@@ -29,7 +29,7 @@
     }
   },
   "parserOptions": {
-    "ecmaVersion": 2021,
+    "ecmaVersion": "latest",
     "project": "**/tsconfig.json",
     "ecmaFeatures": {
       "jsx": true,
