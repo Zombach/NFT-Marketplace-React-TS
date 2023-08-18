@@ -2,7 +2,11 @@ import './Footer.scss';
 import React, { type FC } from 'react';
 
 export const Footer: FC = () => {
-  return <div className="">Footer</div>;
+  return (
+    <div className="footer">
+      <svg></svg>
+    </div>
+  );
 };
 
 export default Footer;
