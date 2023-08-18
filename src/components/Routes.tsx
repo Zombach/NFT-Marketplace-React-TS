@@ -1,7 +1,7 @@
 import { Details as BlogDetails } from '@pages/Blog/Details/Details';
-import { BrowserRouter, Route, Routes as Switch } from 'react-router-dom';
 import { Details as CollectionsDetails } from '@pages/Collections/Details/Details';
 import { FC } from 'react';
+import { Route, Routes as Switch } from 'react-router-dom';
 import Blog from '@pages/Blog/Blog';
 import Carts from '@pages/Carts/Carts';
 import Checkout from '@pages/Checkout/Checkout';
