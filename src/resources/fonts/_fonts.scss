@@ -1,4 +1,9 @@
 @font-face {
-    font-family: "Poppins";
-    src: local("PoppinsMedium-default"), url("./Poppins-Medium.ttf") format("truetype");
+    font-family: "Helvetica Neue";
+    src: local("HelveticaNeueMedium"), url("./HelveticaNeueMedium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Lato";
+    src: local("Lato-Regular"), url("./Lato-Regular.ttf") format("truetype");
 }
