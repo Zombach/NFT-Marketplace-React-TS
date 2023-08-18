@@ -1,10 +1,11 @@
 import './Footer.scss';
 import React, { type FC } from 'react';
+import SocialNetwork from './SocialNetwork/SocialNetwork';
 
 export const Footer: FC = () => {
   return (
     <div className="footer">
-      <svg></svg>
+      <SocialNetwork />
     </div>
   );
 };
