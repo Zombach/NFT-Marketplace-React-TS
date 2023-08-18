@@ -19,26 +19,24 @@ import Welcome from '@pages/Welcome/Welcome';
 
 export const Routes: FC = () => {
   return (
-    <BrowserRouter basename={process.env.REACT_APP_BASE_NAME}>
-      <Switch>
-        <Route path="/" Component={Home}></Route>
-        <Route path="/marketplace" Component={Marketplace}></Route>
-        <Route path="/creators" Component={Creators}></Route>
-        <Route path="/collections" Component={Collections}></Route>
-        <Route path="/collections/details" Component={CollectionsDetails}></Route>
-        <Route path="/product" Component={Product}></Route>
-        <Route path="/carts" Component={Carts}></Route>
-        <Route path="/checkout" Component={Checkout}></Route>
-        <Route path="/logIn" Component={LogIn}></Route>
-        <Route path="/signUp" Component={SignUp}></Route>
-        <Route path="/welcome" Component={Welcome}></Route>
-        <Route path="/sellers" Component={Sellers}></Route>
-        <Route path="/createNFT" Component={CreateNFT}></Route>
-        <Route path="/blog" Component={Blog}></Route>
-        <Route path="/blog/details" Component={BlogDetails}></Route>
-        <Route path="/404" Component={NotFound}></Route>
-      </Switch>
-    </BrowserRouter>
+    <Switch>
+      <Route index element={<Home />}></Route>
+      <Route path="marketplace" element={<Marketplace />}></Route>
+      <Route path="creators" element={<Creators />}></Route>
+      <Route path="collections" element={<Collections />}></Route>
+      <Route path="collections/:profileId" element={<CollectionsDetails />}></Route>
+      <Route path="product" element={<Product />}></Route>
+      <Route path="carts" element={<Carts />}></Route>
+      <Route path="checkout" element={<Checkout />}></Route>
+      <Route path="logIn" element={<LogIn />}></Route>
+      <Route path="signUp" element={<SignUp />}></Route>
+      <Route path="welcome" element={<Welcome />}></Route>
+      <Route path="sellers" element={<Sellers />}></Route>
+      <Route path="createNFT" element={<CreateNFT />}></Route>
+      <Route path="blog" element={<Blog />}></Route>
+      <Route path="blog/details" element={<BlogDetails />}></Route>
+      <Route path="*" element={<NotFound />}></Route>
+    </Switch>
   );
 };
 
