@@ -10,12 +10,16 @@ import Trust from './Trust/Trust';
 export const Footer: FC = () => {
   return (
     <div className="footer">
-      <SocialNetwork />
-      <Links />
-      <Trust />
-      <Copyright />
-      <Subscribe />
-      <AboutUs />
+      <div className="left">
+        <AboutUs />
+        <Subscribe />
+        <Trust />
+      </div>
+      <div className="right">
+        <Links />
+        <SocialNetwork />
+        <Copyright />
+      </div>
     </div>
   );
 };

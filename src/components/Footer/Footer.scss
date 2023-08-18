@@ -1,0 +1,19 @@
+.footer {
+    display: inline-flex;
+    flex-direction: row;
+    width: 1440px;
+    height: 610px;
+    flex-shrink: 0;
+
+    .left {
+        margin-top: 61px;
+        margin-left: 150px;
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    .right {
+        display: inline-flex;
+        flex-direction: column;
+    }
+}
