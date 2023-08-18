@@ -1,9 +1,19 @@
 @font-face {
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica Neue Regular";
+    src: local("HelveticaNeueRegular"), url("./HelveticaNeueRegular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Helvetica Neue Medium";
     src: local("HelveticaNeueMedium"), url("./HelveticaNeueMedium.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "Lato";
-    src: local("Lato-Regular"), url("./Lato-Regular.ttf") format("truetype");
+    font-family: "Helvetica Neue Bold";
+    src: local("HelveticaNeueBold"), url("./HelveticaNeueBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Lato Regular";
+    src: local("LatoRegular"), url("./LatoRegular.ttf") format("truetype");
 }
