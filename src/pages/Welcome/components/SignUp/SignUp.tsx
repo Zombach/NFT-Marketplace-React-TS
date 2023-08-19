@@ -4,7 +4,7 @@ import React, { type FC } from 'react';
 export const SignUp: FC = () => {
   return (
     <div className="sign-up">
-      <p className="text-1">Welcome to BnB!</p>
+      <h2 className="h2">Welcome to BnB!</h2>
       <p className="text-2">Already registered? Tap here to Log In</p>
     </div>
   );

@@ -9,16 +9,23 @@ import SignUp from './components/SignUp/SignUp';
 export const Welcome: FC = () => {
   return (
     <div className="welcome">
-      <Background className="welcome background" />
-      <div className="welcome left">
+      <Background className="background" />
+      <div className="left">
         <SignUp />
       </div>
-      <Delimiter className="welcome delimiter" />
-      <div className="welcome right">
-        <BnB />
-      </div>
+      <Delimiter className="delimiter" />
     </div>
   );
 };
 
 export default Welcome;
+
+/*
+      
+
+
+
+      <div className="right">
+        <BnB />
+      </div>
+*/

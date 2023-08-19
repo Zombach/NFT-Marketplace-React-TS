@@ -1,0 +1,23 @@
+.sign-up {
+    margin-top: 148px;
+    margin-left: 150px;
+    display: inline-flex;
+    flex-direction: column;
+    height: 368px;
+    width: 458px;
+
+    .h2 {
+        color: var(--black, #232632);
+        font-feature-settings: 'clig' off, 'liga' off;
+
+        /* H2 */
+        font-family: Helvetica Neue;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 48px;
+        /* 120% */
+    }
+
+    .text-2 {}
+}

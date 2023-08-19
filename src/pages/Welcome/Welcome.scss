@@ -4,31 +4,33 @@
     display: inline-flex;
     flex-direction: row;
     z-index: 1;
+    gap: 1px;
 
     .delimiter {
+        position: absolute;
+        margin-left: 720px;
         margin-top: 40px;
-        width: 584px;
-        height: 1px;
-        transform: rotate(-90deg);
+        height: 584px;
+        width: 1px;
         flex-shrink: 0;
         stroke-width: 1px;
         stroke: var(--black, #232632);
         opacity: 0.1;
-        z-index: 1;
+        border: 1px;
+        z-index: 2;
+        background: #232632;
     }
 
     .left {
-        flex-direction: column;
-        width: 750px;
-        height: 720px;
-        z-index: 1;
+        position: relative;
+        height: 750px;
+        width: 720px;
     }
 
     .right {
-        display: block;
-        width: 750px;
-        height: 719px;
-        z-index: 1;
+        position: relative;
+        height: 750px;
+        width: 719px;
     }
 
     .background {
