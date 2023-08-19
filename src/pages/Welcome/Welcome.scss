@@ -1,0 +1,42 @@
+.welcome {
+    width: 1440px;
+    height: 1460px;
+    display: inline-flex;
+    flex-direction: row;
+    z-index: 1;
+
+    .delimiter {
+        margin-top: 40px;
+        width: 584px;
+        height: 1px;
+        transform: rotate(-90deg);
+        flex-shrink: 0;
+        stroke-width: 1px;
+        stroke: var(--black, #232632);
+        opacity: 0.1;
+        z-index: 1;
+    }
+
+    .left {
+        flex-direction: column;
+        width: 750px;
+        height: 720px;
+        z-index: 1;
+    }
+
+    .right {
+        display: block;
+        width: 750px;
+        height: 719px;
+        z-index: 1;
+    }
+
+    .background {
+        width: 1440px;
+        height: 1440px;
+        flex-shrink: 0;
+        position: absolute;
+        background: var(--white, #FFF);
+        z-index: 0;
+    }
+}
