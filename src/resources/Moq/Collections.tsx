@@ -1,32 +1,30 @@
 import { ReactComponent as Avatar } from './Avatar.svg';
 import { FC, FunctionComponent, SVGProps } from 'react';
 
-export type CartCreator = {
+export type CartCollections = {
   userId: string;
-  userName: String;
+  collectionName: String;
   avatar: FunctionComponent<
     SVGProps<SVGSVGElement> & {
       title?: string | undefined;
     }
   >;
-  volume: String;
-  sales: String;
-  items: String;
-  followers: String;
-  follow: Boolean;
+  nftImage: string;
+  owners: string;
+  totalVolume: string;
+  floor: string;
 };
 
-const Cart = (userName: string) => {
+const Cart = (userId: string) => {
   return {
-    userId: '1',
-    userName: userName,
+    userId: userId,
+    collectionName: 'club',
     avatar: Avatar,
-    volume: '15,085,035.95',
-    sales: '111,850',
-    items: '50,850',
-    followers: '10,150',
-    follow: true,
-  } as CartCreator;
+    nftImage: 'image source',
+    owners: '34,7K owners',
+    totalVolume: '795,6K BNB',
+    floor: '72 BNB',
+  } as CartCollections;
 };
 
 export const carts = [
@@ -50,7 +48,7 @@ export const carts = [
   Cart('@user 18'),
   Cart('@user 19'),
   Cart('@user 20'),
-] as CartCreator[];
+] as CartCollections[];
 
 export const Render: FC = () => {
   return (
@@ -58,13 +56,12 @@ export const Render: FC = () => {
       {carts.map((x, index) => (
         <div key={`${x.userId}-${index}`} id={x.userId} style={{ display: 'inline-flex', flexDirection: 'row' }}>
           <x.avatar></x.avatar>
-          <p>{x.items}</p>
-          <p>{x.userName}</p>
-          <p>{x.volume}</p>
-          <p>{x.sales}</p>
-          <p>{x.items}</p>
-          <p>{x.followers}</p>
-          <p>{x.follow ? 'Follow' : 'Unsubscribe'}</p>
+          <p>{x.collectionName}</p>
+          <p>{x.owners}</p>
+          <p>{x.totalVolume}</p>
+          <p>{x.userId}</p>
+          <p>{x.nftImage}</p>
+          <p>{x.floor}</p>
         </div>
       ))}
     </div>
