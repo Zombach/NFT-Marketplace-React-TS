@@ -1,10 +1,9 @@
 import './Button.scss';
 import React, { type FC, FunctionComponent, SVGProps } from 'react';
 import Text, { TypeEnum } from './components/Text/Text';
-import console from 'node:console';
 
 interface ButtonProps {
-  text: string;
+  children: string;
   className?: string | undefined;
   buttonClassName?: string | undefined;
   textClassName?: string | undefined;
@@ -20,7 +19,7 @@ interface ButtonProps {
   Func?: (() => void) | undefined;
 }
 
-export const Button: FC<ButtonProps> = ({ text, className, buttonClassName, textClassName, textType, SvgClassName, Svg, Func }): JSX.Element => {
+export const Button: FC<ButtonProps> = ({ children, className, buttonClassName, textClassName, textType, SvgClassName, Svg, Func }): JSX.Element => {
   return (
     <div className={className ?? 'button-box'}>
       {Svg !== undefined ? <Svg className={SvgClassName ?? 'background'} /> : null}
@@ -35,7 +34,7 @@ export const Button: FC<ButtonProps> = ({ text, className, buttonClassName, text
           click();
         }}>
         <Text className={textClassName} type={textType ?? TypeEnum.P}>
-          {text}
+          {children}
         </Text>
       </button>
     </div>
