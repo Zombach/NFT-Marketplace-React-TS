@@ -1,0 +1,36 @@
+.product-page {
+    color: var(--white, #FFF);
+}
+
+.product-section {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.product-section-right-part {
+    .avatar {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    .authored-by {
+        align-items: center;
+        display: flex;
+        margin-bottom: 24px;
+    }
+
+    .product-price-block {
+        padding: 24px;
+
+        .product-price-block-top {
+            display: flex;
+            gap: 9px;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@import '../../variables';
+
+.ethereum-price {
+    svg {
+        margin-right: 4px;
+    }
+
+    .ethereum-price-value-currency {
+        //ToDO: make better
+        margin-bottom: 4px;
+        color: var(--white, #FFF);
+        font-feature-settings: 'clig' off, 'liga' off;
+
+        font-family: $helveticaNeueFont;
+        font-style: normal;
+    }
+
+    .ethereum-price-bottom {
+        /* text */
+        font-family: Helvetica Neue;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        /* 157.143% */
+    }
+}
