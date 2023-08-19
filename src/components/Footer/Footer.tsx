@@ -12,6 +12,8 @@ import Trust from './Trust/Trust';
 export const Footer: FC = () => {
   return (
     <div className="footer">
+      <Background className="background" />
+      <Delimiter className="delimiter" />
       <div className="left">
         <AboutUs />
         <Subscribe />
