@@ -1,7 +1,7 @@
 import './Text.scss';
 import React, { type FC, ReactNode } from 'react';
 
-export enum TypeEnum {
+export enum TextType {
   H1 = 0,
   H2 = 1,
   P = 2,
@@ -9,7 +9,7 @@ export enum TypeEnum {
 }
 
 interface TextProps {
-  type: TypeEnum;
+  type: TextType;
   children: string;
   className?: string | undefined;
 }
@@ -17,13 +17,13 @@ interface TextProps {
 export const Text: FC<TextProps> = ({ type, children, className }) => {
   className = className ?? 'text';
   switch (type) {
-    case TypeEnum.H1:
+    case TextType.H1:
       return <h1 className={className}>{children}</h1>;
-    case TypeEnum.H2:
+    case TextType.H2:
       return <h2 className={className}>{children}</h2>;
-    case TypeEnum.P:
+    case TextType.P:
       return <p className={className}>{children}</p>;
-    case TypeEnum.Span:
+    case TextType.Span:
       return <span className={className}>{children}</span>;
     default:
       return <p className={className}>{children}</p>;

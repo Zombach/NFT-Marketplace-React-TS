@@ -1,14 +1,14 @@
 import './Button.scss';
 import React, { type FC, FunctionComponent, SVGProps } from 'react';
-import Text, { TypeEnum } from './components/Text/Text';
+import Text, { TextType } from './components/Text/Text';
 
 interface ButtonProps {
   children: string;
   className?: string | undefined;
   buttonClassName?: string | undefined;
   textClassName?: string | undefined;
-  textType?: TypeEnum;
-  SvgClassName?: string | undefined;
+  textType?: TextType;
+  svgClassName?: string | undefined;
   Svg?:
     | FunctionComponent<
         SVGProps<SVGSVGElement> & {
@@ -16,24 +16,25 @@ interface ButtonProps {
         }
       >
     | undefined;
-  Func?: (() => void) | undefined;
+  func?: (() => void) | undefined;
 }
 
-export const Button: FC<ButtonProps> = ({ children, className, buttonClassName, textClassName, textType, SvgClassName, Svg, Func }): JSX.Element => {
+export const Button: FC<ButtonProps> = ({ children, className, buttonClassName, textClassName, textType, svgClassName, Svg, func }): JSX.Element => {
   return (
     <div className={className ?? 'button-box'}>
-      {Svg !== undefined ? <Svg className={SvgClassName ?? 'background'} /> : null}
+      {Svg !== undefined ? <Svg className={svgClassName ?? 'background'} /> : null}
       <button
         className={buttonClassName ?? 'button'}
         onClick={() => {
           const click =
-            Func ??
+            func ??
             (() => {
+              // eslint-disable-next-line
               console.log('Не реализованная функция');
             });
           click();
         }}>
-        <Text className={textClassName} type={textType ?? TypeEnum.P}>
+        <Text className={textClassName} type={textType ?? TextType.P}>
           {children}
         </Text>
       </button>
