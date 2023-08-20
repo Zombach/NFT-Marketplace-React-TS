@@ -82,13 +82,10 @@
             color: var(--black, #232632);
             text-align: center;
             font-feature-settings: 'clig' off, 'liga' off;
-            /* H3 */
             font-family: 'Helvetica Neue';
             font-size: 24px;
-            font-style: normal;
             font-weight: 500;
             line-height: 34px;
-            /* 141.667% */
         }
 
         .text {
@@ -97,7 +94,6 @@
             //font-variant-numeric: lining-nums proportional-nums;
             font-family: "Helvetica Neue";
             font-size: 14px;
-            font-style: normal;
             font-weight: 400;
             line-height: 22px;
             white-space: nowrap;
