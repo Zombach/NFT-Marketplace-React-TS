@@ -15,25 +15,54 @@
         z-index: 0;
     }
 
+    .picture-background {
+        position: absolute;
+        width: 457px;
+        height: 459px;
+        flex-shrink: 0;
+        z-index: 0;
+        fill: rgba(191, 191, 191, 0.15);
+        backdrop-filter: blur(35px);
+        z-index: 1;
+    }
+
     .picture-block {
         margin-top: 22px;
         margin-left: 74px;
-        height: 326px;
+        height: 306px;
         width: 306px;
-
-        .background {
-            position: absolute;
-            margin-top: 30px;
-            margin-left: 10px;
-            width: 287px;
-            height: 296px;
-            flex-shrink: 0;
-        }
+        z-index: 1;
 
         .picture {
             position: absolute;
+            width: 306px;
             height: 306px;
             flex-shrink: 0;
+            z-index: 2;
+        }
+
+        .bnb-mini {
+            position: absolute;
+            margin-top: 72px;
+            margin-left: 148px;
+            width: 60px;
+            height: 24px;
+            z-index: 2;
+        }
+
+        .bnb-base {
+            position: absolute;
+            width: 167px;
+            height: 66px;
+
+            &.part-1 {
+                margin-top: 171px;
+            }
+
+            &.part-2 {
+                margin-top: 99px;
+                margin-left: 148px;
+            }
         }
     }
 
@@ -62,7 +91,7 @@
             /* 141.667% */
         }
 
-        .t {
+        .text {
             width: 379px;
             color: var(--gray-3, #828282);
             //font-variant-numeric: lining-nums proportional-nums;
