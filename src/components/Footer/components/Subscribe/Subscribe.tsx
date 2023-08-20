@@ -15,9 +15,11 @@ export const Subscribe: FC = () => {
           </div>
           <div className="base">
             <input className="input" placeholder="placeholder..." />
-            <div className="adornment">
-              <Send className="send" />
-            </div>
+            <button className="btn">
+              <div className="adornment">
+                <Send className="send" />
+              </div>
+            </button>
           </div>
         </div>
       </div>

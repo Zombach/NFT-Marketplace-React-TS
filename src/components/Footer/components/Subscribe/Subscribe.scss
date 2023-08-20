@@ -1,5 +1,6 @@
 $font-helvetica-neue: "Helvetica Neue";
 $color-black: var(--black, #232632);
+$color-white: var(--white, #ffffff);
 $color-dark-2: var(--dark-2, #191B23);
 $color-gray-3: var(--gray-3, #828282);
 
@@ -24,7 +25,7 @@ $color-gray-3: var(--gray-3, #828282);
             font-weight: 700;
             line-height: 26px;
             text-transform: capitalize;
-            background: #ffffff;
+            background: $color-white;
             padding: 10px;
             text-align: center;
             text-decoration: none;
@@ -54,7 +55,7 @@ $color-gray-3: var(--gray-3, #828282);
                 padding: 0px 8px 2px 8px;
                 align-items: center;
                 gap: 10px;
-                background: #FFF;
+                background: $color-white;
 
                 .text {
                     display: flex;
@@ -92,14 +93,20 @@ $color-gray-3: var(--gray-3, #828282);
                     text-decoration: none;
                 }
 
-                .adornment {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
+                .btn {
+                    background: none;
+                    border: none;
 
-                    .send {
-                        width: 16px;
-                        height: 16px;
+                    .adornment {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+
+
+                        .send {
+                            width: 16px;
+                            height: 16px;
+                        }
                     }
                 }
             }
