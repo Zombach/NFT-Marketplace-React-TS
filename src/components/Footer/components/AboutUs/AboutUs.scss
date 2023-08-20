@@ -1,3 +1,5 @@
+$color-black: var(--black, #232632);
+
 .about-us {
     display: inline-flex;
     flex-direction: column;
@@ -7,7 +9,7 @@
 
     .h2 {
         width: 444px;
-        color: var(--black, #232632);
+        color: $color-black;
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: 'Helvetica Neue';
         font-size: 40px;
@@ -17,7 +19,7 @@
 
     .h3 {
         width: 420px;
-        color: var(--black, #232632);
+        color: $color-black;
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: 'Helvetica Neue';
         font-size: 20px;

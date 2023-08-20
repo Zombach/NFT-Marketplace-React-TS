@@ -1,3 +1,6 @@
+$color-gray: var(--grey, #EBEDF2);
+$color-white: var(--white, #FFF);
+
 .footer {
     display: inline-flex;
     flex-direction: row;
@@ -14,7 +17,7 @@
         z-index: 2;
 
         path {
-            fill: var(--grey, #EBEDF2);
+            fill: $color-gray;
         }
     }
 
@@ -40,7 +43,7 @@
         z-index: 1;
 
         path {
-            fill: var(--white, #FFF);
+            fill: $color-white;
         }
     }
 }

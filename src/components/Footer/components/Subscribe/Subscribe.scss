@@ -1,3 +1,7 @@
+$color-black: var(--black, #232632);
+$color-dark-2: var(--dark-2, #191B23);
+$color-gray-3: var(--gray-3, #828282);
+
 .subscribe {
     margin-top: 40px;
     display: inline-flex;
@@ -12,10 +16,10 @@
         .btn {
             width: 190px;
             height: 26px;
-            color: var(--black, #232632);
+            color: $color-black;
             font-variant-numeric: lining-nums proportional-nums;
             font-family: 'Helvetica Neue';
-            font-size: 16px;            
+            font-size: 16px;
             font-weight: 700;
             line-height: 26px;
             text-transform: capitalize;
@@ -41,7 +45,7 @@
             align-items: flex-start;
             align-self: stretch;
             border-radius: 10px;
-            border: 2px solid var(--dark-2, #191B23);
+            border: 2px solid $color-dark-2;
 
             .label {
                 display: flex;
@@ -54,7 +58,7 @@
                 .text {
                     display: flex;
                     align-items: center;
-                    color: var(--gray-3, #828282);
+                    color: $color-gray-3;
                     font-variant-numeric: lining-nums proportional-nums;
                     font-family: 'Helvetica Neue';
                     font-size: 12px;
@@ -77,10 +81,10 @@
                     align-items: center;
                     gap: 10px;
                     flex: 1 0 0;
-                    color: var(--dark-2, #191B23);
+                    color: $color-dark-2;
                     font-variant-numeric: lining-nums proportional-nums;
                     font-family: 'Helvetica Neue';
-                    font-size: 14px;                    
+                    font-size: 14px;
                     font-weight: 400;
                     line-height: 22px;
                     border: none;

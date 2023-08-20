@@ -1,8 +1,10 @@
+$color-additional-dark: var(--additional-dark, #3B5266);
+
 .copyright {
     margin-top: 84px;
     margin-left: 349px;
-    color: var(--additional-dark, #3B5266);
-    font-family: Lato;
+    color: $color-additional-dark;
+    font-family: 'Lato';
     font-size: 17px;
     font-weight: 400;
     line-height: 25px;
