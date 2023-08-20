@@ -1,0 +1,53 @@
+$background-color: var(--dark-2, #191B23);
+
+
+.header {
+    background-color: $background-color;
+    padding: 37px 50px 37px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.background {
+    background-color: $background-color ;
+    border: 0;
+
+}
+
+.column {
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    gap: 60px;
+
+}
+
+.right {
+    gap: 60px;
+}
+
+
+.signIn {
+    text-align: center;
+    font-size: 14px;
+    line-height: 26px;
+
+}
+
+.icon {
+    display: flex;
+    gap: 16px;
+}
+
+.ellipse {
+    //position: relative;
+}
+
+.burger {
+    position: relative;
+    right: 35px;
+    bottom: 14px;
+}
