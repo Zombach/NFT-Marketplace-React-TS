@@ -1,3 +1,5 @@
+$font-helvetica-neue: "Helvetica Neue";
+
 $color-black: var(--black, #232632);
 
 .about-us {
@@ -11,7 +13,7 @@ $color-black: var(--black, #232632);
         width: 444px;
         color: $color-black;
         font-feature-settings: 'clig' off, 'liga' off;
-        font-family: 'Helvetica Neue';
+        font-family: $font-helvetica-neue;
         font-size: 40px;
         font-weight: 500;
         line-height: 48px;
@@ -21,7 +23,7 @@ $color-black: var(--black, #232632);
         width: 420px;
         color: $color-black;
         font-feature-settings: 'clig' off, 'liga' off;
-        font-family: 'Helvetica Neue';
+        font-family: $font-helvetica-neue;
         font-size: 20px;
         font-weight: 500;
         line-height: 34px;
