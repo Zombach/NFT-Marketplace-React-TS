@@ -6,15 +6,22 @@ import { ReactComponent as BnBMini } from './assets/b-n-b-mini.svg';
 import { ReactComponent as Img } from './assets/img.svg';
 import React, { type FC } from 'react';
 
-export const BnB: FC = () => {
+interface BnBProps {
+  className: string;
+}
+
+export const BnB: FC<BnBProps> = ({ className }) => {
   return (
-    <div className="b-n-b">
+    <div className={className}>
       <Background className="background" />
       <div className="picture-block">
         <Img className="picture" />
-        <BackgroundImg className="picture-background" />
+        <BackgroundImg className="background" />
       </div>
-      <div></div>
+      <div className="text-block">
+        <h3 className="h3">Buy Crypto in Minutes</h3>
+        <span className="t">Enjoy the world’s cryptocurrency exchange at your fingertips</span>
+      </div>
     </div>
   );
 };
@@ -22,6 +29,5 @@ export const BnB: FC = () => {
 export default BnB;
 
 /*
-<BnBMini className="b-n-b-mini" />
-      <BnBBase className="b-n-b-base" />
+<Background className="background" />     
 */

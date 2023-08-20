@@ -19,5 +19,167 @@
         /* 120% */
     }
 
-    .text-2 {}
+    .button {
+        margin-top: 40px;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+        display: flex;
+        width: 458px;
+        height: 56px;
+        padding: 6px 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: var(--purple, #7B61FF);
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        .text {
+            margin-left: 10px;
+            color: var(--white, #FFF);
+            text-align: right;
+            font-feature-settings: 'clig' off, 'liga' off;
+
+            /* text_big */
+            font-family: 'Helvetica Neue';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px;
+            /* 160% */
+        }
+    }
+
+    .continue {
+        display: inline-flex;
+        flex-direction: row;
+        height: 26px;
+        margin-top: 40px;
+
+        .line-left {
+            margin-top: 6px;
+            width: 140px;
+            height: 1px;
+            flex-shrink: 0;
+            border: 1px;
+        }
+
+        .text {
+            margin-left: 24px;
+        }
+
+        .line-right {
+            margin-top: 6px;
+            margin-left: 30px;
+            width: 140px;
+            height: 1px;
+            flex-shrink: 0;
+            border: 1px;
+        }
+    }
+
+    .extra-auto-login {
+        display: inline-flex;
+        flex-direction: row;
+        margin-top: 40px;
+
+        .google {
+            display: flex;
+            width: 221px;
+            height: 56px;
+            padding: 6px 8px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: var(--grey, #EBEDF2);
+
+            .icon {
+                width: 24px;
+                height: 24px;
+                flex-shrink: 0;
+            }
+
+            .text {
+                color: var(--black, #232632);
+                text-align: right;
+                font-feature-settings: 'clig' off, 'liga' off;
+
+                /* text_big */
+                font-family: Helvetica Neue;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 32px;
+                /* 160% */
+            }
+        }
+
+        .apple {
+            margin-left: 16px;
+            display: flex;
+            width: 221px;
+            height: 56px;
+            padding: 6px 8px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: var(--grey, #EBEDF2);
+
+            .icon {
+                width: 24px;
+                height: 24px;
+                flex-shrink: 0;
+            }
+
+            .text {
+                color: var(--black, #232632);
+                text-align: right;
+                font-feature-settings: 'clig' off, 'liga' off;
+
+                /* text_big */
+                font-family: Helvetica Neue;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 32px;
+                /* 160% */
+            }
+        }
+    }
+
+
+    .log-in {
+        margin-left: 110px;
+        margin-top: 40px;
+        width: 238px;
+        height: 22px;
+
+        .text {
+            color: var(--gray-3, #828282);
+            text-align: center;
+            font-variant-numeric: lining-nums proportional-nums;
+
+            /* text */
+            font-family: 'Helvetica Neue';
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+
+            .part-01 {
+                color: var(--purple, #7B61FF);
+            }
+        }
+    }
 }

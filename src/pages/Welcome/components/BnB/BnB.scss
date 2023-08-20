@@ -1,8 +1,8 @@
-.b-n-b {
+.bnb {
     display: inline-flex;
     flex-direction: column;
-    margin-top: 102px;
     margin-left: 112px;
+    margin-top: 102px;
     width: 457px;
     height: 459px;
     flex-shrink: 0;
@@ -12,52 +12,68 @@
         width: 457px;
         height: 459px;
         flex-shrink: 0;
-        z-index: 1;
-
-        //path {
-        //    fill: rgba(191, 191, 191, 0.15);
-        //}
-
-        //backdrop-filter: blur(35px);
+        z-index: 0;
     }
 
-
     .picture-block {
-        position: relative;
         margin-top: 22px;
         margin-left: 74px;
+        height: 326px;
         width: 306px;
-        height: 306px;
-        flex-shrink: 0;
-        z-index: 2;
 
-        .picture {
-            position: absolute;
-            width: 306px;
-            height: 306px;
-            flex-shrink: 0;
-            z-index: 4;
-            fill: lightgray 50% / cover no-repeat;
-            z-index: 4;
-
-            //background: url(./assets/img.svg), lightgray 50% / cover no-repeat;
-        }
-
-        .picture-background {
+        .background {
             position: absolute;
             margin-top: 30px;
             margin-left: 10px;
             width: 287px;
             height: 296px;
             flex-shrink: 0;
-            z-index: 3;
+        }
 
-            //path {
-            //    fill: lightgray 50% / cover no-repeat;
-            //}
+        .picture {
+            position: absolute;
+            height: 306px;
+            flex-shrink: 0;
         }
     }
 
+    .text-block {
+        display: inline-flex;
+        flex-direction: column;
+        margin-top: 27px;
+        margin-left: 39px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        height: 64px;
+        width: 379px;
+        z-index: 1;
 
+        .h3 {
+            color: var(--black, #232632);
+            text-align: center;
+            font-feature-settings: 'clig' off, 'liga' off;
+            /* H3 */
+            font-family: 'Helvetica Neue';
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 34px;
+            /* 141.667% */
+        }
 
+        .t {
+            width: 379px;
+            color: var(--gray-3, #828282);
+            //font-variant-numeric: lining-nums proportional-nums;
+            font-family: "Helvetica Neue";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+            white-space: nowrap;
+            padding: 0;
+            margin: 0;
+        }
+    }
 }
