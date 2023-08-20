@@ -1,6 +1,6 @@
 import './Button.scss';
 import React, { type FC, FunctionComponent, SVGProps } from 'react';
-import Text, { TextType } from '../Text/Text';
+import Text, { TextType } from './components/Text/Text';
 
 interface ButtonProps {
   children: string;
