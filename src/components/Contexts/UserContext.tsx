@@ -20,21 +20,19 @@ interface UserProviderProps {
 }
 
 const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
-  const [id, setId] = useState<string>(userDefault.id);
-  const [name, setName] = useState<string>(userDefault.name);
-  const [token, setToken] = useState<string>(userDefault.token);
-  function SetUser({ id, name, token }: UserContextType) {
-    setId(() => id);
-    setName(() => name);
-    setToken(() => token);
-  }
+  const [user, setUser] = useState<UserContextType>(userDefault);
+
+  const SetUser = ({ id, name, token }: UserContextType) => {
+    let currentUser = { id: id, name: name, token: token, setUser: undefined };
+    setUser(() => currentUser);
+  };
 
   return (
     <UserContext.Provider
       value={{
-        id: id,
-        name: name,
-        token: token,
+        id: user.id,
+        name: user.name,
+        token: user.token,
         setUser: SetUser,
       }}>
       {children}
