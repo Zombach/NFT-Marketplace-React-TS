@@ -1,15 +1,16 @@
 import './CardLong.scss';
 import React, { type FC } from 'react';
+import UserInfo from './components/UserInfo/UserInfo';
 
 type CardLongModel = {
   userId: string;
-  userName: String;
+  userName: string;
   avatar: string;
-  volume: String;
-  sales: String;
-  items: String;
-  followers: String;
-  follow: Boolean;
+  volume: string;
+  sales: string;
+  items: string;
+  followers: string;
+  follow: boolean;
 };
 
 interface CardLongProps {
@@ -22,6 +23,7 @@ export const CardLong: FC<CardLongProps> = ({ number, model }) => {
   return (
     <div className="card-long">
       <p className="number">{number}</p>
+      <UserInfo userName={userName} avatar={avatar}></UserInfo>
     </div>
   );
 };
