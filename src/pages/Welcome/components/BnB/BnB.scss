@@ -1,3 +1,7 @@
+$font-family: 'Helvetica Neue';
+$color-black: var(--black, #232632);
+$color-gray-3: var(--gray-3, #828282);
+
 .bnb {
     display: inline-flex;
     flex-direction: column;
@@ -79,10 +83,10 @@
         z-index: 1;
 
         .h3 {
-            color: var(--black, #232632);
+            color: $color-black;
             text-align: center;
             font-feature-settings: 'clig' off, 'liga' off;
-            font-family: 'Helvetica Neue';
+            font-family: $font-family;
             font-size: 24px;
             font-weight: 500;
             line-height: 34px;
@@ -90,7 +94,7 @@
 
         .text {
             width: 379px;
-            color: var(--gray-3, #828282);
+            color: $color-gray-3;
             //font-variant-numeric: lining-nums proportional-nums;
             font-family: "Helvetica Neue";
             font-size: 14px;

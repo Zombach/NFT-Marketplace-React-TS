@@ -1,3 +1,6 @@
+$color-black: var(--black, #232632);
+$color-white: var(--white, #FFF);
+
 .welcome {
     width: 1440px;
     height: 1460px;
@@ -14,11 +17,11 @@
         width: 1px;
         flex-shrink: 0;
         stroke-width: 1px;
-        stroke: var(--black, #232632);
+        stroke: $color-black;
         opacity: 0.1;
         border: 1px;
         z-index: 2;
-        background: #232632;
+        background: $color-black;
     }
 
     .left {
@@ -38,7 +41,7 @@
         height: 1440px;
         flex-shrink: 0;
         position: absolute;
-        background: var(--white, #FFF);
+        background: $color-white;
         z-index: 0;
     }
 }
