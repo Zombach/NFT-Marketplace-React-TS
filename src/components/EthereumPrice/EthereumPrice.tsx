@@ -1,5 +1,5 @@
 import './EthereumPrice.scss';
-import { ReactComponent as EthereumIcon } from './assets/ethereum.svg';
+import { ReactComponent as EthereumIcon } from './assets/ethereum-black.svg';
 
 export interface EthereumPriceProps {
   value: number;
@@ -9,11 +9,14 @@ export interface EthereumPriceProps {
 export const EthereumPrice = (props: EthereumPriceProps) => {
   return (
     <div className="ethereum-price">
-      <div>
-        <EthereumIcon className="" />
-        <span className="ethereum-price-value-currency">{props.value} BNB</span>
-      </div>
-      {props.children ? <span className="ethereum-price-bottom">{props.children}</span> : null}
+      <EthereumIcon className="" />
+      <div className="ethereum-price-value-currency">{props.value} BNB</div>
+      {props.children ? (
+        <>
+          <div></div>
+          <div className="ethereum-price-extra">{props.children}</div>
+        </>
+      ) : null}
     </div>
   );
 };

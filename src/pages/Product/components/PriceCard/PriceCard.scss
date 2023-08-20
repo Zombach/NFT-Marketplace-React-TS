@@ -1,7 +1,7 @@
 @import '../../../../variables';
 
 .price-card {
-    background: var(--black, #232632);
+    background: var(--grey, #EBEDF2);
     border-radius: 10px;
     display: flex;
     padding: 24px;
@@ -9,27 +9,19 @@
     width: 100%;
 
     .price-card-title {
-        color: var(--white, #FFF);
         font-variant-numeric: lining-nums proportional-nums;
         margin-bottom: 16px;
 
-        /* text */
         font-family: $helveticaNeueFont;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
-        line-height: 22px;
-        /* 157.143% */
     }
 
     .ethereum-price-value-currency {
-        color: var(--white, #FFF);
         font-feature-settings: 'clig' off, 'liga' off;
 
-        /* H3 */
         font-size: 24px;
         font-weight: 500;
-        line-height: 34px;
-        /* 141.667% */
     }
 }
