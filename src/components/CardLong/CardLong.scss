@@ -1,0 +1,13 @@
+$color-white: var(--white, #FFF);
+$color-grey: var(--grey, #EBEDF2);
+
+.card-long {
+    display: inline-flex;
+    flex-Direction: row;
+    width: 1140px;
+    height: 88px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1.4px solid $color-grey;
+    background: $color-white;
+}
