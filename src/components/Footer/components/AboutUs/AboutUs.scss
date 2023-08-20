@@ -9,27 +9,19 @@
         width: 444px;
         color: var(--black, #232632);
         font-feature-settings: 'clig' off, 'liga' off;
-
-        /* H2 */
-        font-family: Helvetica Neue;
+        font-family: 'Helvetica Neue';
         font-size: 40px;
-        font-style: normal;
         font-weight: 500;
         line-height: 48px;
-        /* 120% */
     }
 
     .h3 {
         width: 420px;
         color: var(--black, #232632);
         font-feature-settings: 'clig' off, 'liga' off;
-
-        /* H3 */
-        font-family: Helvetica Neue;
-        font-size: 24px;
-        font-style: normal;
+        font-family: 'Helvetica Neue';
+        font-size: 20px;
         font-weight: 500;
         line-height: 34px;
-        /* 141.667% */
     }
 }
