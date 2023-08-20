@@ -1,0 +1,58 @@
+.card-long-render {
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    gap: 16px;
+    align-items: center;
+
+    .header-card {
+        display: inline-flex;
+        align-items: center;
+        flex-direction: row;
+        width: 1140px;
+
+        .text {
+            color: var(--black, #232632);
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: 'Helvetica Neue';
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 26px;
+            text-transform: capitalize;
+
+            &.part-1 {
+                margin-left: 53px;
+                width: 58px;
+            }
+
+            &.part-2 {
+                margin-left: 292px;
+                width: 105px;
+            }
+
+            &.part-3 {
+                margin-left: 59px;
+                width: 42px;
+            }
+
+            &.part-4 {
+                margin-left: 68px;
+                width: 43px;
+            }
+
+            &.part-5 {
+                margin-left: 51px;
+                width: 75px;
+            }
+        }
+
+
+        .icon {
+            margin-left: 10px;
+            width: 18px;
+            height: 18px;
+        }
+    }
+}

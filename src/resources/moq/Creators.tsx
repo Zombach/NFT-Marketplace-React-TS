@@ -3,13 +3,13 @@ import React, { type FC } from 'react';
 
 export type CartCreator = {
   userId: string;
-  userName: String;
+  userName: string;
   avatar: string;
-  volume: String;
-  sales: String;
-  items: String;
-  followers: String;
-  follow: Boolean;
+  volume: string;
+  sales: string;
+  items: string;
+  followers: string;
+  follow: boolean;
 };
 
 const Cart = (userName: string) => {
