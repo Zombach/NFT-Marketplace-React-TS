@@ -1,0 +1,29 @@
+$font-helvetica-neue: "Helvetica Neue";
+$color-gray-3: var(--gray-3, #828282);
+
+.trust {
+    width: 303px;
+    margin-top: 73px;
+    display: inline-flex;
+    flex-direction: row;
+    gap: 29px;
+    font-family: $font-helvetica-neue;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: $color-gray-3;
+    font-variant-numeric: lining-nums proportional-nums;
+
+    .text-1 {
+        width: 87px;
+    }
+
+    .text-2 {
+        width: 95px;
+    }
+
+    .text-3 {
+        width: 62px;
+        margin-left: 1px;
+    }
+}

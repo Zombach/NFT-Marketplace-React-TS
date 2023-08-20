@@ -1,0 +1,12 @@
+.social-networks {
+    display: inline-flex;
+    flex-direction: row;
+    margin-top: 191px;
+    gap: 40px;
+
+    &.icon {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+    }
+}
