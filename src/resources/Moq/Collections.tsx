@@ -1,14 +1,10 @@
-import { ReactComponent as Avatar } from './Avatar.svg';
-import { FC, FunctionComponent, SVGProps } from 'react';
+import './Base.scss';
+import React, { type FC } from 'react';
 
 export type CartCollections = {
   userId: string;
   collectionName: String;
-  avatar: FunctionComponent<
-    SVGProps<SVGSVGElement> & {
-      title?: string | undefined;
-    }
-  >;
+  avatar: string;
   nftImage: string;
   owners: string;
   totalVolume: string;
@@ -19,7 +15,7 @@ const Cart = (userId: string) => {
   return {
     userId: userId,
     collectionName: 'club',
-    avatar: Avatar,
+    avatar: './Image.jpg',
     nftImage: 'image source',
     owners: '34,7K owners',
     totalVolume: '795,6K BNB',
@@ -52,15 +48,15 @@ export const carts = [
 
 export const Render: FC = () => {
   return (
-    <div className="" style={{ display: 'inline-flex', flexDirection: 'column' }}>
+    <div className="items">
       {carts.map((x, index) => (
-        <div key={`${x.userId}-${index}`} id={x.userId} style={{ display: 'inline-flex', flexDirection: 'row' }}>
-          <x.avatar></x.avatar>
+        <div className="item" id={x.userId} key={`${x.userId}-${index}`}>
+          <p>{x.userId}</p>
           <p>{x.collectionName}</p>
+          <p>{x.avatar}</p>
+          <p>{x.nftImage}</p>
           <p>{x.owners}</p>
           <p>{x.totalVolume}</p>
-          <p>{x.userId}</p>
-          <p>{x.nftImage}</p>
           <p>{x.floor}</p>
         </div>
       ))}

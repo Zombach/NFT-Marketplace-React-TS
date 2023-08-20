@@ -1,14 +1,10 @@
-import { ReactComponent as Avatar } from './Avatar.svg';
-import { FC, FunctionComponent, SVGProps } from 'react';
+import './Base.scss';
+import React, { type FC } from 'react';
 
 export type CartMarketplace = {
   userId: string;
   userName: string;
-  avatar: FunctionComponent<
-    SVGProps<SVGSVGElement> & {
-      title?: string | undefined;
-    }
-  >;
+  avatar: string;
   nftName: string;
   nftImage: string;
   like: string;
@@ -21,7 +17,7 @@ const Cart = (userId: string) => {
   return {
     userId: userId,
     userName: '@marterium',
-    avatar: Avatar,
+    avatar: './Image.jpg',
     nftName: 'Deadzone 13 Hideout',
     nftImage: 'image source',
     like: '34',
@@ -56,13 +52,14 @@ export const carts = [
 
 export const Render: FC = () => {
   return (
-    <div className="" style={{ display: 'inline-flex', flexDirection: 'column' }}>
+    <div className="items">
       {carts.map((x, index) => (
-        <div key={`${x.userId}-${index}`} id={x.userId} style={{ display: 'inline-flex', flexDirection: 'row' }}>
-          <x.avatar></x.avatar>
+        <div className="item" id={x.userId} key={`${x.userId}-${index}`}>
+          <p>{x.userId}</p>
           <p>{x.userName}</p>
-          <p>{x.nftImage}</p>
+          <p>{x.avatar}</p>
           <p>{x.nftName}</p>
+          <p>{x.nftImage}</p>
           <p>{x.like}</p>
           <p>{x.time.toString()}</p>
           <p>{x.price}</p>

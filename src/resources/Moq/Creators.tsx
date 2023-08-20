@@ -1,14 +1,10 @@
-import { ReactComponent as Avatar } from './Avatar.svg';
-import { FC, FunctionComponent, SVGProps } from 'react';
+import './Base.scss';
+import React, { type FC } from 'react';
 
 export type CartCreator = {
   userId: string;
   userName: String;
-  avatar: FunctionComponent<
-    SVGProps<SVGSVGElement> & {
-      title?: string | undefined;
-    }
-  >;
+  avatar: string;
   volume: String;
   sales: String;
   items: String;
@@ -20,7 +16,7 @@ const Cart = (userName: string) => {
   return {
     userId: '1',
     userName: userName,
-    avatar: Avatar,
+    avatar: './Avatar.jpg',
     volume: '15,085,035.95',
     sales: '111,850',
     items: '50,850',
@@ -54,12 +50,12 @@ export const carts = [
 
 export const Render: FC = () => {
   return (
-    <div className="" style={{ display: 'inline-flex', flexDirection: 'column' }}>
+    <div className="items">
       {carts.map((x, index) => (
-        <div key={`${x.userId}-${index}`} id={x.userId} style={{ display: 'inline-flex', flexDirection: 'row' }}>
-          <x.avatar></x.avatar>
-          <p>{x.items}</p>
+        <div className="item" id={x.userId} key={`${x.userId}-${index}`}>
+          <p>{x.userId}</p>
           <p>{x.userName}</p>
+          <p>{x.avatar}</p>
           <p>{x.volume}</p>
           <p>{x.sales}</p>
           <p>{x.items}</p>
