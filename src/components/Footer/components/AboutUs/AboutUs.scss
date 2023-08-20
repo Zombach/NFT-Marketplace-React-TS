@@ -9,7 +9,7 @@ $color-black: var(--black, #232632);
     align-items: flex-start;
     gap: 24px;
 
-    .h2 {
+    .text-01 {
         width: 444px;
         color: $color-black;
         font-feature-settings: 'clig' off, 'liga' off;
@@ -19,7 +19,7 @@ $color-black: var(--black, #232632);
         line-height: 48px;
     }
 
-    .h3 {
+    .text-02 {
         width: 420px;
         color: $color-black;
         font-feature-settings: 'clig' off, 'liga' off;
