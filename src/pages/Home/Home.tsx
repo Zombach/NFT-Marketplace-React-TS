@@ -9,7 +9,7 @@ export const Home: FC = () => {
         number={1}
         model={{
           userId: '1',
-          userName: 'userName',
+          userName: '@Trickster',
           avatar: './Avatar.jpg',
           volume: '15,085,035.95',
           sales: '111,850',

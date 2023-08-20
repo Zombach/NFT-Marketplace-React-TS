@@ -3,10 +3,13 @@ $color-dark-2: var(--dark-2, #191B23);
 $color-l: var(--light-gray, lightgray 50% / cover no-repeat);
 
 .user-info {
+    margin-left: 25px;
     display: flex;
     width: 251px;
+    height: 56px;
     align-items: center;
     gap: 16px;
+    margin-top: 16px;
 
     .avatar {
         width: 56px;
@@ -22,6 +25,8 @@ $color-l: var(--light-gray, lightgray 50% / cover no-repeat);
         height: 21px;
         flex-direction: column;
         justify-content: center;
+        border: none;
+        background: none;
 
         .user-name {
             color: $color-dark-2;
