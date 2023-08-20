@@ -1,3 +1,6 @@
+$font-helvetica-neue: "Helvetica Neue";
+$color-black: var(--black, #232632);
+
 .card-long-render {
     display: inline-flex;
     flex-direction: column;
@@ -14,9 +17,9 @@
         width: 1140px;
 
         .text {
-            color: var(--black, #232632);
+            color: $color-black;
             font-variant-numeric: lining-nums proportional-nums;
-            font-family: 'Helvetica Neue';
+            font-family: $font-helvetica-neue;
             font-size: 16px;
             font-weight: 700;
             line-height: 26px;
