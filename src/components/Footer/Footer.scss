@@ -30,6 +30,7 @@ $color-white: var(--white, #FFF);
     }
 
     .right {
+        margin-left: 232px;
         display: inline-flex;
         flex-direction: column;
         z-index: 2;

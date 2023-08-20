@@ -2,8 +2,8 @@ $font-lato: "Lato";
 $color-additional-dark: var(--additional-dark, #3B5266);
 
 .copyright {
+    text-align: end;
     margin-top: 84px;
-    margin-left: 349px;
     color: $color-additional-dark;
     font-family: $font-lato;
     font-size: 17px;

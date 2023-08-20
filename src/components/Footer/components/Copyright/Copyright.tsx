@@ -4,7 +4,7 @@ import React, { type FC } from 'react';
 export const Copyright: FC = () => {
   return (
     <div className="copyright">
-      <p>© 2022 Кислый бегемот уни(что)жает пирамиду</p>
+      <p>© Кислый бегемот уни(что)жает пирамиду, 2023.</p>
     </div>
   );
 };
