@@ -5,7 +5,7 @@ import { FC } from 'react';
 import { ReactComponent as LineIcon } from './assets/line.svg';
 import { ReactComponent as PictureIcon } from './assets/picture.svg';
 import { ReactComponent as ReloadIcon } from './assets/reload.svg';
-import { TextType } from '@components/Text/Text';
+import { TextType } from '@components/Button/components/Text/Text';
 import { ReactComponent as ViewIcon } from './assets/view-black.svg';
 import Avatar from '@components/Avatar/Avatar';
 import AvatarMock from '@components/Avatar/assets/avatar-mock.jpg';
