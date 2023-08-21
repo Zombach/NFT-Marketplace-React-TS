@@ -3,7 +3,6 @@ import { Details as CollectionsDetails } from '@pages/Collections/Details/Detail
 import { FC } from 'react';
 import { Route, Routes as Switch } from 'react-router-dom';
 import Blog from '@pages/Blog/Blog';
-import Carts from '@pages/Carts/Carts';
 import Checkout from '@pages/Checkout/Checkout';
 import Collections from '@pages/Collections/Collections';
 import CreateNFT from '@pages/CreateNFT/CreateNFT';
@@ -26,7 +25,6 @@ export const Routes: FC = () => {
       <Route path="collections" element={<Collections />}></Route>
       <Route path="collections/:profileId" element={<CollectionsDetails />}></Route>
       <Route path="product" element={<Product />}></Route>
-      <Route path="carts" element={<Carts />}></Route>
       <Route path="checkout" element={<Checkout />}></Route>
       <Route path="logIn" element={<LogIn />}></Route>
       <Route path="signUp" element={<SignUp />}></Route>
