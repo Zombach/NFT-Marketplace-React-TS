@@ -1,5 +1,4 @@
-$font-lato: "Lato";
-$color-additional-dark: var(--additional-dark, #3B5266);
+@import "@src/variables";
 
 .copyright {
     text-align: end;

@@ -14,10 +14,10 @@
         width: 321px;
         height: 56px;
         border-radius: 10px;
-        border: 2px solid $dark-2-color;
+        border: 2px solid $color-dark-2;
         background-color: inherit;
 
-        color: var(--dark-2, $dark-2-color);
+        color: var(--dark-2, $color-dark-2);
         text-align: center;
         font-family: $font-helvetica-neue;
         font-size: 16px;
@@ -29,11 +29,11 @@
         width: 170px;
         height: 56px;
         border-radius: 10px;
-        background: $purple-color;
-        color: $white-color;
+        background: $color-purple;
+        color: $color-white;
         border: 0;
 
-        color: $white-color;
+        color: $color-white;
         text-align: center;
         font-family: $font-helvetica-neue;
         font-size: 16px;
@@ -56,7 +56,7 @@
         .ethereum-price-value-currency {
             margin-bottom: 0;
 
-            color: $dark-2-color;
+            color: $color-dark-2;
 
             font-family: $font-helvetica-neue;
             font-size: 14px;
@@ -69,7 +69,7 @@
         }
 
         span {
-            color: $black-color;
+            color: $color-black;
             opacity: 0.7;
 
             font-family: $font-helvetica-neue;

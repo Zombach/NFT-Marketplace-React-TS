@@ -1,7 +1,7 @@
 import './Base.scss';
 import React, { type FC } from 'react';
 
-export type CartCreator = {
+export type CardCreator = {
   userId: string;
   userName: String;
   avatar: string;
@@ -12,7 +12,7 @@ export type CartCreator = {
   follow: Boolean;
 };
 
-const Cart = (userName: string) => {
+const Card = (userName: string) => {
   return {
     userId: '1',
     userName: userName,
@@ -22,36 +22,36 @@ const Cart = (userName: string) => {
     items: '50,850',
     followers: '10,150',
     follow: true,
-  } as CartCreator;
+  } as CardCreator;
 };
 
-export const carts = [
-  Cart('@user 1'),
-  Cart('@user 2'),
-  Cart('@user 3'),
-  Cart('@user 4'),
-  Cart('@user 5'),
-  Cart('@user 6'),
-  Cart('@user 7'),
-  Cart('@user 8'),
-  Cart('@user 9'),
-  Cart('@user 10'),
-  Cart('@user 11'),
-  Cart('@user 12'),
-  Cart('@user 13'),
-  Cart('@user 14'),
-  Cart('@user 15'),
-  Cart('@user 16'),
-  Cart('@user 17'),
-  Cart('@user 18'),
-  Cart('@user 19'),
-  Cart('@user 20'),
-] as CartCreator[];
+export const cards = [
+  Card('@user 1'),
+  Card('@user 2'),
+  Card('@user 3'),
+  Card('@user 4'),
+  Card('@user 5'),
+  Card('@user 6'),
+  Card('@user 7'),
+  Card('@user 8'),
+  Card('@user 9'),
+  Card('@user 10'),
+  Card('@user 11'),
+  Card('@user 12'),
+  Card('@user 13'),
+  Card('@user 14'),
+  Card('@user 15'),
+  Card('@user 16'),
+  Card('@user 17'),
+  Card('@user 18'),
+  Card('@user 19'),
+  Card('@user 20'),
+] as CardCreator[];
 
 export const Render: FC = () => {
   return (
     <div className="items">
-      {carts.map((x, index) => (
+      {cards.map((x, index) => (
         <div className="item" id={x.userId} key={`${x.userId}-${index}`}>
           <p>{x.userId}</p>
           <p>{x.userName}</p>

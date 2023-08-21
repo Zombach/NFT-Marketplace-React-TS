@@ -1,8 +1,4 @@
-$font-helvetica-neue: "Helvetica Neue";
-$color-black: var(--black, #232632);
-$color-white: var(--white, #ffffff);
-$color-dark-2: var(--dark-2, #191B23);
-$color-gray-3: var(--gray-3, #828282);
+@import "@src/variables";
 
 .subscribe {
     margin-top: 40px;

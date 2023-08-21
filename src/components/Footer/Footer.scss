@@ -1,5 +1,4 @@
-$color-gray: var(--grey, #EBEDF2);
-$color-white: var(--white, #FFF);
+@import "@src/variables";
 
 .footer {
     display: inline-flex;

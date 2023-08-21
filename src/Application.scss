@@ -1,4 +1,4 @@
-@import "./variables";
+@import "@src/variables";
 
 * {
     box-sizing: border-box;
@@ -11,7 +11,7 @@ h1 {
 }
 
 h2 {
-    color: $dark-2-color;
+    color: $color-dark-2;
 
     font-family: $font-helvetica-neue;
     font-size: 40px;
@@ -20,7 +20,7 @@ h2 {
 
 .thin-block-border {
     border-radius: 10px;
-    border: 1.4px solid $grey-color;
+    border: 1.4px solid $color-grey;
 }
 
 @media (max-width: 850px) {
