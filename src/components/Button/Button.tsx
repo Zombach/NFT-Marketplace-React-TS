@@ -3,7 +3,7 @@ import React, { type FC, FunctionComponent, SVGProps } from 'react';
 import Text, { TextType } from './components/Text/Text';
 
 interface ButtonProps {
-  children: string;
+  children?: string;
   className?: string | undefined;
   buttonClassName?: string | undefined;
   textClassName?: string | undefined;
@@ -34,9 +34,11 @@ export const Button: FC<ButtonProps> = ({ children, className, buttonClassName, 
             });
           click();
         }}>
-        <Text className={textClassName} type={textType ?? TextType.P}>
-          {children}
-        </Text>
+        {children ? (
+          <Text className={textClassName} type={textType ?? TextType.P}>
+            {children}
+          </Text>
+        ) : null}
       </button>
     </div>
   );
