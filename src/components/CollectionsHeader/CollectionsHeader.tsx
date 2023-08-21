@@ -1,35 +1,35 @@
 import './CollectionsHeader.scss';
+import { ReactComponent as Columns } from './assets/Columns.svg';
+import { ReactComponent as Dropdown } from './assets/Dropdown.svg';
+import { ReactComponent as Filter } from './assets/Filter.svg';
+import { ReactComponent as List } from './assets/List.svg';
+import { ReactComponent as SearchIcon } from './assets/Search.svg';
 import React, { FC } from 'react';
-import columns from './assets/colums.svg';
-import dropdown from './assets/dropdown.svg';
-import filter from './assets/filter.svg';
-import list from './assets/list.svg';
-import searchIcon from './assets/search.svg';
 
 export const CollectionsHeader: FC = () => {
   return (
     <div className="collection-header-section">
       <button>
-        <img src={filter} alt="" />
+        <Filter />
         Filters
       </button>
       <button>
-        NFT's <img src={dropdown} alt="" />
+        NFT's <Dropdown />
       </button>
       <div className="search-container">
         <input type="text" className="search-input" placeholder="Search by collection, user or NFT..." />
-        <img src={searchIcon} alt="" />
+        <SearchIcon />
       </div>
       <button>
         Trending
-        <img src={dropdown} alt="" />
+        <Dropdown />
       </button>
       <div className="switches">
         <button>
-          <img src={columns} alt="" />
+          <Columns />
         </button>
         <button>
-          <img src={list} alt="" />
+          <List />
         </button>
       </div>
     </div>
