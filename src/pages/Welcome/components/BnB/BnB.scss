@@ -1,4 +1,4 @@
-$font-family: 'Helvetica Neue';
+$font-helvetica-neue: "Helvetica Neue";
 $color-black: var(--black, #232632);
 $color-gray-3: var(--gray-3, #828282);
 
@@ -87,7 +87,7 @@ $color-gray-3: var(--gray-3, #828282);
             color: $color-black;
             text-align: center;
             font-feature-settings: 'clig' off, 'liga' off;
-            font-family: $font-family;
+            font-family: $font-helvetica-neue;
             font-size: 24px;
             font-weight: 500;
             line-height: 34px;
@@ -96,8 +96,7 @@ $color-gray-3: var(--gray-3, #828282);
         .text {
             width: 379px;
             color: $color-gray-3;
-            //font-variant-numeric: lining-nums proportional-nums;
-            font-family: "Helvetica Neue";
+            font-family: $font-helvetica-neue;
             font-size: 14px;
             font-weight: 400;
             line-height: 22px;

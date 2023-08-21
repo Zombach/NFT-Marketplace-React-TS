@@ -21,9 +21,3 @@ export const Welcome: FC = () => {
 };
 
 export default Welcome;
-
-/*      
-      <div className="right">
-        <BnB />
-      </div>
-*/

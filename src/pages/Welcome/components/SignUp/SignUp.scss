@@ -1,4 +1,4 @@
-$font-family: 'Helvetica Neue';
+$font-helvetica-neue: 'Helvetica Neue';
 $color-black: var(--black, #232632);
 $color-white: var(--white, #FFF);
 $color-purple: var(--purple, #7B61FF);
@@ -15,7 +15,7 @@ $color-gray-3: var(--gray-3, #828282);
     .h2 {
         color: $color-black;
         font-feature-settings: 'clig' off, 'liga' off;
-        font-family: $font-family;
+        font-family: $font-helvetica-neue;
         font-size: 40px;
         font-weight: 500;
         line-height: 48px;
@@ -48,7 +48,7 @@ $color-gray-3: var(--gray-3, #828282);
             color: $color-white;
             text-align: right;
             font-feature-settings: 'clig' off, 'liga' off;
-            font-family: $font-family;
+            font-family: $font-helvetica-neue;
             font-size: 20px;
             font-weight: 400;
             line-height: 32px;
@@ -110,7 +110,7 @@ $color-gray-3: var(--gray-3, #828282);
                 color: $color-black;
                 text-align: right;
                 font-feature-settings: 'clig' off, 'liga' off;
-                font-family: $font-family;
+                font-family: $font-helvetica-neue;
                 font-size: 20px;
                 font-weight: 400;
                 line-height: 32px;
@@ -140,11 +140,10 @@ $color-gray-3: var(--gray-3, #828282);
                 color: $color-black;
                 text-align: right;
                 font-feature-settings: 'clig' off, 'liga' off;
-                font-family: $font-family;
+                font-family: $font-helvetica-neue;
                 font-size: 20px;
                 font-weight: 400;
                 line-height: 32px;
-                /* 160% */
             }
         }
     }
@@ -160,7 +159,7 @@ $color-gray-3: var(--gray-3, #828282);
             color: $color-gray-3;
             text-align: center;
             font-variant-numeric: lining-nums proportional-nums;
-            font-family: $font-family;
+            font-family: $font-helvetica-neue;
             font-size: 14px;
             font-weight: 400;
             line-height: 22px;

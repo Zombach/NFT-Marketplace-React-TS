@@ -13,6 +13,7 @@ interface SignUpProps {
 export const SignUp: FC<SignUpProps> = ({ className }) => {
   return (
     <div className={className}>
+      {/*Использовать прямое обращение к стилям тега h2, дождаться появления в dev*/}
       <h2 className="h2">Welcome to BnB!</h2>
       <button className="button">
         <Man className="icon" />
