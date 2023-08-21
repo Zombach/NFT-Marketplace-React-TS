@@ -1,8 +1,13 @@
 import './Product.scss';
-import React, { type FC } from 'react';
+import { type FC } from 'react';
+import ProductSection from './components/ProductSection/ProductSection';
 
 export const Product: FC = () => {
-  return <div className="">Product</div>;
+  return (
+    <div className="product-page">
+      <ProductSection></ProductSection>
+    </div>
+  );
 };
 
 export default Product;

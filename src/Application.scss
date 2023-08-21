@@ -1,7 +1,30 @@
-@import "./resources/fonts/fonts";
+@import "./variables";
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+h1 {
+    font-family: $font-helvetica-neue;
+}
+
+h2 {
+    color: $dark-2-color;
+
+    font-family: $font-helvetica-neue;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.thin-block-border {
+    border-radius: 10px;
+    border: 1.4px solid $grey-color;
+}
+
+@media (max-width: 850px) {
+    .desktop-only {
+        display: none !important;
+    }
 }
