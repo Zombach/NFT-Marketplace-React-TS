@@ -1,7 +1,7 @@
-@import '../../../../variables';
+@import '@src/variables';
 
 .price-card {
-    background: var(--grey, #EBEDF2);
+    background: $grey-color;
     border-radius: 10px;
     display: flex;
     padding: 24px;
@@ -9,19 +9,14 @@
     width: 100%;
 
     .price-card-title {
-        font-variant-numeric: lining-nums proportional-nums;
         margin-bottom: 16px;
-
-        font-family: $helveticaNeueFont;
+        font-family: $font-helvetica-neue;
         font-size: 14px;
-        font-style: normal;
         font-weight: 400;
         line-height: 22px;
     }
 
     .ethereum-price-value-currency {
-        font-feature-settings: 'clig' off, 'liga' off;
-
         font-size: 24px;
         font-weight: 500;
     }

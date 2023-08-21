@@ -1,4 +1,4 @@
-@import '../../variables';
+@import '@src/variables';
 
 .ethereum-price {
     display: grid;
@@ -8,15 +8,12 @@
 }
 
 .ethereum-price-value-currency {
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: $helveticaNeueFont;
-    font-style: normal;
+    font-family: $font-helvetica-neue;
 }
 
 .ethereum-price-extra {
-    font-family: $helveticaNeueFont;
+    font-family: $font-helvetica-neue;
     font-size: 14px;
-    font-style: normal;
     font-weight: 400;
     margin-top: 4px;
 }

@@ -1,4 +1,4 @@
-@import '../../../../variables';
+@import '@src/variables';
 
 .product-section {
     display: flex;
@@ -17,134 +17,6 @@
     h2 {
         margin-bottom: 10px;
     }
-
-    .authored-by {
-        align-items: center;
-        display: flex;
-        margin-bottom: 24px;
-
-        color: var(--dark-2, #191B23);
-        font-variant-numeric: lining-nums proportional-nums;
-
-        /* text */
-        font-family: $helveticaNeueFont;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-
-        .created-by {
-            color: var(--gray-3, #828282);
-        }
-    }
-
-    .product-price-block {
-        padding: 24px;
-        margin-bottom: 24px;
-
-        .product-price-block-top {
-            display: flex;
-            gap: 9px;
-            margin-bottom: 24px;
-        }
-    }
-
-    .buy-button {
-        width: 321px;
-        height: 56px;
-        border-radius: 10px;
-        border: 2px solid var(--dark-2, #191B23);
-        background-color: inherit;
-
-        color: var(--dark-2, #191B23);
-        text-align: center;
-        font-variant-numeric: lining-nums proportional-nums;
-        /* button */
-        font-family: $helveticaNeueFont;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        /* 162.5% */
-        text-transform: capitalize;
-    }
-
-    .bid-button {
-        width: 170px;
-        height: 56px;
-        border-radius: 10px;
-        background: var(--purple, #7B61FF);
-        color: var(--white, #FFF);
-        border: 0;
-
-        color: var(--dark-2, #ffffff);
-        text-align: center;
-        font-variant-numeric: lining-nums proportional-nums;
-        /* button */
-        font-family: $helveticaNeueFont;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        /* 162.5% */
-        text-transform: capitalize;
-    }
-
-    .product-price-buttons {
-        display: flex;
-        gap: 16px;
-    }
-
-    .last-price {
-        display: flex;
-        gap: 10px;
-        margin-bottom: 24px;
-        width: 100%;
-        justify-content: center;
-        line-height: 22px;
-
-        .ethereum-price-value-currency {
-            margin-bottom: 0;
-
-            color: var(--dark-2, #191B23);
-            font-variant-numeric: lining-nums proportional-nums;
-
-            /* text */
-            font-family: $helveticaNeueFont;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            /* 157.143% */
-        }
-
-        svg {
-            height: 14px;
-            width: 14px;
-        }
-
-        span {
-            color: var(--black, #232632);
-            font-variant-numeric: lining-nums proportional-nums;
-            opacity: 0.7;
-
-            /* text */
-            font-family: $helveticaNeueFont;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            /* 157.143% */
-        }
-    }
-}
-
-.product-actions-part {
-    display: flex;
-    flex-direction: column;
-    gap: 17px;
-}
-
-.product-actions {
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 24px;
-    padding-bottom: 24px;
 }
 
 @media (max-width: 850px) {
@@ -153,21 +25,5 @@
         gap: 34px;
         margin-top: 0;
         flex-direction: column;
-    }
-
-    .product-price-buttons {
-        flex-direction: column;
-
-        .buy-button {
-            width: 100%;
-        }
-
-        .bid-button {
-            width: 100%;
-        }
-    }
-
-    .desktop-only {
-        display: none !important;
     }
 }

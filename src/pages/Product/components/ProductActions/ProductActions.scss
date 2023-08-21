@@ -1,0 +1,12 @@
+.product-actions-part {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.product-actions {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
