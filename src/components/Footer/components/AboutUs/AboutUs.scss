@@ -1,6 +1,4 @@
-$font-helvetica-neue: "Helvetica Neue";
-
-$color-black: var(--black, #232632);
+@import "@src/variables";
 
 .about-us {
     display: inline-flex;

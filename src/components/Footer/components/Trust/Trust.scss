@@ -1,5 +1,4 @@
-$font-helvetica-neue: "Helvetica Neue";
-$color-gray-3: var(--gray-3, #828282);
+@import "@src/variables";
 
 .trust {
     width: 303px;

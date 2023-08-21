@@ -1,9 +1,13 @@
-@import "./resources/fonts/fonts";
-$font-helvetica-neue: 'Helvetica Neue';
+@import "@resources/fonts/fonts";
+$font-helvetica-neue: "Helvetica Neue";
+$font-lato: "Lato";
 
-$dark-2-color: #191B23;
-$grey-3-color: #828282;
-$grey-color: #EBEDF2;
-$purple-color: #7B61FF;
-$white-color: #FFFFFF;
-$black-color: #232632;
+$color-white: #FFFFFF;
+$color-black: #232632;
+$color-black-default: #000;
+$color-dark-2: #191B23;
+$color-dark-additional: #3B5266;
+$color-gray-light: #d3d3d3;
+$color-grey: #EBEDF2;
+$color-grey-3: #828282;
+$color-purple: #7B61FF;
