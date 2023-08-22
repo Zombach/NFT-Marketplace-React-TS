@@ -1,6 +1,6 @@
 import './CardsFragment.scss';
 import { CardMarketplace } from '@resources/moq/Marketplace';
-import CardMiddle from '@components/Cards/components/CardMiddle/CardMiddle';
+import CardMiddle from '@components/Cards/CardMiddle/CardMiddle';
 import React, { type FC } from 'react';
 
 interface CardsFragmentProps {

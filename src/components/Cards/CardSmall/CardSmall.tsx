@@ -1,4 +1,4 @@
-import './CardLong.scss';
+import './CardSmall.scss';
 import React, { type FC } from 'react';
 import UserInfo from './components/UserInfo/UserInfo';
 import type { CardSmall as Model } from '@models/CardModels/CardModels';

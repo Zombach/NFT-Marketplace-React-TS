@@ -2,8 +2,8 @@ import './CardMiddle.scss';
 import { ReactComponent as Avatar } from './assets/Avatar.svg';
 import { CardMarketplace } from '@resources/moq/Marketplace';
 import { ReactComponent as Clock } from './assets/Clock.svg';
-import { ReactComponent as Ethereum } from '../../assets/Ethereum.svg';
-import { ReactComponent as Heart } from '../../assets/Heart.svg';
+import { ReactComponent as Ethereum } from '../assets/Ethereum.svg';
+import { ReactComponent as Heart } from '../assets/Heart.svg';
 import React, { type FC } from 'react';
 
 interface CardMiddleFragmentProps {

@@ -2,7 +2,7 @@
 
 .middle-card {
     border-radius: 10px;
-    border: 1px solid $grey-color;
+    border: 1px solid $color-grey;
     font-family: $font-helvetica-neue;
 }
 
@@ -37,7 +37,7 @@
 
 .price-bnb {
     margin-top: 4px;
-    color: $grey-4-color;
+    color: $color-grey-4;
     font-size: 14px;
 }
 
@@ -45,7 +45,7 @@
     margin-top: 10px;
     padding: 6px 8px;
     border-radius: 10px;
-    background-color: $grey-color;
+    background-color: $color-grey;
     display: flex;
     border: none;
     cursor: pointer;
@@ -60,7 +60,7 @@
 .user-container {
     display: flex;
     flex-direction: row;
-    color: $grey-3-color;
+    color: $color-grey-3;
     gap: 10px;
 }
 
@@ -77,8 +77,8 @@
     position: absolute;
     top: 8px;
     right: 8px;
-    background-color: $white-color;
-    color: $black-color;
+    background-color: $color-white;
+    color: $color-black;
     padding: 6px 8px;
     border-radius: 10px;
     font-size: 12px;
