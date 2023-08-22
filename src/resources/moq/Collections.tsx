@@ -1,4 +1,6 @@
 import './Base.scss';
+import { Collection } from 'models/Collection';
+import AvatarMock from './avatar-mock.jpg';
 import React, { type FC } from 'react';
 
 export type CardCollections = {
@@ -15,7 +17,7 @@ const Card = (userId: string) => {
   return {
     userId: userId,
     collectionName: 'club',
-    avatar: './Image.jpg',
+    avatar: AvatarMock,
     nftImage: 'image source',
     owners: '34,7K owners',
     totalVolume: '795,6K BNB',
@@ -62,4 +64,18 @@ export const Render: FC = () => {
       ))}
     </div>
   );
+};
+
+const collection: Collection = {
+  id: '',
+  name: '',
+  userId: '',
+  userName: '',
+  avatar: '',
+  description: '',
+  floorPrice: '',
+  totalVolume: '',
+  countItems: 0,
+  ownersCount: 0,
+  address: '',
 };

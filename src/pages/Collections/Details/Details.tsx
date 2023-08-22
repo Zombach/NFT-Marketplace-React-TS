@@ -10,6 +10,8 @@ import Image from './assets/details-img.jpg';
 import React, { type FC } from 'react';
 
 export const Details: FC = () => {
+  // collectionName, username, description, floorPrice, totalVolume, countItems, ownersCount, address
+
   return (
     <div className="details-page">
       <div className="header-img">
@@ -42,6 +44,18 @@ export const Details: FC = () => {
           <div className="details-item">
             <span>Total volume</span>
             <EthereumPrice value={794.6}></EthereumPrice>
+          </div>
+          <div className="details-item">
+            <span>Items</span>
+            <div className="details-item-right-part">8,5K</div>
+          </div>
+          <div className="details-item">
+            <span>Owners</span>
+            <div className="details-item-right-part">21,6K</div>
+          </div>
+          <div className="details-item">
+            <span>Address</span>
+            <div className="details-item-right-part">0x394...da91</div>
           </div>
         </div>
       </section>
