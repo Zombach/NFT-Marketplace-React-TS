@@ -28,7 +28,7 @@ export const CardMiddle: FC<CardMiddleFragmentProps> = (props) => {
           <Avatar />
           <span className="user-name">{card.userName}</span>
         </div>
-        <div className="cost-likes-container">
+        <div className="price-like-container">
           <div className="price-container">
             <Ethereum />
             <div>
@@ -36,12 +36,10 @@ export const CardMiddle: FC<CardMiddleFragmentProps> = (props) => {
               <p className="price-bnb">{card.priceBnB}</p>
             </div>
           </div>
-          <div>
-            <button className="likes-btn">
-              <Heart />
-              <span>{card.like}</span>
-            </button>
-          </div>
+          <button className="likes-btn">
+            <Heart />
+            <span>{card.like}</span>
+          </button>
         </div>
       </div>
     </div>
