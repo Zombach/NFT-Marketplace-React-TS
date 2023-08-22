@@ -1,6 +1,6 @@
 import './Marketplace.scss';
-import { cards } from '@resources/moq/Collections';
-import CardMiddle from '@components/Cards/components/CardMiddle/CardMiddle';
+import { cards } from '@resources/moq/Marketplace';
+import CardsFragment from './CardsFragment/CardsFragment';
 import CollectionsHeader from '@components/CollectionsHeader/CollectionsHeader';
 import React, { type FC, useState } from 'react';
 
@@ -12,7 +12,7 @@ export const Marketplace: FC = () => {
   return (
     <div className="market-place-section">
       <CollectionsHeader />
-      <div>{!isTable && cards.map((item, index) => <CardMiddle key={index} />)}</div>
+      <CardsFragment cards={cards} isTable={isTable} />
     </div>
   );
 };
