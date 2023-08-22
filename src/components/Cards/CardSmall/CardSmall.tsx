@@ -1,21 +1,11 @@
 import './CardLong.scss';
 import React, { type FC } from 'react';
 import UserInfo from './components/UserInfo/UserInfo';
-
-type CardSmallModel = {
-  userId: string;
-  userName: string;
-  avatar: string;
-  volume: string;
-  sales: string;
-  items: string;
-  followers: string;
-  follow: boolean;
-};
+import type { CardSmall as Model } from '@models/CardModels/CardModels';
 
 interface CardSmallProps {
   number: number;
-  model: CardSmallModel;
+  model: Model;
 }
 
 export const CardSmall: FC<CardSmallProps> = ({ number, model }) => {

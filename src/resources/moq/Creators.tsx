@@ -1,18 +1,8 @@
 import './Base.scss';
 import React, { type FC } from 'react';
+import type { CardSmall } from '@models/CardModels/CardModels';
 
-export type CardCreator = {
-  userId: string;
-  userName: String;
-  avatar: string;
-  volume: String;
-  sales: String;
-  items: String;
-  followers: String;
-  follow: Boolean;
-};
-
-const Card = (userName: string) => {
+const Card = (userName: string): CardSmall => {
   return {
     userId: '1',
     userName: userName,
@@ -22,10 +12,10 @@ const Card = (userName: string) => {
     items: '50,850',
     followers: '10,150',
     follow: true,
-  } as CardCreator;
+  };
 };
 
-export const cards = [
+export const cards: CardSmall[] = [
   Card('@user 1'),
   Card('@user 2'),
   Card('@user 3'),
@@ -46,7 +36,7 @@ export const cards = [
   Card('@user 18'),
   Card('@user 19'),
   Card('@user 20'),
-] as CardCreator[];
+];
 
 export const Render: FC = () => {
   return (

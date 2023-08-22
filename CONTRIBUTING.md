@@ -16,9 +16,9 @@
 Пример использования алиасов:
 
 ```typescript
-import MyComponent from '@/components/MyComponent';
-import ResourceHelper from '@/resource/ResourceHelper';
-import HomePage from '@/pages/HomePage';
+import MyComponent from '@components/MyComponent';
+import ResourceHelper from '@resource/ResourceHelper';
+import HomePage from '@pages/HomePage';
 ```
 
 ## Использование переменных из `_variables.scss`

@@ -17,7 +17,7 @@
         border: 2px solid $color-dark-2;
         background-color: inherit;
 
-        color: var(--dark-2, $color-dark-2);
+        color: $color-dark-2;
         text-align: center;
         font-family: $font-helvetica-neue;
         font-size: 16px;
