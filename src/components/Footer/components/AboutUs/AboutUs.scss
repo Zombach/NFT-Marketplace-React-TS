@@ -1,6 +1,4 @@
-$font-helvetica-neue: "Helvetica Neue";
-
-$color-black: var(--black, #232632);
+@import "@src/variables";
 
 .about-us {
     display: inline-flex;
@@ -9,21 +7,19 @@ $color-black: var(--black, #232632);
     align-items: flex-start;
     gap: 24px;
 
-    .text-01 {
+    .company-overview {
         width: 444px;
         color: $color-black;
         font-feature-settings: 'clig' off, 'liga' off;
-        font-family: $font-helvetica-neue;
         font-size: 40px;
         font-weight: 500;
         line-height: 48px;
     }
 
-    .text-02 {
+    .company-mail {
         width: 420px;
         color: $color-black;
         font-feature-settings: 'clig' off, 'liga' off;
-        font-family: $font-helvetica-neue;
         font-size: 20px;
         font-weight: 500;
         line-height: 34px;

@@ -1,8 +1,4 @@
-$font-helvetica-neue: "Helvetica Neue";
-$color-black: var(--black, #232632);
-$color-white: var(--white, #ffffff);
-$color-dark-2: var(--dark-2, #191B23);
-$color-gray-3: var(--gray-3, #828282);
+@import "@src/variables";
 
 .subscribe {
     margin-top: 40px;
@@ -20,7 +16,6 @@ $color-gray-3: var(--gray-3, #828282);
             height: 26px;
             color: $color-black;
             font-variant-numeric: lining-nums proportional-nums;
-            font-family: $font-helvetica-neue;
             font-size: 16px;
             font-weight: 700;
             line-height: 26px;
@@ -60,9 +55,8 @@ $color-gray-3: var(--gray-3, #828282);
                 .text {
                     display: flex;
                     align-items: center;
-                    color: $color-gray-3;
+                    color: $color-grey-3;
                     font-variant-numeric: lining-nums proportional-nums;
-                    font-family: $font-helvetica-neue;
                     font-size: 12px;
                     font-weight: 500;
                     line-height: 14px;
@@ -85,7 +79,6 @@ $color-gray-3: var(--gray-3, #828282);
                     flex: 1 0 0;
                     color: $color-dark-2;
                     font-variant-numeric: lining-nums proportional-nums;
-                    font-family: $font-helvetica-neue;
                     font-size: 14px;
                     font-weight: 400;
                     line-height: 22px;

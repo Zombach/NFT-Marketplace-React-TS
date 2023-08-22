@@ -1,5 +1,4 @@
-$font-helvetica-neue: "Helvetica Neue";
-//TODO: add colors and fonts to variables 
+@import "@src/variables";
 
 .collection-header-section {
     margin-top: 40px;
@@ -11,15 +10,14 @@ $font-helvetica-neue: "Helvetica Neue";
 .search-container {
     display: flex;
     align-items: center;
-    border: 2px solid black;
+    border: 2px solid $color-black-default;
     border-radius: 10px;
     padding: 16px;
     min-width: 480px;
 }
 
 .search-input::placeholder {
-    font-size: 14px;
-    font-family: $font-helvetica-neue;
+    font-size: 14px;    
 }
 
 .search-input {
@@ -34,10 +32,9 @@ $font-helvetica-neue: "Helvetica Neue";
     padding: 8px;
     width: 100%;
     gap: 10px;
-    font-family: $font-helvetica-neue;
     align-items: center;
     justify-content: center;
-    background-color: #EBEDF2;
+    background-color: $color-grey;
     border-radius: 10px;
     font-weight: 400;
     border: none;
