@@ -1,9 +1,9 @@
 import './CollectionsHeader.scss';
-import { ReactComponent as Columns } from './assets/Columns.svg';
-import { ReactComponent as Dropdown } from './assets/Dropdown.svg';
-import { ReactComponent as Filter } from './assets/Filter.svg';
-import { ReactComponent as List } from './assets/List.svg';
-import { ReactComponent as SearchIcon } from './assets/Search.svg';
+import { ReactComponent as Columns } from './assets/columns.svg';
+import { ReactComponent as Dropdown } from './assets/dropdown.svg';
+import { ReactComponent as Filter } from './assets/filter.svg';
+import { ReactComponent as List } from './assets/list.svg';
+import { ReactComponent as SearchIcon } from './assets/search.svg';
 import React, { FC } from 'react';
 
 export const CollectionsHeader: FC = () => {

@@ -1,27 +1,17 @@
-import './CardLong.scss';
+import './CardSmall.scss';
 import React, { type FC } from 'react';
 import UserInfo from './components/UserInfo/UserInfo';
+import type { CardSmall as Model } from '@models/CardModels/CardModels';
 
-type CardLongModel = {
-  userId: string;
-  userName: string;
-  avatar: string;
-  volume: string;
-  sales: string;
-  items: string;
-  followers: string;
-  follow: boolean;
-};
-
-interface CardLongProps {
+interface CardSmallProps {
   number: number;
-  model: CardLongModel;
+  model: Model;
 }
 
-export const CardLong: FC<CardLongProps> = ({ number, model }) => {
+export const CardSmall: FC<CardSmallProps> = ({ number, model }) => {
   const { userId, userName, avatar, volume, sales, items, followers, follow } = model;
   return (
-    <div className="card-long">
+    <div className="card-small">
       <p className="text number">{number}</p>
       <UserInfo userId={userId} userName={userName} avatar={avatar}></UserInfo>
       <p className="text volume">{volume}</p>
@@ -35,4 +25,4 @@ export const CardLong: FC<CardLongProps> = ({ number, model }) => {
   );
 };
 
-export default CardLong;
+export default CardSmall;

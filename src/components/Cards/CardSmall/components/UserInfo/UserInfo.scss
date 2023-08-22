@@ -1,6 +1,4 @@
-$font-helvetica-neue: "Helvetica Neue";
-$color-dark-2: var(--dark-2, #191B23);
-$color-l: var(--light-gray, lightgray 50% / cover no-repeat);
+@import "@src/variables";
 
 .user-info {
     margin-left: 25px;
@@ -31,7 +29,6 @@ $color-l: var(--light-gray, lightgray 50% / cover no-repeat);
         .user-name {
             color: $color-dark-2;
             font-variant-numeric: lining-nums proportional-nums;
-            font-family: $font-helvetica-neue;
             font-size: 16px;
             font-weight: 700;
             line-height: 26px;
