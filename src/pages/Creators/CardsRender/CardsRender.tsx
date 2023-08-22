@@ -1,11 +1,11 @@
 import './CardsRender.scss';
-import { CardSmall as model } from '@models/CardModels/CardModels';
+import { type CardSmall as Cards } from '@models/CardModels/CardModels';
 import CardSmall from '@components/Cards/CardSmall/CardSmall';
 import HeaderCardSmall from './HeaderCardSmall/HeaderCardSmall';
 import React, { type FC } from 'react';
 
 interface CardsRenderProps {
-  cards: model[];
+  cards: Cards[];
 }
 
 export const CardsRender: FC<CardsRenderProps> = ({ cards }) => {
