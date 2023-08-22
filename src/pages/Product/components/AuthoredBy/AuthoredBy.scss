@@ -1,0 +1,16 @@
+@import "@src/variables";
+
+.authored-by {
+    align-items: center;
+    display: flex;
+    margin-bottom: 24px;
+
+    color: $color-dark-2;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    .created-by {
+        color: $color-grey-3;
+    }
+}

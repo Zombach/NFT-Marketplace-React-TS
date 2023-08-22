@@ -1,0 +1,14 @@
+@import '@src/variables';
+
+.ethereum-price {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    column-gap: 4px;
+    align-items: center;
+}
+
+.ethereum-price-extra {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 4px;
+}

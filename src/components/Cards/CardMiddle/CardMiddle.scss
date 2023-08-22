@@ -1,0 +1,88 @@
+@import '@src/variables';
+
+.middle-card {
+    border-radius: 10px;
+    border: 1px solid $color-grey;
+}
+
+.bottom-section {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 8px 0;
+}
+
+.bottom-section-header {
+    font-size: 20px;
+}
+
+.price-like-container {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-container {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.price {
+    font-family: $font-helvetica-neue;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.price-bnb {
+    margin-top: 4px;
+    color: $color-grey-4;
+    font-size: 14px;
+}
+
+.likes-btn {
+    margin-top: 10px;
+    padding: 6px 8px;
+    border-radius: 10px;
+    background-color: $color-grey;
+    display: flex;
+    border: none;
+    cursor: pointer;
+}
+
+.likes-btn span {
+    font-size: 14px;
+    margin-left: 4px;
+    align-self: center;
+}
+
+.user-container {
+    display: flex;
+    flex-direction: row;
+    color: $color-grey-3;
+    gap: 10px;
+}
+
+.user-name {
+    display: flex;
+    align-items: center;
+}
+
+.top-section {
+    position: relative;
+}
+
+.time-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: $color-white;
+    color: $color-black;
+    padding: 6px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    text-align: center;
+}

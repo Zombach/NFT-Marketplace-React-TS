@@ -1,8 +1,18 @@
 import './Home.scss';
-import React, { type FC } from 'react';
+import { UserContext } from '@components/Contexts/UserContext';
+import Footer from '@components/Footer/Footer';
+import React, { type FC, useContext } from 'react';
 
 export const Home: FC = () => {
-  return <div className="">Home</div>;
+  const context = useContext(UserContext);
+  return (
+    <div className="">
+      <p>Id: {context?.id}</p>
+      <p>UserName: {context?.name}</p>
+      <p>Token: {context?.token}</p>
+      <Footer />
+    </div>
+  );
 };
 
 export default Home;
