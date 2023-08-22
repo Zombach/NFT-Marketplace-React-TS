@@ -17,8 +17,7 @@
 }
 
 .search-input::placeholder {
-    font-size: 14px;
-    font-family: $font-helvetica-neue;
+    font-size: 14px;    
 }
 
 .search-input {
@@ -33,7 +32,6 @@
     padding: 8px;
     width: 100%;
     gap: 10px;
-    font-family: $font-helvetica-neue;
     align-items: center;
     justify-content: center;
     background-color: $color-grey;

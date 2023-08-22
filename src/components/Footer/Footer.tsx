@@ -1,6 +1,6 @@
 import './Footer.scss';
-import { ReactComponent as Background } from './assets/Background.svg';
-import { ReactComponent as Delimiter } from './assets/Delimiter.svg';
+import { ReactComponent as Background } from './assets/background.svg';
+import { ReactComponent as Delimiter } from './assets/delimiter.svg';
 import AboutUs from './components/AboutUs/AboutUs';
 import Copyright from './components/Copyright/Copyright';
 import Links from './components/Links/Links';
