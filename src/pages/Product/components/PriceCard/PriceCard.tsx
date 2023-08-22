@@ -4,7 +4,7 @@ import { FC } from 'react';
 
 interface PriceCardProps {
   title: string;
-  price: number;
+  price: number | string;
   bottomText: string;
 }
 

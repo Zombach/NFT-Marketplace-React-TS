@@ -18,6 +18,7 @@
 
     margin-right: 150px;
     margin-left: 150px;
+    margin-bottom: 70px;
 
     .details-page-section-left-part {
         position: relative;
@@ -49,13 +50,8 @@
             .create-community-button {
                 width: 321px;
                 height: 56px;
-                border-radius: 10px;
-                border: 2px solid $color-dark-2;
-                background-color: inherit;
 
-                color: $color-dark-2;
                 text-align: center;
-                font-family: $font-helvetica-neue;
                 font-size: 16px;
                 font-weight: 700;
                 text-transform: capitalize;
@@ -64,13 +60,8 @@
             .bid-button {
                 width: 170px;
                 height: 56px;
-                border-radius: 10px;
-                background: $color-purple;
-                color: $color-white;
 
-                border: 0;
                 text-align: center;
-                font-family: $font-helvetica-neue;
                 font-size: 16px;
                 font-weight: 700;
                 text-transform: capitalize;
@@ -119,6 +110,20 @@
                 font-weight: 400;
                 line-height: 22px;
             }
+
+            .details-item-right-part {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .ethereum-price {
+                column-gap: 10px;
+
+                .ethereum-price-value-currency {
+                    font-weight: 700;
+                }
+            }
         }
     }
 }
@@ -128,6 +133,7 @@
         flex-direction: column;
         margin-right: 24px;
         margin-left: 24px;
+        margin-bottom: 48px;
     }
 
     .header-img {
@@ -136,6 +142,34 @@
         img {
             height: 200px;
             border-radius: 0;
+        }
+    }
+
+    .details-page-section {
+        .details-page-section-left-part {
+            .profile-buttons {
+                flex-direction: column;
+
+                .create-community-button {
+                    width: 100%;
+                }
+
+                .profile-buttons-right {
+                    .button-box {
+                        width: 100%;
+
+                        .bid-button {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .details-page-section-right-part {
+            .details-item {
+                gap: 0;
+            }
         }
     }
 }

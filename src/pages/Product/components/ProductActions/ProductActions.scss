@@ -10,3 +10,11 @@
     padding-top: 24px;
     padding-bottom: 24px;
 }
+
+@media (max-width: 370px) {
+    .product-actions {
+        padding: 24px;
+        flex-direction: column;
+        gap: 17px;
+    }
+}

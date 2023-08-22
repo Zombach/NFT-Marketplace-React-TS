@@ -19,6 +19,20 @@ h2 {
     border: 1.4px solid $color-grey;
 }
 
+.primary-btn {
+    border-radius: 10px;
+    border: 2px solid $color-dark-2;
+    background-color: inherit;
+    color: $color-dark-2;
+}
+
+.primary-2-btn {
+    border-radius: 10px;
+    background: $color-purple;
+    color: $color-white;
+    border: 0;
+}
+
 @media (max-width: 850px) {
     .desktop-only {
         display: none !important;
