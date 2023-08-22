@@ -11,7 +11,7 @@ interface CardSmallProps {
 export const CardSmall: FC<CardSmallProps> = ({ number, model }) => {
   const { userId, userName, avatar, volume, sales, items, followers, follow } = model;
   return (
-    <div className="card-long">
+    <div className="card-small">
       <p className="text number">{number}</p>
       <UserInfo userId={userId} userName={userName} avatar={avatar}></UserInfo>
       <p className="text volume">{volume}</p>
