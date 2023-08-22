@@ -7,9 +7,7 @@ export const Application: FC = () => {
   return (
     <UserProvider>
       <div className="application">
-        <header />
         <Routes />
-        <footer />
       </div>
     </UserProvider>
   );

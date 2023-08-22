@@ -1,7 +1,4 @@
-$font-helvetica-neue: "Helvetica Neue";
-$color-white: var(--white, #FFF);
-$color-grey: var(--grey, #EBEDF2);
-$color-dark-2: var(--dark-2, #191B23);
+@import '@src/variables';
 
 .card-long {
     display: inline-flex;
@@ -16,7 +13,6 @@ $color-dark-2: var(--dark-2, #191B23);
     .text {
         color: $color-dark-2;
         text-align: center;
-        font-family: $font-helvetica-neue;
         font-feature-settings: 'clig' off, 'liga' off;
         font-size: 20px;
         font-weight: 400;
@@ -63,10 +59,9 @@ $color-dark-2: var(--dark-2, #191B23);
         background: rgba(123, 97, 255, 0.15);
 
         .follow-text {
-            color: var(--purple, #7B61FF);
+            color: $color-purple;
             text-align: center;
             font-variant-numeric: lining-nums proportional-nums;
-            font-family: $font-helvetica-neue;
             font-size: 16px;
             font-weight: 700;
             line-height: 26px;
