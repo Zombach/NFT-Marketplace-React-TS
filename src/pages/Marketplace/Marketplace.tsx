@@ -4,8 +4,6 @@ import CardsFragment from './CardsFragment/CardsFragment';
 import CollectionsHeader from '@components/CollectionsHeader/CollectionsHeader';
 import React, { type FC, useState } from 'react';
 
-console.log('cards', cards);
-
 export const Marketplace: FC = () => {
   const [isTable, setIsTable] = useState<boolean>(false);
 
