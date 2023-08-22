@@ -5,14 +5,14 @@ import React, { type FC } from 'react';
 export const HeaderCardSmall: FC = () => {
   return (
     <div className="header-card">
-      <p className="text creator">Creator</p>
-      <p className="text volume">Volume (USD)</p>
+      <span className="text creator">Creator</span>
+      <span className="text volume">Volume (USD)</span>
       <Icon className="icon" />
-      <p className="text sales">Sales</p>
+      <span className="text sales">Sales</span>
       <Icon className="icon" />
-      <p className="text items">Items</p>
+      <span className="text items">Items</span>
       <Icon className="icon" />
-      <p className="text followers">Followers</p>
+      <span className="text followers">Followers</span>
       <Icon className="icon" />
     </div>
   );
