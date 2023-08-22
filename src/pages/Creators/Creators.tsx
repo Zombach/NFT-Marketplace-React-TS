@@ -6,14 +6,11 @@ import React, { type FC, useEffect, useState } from 'react';
 
 export const Creators: FC = () => {
   const [cards, setCards] = useState<CardSmall[]>([]);
-  const SetCards = (value: CardSmall[]) => {
-    setCards(() => value);
-  };
 
   useEffect(() => {
     const getCards = async () => {
       await timeout(1000);
-      SetCards(mock);
+      setCards(mock);
     };
     getCards();
   }, []);
