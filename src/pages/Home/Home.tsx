@@ -10,7 +10,6 @@ export const Home: FC = () => {
       <p>Id: {context?.id}</p>
       <p>UserName: {context?.name}</p>
       <p>Token: {context?.token}</p>
-      <Footer />
     </div>
   );
 };
