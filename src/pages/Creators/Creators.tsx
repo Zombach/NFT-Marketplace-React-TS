@@ -5,7 +5,7 @@ import CardsRender from './CardsRender/CardsRender';
 import React, { type FC, useEffect, useState } from 'react';
 
 export const Creators: FC = () => {
-  const [cards, setCards] = useState<CardSmall[] | undefined>(undefined);
+  const [cards, setCards] = useState<CardSmall[]>([]);
   const SetCards = (value: CardSmall[]) => {
     setCards(() => value);
   };
