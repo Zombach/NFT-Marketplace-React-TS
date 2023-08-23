@@ -1,4 +1,4 @@
-//@import "@src/variables";
+@import "@src/variables";
 
 
 #header {
@@ -9,7 +9,7 @@
 }
 
 .background {
-    background-color: white;
+    background-color: $color-white;
     border: 0;
 }
 
@@ -30,6 +30,9 @@
     text-align: center;
     font-size: 14px;
     line-height: 26px;
+    font-weight: 500;
+    font-family: $font-helvetica-neue;
+    color: $color-black;
 }
 
 .icon {

@@ -1,12 +1,17 @@
+@import "@src/variables";
+
 .link-text {
     text-align: center;
     font-size: 14px;
     line-height: 26px;
+    font-weight: 500;
+    font-family: $font-helvetica-neue;
     text-decoration: none;
+    color: $color-black;
 }
 
 .link {
     display: flex;
     align-items: baseline;
     gap: 15px;
-}   
+}
