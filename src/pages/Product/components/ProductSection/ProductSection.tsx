@@ -1,6 +1,6 @@
 import './ProductSection.scss';
 import { FC } from 'react';
-import AuthoredBy from '../../../../components/AuthoredBy/AuthoredBy';
+import AuthoredBy from '@components/AuthoredBy/AuthoredBy';
 import AvatarMock from '@components/Avatar/assets/avatar-mock.jpg';
 import ProductActions from '../ProductActions/ProductActions';
 import ProductImg from './assets/product-mock.svg';
