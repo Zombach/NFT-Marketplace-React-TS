@@ -1,7 +1,7 @@
 import './Welcome.scss';
-import { ReactComponent as Background } from './assets/Background.svg';
+import { ReactComponent as Background } from './assets/background.svg';
 import { BnB } from './components/BnB/BnB';
-import { ReactComponent as Delimiter } from './assets/Delimiter.svg';
+import { ReactComponent as Delimiter } from './assets/delimiter.svg';
 import React, { type FC } from 'react';
 import SignUp from './components/SignUp/SignUp';
 
