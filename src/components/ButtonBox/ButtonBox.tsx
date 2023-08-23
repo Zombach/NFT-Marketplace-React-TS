@@ -19,7 +19,7 @@ export const ButtonBox: FC<ButtonBoxProps> = ({ className, buttonClassName, text
     });
   return (
     <div className={className ?? 'button-box'}>
-      <button className={buttonClassName ?? 'button'} onClick={() => click()}>
+      <button className={buttonClassName ?? 'button'} onClick={click}>
         {SvgBox && SvgBox}
         {children && <span className={textClassName ?? 'text'}>{children}</span>}
       </button>
