@@ -1,0 +1,15 @@
+.product-action-item {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    background-color: inherit;
+
+    border: none;
+    outline: none;
+    line-height: 22px;
+
+    svg {
+        height: 18px;
+        width: 18px;
+    }
+}

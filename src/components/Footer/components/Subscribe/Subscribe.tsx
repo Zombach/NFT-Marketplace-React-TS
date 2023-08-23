@@ -1,5 +1,5 @@
 import './Subscribe.scss';
-import { ReactComponent as Send } from './assets/Send.svg';
+import { ReactComponent as Send } from './assets/send.svg';
 import React, { type FC } from 'react';
 
 export const Subscribe: FC = () => {

@@ -1,7 +1,7 @@
 import './Base.scss';
 import React, { type FC } from 'react';
 
-export type CartCollections = {
+export type CardCollections = {
   userId: string;
   collectionName: String;
   avatar: string;
@@ -11,7 +11,7 @@ export type CartCollections = {
   floor: string;
 };
 
-const Cart = (userId: string) => {
+const Card = (userId: string) => {
   return {
     userId: userId,
     collectionName: 'club',
@@ -20,36 +20,36 @@ const Cart = (userId: string) => {
     owners: '34,7K owners',
     totalVolume: '795,6K BNB',
     floor: '72 BNB',
-  } as CartCollections;
+  } as CardCollections;
 };
 
-export const carts = [
-  Cart('@user 1'),
-  Cart('@user 2'),
-  Cart('@user 3'),
-  Cart('@user 4'),
-  Cart('@user 5'),
-  Cart('@user 6'),
-  Cart('@user 7'),
-  Cart('@user 8'),
-  Cart('@user 9'),
-  Cart('@user 10'),
-  Cart('@user 11'),
-  Cart('@user 12'),
-  Cart('@user 13'),
-  Cart('@user 14'),
-  Cart('@user 15'),
-  Cart('@user 16'),
-  Cart('@user 17'),
-  Cart('@user 18'),
-  Cart('@user 19'),
-  Cart('@user 20'),
-] as CartCollections[];
+export const cards = [
+  Card('@user 1'),
+  Card('@user 2'),
+  Card('@user 3'),
+  Card('@user 4'),
+  Card('@user 5'),
+  Card('@user 6'),
+  Card('@user 7'),
+  Card('@user 8'),
+  Card('@user 9'),
+  Card('@user 10'),
+  Card('@user 11'),
+  Card('@user 12'),
+  Card('@user 13'),
+  Card('@user 14'),
+  Card('@user 15'),
+  Card('@user 16'),
+  Card('@user 17'),
+  Card('@user 18'),
+  Card('@user 19'),
+  Card('@user 20'),
+] as CardCollections[];
 
 export const Render: FC = () => {
   return (
     <div className="items">
-      {carts.map((x, index) => (
+      {cards.map((x, index) => (
         <div className="item" id={x.userId} key={`${x.userId}-${index}`}>
           <p>{x.userId}</p>
           <p>{x.collectionName}</p>
