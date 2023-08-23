@@ -10,7 +10,7 @@ export interface AuthoredByProps {
 export const AuthoredBy: FC<AuthoredByProps> = ({ srcAvatar, username }) => {
   return (
     <div className="authored-by">
-      {srcAvatar ? <Avatar src={srcAvatar}></Avatar> : null}
+      {srcAvatar && <Avatar src={srcAvatar}></Avatar>}
       <div>
         <span className="created-by">created by: </span>
         <span>{username}</span>
