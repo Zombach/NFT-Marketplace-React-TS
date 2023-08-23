@@ -1,5 +1,5 @@
 import './UserInfo.scss';
-import { ReactComponent as Layer } from './assets/Layer.svg';
+import { ReactComponent as Layer } from './assets/layer.svg';
 import Avatar from '@components/Avatar/Avatar';
 import React, { type FC } from 'react';
 
