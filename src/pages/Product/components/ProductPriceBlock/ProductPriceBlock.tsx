@@ -5,11 +5,11 @@ import ButtonBox from '@components/ButtonBox/ButtonBox';
 import PriceCard from '../PriceCard/PriceCard';
 
 export interface AuthoredByProps {
-  ethereumPrice: number;
-  dollarPrice: number;
+  ethereumPrice: number | string;
+  dollarPrice: number | string;
   username: string;
-  lastSalePrice: number;
-  ethereumBidPrice: number;
+  lastSalePrice: number | string;
+  ethereumBidPrice: number | string;
 }
 
 export const ProductPriceBlock: FC<AuthoredByProps> = ({ ethereumPrice, username, lastSalePrice, dollarPrice, ethereumBidPrice }) => {
@@ -24,8 +24,8 @@ export const ProductPriceBlock: FC<AuthoredByProps> = ({ ethereumPrice, username
         <EthereumPrice value={lastSalePrice}></EthereumPrice>
       </div>
       <div className="product-price-buttons">
-        <ButtonBox buttonClassName="buy-button">Buy now for 2.2 BNB</ButtonBox>
-        <ButtonBox buttonClassName="bid-button">Place bid</ButtonBox>
+        <ButtonBox buttonClassName="buy-button primary-btn">Buy now for 2.2 BNB</ButtonBox>
+        <ButtonBox buttonClassName="bid-button primary-2-btn">Place bid</ButtonBox>
       </div>
     </div>
   );
