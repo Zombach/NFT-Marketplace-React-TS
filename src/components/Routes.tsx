@@ -1,5 +1,5 @@
 import { Details as BlogDetails } from '@pages/Blog/Details/Details';
-import { Details as CollectionProfile } from '@pages/Collections/Details/CollectionProfile';
+import { Details as CollectionProfile } from '@pages/Collections/CollectionProfile/CollectionProfile';
 import { FC } from 'react';
 import { Route, Routes as Switch } from 'react-router-dom';
 import Blog from '@pages/Blog/Blog';
