@@ -1,4 +1,6 @@
 import './Base.scss';
+import { Creator } from '@models/Creator';
+import AvatarMock from './avatar-mock.jpg';
 import React, { type FC } from 'react';
 import type { CardSmall } from '@models/CardModels/CardModels';
 
@@ -55,4 +57,20 @@ export const Render: FC = () => {
       ))}
     </div>
   );
+};
+
+const desc = `LIŔONA is a creator of minimalistic ⨯ bold graphic and digital artwork. 
+✹ Artist / Creative Director ✹ #NFT minting `;
+
+export const creator = (id: string) => {
+  return {
+    id: id,
+    userName: '@YFI Fan',
+    avatar: AvatarMock,
+    description: desc,
+    followersCount: 123,
+    followingCount: 123,
+    earned: 123,
+    address: '0xa6794dec66df7d8b69752956df1b28ca93f77cd7',
+  } as Creator;
 };

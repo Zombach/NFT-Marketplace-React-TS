@@ -1,0 +1,161 @@
+@import '@src/variables';
+
+.header-img {
+    margin: 4px 50px 30px 50px;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 250px;
+        border-radius: 10px;
+        display: block;
+    }
+}
+
+.profile-section {
+    display: flex;
+    gap: 29px;
+
+    margin-right: 150px;
+    margin-left: 150px;
+    margin-bottom: 70px;
+
+    .profile-section-left-part {
+        position: relative;
+
+        h2 {
+            margin-bottom: 4px;
+        }
+
+        .authored-by {
+            margin-bottom: 26px;
+        }
+
+        .avatar {
+            height: 75px;
+            width: 75px;
+            position: absolute;
+            top: -91px;
+        }
+
+        .desc {
+            display: block;
+            margin-bottom: 26px;
+
+            color: var(--dark-2, $color-dark-2);
+
+            font-family: $font-helvetica-neue;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+        }
+    }
+
+    .profile-section-right-part {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        white-space: nowrap;
+
+        .details-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 100px;
+
+            span {
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 22px;
+            }
+
+            .details-item-right-part {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .ethereum-price {
+                column-gap: 10px;
+
+                .ethereum-price-value-currency {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.profile-buttons {
+    display: flex;
+    gap: 16px;
+
+    .profile-buttons-right {
+        display: flex;
+        gap: 16px;
+    }
+
+    .left-btn {
+        width: 321px;
+        height: 56px;
+
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+
+    .right-btn {
+        width: 170px;
+        height: 56px;
+
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+
+    .share-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        width: 56px;
+        height: 56px;
+        background: $color-grey;
+        border: 0;
+    }
+}
+
+@media (max-width: 850px) {
+    .profile-section {
+        flex-direction: column;
+        margin-right: 24px;
+        margin-left: 24px;
+        margin-bottom: 48px;
+    }
+
+    .header-img {
+        margin: 0 0 24px 0;
+
+        img {
+            height: 200px;
+            border-radius: 0;
+        }
+    }
+
+    .profile-section-left-part .profile-buttons {
+        flex-direction: column;
+
+        .left-btn {
+            width: 100%;
+        }
+
+        .profile-buttons-right {
+            .right-btn {
+                width: 100%;
+            }
+        }
+    }
+}

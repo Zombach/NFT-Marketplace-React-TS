@@ -1,6 +1,3 @@
-//collectionName, username, description,
-//floorPrice, totalVolume, countItems, ownersCount, address
-
 export interface Collection {
   id: string;
   name: string;
