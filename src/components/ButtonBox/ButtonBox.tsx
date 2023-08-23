@@ -3,33 +3,25 @@ import React, { type FC, ReactNode } from 'react';
 
 interface ButtonBoxProps {
   className?: string;
-  buttonClassName?: string | undefined;
-  textClassName?: string | undefined;
-  children?: string | undefined;
-  SvgBox?: ReactNode | undefined;
-  func?: (() => void) | undefined;
+  buttonClassName?: string;
+  textClassName?: string;
+  children?: string;
+  SvgBox?: ReactNode;
+  onClick?: () => void;
 }
 
-export const ButtonBox: FC<ButtonBoxProps> = ({ className, buttonClassName, textClassName, children, SvgBox, func }): JSX.Element => {
-  className ??= 'button-box';
-  buttonClassName ??= 'button';
-  textClassName ??= 'text';
-
+export const ButtonBox: FC<ButtonBoxProps> = ({ className, buttonClassName, textClassName, children, SvgBox, onClick }): JSX.Element => {
+  let click =
+    onClick ??
+    (() => {
+      // eslint-disable-next-line
+      console.log('Не реализованная функция');
+    });
   return (
-    <div className={className}>
-      <button
-        className={buttonClassName}
-        onClick={() => {
-          const click =
-            func ??
-            (() => {
-              // eslint-disable-next-line
-              console.log('Не реализованная функция');
-            });
-          click();
-        }}>
+    <div className={className ?? 'button-box'}>
+      <button className={buttonClassName ?? 'button'} onClick={() => click()}>
         {SvgBox && SvgBox}
-        {children && <span className={textClassName}>{children}</span>}
+        {children && <span className={textClassName ?? 'text'}>{children}</span>}
       </button>
     </div>
   );
