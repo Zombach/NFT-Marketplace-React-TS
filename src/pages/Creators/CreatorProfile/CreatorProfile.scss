@@ -1,0 +1,79 @@
+@import '@src/variables';
+
+.creator-profile-buttons {
+    display: flex;
+    gap: 16px;
+
+    .left-btn {
+        width: 170px;
+        height: 56px;
+
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+
+    .right-btn {
+        width: 170px;
+        height: 56px;
+
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+
+    .share-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        width: 56px;
+        height: 56px;
+        background: $color-grey;
+        border: 0;
+    }
+
+    .profile-buttons-right {
+        display: flex;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 850px) {
+    .creator-profile-buttons {
+        gap: 8px;
+
+        .left-btn {
+            width: 147px;
+        }
+
+        .profile-buttons-right {
+            gap: 8px;
+
+            .right-btn {
+                width: 147px;
+            }
+        }
+    }
+}
+
+@media (max-width: 413px) {
+    .creator-profile-buttons {
+        flex-direction: column;
+        gap: 8px;
+
+        .left-btn {
+            width: 100%;
+        }
+
+        .profile-buttons-right {
+            gap: 8px;
+
+            .right-btn {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,3 +1,4 @@
+import { Header } from '@components/Header/Header';
 import './Home.scss';
 import { UserContext } from '@components/Contexts/UserContext';
 import Footer from '@components/Footer/Footer';
