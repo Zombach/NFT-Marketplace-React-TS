@@ -14,22 +14,14 @@
 .volume-floor-container {
     display: flex;
     gap: 30px;
-}
 
-.total-floor-container,
-.total-volume-container {
-    display: flex;
-    flex-direction: row;
-    align-items: end;
-    gap: 4px;
-}
+    .ethereum-price-value-currency {
+        font-weight: 700;
+    }
 
-.floor,
-.volume,
-.collection-title {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    .ethereum-icon {
+        height: 18px;
+    }
 }
 
 .top-section {

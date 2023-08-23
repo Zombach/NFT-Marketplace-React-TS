@@ -1,7 +1,7 @@
 import '../Card.scss';
 import './CardBig.scss';
 import { CardCollections } from '@resources/moq/Collections';
-import { ReactComponent as EthereumIcon } from '../../assets/ethereum-black.svg';
+import { EthereumPrice } from '@components/EthereumPrice/EthereumPrice';
 import Avatar from '@components/Avatar/Avatar';
 import React, { type FC } from 'react';
 
@@ -24,20 +24,8 @@ export const CardBig: FC<CardBigFragmentProps> = (props) => {
           <p className="sub-title">{card.owners}</p>
         </div>
         <div className="volume-floor-container">
-          <div className="total-volume-container">
-            <EthereumIcon />
-            <div className="volume">
-              <p className="sub-title">Total volume</p>
-              <p className="volume-price">{card.totalVolume}</p>
-            </div>
-          </div>
-          <div className="total-floor-container">
-            <EthereumIcon />
-            <div className="floor">
-              <p className="sub-title">Floor</p>
-              <p className="floor-price">{card.floor}</p>
-            </div>
-          </div>
+          <EthereumPrice value={card.totalVolume} title="Total volume" />
+          <EthereumPrice value={card.floor} title="Floor" />
         </div>
       </div>
     </div>
