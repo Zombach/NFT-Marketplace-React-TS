@@ -1,9 +1,10 @@
+import '../Card.scss';
 import './CardMiddle.scss';
-import { ReactComponent as Avatar } from './assets/Avatar.svg';
 import { CardMarketplace } from '@resources/moq/Marketplace';
 import { ReactComponent as Clock } from './assets/Clock.svg';
 import { ReactComponent as Ethereum } from '../assets/Ethereum.svg';
 import { ReactComponent as Heart } from '../assets/Heart.svg';
+import Avatar from '@components/Avatar/Avatar';
 import React, { type FC } from 'react';
 
 interface CardMiddleFragmentProps {
@@ -13,8 +14,9 @@ interface CardMiddleFragmentProps {
 export const CardMiddle: FC<CardMiddleFragmentProps> = (props) => {
   const { card } = props;
 
+  console.log('d', card.avatar);
   return (
-    <div className="middle-card">
+    <div className="card-container">
       <div className="top-section">
         <img src={card.nftImage} alt="" />
         <div className="time-badge">
@@ -25,7 +27,7 @@ export const CardMiddle: FC<CardMiddleFragmentProps> = (props) => {
       <div className="bottom-section">
         <p className="bottom-section-header">{card.nftName}</p>
         <div className="user-container">
-          <Avatar />
+          <Avatar src={card.avatar} className="small-avatar" />
           <span className="user-name">{card.userName}</span>
         </div>
         <div className="price-like-container">
@@ -33,7 +35,7 @@ export const CardMiddle: FC<CardMiddleFragmentProps> = (props) => {
             <Ethereum />
             <div>
               <p className="price">{card.price}</p>
-              <p className="price-bnb">{card.priceBnB}</p>
+              <p className="sub-title">{card.priceBnB}</p>
             </div>
           </div>
           <button className="likes-btn">

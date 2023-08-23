@@ -1,5 +1,7 @@
 import './Base.scss';
 import React, { type FC } from 'react';
+import avatar from './avatar-mock.jpg';
+import collection from './Collection.png';
 
 export type CardCollections = {
   userId: string;
@@ -14,9 +16,9 @@ export type CardCollections = {
 const Card = (userId: string) => {
   return {
     userId: userId,
-    collectionName: 'club',
-    avatar: './Image.jpg',
-    nftImage: 'image source',
+    collectionName: 'Bored Ape Yacht Club',
+    avatar: avatar,
+    nftImage: collection,
     owners: '34,7K owners',
     totalVolume: '795,6K BNB',
     floor: '72 BNB',

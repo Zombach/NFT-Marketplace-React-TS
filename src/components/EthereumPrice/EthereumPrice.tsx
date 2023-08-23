@@ -1,5 +1,5 @@
 import './EthereumPrice.scss';
-import { ReactComponent as EthereumIcon } from './assets/ethereum-black.svg';
+import { ReactComponent as EthereumIcon } from '../assets/ethereum-black.svg';
 import { FC } from 'react';
 
 export interface EthereumPriceProps {

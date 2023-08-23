@@ -1,5 +1,5 @@
 import './ProductActions.scss';
-import { ReactComponent as EthereumIcon } from '@components/EthereumPrice/assets/ethereum-black.svg';
+import { ReactComponent as EthereumIcon } from '@components/assets/ethereum-black.svg';
 import { FC } from 'react';
 import { ReactComponent as LineIcon } from './assets/icons/line.svg';
 import { ReactComponent as PictureIcon } from './assets/icons/picture.svg';
