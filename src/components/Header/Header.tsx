@@ -1,34 +1,34 @@
 import './Header.scss';
-import { NavLink } from './components/NavLink/NavLink';
-import Ellipse from './assets/Ellipse.svg';
-import HamburgerMenu from './assets/HamburgerMenu.svg';
-import Lock from './assets/Lock.svg';
+import { ReactComponent as Ellipse } from './assets/ellipse.svg';
+import { ReactComponent as HamburgerMenu } from './assets/hamburgerMenu.svg';
+import { ReactComponent as Lock } from './assets/lock.svg';
+import { ReactComponent as Logo } from './assets/logo.svg';
+import { ReactComponent as Search } from './assets/search.svg';
+import NavLink from './components/NavLink/NavLink';
 import React from 'react';
-import Search from './assets/Search.svg';
-import logo from './assets/logo.svg';
 
 export const Header = () => {
   return (
-    <div className="header">
+    <div id="header">
       <div className="left column">
-        <img src={logo} alt="header" className="logo" />
+        <Logo className="logo" />
         <NavLink />
       </div>
       <div className="right column">
         <button className="background">
-          <img src={Search} alt="Search" className="logo" />
+          <Search className="logo" />
         </button>
         <div className="icon">
           <button className="background">
-            <img src={Lock} alt="Lock" className="logo" />
+            <Lock className="logo" />
           </button>
-          <a href="signUp" className="signIn">
+          <a href="signUp" className="sign-in">
             Sign in
           </a>
         </div>
-        <div className="burgerMenu">
-          <img src={Ellipse} alt="Ellipse" className="logo ellipse" />
-          <img src={HamburgerMenu} alt="HamburgerMenu" className="logo burger" />
+        <div className="burger-menu">
+          <Ellipse className="logo ellipse" />
+          <HamburgerMenu className="logo burger" />
         </div>
       </div>
     </div>

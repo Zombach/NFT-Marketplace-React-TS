@@ -1,8 +1,7 @@
-$background-color: var(--dark-2, #191B23);
+//@import "@src/variables";
 
 
-.header {
-    background-color: $background-color;
+#header {
     padding: 37px 50px 37px 50px;
     display: flex;
     justify-content: space-between;
@@ -10,9 +9,8 @@ $background-color: var(--dark-2, #191B23);
 }
 
 .background {
-    background-color: $background-color ;
+    background-color: white;
     border: 0;
-
 }
 
 .column {
@@ -22,28 +20,21 @@ $background-color: var(--dark-2, #191B23);
 
 .left {
     gap: 60px;
-
 }
 
 .right {
     gap: 60px;
 }
 
-
-.signIn {
+.sign-in {
     text-align: center;
     font-size: 14px;
     line-height: 26px;
-
 }
 
 .icon {
     display: flex;
     gap: 16px;
-}
-
-.ellipse {
-    //position: relative;
 }
 
 .burger {

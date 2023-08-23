@@ -1,7 +1,7 @@
 import React from 'react';
 import './NavLink.scss';
 
-export const NavLink = () => {
+export  const NavLink = () => {
     return (
       <div className="link">
         <a href="welcome" className="link-text">
@@ -22,3 +22,4 @@ export const NavLink = () => {
       </div>
     );
 };
+export default NavLink;
