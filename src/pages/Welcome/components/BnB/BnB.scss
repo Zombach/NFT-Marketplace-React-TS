@@ -1,6 +1,4 @@
-$font-helvetica-neue: "Helvetica Neue";
-$color-black: var(--black, #232632);
-$color-gray-3: var(--gray-3, #828282);
+@import "@src/variables";
 
 .bnb {
     margin-top: 102px;
@@ -25,7 +23,8 @@ $color-gray-3: var(--gray-3, #828282);
         height: 459px;
         flex-shrink: 0;
         z-index: 0;
-        fill: rgba(191, 191, 191, 0.15);
+        fill: #bfbfbf;
+        opacity: 0.15;
         backdrop-filter: blur(35px);
         z-index: 1;
     }
@@ -95,7 +94,7 @@ $color-gray-3: var(--gray-3, #828282);
 
         .text {
             width: 379px;
-            color: $color-gray-3;
+            color: $color-grey-3;
             font-family: $font-helvetica-neue;
             font-size: 14px;
             font-weight: 400;

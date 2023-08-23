@@ -1,9 +1,9 @@
 import './SignUp.scss';
-import { ReactComponent as Apple } from './assets/Apple.svg';
-import { ReactComponent as Google } from './assets/Google.svg';
-import { ReactComponent as LineLeft } from './assets/LineLeft.svg';
-import { ReactComponent as LineRight } from './assets/LineRight.svg';
-import { ReactComponent as Man } from './assets/Man.svg';
+import { ReactComponent as Apple } from './assets/apple.svg';
+import { ReactComponent as Google } from './assets/google.svg';
+import { ReactComponent as LineLeft } from './assets/line-left.svg';
+import { ReactComponent as LineRight } from './assets/line-right.svg';
+import { ReactComponent as Man } from './assets/man.svg';
 import React, { type FC } from 'react';
 
 interface SignUpProps {

@@ -1,9 +1,4 @@
-$font-helvetica-neue: 'Helvetica Neue';
-$color-black: var(--black, #232632);
-$color-white: var(--white, #FFF);
-$color-purple: var(--purple, #7B61FF);
-$color-gray: var(--grey, #EBEDF2);
-$color-gray-3: var(--gray-3, #828282);
+@import "@src/variables";
 
 .sign-up {
     margin-top: 148px;
@@ -98,7 +93,7 @@ $color-gray-3: var(--gray-3, #828282);
             gap: 10px;
             flex-shrink: 0;
             border-radius: 10px;
-            background: $color-gray;
+            background: $color-grey;
 
             .icon {
                 width: 24px;
@@ -128,7 +123,7 @@ $color-gray-3: var(--gray-3, #828282);
             gap: 10px;
             flex-shrink: 0;
             border-radius: 10px;
-            background: $color-gray;
+            background: $color-grey;
 
             .icon {
                 width: 24px;
@@ -156,7 +151,7 @@ $color-gray-3: var(--gray-3, #828282);
         height: 22px;
 
         .text {
-            color: $color-gray-3;
+            color: $color-grey-3;
             text-align: center;
             font-variant-numeric: lining-nums proportional-nums;
             font-family: $font-helvetica-neue;

@@ -1,6 +1,4 @@
-$color-black: var(--black, #232632);
-$color-white: var(--white, #FFF);
-$clamp: clamp(2%, 112px, 10%);
+@import "@src/variables";
 
 .welcome {
     width: 100%;
@@ -9,7 +7,7 @@ $clamp: clamp(2%, 112px, 10%);
     flex-direction: row;
     justify-content: space-between;
     z-index: 1;
-    gap: $clamp;
+    gap: clamp(2%, 112px, 10%);
     overflow: hidden;
 
     .delimiter {
@@ -31,7 +29,7 @@ $clamp: clamp(2%, 112px, 10%);
         display: flex;
         position: relative;
         justify-content: center;
-        margin-left: $clamp;
+        margin-left: clamp(2%, 112px, 10%);
         height: 750px;
         width: 100%;
     }
