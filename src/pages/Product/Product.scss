@@ -1,0 +1,9 @@
+.product-page {
+    padding: 0 150px;
+}
+
+@media (max-width: 850px) {
+    .product-page {
+        padding: 0 24px;
+    }
+}

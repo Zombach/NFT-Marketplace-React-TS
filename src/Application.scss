@@ -1,7 +1,40 @@
-@import "./resources/fonts/fonts";
+@import "@src/variables";
 
 * {
+    font-family: $font-helvetica-neue;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+h2 {
+    color: $color-dark-2;
+
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.thin-block-border {
+    border-radius: 10px;
+    border: 1.4px solid $color-grey;
+}
+
+.primary-btn {
+    border-radius: 10px;
+    border: 2px solid $color-dark-2;
+    background-color: inherit;
+    color: $color-dark-2;
+}
+
+.primary-2-btn {
+    border-radius: 10px;
+    background: $color-purple;
+    color: $color-white;
+    border: 0;
+}
+
+@media (max-width: 850px) {
+    .desktop-only {
+        display: none !important;
+    }
 }

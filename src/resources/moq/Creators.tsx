@@ -1,18 +1,10 @@
 import './Base.scss';
+import { Creator } from '@models/Creator';
+import AvatarMock from './avatar-mock.jpg';
 import React, { type FC } from 'react';
+import type { CardSmall } from '@models/CardModels/CardModels';
 
-export type CartCreator = {
-  userId: string;
-  userName: String;
-  avatar: string;
-  volume: String;
-  sales: String;
-  items: String;
-  followers: String;
-  follow: Boolean;
-};
-
-const Cart = (userName: string) => {
+const Card = (userName: string): CardSmall => {
   return {
     userId: '1',
     userName: userName,
@@ -22,36 +14,36 @@ const Cart = (userName: string) => {
     items: '50,850',
     followers: '10,150',
     follow: true,
-  } as CartCreator;
+  };
 };
 
-export const carts = [
-  Cart('@user 1'),
-  Cart('@user 2'),
-  Cart('@user 3'),
-  Cart('@user 4'),
-  Cart('@user 5'),
-  Cart('@user 6'),
-  Cart('@user 7'),
-  Cart('@user 8'),
-  Cart('@user 9'),
-  Cart('@user 10'),
-  Cart('@user 11'),
-  Cart('@user 12'),
-  Cart('@user 13'),
-  Cart('@user 14'),
-  Cart('@user 15'),
-  Cart('@user 16'),
-  Cart('@user 17'),
-  Cart('@user 18'),
-  Cart('@user 19'),
-  Cart('@user 20'),
-] as CartCreator[];
+export const cards: CardSmall[] = [
+  Card('@user 1'),
+  Card('@user 2'),
+  Card('@user 3'),
+  Card('@user 4'),
+  Card('@user 5'),
+  Card('@user 6'),
+  Card('@user 7'),
+  Card('@user 8'),
+  Card('@user 9'),
+  Card('@user 10'),
+  Card('@user 11'),
+  Card('@user 12'),
+  Card('@user 13'),
+  Card('@user 14'),
+  Card('@user 15'),
+  Card('@user 16'),
+  Card('@user 17'),
+  Card('@user 18'),
+  Card('@user 19'),
+  Card('@user 20'),
+];
 
 export const Render: FC = () => {
   return (
     <div className="items">
-      {carts.map((x, index) => (
+      {cards.map((x, index) => (
         <div className="item" id={x.userId} key={`${x.userId}-${index}`}>
           <p>{x.userId}</p>
           <p>{x.userName}</p>
@@ -65,4 +57,20 @@ export const Render: FC = () => {
       ))}
     </div>
   );
+};
+
+const desc = `LIŔONA is a creator of minimalistic ⨯ bold graphic and digital artwork. 
+✹ Artist / Creative Director ✹ #NFT minting `;
+
+export const creator = (id: string) => {
+  return {
+    id: id,
+    userName: '@YFI Fan',
+    avatar: AvatarMock,
+    description: desc,
+    followersCount: 123,
+    followingCount: 123,
+    earned: 123,
+    address: '0xa6794dec66df7d8b69752956df1b28ca93f77cd7',
+  } as Creator;
 };

@@ -1,5 +1,4 @@
-$font-helvetica-neue: "Helvetica Neue";
-$color-black-default: var(--black-default, #000);
+@import "@src/variables";
 
 .links {
     display: inline-flex;
@@ -10,7 +9,6 @@ $color-black-default: var(--black-default, #000);
     .text {
         color: $color-black-default;
         font-feature-settings: 'clig' off, 'liga' off;
-        font-family: $font-helvetica-neue;
         font-size: 20px;
         font-weight: 400;
         line-height: 32px;

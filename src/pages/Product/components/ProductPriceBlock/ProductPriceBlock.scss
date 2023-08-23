@@ -1,0 +1,85 @@
+@import "@src/variables";
+
+.product-price-block {
+    padding: 24px;
+    margin-bottom: 24px;
+
+    .product-price-block-top {
+        display: flex;
+        gap: 9px;
+        margin-bottom: 24px;
+    }
+
+    .buy-button {
+        width: 321px;
+        height: 56px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+
+    .bid-button {
+        width: 170px;
+        height: 56px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+
+    .product-price-buttons {
+        display: flex;
+        gap: 16px;
+    }
+
+    .last-price {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 24px;
+        justify-content: center;
+        line-height: 22px;
+
+        .ethereum-price-value-currency {
+            margin-bottom: 0;
+
+            color: $color-dark-2;
+
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        svg {
+            height: 14px;
+            width: 14px;
+        }
+
+        span {
+            color: $color-black;
+            opacity: 0.7;
+
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .product-price-buttons {
+        flex-direction: column;
+
+        .buy-button {
+            width: 100%;
+        }
+
+        .bid-button {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .product-price-block-top {
+        flex-direction: column;
+    }
+}
