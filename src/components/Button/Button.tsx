@@ -4,36 +4,26 @@ import Text, { TextType } from './components/Text/Text';
 
 interface ButtonProps {
   children: string;
-  className?: string | undefined;
-  buttonClassName?: string | undefined;
-  textClassName?: string | undefined;
+  className?: string;
+  buttonClassName?: string;
+  textClassName?: string;
   textType?: TextType;
-  svgClassName?: string | undefined;
-  Svg?:
-    | FunctionComponent<
-        SVGProps<SVGSVGElement> & {
-          title?: string | undefined;
-        }
-      >
-    | undefined;
-  func?: (() => void) | undefined;
+  svgClassName?: string;
+  Svg?: FunctionComponent<SVGProps<SVGSVGElement> & { title?: string }>;
+  func?: () => void;
 }
 
 export const Button: FC<ButtonProps> = ({ children, className, buttonClassName, textClassName, textType, svgClassName, Svg, func }): JSX.Element => {
+  const handleClick = () => {
+    if (!func) {
+      console.log('Not implemented');
+    }
+  };
+
   return (
     <div className={className ?? 'button-box'}>
       {Svg !== undefined ? <Svg className={svgClassName ?? 'background'} /> : null}
-      <button
-        className={buttonClassName ?? 'button'}
-        onClick={() => {
-          const click =
-            func ??
-            (() => {
-              // eslint-disable-next-line
-              console.log('Не реализованная функция');
-            });
-          click();
-        }}>
+      <button className={buttonClassName ?? 'button'} onClick={handleClick}>
         <Text className={textClassName} type={textType ?? TextType.P}>
           {children}
         </Text>

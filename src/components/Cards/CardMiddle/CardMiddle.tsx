@@ -14,7 +14,6 @@ interface CardMiddleFragmentProps {
 export const CardMiddle: FC<CardMiddleFragmentProps> = (props) => {
   const { card } = props;
 
-  console.log('d', card.avatar);
   return (
     <div className="card-container">
       <div className="top-section">
