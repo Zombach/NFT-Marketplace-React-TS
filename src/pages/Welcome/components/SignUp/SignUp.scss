@@ -32,7 +32,7 @@
         border-radius: 10px;
         background: $color-purple;
 
-        .icon {
+        .background {
             width: 20px;
             height: 20px;
             flex-shrink: 0;
@@ -83,7 +83,7 @@
         flex-direction: row;
         margin-top: 40px;
 
-        .google {
+        .button-google {
             display: flex;
             width: 221px;
             height: 56px;
@@ -95,7 +95,7 @@
             border-radius: 10px;
             background: $color-grey;
 
-            .icon {
+            .background {
                 width: 24px;
                 height: 24px;
                 flex-shrink: 0;
@@ -112,7 +112,7 @@
             }
         }
 
-        .apple {
+        .button-apple {
             margin-left: 16px;
             display: flex;
             width: 221px;
@@ -125,7 +125,7 @@
             border-radius: 10px;
             background: $color-grey;
 
-            .icon {
+            .background {
                 width: 24px;
                 height: 24px;
                 flex-shrink: 0;

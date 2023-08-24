@@ -37,13 +37,14 @@
     display: flex;
     border: none;
     cursor: pointer;
+
+    .text {
+        font-size: 14px;
+        margin-left: 4px;
+        align-self: center;
+    }
 }
 
-.likes-btn span {
-    font-size: 14px;
-    margin-left: 4px;
-    align-self: center;
-}
 
 .user-container {
     display: flex;

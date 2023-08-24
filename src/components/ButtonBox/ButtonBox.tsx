@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import './ButtonBox.scss';
-import React, { type FC, ReactNode } from 'react';
+import React, { type FC, FunctionComponent, ReactNode, SVGProps } from 'react';
+import SvgBox from './components/SvgBox/SvgBox';
 
 interface ButtonBoxProps {
   className?: string;
@@ -11,15 +13,17 @@ interface ButtonBoxProps {
 }
 
 export const ButtonBox: FC<ButtonBoxProps> = ({ className, buttonClassName, textClassName, children, SvgBox, onClick }): JSX.Element => {
-  let click =
-    onClick ??
-    (() => {
-      // eslint-disable-next-line
+  const buttonHandler = () => {
+    if (onClick) {
+      onClick();
+    } else {
+      // eslint-disable-next-line no-console
       console.log('Не реализованная функция');
-    });
+    }
+  };
   return (
     <div className={className ?? 'button-box'}>
-      <button className={buttonClassName ?? 'button'} onClick={click}>
+      <button className={buttonClassName ?? 'button'} onClick={buttonHandler}>
         {SvgBox && SvgBox}
         {children && <span className={textClassName ?? 'text'}>{children}</span>}
       </button>

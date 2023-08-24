@@ -11,13 +11,13 @@ export const ProductActions: FC = () => {
   return (
     <div className="product-actions thin-block-border">
       <div className="product-actions-part">
-        <ProductActionItem iconSvg={EthereumIcon}>Ethereum (ERC-721)</ProductActionItem>
-        <ProductActionItem iconSvg={ViewIcon}>View on Etherscan</ProductActionItem>
+        <ProductActionItem iconSvg={<EthereumIcon />}>Ethereum (ERC-721)</ProductActionItem>
+        <ProductActionItem iconSvg={<ViewIcon />}>View on Etherscan</ProductActionItem>
       </div>
       <LineIcon className="desktop-only"></LineIcon>
       <div className="product-actions-part">
-        <ProductActionItem iconSvg={PictureIcon}>Open original</ProductActionItem>
-        <ProductActionItem iconSvg={ReloadIcon}>Refresh Metadata</ProductActionItem>
+        <ProductActionItem iconSvg={<PictureIcon />}>Open original</ProductActionItem>
+        <ProductActionItem iconSvg={<ReloadIcon />}>Refresh Metadata</ProductActionItem>
       </div>
     </div>
   );

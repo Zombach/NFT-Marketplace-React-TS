@@ -5,15 +5,14 @@ import { ReactComponent as Clock } from './assets/Clock.svg';
 import { ReactComponent as Ethereum } from '../assets/Ethereum.svg';
 import { ReactComponent as Heart } from '../assets/Heart.svg';
 import Avatar from '@components/Avatar/Avatar';
+import Button from '@components/ButtonBox/ButtonBox';
 import React, { type FC } from 'react';
 
 interface CardMiddleFragmentProps {
   card: CardMarketplace;
 }
 
-export const CardMiddle: FC<CardMiddleFragmentProps> = (props) => {
-  const { card } = props;
-
+export const CardMiddle: FC<CardMiddleFragmentProps> = ({ card }) => {
   return (
     <div className="card-container">
       <div className="top-section">
@@ -37,10 +36,9 @@ export const CardMiddle: FC<CardMiddleFragmentProps> = (props) => {
               <p className="sub-title">{card.priceBnB}</p>
             </div>
           </div>
-          <button className="likes-btn">
-            <Heart />
-            <span>{card.like}</span>
-          </button>
+          <Button buttonClassName="likes-btn" SvgBox={<Heart />}>
+            {card.like}
+          </Button>
         </div>
       </div>
     </div>

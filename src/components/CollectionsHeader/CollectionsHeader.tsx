@@ -4,33 +4,27 @@ import { ReactComponent as Dropdown } from './assets/dropdown.svg';
 import { ReactComponent as Filter } from './assets/filter.svg';
 import { ReactComponent as List } from './assets/list.svg';
 import { ReactComponent as SearchIcon } from './assets/search.svg';
+import Button from '@components/ButtonBox/ButtonBox';
 import React, { FC } from 'react';
+import Svg from '@components/ButtonBox/components/SvgBox/SvgBox';
 
 export const CollectionsHeader: FC = () => {
   return (
     <div className="collection-header-section">
-      <button>
-        <Filter />
-        Filters
-      </button>
-      <button>
-        NFT's <Dropdown />
-      </button>
+      <Button SvgBox={<Filter />}>Filters</Button>
+      <Button buttonClassName="button dropdown" SvgBox={<Dropdown />}>
+        NFT's
+      </Button>
       <div className="search-container">
         <input type="text" className="search-input" placeholder="Search by collection, user or NFT..." />
-        <SearchIcon />
+        <Svg SvgElement={SearchIcon} />
       </div>
-      <button>
+      <Button buttonClassName="button dropdown" SvgBox={<Dropdown />}>
         Trending
-        <Dropdown />
-      </button>
+      </Button>
       <div className="switches">
-        <button>
-          <Columns />
-        </button>
-        <button>
-          <List />
-        </button>
+        <Button SvgBox={<Columns />} />
+        <Button SvgBox={<List />} />
       </div>
     </div>
   );
