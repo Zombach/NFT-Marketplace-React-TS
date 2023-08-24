@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import './ButtonBox.scss';
 import React, { type FC, ReactNode } from 'react';
 
