@@ -23,10 +23,8 @@ export const SignUp: FC<SignUpProps> = ({ className }) => {
         <LineRight className="line-right" />
       </div>
       <div className="extra-auto-login">
-        <Button buttonClassName="button-google" SvgBox={<Google />}>
-          Google
-        </Button>
-        <Button buttonClassName="button-apple" SvgBox={<Apple />}>
+        <Button SvgBox={<Google />}>Google</Button>
+        <Button buttonClassName="button apple" SvgBox={<Apple />}>
           Apple
         </Button>
       </div>

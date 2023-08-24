@@ -83,7 +83,7 @@
         flex-direction: row;
         margin-top: 40px;
 
-        .button-google {
+        .button {
             display: flex;
             width: 221px;
             height: 56px;
@@ -110,35 +110,9 @@
                 font-weight: 400;
                 line-height: 32px;
             }
-        }
 
-        .button-apple {
-            margin-left: 16px;
-            display: flex;
-            width: 221px;
-            height: 56px;
-            padding: 6px 8px;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            flex-shrink: 0;
-            border-radius: 10px;
-            background: $color-grey;
-
-            .background {
-                width: 24px;
-                height: 24px;
-                flex-shrink: 0;
-            }
-
-            .text {
-                color: $color-black;
-                text-align: right;
-                font-feature-settings: 'clig' off, 'liga' off;
-                font-family: $font-helvetica-neue;
-                font-size: 20px;
-                font-weight: 400;
-                line-height: 32px;
+            &.apple {
+                margin-left: 16px;
             }
         }
     }
