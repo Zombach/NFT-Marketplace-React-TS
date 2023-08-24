@@ -6,11 +6,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
 
-.background {
-    background-color: $color-white;
-    border: 0;
+    .background {
+        background-color: $color-white;
+        border: 0;
+    }
 }
 
 .column {
