@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import './ButtonBox.scss';
-import React, { type FC, FunctionComponent, ReactNode, SVGProps } from 'react';
-import SvgBox from './components/SvgBox/SvgBox';
+import React, { type FC, ReactNode } from 'react';
 
 interface ButtonBoxProps {
   className?: string;
