@@ -1,5 +1,4 @@
 import './EmailPassword.scss';
-import Button from '@components/Button/Button';
 
 import { ReactComponent as Apple } from './assets/Apple.svg';
 import { ReactComponent as EyeClosed } from './assets/EyeClosed.svg';
