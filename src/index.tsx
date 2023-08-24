@@ -1,3 +1,4 @@
+import './index.scss';
 import { Application } from './Application';
 import { BrowserRouter } from 'react-router-dom';
 import React from 'react';

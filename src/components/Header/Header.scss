@@ -1,0 +1,47 @@
+@import "@src/variables";
+
+
+#header {
+    padding: 37px 50px 37px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.background {
+    background-color: $color-white;
+    border: 0;
+}
+
+.column {
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    gap: 60px;
+}
+
+.right {
+    gap: 60px;
+}
+
+.sign-in {
+    text-align: center;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 500;
+    font-family: $font-helvetica-neue;
+    color: $color-black;
+}
+
+.icon {
+    display: flex;
+    gap: 16px;
+}
+
+.burger {
+    position: relative;
+    right: 35px;
+    bottom: 14px;
+}

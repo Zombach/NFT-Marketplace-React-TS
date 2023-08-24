@@ -1,0 +1,11 @@
+.extra-info-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+@media (max-width: 850px) {
+    .extra-info-item {
+        gap: 0;
+    }
+}

@@ -1,0 +1,41 @@
+.collection-name,
+.volume-price,
+.floor-price {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.card-bottom-section {
+    padding: 26px 16px 16px 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.volume-floor-container {
+    display: flex;
+    gap: 30px;
+
+    .ethereum-price-value-currency {
+        font-weight: 700;
+    }
+
+    .ethereum-icon {
+        height: 18px;
+    }
+}
+
+.top-section {
+    position: relative;
+}
+
+.big-avatar {
+    position: absolute;
+    bottom: 16px;
+    left: 50px;
+    transform: translate(-50%, 50%);
+    z-index: 1;
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}

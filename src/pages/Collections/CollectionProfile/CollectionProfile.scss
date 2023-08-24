@@ -1,0 +1,22 @@
+.extra-info-item {
+    span {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+
+    .details-item-right-part {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .ethereum-price {
+        column-gap: 10px;
+
+        .ethereum-price-value-currency {
+            font-weight: 700;
+        }
+    }
+}
