@@ -1,6 +1,7 @@
 import './Base.scss';
 import Nft from './Nft.png';
 import React, { type FC } from 'react';
+import avatar from './avatar-mock.jpg';
 
 export type CardMarketplace = {
   userId: string;
@@ -18,7 +19,7 @@ const Card = (userId: string) => {
   return {
     userId: userId,
     userName: '@marterium',
-    avatar: './Image.jpg',
+    avatar: avatar,
     nftName: 'Deadzone 13 Hideout',
     nftImage: Nft,
     like: '34',

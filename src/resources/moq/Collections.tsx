@@ -2,6 +2,7 @@ import './Base.scss';
 import { Collection } from 'models/Collection';
 import AvatarMock from './avatar-mock.jpg';
 import React, { type FC } from 'react';
+import collectionImg from './Collection.png';
 
 export type CardCollections = {
   id: string;
@@ -18,12 +19,12 @@ const Card = (id: string, userId: string) => {
   return {
     id: id,
     userId: userId,
-    collectionName: 'club',
+    collectionName: 'Bored Ape Yacht Club',
     avatar: AvatarMock,
-    nftImage: 'image source',
+    nftImage: collectionImg,
     owners: '34,7K owners',
-    totalVolume: '795,6K BNB',
-    floor: '72 BNB',
+    totalVolume: '795,6K',
+    floor: '72',
   } as CardCollections;
 };
 
