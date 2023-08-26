@@ -1,18 +1,76 @@
+@import '@src/variables';
+
 .create-nft-page {
-    padding: 0 150px 0 150px;
+    margin-bottom: 120px;
+    margin-top: 40px;
+    padding: 0 150px;
 
     h2 {
         margin-bottom: 40px;
     }
 
     .create-nft-form {
+        position: relative;
         display: flex;
-        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
         flex-direction: column;
         width: 555px;
 
-        .tmp {
+        p {
+            color: $color-dark-2;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 26px;
+            text-transform: capitalize;
+            margin-bottom: 8px;
+        }
+
+        .types-allowed {
+            margin-bottom: 16px;
+            color: $color-grey-3;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+        }
+
+        .name-text-field {
             margin-bottom: 30px;
+        }
+
+        .desc-text-field {
+            margin-bottom: 32px;
+        }
+
+        .drop-area {
+            border: 2px dashed #7b61ff40;
+            border-radius: 10px;
+            height: 231px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 32px;
+
+            .circle {
+                position: absolute;
+            }
+        }
+
+        .checkbox-label {
+            font-family: $font-helvetica-neue;
+            color: $color-grey-3;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+        }
+
+        .checkbox {
+            margin-bottom: 41px;
+        }
+
+        .submit {
+            width: 170px;
+            height: 56px;
         }
     }
 }
