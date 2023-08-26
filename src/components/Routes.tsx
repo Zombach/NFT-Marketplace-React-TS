@@ -30,7 +30,7 @@ export const Routes: FC = () => {
       <Route path="logIn" element={<LogIn />}></Route>
       <Route path="signUp" element={<SignUp />}></Route>
       <Route path="welcome" element={<Welcome />}></Route>
-      <Route path="createNFT" element={<CreateNFT />}></Route>
+      <Route path="create-nft" element={<CreateNFT />}></Route>
       <Route path="blog" element={<Blog />}></Route>
       <Route path="blog/details" element={<BlogDetails />}></Route>
       <Route path="*" element={<NotFound />}></Route>

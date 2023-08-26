@@ -1,0 +1,18 @@
+.create-nft-page {
+    padding: 0 150px 0 150px;
+
+    h2 {
+        margin-bottom: 40px;
+    }
+
+    .create-nft-form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 555px;
+
+        .tmp {
+            margin-bottom: 30px;
+        }
+    }
+}
