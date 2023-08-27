@@ -1,14 +1,13 @@
 import './EmailPassword.scss';
+import { ContinueWith } from '../ContinueWith/ContinueWith';
 
-import { ReactComponent as Apple } from './assets/Apple.svg';
-import { ReactComponent as EyeClosed } from './assets/EyeClosed.svg';
-import { ReactComponent as Google } from './assets/Google.svg';
-import { ReactComponent as Line } from './assets/Line.svg';
+import { ReactComponent as EyeClosed } from './assets/eyeClosed.svg';
+import { TapHere } from '../TapHere/TapHere';
 import React, { type FC } from 'react';
 
 export const EmailPassword: FC = () => {
   return (
-    <div className="left-block">
+    <form className="left-block">
       <h2 className="text">Log in</h2>
       <fieldset>
         <legend>
@@ -27,37 +26,15 @@ export const EmailPassword: FC = () => {
           </div>
         </div>
       </fieldset>
-      <p className="text-forget">
-        Forget password?{' '}
-        <button className="button">
-          <span className="purple-color">Tap here</span>
-        </button>
-      </p>
+      <TapHere text="Forget password?" tap="Tap here" />
       <button className="button-fill">
         <p className="text-b">Log In</p>
       </button>
-      <div className="continue">
-        <Line className="line" />
-        <p className="text-continue">or continue with</p>
-        <Line className="line" />
+      <ContinueWith />
+      <div className="text-down">
+        <TapHere text="Don’t have an account yet?" tap="Tap here" />
       </div>
-      <div className="extra-auto-login">
-        <button className="butt">
-          <Google />
-          <p className="text-app-goog">Google</p>
-        </button>
-        <button className="butt">
-          <Apple />
-          <p className="text-app-goog">Apple</p>
-        </button>
-      </div>
-      <p className="text-forget down">
-        Don’t have an account yet?{' '}
-        <button className="button">
-          <span className="purple-color">Tap here</span>
-        </button>
-      </p>
-    </div>
+    </form>
   );
 };
 
