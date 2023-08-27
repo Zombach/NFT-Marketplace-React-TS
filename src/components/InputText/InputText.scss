@@ -1,0 +1,43 @@
+@import "@src/variables";
+
+#InputText{
+    fieldset {
+            font-size: 12px;
+            border: solid 2px black;
+            border-radius: 10px;
+            margin: 32px 0 16px 0;  
+        }
+    
+        fieldset legend {
+            padding: 0 18px 0 18px;
+            text-align: left;
+            font-family: $font-helvetica-neue;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 14px;
+            color: $color-grey-3;
+        }
+
+        .table {
+            padding: 16px 16px 16px 16px;
+            display: flex;
+            justify-content: space-between;
+            font-family: $font-helvetica-neue;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px;
+        }
+        .left-column{
+            border: none;
+            
+        }
+        
+        .left-column:focus {
+            outline: none !important;
+        }
+
+        .right-column{
+            display: none;
+        }
+        
+}

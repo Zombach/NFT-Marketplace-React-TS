@@ -1,0 +1,21 @@
+@import "@src/variables";
+
+#tap-here {
+
+    .button-t {
+        background-color: $color-white;
+        border: 0px;
+    }
+
+    .text-forget {
+        color: $color-grey-3;
+        font-family: $font-helvetica-neue;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+
+    .purple-color {
+        color: $color-purple;
+    }
+}
