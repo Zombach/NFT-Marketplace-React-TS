@@ -13,16 +13,16 @@ export const AccordionCheckout: FC<AccordionCheckoutProps> = ({ title, content }
     <div>
       <Accordion className="accordion">
         <Item
-          className="item"
           header={
             <div className="header">
               <span>{title}</span>
-              <img src={arrowUp} alt="Chevron Down" />
+              <img className="arrow" src={arrowUp} alt="" />
             </div>
           }
           buttonProps={{
-            className: 'item-btn',
-          }}>
+            className: ({ isEnter }) => `${'item-btn'} ${isEnter && 'item-btn-expanded'}`,
+          }}
+          panelProps={{ className: 'item-panel' }}>
           {content}
         </Item>
       </Accordion>
