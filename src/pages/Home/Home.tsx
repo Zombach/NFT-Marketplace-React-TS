@@ -1,7 +1,5 @@
-import { Header } from '@components/Header/Header';
 import './Home.scss';
 import { UserContext } from '@components/Contexts/UserContext';
-import Footer from '@components/Footer/Footer';
 import React, { type FC, useContext } from 'react';
 
 export const Home: FC = () => {
