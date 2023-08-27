@@ -1,6 +1,5 @@
 import './EmailPassword.scss';
 import { ContinueWith } from '../ContinueWith/ContinueWith';
-
 import { InputText } from '../../../../components/InputText/InputText';
 import { TapHere } from '../TapHere/TapHere';
 import React, { type FC } from 'react';
@@ -10,8 +9,8 @@ export const EmailPassword: FC = () => {
     <div id="EmailPassword">
       <form className="left-block">
         <h2 className="text">Log in</h2>
-        <InputText id="email" name="email" placeholder="Your email" />
-        <InputText id="password" name="password" placeholder="Your password" />
+        <InputText id="email" name="email" placeholder="Email / Phone number" isRequired={true} />
+        <InputText id="password" name="password" placeholder="Password" isRequired={true} />
         <TapHere text="Forget password?" tap="Tap here" />
         <button className="button-fill">
           <p className="text-b">Log In</p>
