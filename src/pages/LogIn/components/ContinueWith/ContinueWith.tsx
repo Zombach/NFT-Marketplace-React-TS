@@ -13,11 +13,11 @@ export const ContinueWith = () => {
         <Line className="line" />
       </div>
       <div className="extra-auto-login">
-        <button className="butt">
+        <button className="button-icon">
           <Google />
           <p className="text-app-goog">Google</p>
         </button>
-        <button className="butt">
+        <button className="button-icon">
           <Apple />
           <p className="text-app-goog">Apple</p>
         </button>

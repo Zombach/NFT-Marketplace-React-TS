@@ -1,7 +1,7 @@
 import './EmailPassword.scss';
 import { ContinueWith } from '../ContinueWith/ContinueWith';
 
-import { InputText } from '../InputText/InputText';
+import { InputText } from '../../../../components/InputText/InputText';
 import { TapHere } from '../TapHere/TapHere';
 import React, { type FC } from 'react';
 
