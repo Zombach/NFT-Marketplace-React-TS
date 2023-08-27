@@ -9,8 +9,10 @@ export const EmailPassword: FC = () => {
     <div id="EmailPassword">
       <form className="left-block">
         <h2 className="text">Log in</h2>
-        <InputText id="email" name="email" placeholder="Email / Phone number" isRequired={true} />
-        <InputText id="password" name="password" placeholder="Password" isRequired={true} />
+        <div className="email-password-container">
+          <InputText id="email" name="email" placeholder="Email / Phone number" isRequired={true} />
+          <InputText id="password" name="password" placeholder="Password" isRequired={true} />
+        </div>
         <TapHere text="Forget password?" tap="Tap here" />
         <button className="button-fill">
           <p className="text-b">Log In</p>
