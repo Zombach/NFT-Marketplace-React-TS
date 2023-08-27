@@ -4,6 +4,7 @@ import React, { type FC } from 'react';
 import avatar from './avatar-mock.jpg';
 
 export type CardMarketplace = {
+  id: string | number;
   userId: string;
   userName: string;
   avatar: string;
@@ -17,7 +18,8 @@ export type CardMarketplace = {
 
 const Card = (userId: string) => {
   return {
-    userId: userId,
+    id: 1,
+    userId: '1',
     userName: '@marterium',
     avatar: avatar,
     nftName: 'Deadzone 13 Hideout',
