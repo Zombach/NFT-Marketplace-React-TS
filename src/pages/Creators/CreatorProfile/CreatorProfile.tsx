@@ -1,16 +1,20 @@
 import './CreatorProfile.scss';
+import { CardsFragment } from '@pages/Marketplace/CardsFragment/CardsFragment';
 import { EthereumPrice } from '@components/EthereumPrice/EthereumPrice';
 import { ReactComponent as ViewIcon } from '@components/Profile/assets/view.svg';
+import { cards } from '@resources/moq/Marketplace';
 import { creator } from '@resources/moq/Creators';
 import { getShortAddress } from '@src/helpers';
 import { useParams } from 'react-router-dom';
+import CollectionsHeader from '@components/CollectionsHeader/CollectionsHeader';
 import ExtraInfoItem from '@components/Profile/components/ExtraInfoItem/ExtraInfoItem';
 import HeaderImg from './assets/creator-header-img.jpg';
 import Profile from '@components/Profile/Profile';
-import React, { type FC } from 'react';
+import React, { type FC, useState } from 'react';
 
 export const CreatorProfile: FC = () => {
   const { profileId } = useParams();
+  const [isTable, setIsTable] = useState<boolean>(false);
 
   const getCollection = (id: string) => {
     return creator(id);
@@ -39,6 +43,11 @@ export const CreatorProfile: FC = () => {
             </div>
           }></ExtraInfoItem>
       </Profile>
+      <div className="market-place-section">
+        <h2>Products</h2>
+        <CollectionsHeader />
+        <CardsFragment cards={cards} isTable={isTable} />
+      </div>
     </>
   );
 };
