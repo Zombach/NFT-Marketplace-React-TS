@@ -21,9 +21,9 @@ export const AccordionCheckout: FC<AccordionCheckoutProps> = ({ title, content }
           }
           buttonProps={{
             className: ({ isEnter }) => `${'item-btn'} ${isEnter && 'item-btn-expanded'}`,
-          }}
-          panelProps={{ className: 'item-panel' }}>
-          {content}
+          }}>
+          <div className="divider"></div>
+          <div className="item-panel">{content}</div>
         </Item>
       </Accordion>
     </div>
