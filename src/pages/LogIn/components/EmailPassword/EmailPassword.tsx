@@ -10,8 +10,8 @@ export const EmailPassword: FC = () => {
     <div id="EmailPassword">
       <form className="left-block">
         <h2 className="text">Log in</h2>
-        <InputText name="Email / Phone number *" value="Your email" />
-        <InputText name="Password *" value="Your password" eye="eye-need" />
+        <InputText id="email" name="email" placeholder="Your email" />
+        <InputText id="password" name="password" placeholder="Your password" />
         <TapHere text="Forget password?" tap="Tap here" />
         <button className="button-fill">
           <p className="text-b">Log In</p>
