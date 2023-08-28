@@ -19,7 +19,7 @@ export const InputText: FC<InputTextProps> = ({ id, name, placeholder, icon, isR
         {placeholder}
         {isRequired && <span className="required">*</span>}
       </label>
-      {icon && <img className="icon" src={icon} alt="" />}
+      {icon && <img className="icon-img" src={icon} alt="" />}
     </div>
   );
 };
