@@ -4,6 +4,7 @@ import { CardMarketplace } from '@resources/moq/Marketplace';
 import { ReactComponent as Clock } from './assets/Clock.svg';
 import { ReactComponent as Ethereum } from '../assets/Ethereum.svg';
 import { ReactComponent as Heart } from '../assets/Heart.svg';
+import { Link } from 'react-router-dom';
 import Avatar from '@components/Avatar/Avatar';
 import React, { type FC } from 'react';
 
@@ -24,11 +25,17 @@ export const CardMiddle: FC<CardMiddleFragmentProps> = (props) => {
         </div>
       </div>
       <div className="bottom-section">
-        <p className="bottom-section-header">{card.nftName}</p>
-        <div className="user-container">
-          <Avatar src={card.avatar} className="small-avatar" />
-          <span className="user-name">{card.userName}</span>
-        </div>
+        <p className="bottom-section-header">
+          <Link className="link" to={`/product/${card.id}`}>
+            {card.nftName}
+          </Link>
+        </p>
+        <Link className="link" to={`/creators/${card.userId}`}>
+          <div className="user-container">
+            <Avatar src={card.avatar} className="small-avatar" />
+            <span className="user-name">{card.userName}</span>
+          </div>
+        </Link>
         <div className="price-like-container">
           <div className="price-container">
             <Ethereum />

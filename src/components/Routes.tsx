@@ -25,7 +25,7 @@ export const Routes: FC = () => {
       <Route path="creators/:profileId" element={<CreatorProfile />}></Route>
       <Route path="collections" element={<Collections />}></Route>
       <Route path="collections/:profileId" element={<CollectionProfile />}></Route>
-      <Route path="product" element={<Product />}></Route>
+      <Route path="product/:id" element={<Product />}></Route>
       <Route path="checkout" element={<Checkout />}></Route>
       <Route path="logIn" element={<LogIn />}></Route>
       <Route path="signUp" element={<SignUp />}></Route>

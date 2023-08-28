@@ -1,0 +1,26 @@
+@import '@src/variables';
+
+.video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+
+    iframe {
+        border-radius: 10px;
+    }
+
+    h2 {
+        margin-bottom: 24px;
+    }
+
+    span {
+        color: $color-black;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        opacity: 0.7;
+        margin-bottom: 40px;
+    }
+}
