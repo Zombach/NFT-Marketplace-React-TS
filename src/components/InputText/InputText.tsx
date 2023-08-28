@@ -7,7 +7,7 @@ export interface InputTextProps {
   name: string;
   placeholder: string;
   icon?: string;
-  isRequired: boolean;
+  isRequired?: boolean;
   minHeight?: string; //to-do
 }
 

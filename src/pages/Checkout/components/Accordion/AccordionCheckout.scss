@@ -1,9 +1,5 @@
 @import "@src/variables";
 
-.accordion {
-    width: 100%;
-}
-
 .header {
     display: flex;
     justify-content: space-between;
@@ -41,6 +37,7 @@
     border-left: 1px solid $color-grey;
     border-bottom: 1px solid $color-grey;
     border-radius: 0 0 10px 10px;
+    width: 100%;
 }
 
 .divider {
