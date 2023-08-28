@@ -10,12 +10,10 @@ import React, { type FC } from 'react';
 
 export const LogIn: FC = () => {
   return (
-    <div>
-      <div className="flex-block">
-        <EmailPassword />
-        <Line />
-        <LogQR />
-      </div>
+    <div className="login-section">
+      <EmailPassword />
+      <Line />
+      <LogQR />
     </div>
   );
 };
