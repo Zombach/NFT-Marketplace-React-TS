@@ -6,11 +6,11 @@
     justify-content: center;
     align-items: flex-start;
     gap: 24px;
+    margin-bottom: 40px;
 
     .company-overview {
         width: 444px;
         color: $color-black;
-        font-feature-settings: 'clig' off, 'liga' off;
         font-size: 40px;
         font-weight: 500;
         line-height: 48px;
@@ -19,9 +19,22 @@
     .company-mail {
         width: 420px;
         color: $color-black;
-        font-feature-settings: 'clig' off, 'liga' off;
         font-size: 20px;
         font-weight: 500;
         line-height: 34px;
+    }
+}
+
+@media (max-width: 850px) {
+    .about-us {
+        margin-bottom: 54px;
+
+        .company-overview {
+            width: 100%;
+        }
+
+        .company-mail {
+            width: 100%;
+        }
     }
 }
