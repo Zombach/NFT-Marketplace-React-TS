@@ -1,0 +1,29 @@
+@import "@src/variables";
+
+.text-qr{
+    text-align: center;
+    font-family: $font-helvetica-neue;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    margin-bottom: 8px;
+}
+.text-scan{
+    color: $color-grey-3;
+    font-family: $font-helvetica-neue;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+}
+.foto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 64px auto;
+}
+.qr-column{
+    margin: 160px auto 0 114px;
+    
+    
+}
