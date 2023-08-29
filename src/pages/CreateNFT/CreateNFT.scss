@@ -17,6 +17,18 @@
         flex-direction: column;
         width: 555px;
 
+        .checkbox {
+            margin-bottom: 40px;
+        }
+
+        #name {
+            margin-bottom: 30px;
+        }
+
+        #desc {
+            margin-bottom: 32px;
+        }
+
         p {
             color: $color-dark-2;
             font-size: 16px;

@@ -1,11 +1,9 @@
 import './CreateNFT.scss';
 import { ReactComponent as Circle } from './assets/circle.svg';
 import { ReactComponent as DownloadIcon } from './assets/download.svg';
-import { defaultFieldsetStyles } from '@src/helpers';
-import Checkbox from '@mui/material/Checkbox/Checkbox';
-import FormControlLabel from '@mui/material/FormControlLabel/FormControlLabel';
+import Checkbox from '@components/Checkbox/Checkbox';
+import InputText from '@components/InputText/InputText';
 import React, { type FC, useState } from 'react';
-import TextField from '@mui/material/TextField';
 
 export const CreateNFT: FC = () => {
   const [name, setName] = useState<string>('');
@@ -26,6 +24,7 @@ export const CreateNFT: FC = () => {
 
   const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
+
     setDragIsOver(true);
   };
 
@@ -58,38 +57,25 @@ export const CreateNFT: FC = () => {
             <DownloadIcon></DownloadIcon>
             <Circle className="circle"></Circle>
           </div>
-          <TextField
-            className="name-text-field"
-            id="outlined"
-            label="Name"
-            placeholder="Enter a name here..."
-            required
-            InputProps={{
-              sx: defaultFieldsetStyles,
-            }}
-            onChange={(event) => setName(event.target.value)}
-          />
-          <TextField
-            className="desc-text-field"
-            id="outlined"
-            label="Description"
-            placeholder="Enter a description here..."
-            required
-            InputProps={{
-              sx: defaultFieldsetStyles,
-            }}
-            multiline
-            rows={5}
-            onChange={(event) => setDesc(event.target.value)}
-          />
+          <InputText
+            id={'name'}
+            name={'Name'}
+            placeholder={'Enter a name here...'}
+            isRequired={true}
+            onChange={(event) => setName(event.target.value)}></InputText>
+          <InputText
+            id={'desc'}
+            name={'Description'}
+            placeholder={'Enter a description here...'}
+            isRequired={true}
+            onChange={(event) => setDesc(event.target.value)}></InputText>
 
-          <div>
-            <FormControlLabel
-              className="checkbox"
-              control={<Checkbox defaultChecked onChange={(e) => setIsChecked(e.target.checked)} />}
-              label={<span className="checkbox-label">I understand and agree to BNB NFT’s Minting Rules and terms</span>}
-            />
-          </div>
+          <Checkbox
+            className="checkbox"
+            label={'I understand and agree to BNB NFT’s Minting Rules and terms '}
+            onChange={(e) => {
+              setIsChecked(e.target.checked);
+            }}></Checkbox>
           <input className="submit primary-2-btn" type="submit" value="Create" onClick={sendData} />
         </form>
       </div>
