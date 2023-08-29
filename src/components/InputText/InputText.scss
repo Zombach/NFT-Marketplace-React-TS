@@ -42,6 +42,27 @@
     transition: 150ms;
 }
 
+textarea {
+    padding: 16px;
+    border: 2px solid $color-black;
+    background-color: transparent;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 16px;
+    resize: none;
+}
+
+.input-group:focus-within label,
+.input-group textarea:not(:placeholder-shown)~label {
+    padding: 0px 8px;
+    background-color: $color-white;
+    top: -12px;
+    left: 16px;
+    bottom: auto;
+    color: $color-grey-3;
+    transition: 150ms;
+}
+
 .icon-img {
     position: absolute;
     right: 16px;

@@ -9,13 +9,19 @@ export interface InputTextProps {
   icon?: string;
   isRequired: boolean;
   minHeight?: string; //to-do
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+  multiline?: boolean;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  onChange?: (e: ChangeEvent<any>) => void;
 }
 
-export const InputText: FC<InputTextProps> = ({ id, name, placeholder, icon, onChange, isRequired = false }) => {
+export const InputText: FC<InputTextProps> = ({ id, name, placeholder, icon, onChange, isRequired = false, multiline = false }) => {
   return (
     <div className="input-group">
-      <input type="text" name={name} id={id} placeholder="" onChange={onChange} />
+      {!multiline ? (
+        <input type="text" name={name} id={id} placeholder="" onChange={onChange} />
+      ) : (
+        <textarea name={name} id={id} placeholder="" onChange={onChange}></textarea>
+      )}
       <label htmlFor={id}>
         {placeholder}
         {isRequired && <span className="required">*</span>}

@@ -79,6 +79,7 @@ export const CreateNFT: FC = () => {
             name={'Description'}
             placeholder={'Enter a description here...'}
             isRequired={true}
+            multiline={true}
             onChange={(event) => setDesc(event.target.value)}></InputText>
           <Checkbox
             className="checkbox"
