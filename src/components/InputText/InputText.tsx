@@ -6,14 +6,14 @@ export interface InputTextProps {
   id: string;
   name: string;
   placeholder: string;
-  icon?: string;
-  isRequired: boolean;
+  rightSideItem?: string | React.ReactNode;
+  isRequired?: boolean;
   minHeight?: string; //to-do
   multiline?: boolean;
   onChange?: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
 
-export const InputText: FC<InputTextProps> = ({ id, name, placeholder, icon, onChange, isRequired = false, multiline = false }) => {
+export const InputText: FC<InputTextProps> = ({ id, name, placeholder, onChange, rightSideItem, isRequired = false, multiline = false }) => {
   return (
     <div className="input-group">
       {!multiline ? (
@@ -25,7 +25,12 @@ export const InputText: FC<InputTextProps> = ({ id, name, placeholder, icon, onC
         {placeholder}
         {isRequired && <span className="required">*</span>}
       </label>
-      {icon && <img className="icon-img" src={icon} alt="" />}
+      {rightSideItem &&
+        (typeof rightSideItem === 'string' ? (
+          <img className="input-right" src={rightSideItem} alt="" />
+        ) : (
+          <div className="input-right">{rightSideItem}</div>
+        ))}
     </div>
   );
 };
