@@ -15,21 +15,14 @@ export const CreateNFT: FC = () => {
   const [fileName, setFileName] = useState<string | undefined>(undefined);
   const allowedFileTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/svg'];
 
-  const sendData = (event: React.MouseEvent) => {
-    event.preventDefault();
-    // eslint-disable-next-line no-console
-    console.log(name, desc, isChecked);
-
-    // eslint-disable-next-line no-console
-    console.log({ file });
-  };
+  const sendData = (event: React.FormEvent<HTMLFormElement>) => {};
 
   const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
 
     let dropArea = document.getElementById('drop-area');
     if (dropArea && dropArea.style) {
-      dropArea.style.opacity = '1';
+      //dropArea.style.opacity = '1';
     }
     setDragIsOver(true);
   };
@@ -38,7 +31,7 @@ export const CreateNFT: FC = () => {
     event.preventDefault();
     let dropArea = document.getElementById('drop-area');
     if (dropArea && dropArea.style) {
-      dropArea.style.opacity = '0.25';
+      // dropArea.style.opacity = '0.25';
     }
     setDragIsOver(false); //TODo: To darken or change the background picture
   };
@@ -61,7 +54,7 @@ export const CreateNFT: FC = () => {
     <>
       <div className="create-nft-page">
         <h2>Create an NFT</h2>
-        <form className="create-nft-form">
+        <form onSubmit={(e) => sendData} className="create-nft-form">
           <p>Import image</p>
           <span className="types-allowed">File types supported: JPG, PNG, GIF, SVG. Max size: 50 MB</span>
           <div id="drop-area" className="drop-area" onDragOver={handleDragOver} onDragLeave={handleDragLeave} onDrop={handleDrop}>
@@ -87,7 +80,7 @@ export const CreateNFT: FC = () => {
             onChange={(e) => {
               setIsChecked(e.target.checked);
             }}></Checkbox>
-          <input className="submit primary-2-btn" type="submit" value="Create" onClick={sendData} />
+          <input className="submit primary-2-btn" type="submit" value="Create" />
         </form>
       </div>
     </>
