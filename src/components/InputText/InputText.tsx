@@ -10,8 +10,7 @@ export interface InputTextProps {
   isRequired: boolean;
   minHeight?: string; //to-do
   multiline?: boolean;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  onChange?: (e: ChangeEvent<any>) => void;
+  onChange?: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
 
 export const InputText: FC<InputTextProps> = ({ id, name, placeholder, icon, onChange, isRequired = false, multiline = false }) => {
