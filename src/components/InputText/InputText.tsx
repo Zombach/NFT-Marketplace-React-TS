@@ -7,7 +7,7 @@ export interface InputTextProps {
   name: string;
   placeholder: string;
   right?: string | React.ReactNode;
-  isRequired: boolean;
+  isRequired?: boolean;
   minHeight?: string; //to-do
 }
 
