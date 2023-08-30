@@ -1,0 +1,65 @@
+@import '@src/variables';
+
+.seller-card {
+    display: flex;
+    justify-content: space-between;
+    width: 556px;
+    height: 78px;
+    padding: 17px 12px 17px 16px;
+    border-radius: 10px;
+    border: 1.4px solid $color-grey;
+
+    .seller-card-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .number {
+            color: $color-dark-2;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 32px;
+        }
+
+        .avatar {
+            height: 44px;
+            width: 44px;
+        }
+
+        .seller-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            .username {
+                color: $color-dark-2;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 19px;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .seller-card-right {
+
+        .ethereum-icon {
+            height: 16px;
+            width: 16px;
+        }
+
+        .ethereum-price-extra {
+            margin-top: 0;
+            color: $color-black;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+        }
+
+        .ethereum-price-value-currency {
+            color: $color-dark-2;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+}
