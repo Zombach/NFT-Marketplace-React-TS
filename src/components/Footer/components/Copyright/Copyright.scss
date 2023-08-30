@@ -9,3 +9,12 @@
     font-weight: 400;
     line-height: 25px;
 }
+
+@media (max-width: 850px) {
+    .copyright {
+        text-align: center;
+        margin-top: 32px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+}

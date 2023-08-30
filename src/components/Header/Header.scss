@@ -11,19 +11,19 @@
         background-color: $color-white;
         border: 0;
     }
+
+    .left {
+        gap: 60px;
+    }
+
+    .right {
+        gap: 60px;
+    }
 }
 
 .column {
     display: flex;
     align-items: center;
-}
-
-.left {
-    gap: 60px;
-}
-
-.right {
-    gap: 60px;
 }
 
 .sign-in {

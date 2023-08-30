@@ -6,12 +6,12 @@ export interface InputTextProps {
   id: string;
   name: string;
   placeholder: string;
-  icon?: string;
-  isRequired: boolean;
+  rightSideItem?: string | React.ReactNode;
+  isRequired?: boolean;
   minHeight?: string; //to-do
 }
 
-export const InputText: FC<InputTextProps> = ({ id, name, placeholder, icon, isRequired = false }) => {
+export const InputText: FC<InputTextProps> = ({ id, name, placeholder, rightSideItem, isRequired = false }) => {
   return (
     <div className="input-group">
       <input type="text" name={name} id={id} placeholder="" />
@@ -19,7 +19,12 @@ export const InputText: FC<InputTextProps> = ({ id, name, placeholder, icon, isR
         {placeholder}
         {isRequired && <span className="required">*</span>}
       </label>
-      {icon && <img className="icon-img" src={icon} alt="" />}
+      {rightSideItem &&
+        (typeof rightSideItem === 'string' ? (
+          <img className="input-right" src={rightSideItem} alt="" />
+        ) : (
+          <div className="input-right">{rightSideItem}</div>
+        ))}
     </div>
   );
 };
