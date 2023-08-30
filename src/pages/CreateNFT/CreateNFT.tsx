@@ -22,7 +22,7 @@ export const CreateNFT: FC = () => {
 
     let dropArea = document.getElementById('drop-area');
     if (dropArea && dropArea.style) {
-      //dropArea.style.opacity = '1';
+      dropArea.style.opacity = '1';
     }
     setDragIsOver(true);
   };
@@ -31,7 +31,7 @@ export const CreateNFT: FC = () => {
     event.preventDefault();
     let dropArea = document.getElementById('drop-area');
     if (dropArea && dropArea.style) {
-      // dropArea.style.opacity = '0.25';
+      dropArea.style.opacity = '0.25';
     }
     setDragIsOver(false); //TODo: To darken or change the background picture
   };
