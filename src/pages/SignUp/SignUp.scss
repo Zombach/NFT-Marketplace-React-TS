@@ -1,0 +1,64 @@
+@import "@src/variables";
+
+#sign-up-section {
+    
+    display: flex;
+    padding: 40px;
+    max-width: 1140px;
+    margin: 40px auto 0 auto;
+    gap: 112px; 
+    justify-content: space-around;
+
+    .left-block {
+            width: 450px;            
+        }
+
+.text {
+    margin-bottom: 8px;
+    font-family: $font-helvetica-neue;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 48px;
+}
+
+
+
+    .button-fill {
+        margin-top: 32px;
+        width: 100%;
+        padding: 16px 8px;
+        border-radius: 10px;
+        border: 0;
+        background: $color-purple;
+
+
+        .text-b {
+            margin: 0 auto;
+            color: $color-white;
+            font-family: $font-helvetica-neue;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 32px;
+        }
+    }
+
+
+    .foto-right{
+        position: relative;
+        top: 40px;
+    }
+
+
+
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        margin-bottom: 16px;
+        margin-top: 40px;
+    }
+
+         
+   
+}
+

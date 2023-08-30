@@ -9,11 +9,12 @@ export interface InputTextProps {
   icon?: string;
   isRequired: boolean;
   minHeight?: string; //to-do
+  className?: string;
 }
 
-export const InputText: FC<InputTextProps> = ({ id, name, placeholder, icon, isRequired = false }) => {
+export const InputText: FC<InputTextProps> = ({ id, name, placeholder, icon, isRequired = false, className }) => {
   return (
-    <div className="input-group">
+    <div className={className ?? 'input-group'}>
       <input type="text" name={name} id={id} placeholder="" />
       <label htmlFor={id}>
         {placeholder}
