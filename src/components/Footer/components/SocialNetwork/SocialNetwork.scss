@@ -10,3 +10,16 @@
         flex-shrink: 0;
     }
 }
+
+@media (max-width: 850px) {
+    .social-networks {
+        margin-top: 0;
+        justify-content: space-between;
+        margin-bottom: 40px;
+
+        &.icon {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
