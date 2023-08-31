@@ -10,12 +10,13 @@ export interface InputTextProps {
   isRequired?: boolean;
   minHeight?: string; //to-do
   multiline?: boolean;
+  className?: string;
   onChange?: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
 
-export const InputText: FC<InputTextProps> = ({ id, name, placeholder, onChange, rightSideItem, isRequired = false, multiline = false }) => {
+export const InputText: FC<InputTextProps> = ({ id, name, placeholder, onChange, rightSideItem, isRequired = false, multiline = false , className}) => {
   return (
-    <div className="input-group">
+    <div className={className ?? 'input-group'}>
       {!multiline ? (
         <input type="text" name={name} id={id} placeholder="" onChange={onChange} />
       ) : (
