@@ -13,7 +13,7 @@ export const Activity: FC = () => {
         avatar={seller.avatar}
         username={seller.username}
         lastBidPrice={seller.lastBidPrice}
-        rightBottom={<span>≈ $140.05</span>}
+        rightBottom={<span>≈ ${seller.lastBidPrice}</span>}
         sellerInfoBottom={
           <div className="recent-bid">
             <span className="time">{seller.lastBidTime}</span>

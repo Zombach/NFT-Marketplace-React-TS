@@ -3,6 +3,13 @@
     gap: 30px;
     margin-top: 40px;
     margin-bottom: 48px;
+
+    .product-img {
+        width: 555px;
+        min-width: 555px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
 }
 
 .product-section-right-part {
@@ -27,5 +34,11 @@
         gap: 34px;
         margin-top: 0;
         flex-direction: column;
+
+        .product-img {
+            width: 100%;
+            min-width: 100%;
+            width: 100%;
+        }
     }
 }
