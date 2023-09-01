@@ -15,3 +15,21 @@
         word-spacing: 16.5px;
     }
 }
+
+@media (max-width: 850px) {
+    .links {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 40px;
+
+        .text {
+            text-align: right;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px;
+            word-spacing: 10px;
+        }
+    }
+}
