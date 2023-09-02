@@ -19,7 +19,7 @@ export const Sellers: FC<SellersProps> = ({ title, countOnPage, getSellerCard })
   const [totalCount, setTotalCount] = useState<number>(0);
 
   const onClickSkip = () => {
-    if (skip + 4 >= totalCount) {
+    if (skip + countOnPage >= totalCount) {
       setSkip(0);
     } else {
       setSkip(skip + countOnPage);
@@ -48,7 +48,7 @@ export const Sellers: FC<SellersProps> = ({ title, countOnPage, getSellerCard })
       </div>
       <div className="seller-cards">
         {sellers.map((seller, i) => {
-          return getSellerCard(seller, i);
+          return getSellerCard(seller, i + skip);
         })}
       </div>
     </section>
