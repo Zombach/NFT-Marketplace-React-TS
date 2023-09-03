@@ -5,7 +5,8 @@ import { FindResponseModel } from '@models/FindResponseModel';
 import { Link } from 'react-router-dom';
 import { Seller } from '@models/Seller';
 import { sellersMock } from '@resources/moq/Creators';
-import ButtonBox from '@components/ButtonBox/ButtonBox';
+import ButtonBox, { ButtonBoxProps } from '@components/ButtonBox/ButtonBox';
+import Switch, { SwitchItem } from '@components/Switch/Switch';
 
 export interface SellersProps {
   title: string;
@@ -26,6 +27,29 @@ export const Sellers: FC<SellersProps> = ({ title, countOnPage, getSellerCard })
     }
   };
 
+  const firstItem: SwitchItem = {
+    onClick: function (): {} {
+      throw new Error('Function not implemented.');
+    },
+    id: '1 day',
+    item: '1 day',
+  };
+  const secondItem: SwitchItem = {
+    onClick: function (): {} {
+      throw new Error('Function not implemented.');
+    },
+    id: '7 days',
+    item: '7 days',
+  };
+
+  const thirdItem: SwitchItem = {
+    onClick: function (): {} {
+      throw new Error('Function not implemented.');
+    },
+    id: '30 days',
+    item: '30 days',
+  };
+
   const getSellers = (skip: number, count: number): FindResponseModel<Seller> => {
     const response: FindResponseModel<Seller> = { items: sellersMock.slice(skip, skip + count), totalCount: sellersMock.length };
     return response;
@@ -41,6 +65,7 @@ export const Sellers: FC<SellersProps> = ({ title, countOnPage, getSellerCard })
     <section className="sellers-section">
       <div className="sellers-section-header">
         <h2>{title}</h2>
+        <Switch items={[firstItem, secondItem, thirdItem]} defaultState={1}></Switch>
         <div className="sellers-section-header-right">
           <Link to={'../creators'}>See all</Link>
           <ButtonBox onClick={onClickSkip} SvgBox={<Arrow></Arrow>}></ButtonBox>
