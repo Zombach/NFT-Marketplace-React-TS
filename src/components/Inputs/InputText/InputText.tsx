@@ -1,5 +1,5 @@
+import '../Input.scss';
 import './InputText.scss';
-import { ReactComponent as EyeClosed } from './assets/eyeClosed.svg';
 import React, { ChangeEvent, FC } from 'react';
 
 export interface InputTextProps {
@@ -8,7 +8,7 @@ export interface InputTextProps {
   placeholder: string;
   rightSideItem?: string | React.ReactNode;
   isRequired?: boolean;
-  minHeight?: string; //to-do
+  minHeight?: string;
   multiline?: boolean;
   onChange?: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
@@ -17,7 +17,7 @@ export const InputText: FC<InputTextProps> = ({ id, name, placeholder, onChange,
   return (
     <div className="input-group">
       {!multiline ? (
-        <input type="text" name={name} id={id} placeholder="" onChange={onChange} />
+        <input className="input-group-input" type="text" name={name} id={id} placeholder="" onChange={onChange} />
       ) : (
         <textarea name={name} id={id} placeholder="" onChange={onChange}></textarea>
       )}

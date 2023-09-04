@@ -2,7 +2,7 @@ import './Subscribe.scss';
 import { type FC } from 'react';
 import { ReactComponent as SendIcon } from './assets/send.svg';
 import ButtonBox from '@components/ButtonBox/ButtonBox';
-import InputText from '@components/InputText/InputText';
+import InputText from '@components/Inputs/InputText/InputText';
 
 export const Subscribe: FC = () => {
   return (
