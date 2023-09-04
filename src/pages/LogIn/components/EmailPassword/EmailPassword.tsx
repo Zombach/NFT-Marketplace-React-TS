@@ -1,9 +1,8 @@
 import './EmailPassword.scss';
 import { ContinueWith } from '../ContinueWith/ContinueWith';
-import { InputText } from '../../../../components/Inputs/InputText/InputText';
 import { TapHere } from '../TapHere/TapHere';
+import InputText from '@components/Inputs/InputText/InputText';
 import React, { type FC } from 'react';
-import Select from '@components/Inputs/Select/Select';
 
 export const EmailPassword: FC = () => {
   return (
