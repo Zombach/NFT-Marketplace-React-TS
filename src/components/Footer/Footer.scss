@@ -4,9 +4,10 @@
     display: inline-flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;    
+    width: 100%;
     flex-shrink: 0;
     z-index: 2;
+    padding-bottom: 56px;
 
     .delimiter {
         position: absolute;
@@ -22,7 +23,6 @@
 
     .left {
         margin-top: 61px;
-        margin-left: 150px;
         display: inline-flex;
         flex-direction: column;
         z-index: 2;
@@ -45,6 +45,23 @@
 
         path {
             fill: $color-white;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .footer {
+        padding: 0 24px;
+        flex-direction: column;
+        padding-bottom: 24px;
+
+        .left {
+            margin-top: 24px;
+        }
+
+        .right {
+            margin-top: 40px;
+            margin-left: 0;
         }
     }
 }

@@ -1,5 +1,4 @@
 import './Footer.scss';
-import { ReactComponent as Background } from './assets/background.svg';
 import { ReactComponent as Delimiter } from './assets/delimiter.svg';
 import AboutUs from './components/AboutUs/AboutUs';
 import Copyright from './components/Copyright/Copyright';
@@ -11,20 +10,22 @@ import Trust from './components/Trust/Trust';
 
 export const Footer: FC = () => {
   return (
-    <div className="footer">
-      <Background className="background" />
+    <>
       <Delimiter className="delimiter" />
-      <div className="left">
-        <AboutUs />
-        <Subscribe />
-        <Trust />
+      <div className="footer">
+        <div className="left">
+          <AboutUs />
+          <Subscribe />
+          <Trust extraClassName="desktop-only" />
+        </div>
+        <div className="right">
+          <Links />
+          <SocialNetwork />
+          <Trust extraClassName="mobile-only" />
+          <Copyright />
+        </div>
       </div>
-      <div className="right">
-        <Links />
-        <SocialNetwork />
-        <Copyright />
-      </div>
-    </div>
+    </>
   );
 };
 
