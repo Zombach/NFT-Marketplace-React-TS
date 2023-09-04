@@ -1,7 +1,7 @@
 import './Home.scss';
+import { type FC, useContext } from 'react';
 import { UserContext } from '@components/Contexts/UserContext';
 import { Video } from '@components/Video/Video';
-import React, { type FC, useContext } from 'react';
 import SellersSection from './components/SellersSection/SellersSection';
 
 export const Home: FC = () => {

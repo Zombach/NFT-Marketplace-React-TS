@@ -1,13 +1,19 @@
 @import "@src/variables";
 
+.switch-box {
+    display: inline-block;
+}
+
 .switch {
     display: flex;
     padding: 4px;
     border-radius: 10px;
     background: $color-grey;
+    width: 100%;
 
     .button-box {
-        width: 70px;
+        padding: 0 19px;
+        display: inline-block;
         height: 38px;
         display: flex;
         align-items: center;

@@ -9,6 +9,11 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 32px;
+
+        .sellers-section-header-left {
+            display: flex;
+            gap: 257px;
+        }
     }
 
     .sellers-section-header-right {
@@ -34,5 +39,16 @@
 @media (max-width: 850px) {
     .sellers-section {
         width: 100%;
+
+        .sellers-section-header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 32px;
+
+            .sellers-section-header-left {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
     }
 }

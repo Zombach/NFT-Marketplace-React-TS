@@ -1,6 +1,6 @@
 import './Switch.scss';
-import { FC, useState } from 'react';
-import ButtonBox, { ButtonBoxProps } from '@components/ButtonBox/ButtonBox';
+import { FC, useEffect, useState } from 'react';
+import ButtonBox from '@components/ButtonBox/ButtonBox';
 
 export interface SwitchProps {
   items: SwitchItem[];
@@ -9,7 +9,7 @@ export interface SwitchProps {
 
 export interface SwitchItem {
   item: string;
-  onClick: () => {};
+  onClick: () => void;
   id: string;
 }
 
@@ -19,19 +19,34 @@ export const Switch: FC<SwitchProps> = ({ items, defaultState }) => {
   }
 
   const [state, setState] = useState<number>(defaultState);
+
+  useEffect(() => {
+    setActiveButton(items[defaultState].id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const onClickHandler = (key: number, item: SwitchItem) => {
     if (key === state) {
       return;
     }
-    const box = document.getElementById(item.id);
-    const button = document.getElementById(`${item.id} button`);
+    setActiveButton(item.id);
+
+    resetButton();
+    setState(key);
+  };
+
+  const setActiveButton = (id: string) => {
+    const box = document.getElementById(id);
+    const button = document.getElementById(`${id} button`);
 
     if (box !== null && button !== null) {
       box.style.backgroundColor = '#7B61FF';
       button.style.color = 'white';
       button.style.fontWeight = '700';
     }
+  };
 
+  const resetButton = () => {
     const lastStateBox = document.getElementById(items[state].id);
     const lastButton = document.getElementById(`${items[state].id} button`);
 
@@ -40,18 +55,19 @@ export const Switch: FC<SwitchProps> = ({ items, defaultState }) => {
       lastButton.style.color = 'inherit';
       lastButton.style.fontWeight = '400';
     }
-    setState(key);
   };
 
   return (
-    <div className="switch">
-      {items.map((i, key) => {
-        return (
-          <ButtonBox id={i.id} buttonId={`${i.id} button`} key={key} onClick={() => onClickHandler(key, i)}>
-            {i.item}
-          </ButtonBox>
-        );
-      })}
+    <div className="switch-box">
+      <div className="switch">
+        {items.map((i, key) => {
+          return (
+            <ButtonBox id={i.id} buttonId={`${i.id} button`} key={key} onClick={() => onClickHandler(key, i)}>
+              {i.item}
+            </ButtonBox>
+          );
+        })}
+      </div>
     </div>
   );
 };

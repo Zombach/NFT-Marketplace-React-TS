@@ -24,7 +24,7 @@ export const SellersSection: FC = () => {
     );
   };
 
-  return <Sellers title={'Top Sellers'} countOnPage={10} getSellerCard={getSellerCard}></Sellers>;
+  return <Sellers title={'Top Sellers'} countOnPage={10} isNeededSwitch={true} getSellerCard={getSellerCard}></Sellers>;
 };
 
 export default SellersSection;
