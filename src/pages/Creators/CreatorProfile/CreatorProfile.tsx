@@ -7,6 +7,7 @@ import { creator } from '@resources/moq/Creators';
 import { getShortAddress } from '@src/helpers';
 import { useParams } from 'react-router-dom';
 import CollectionsHeader from '@components/CollectionsHeader/CollectionsHeader';
+import CreatorProfileSwitch from './components/CreatorProfileSwitch/CreatorProfileSwitch';
 import ExtraInfoItem from '@components/Profile/components/ExtraInfoItem/ExtraInfoItem';
 import HeaderImg from './assets/creator-header-img.jpg';
 import Profile from '@components/Profile/Profile';
@@ -19,6 +20,11 @@ export const CreatorProfile: FC = () => {
   const getCollection = (id: string) => {
     return creator(id);
   };
+
+  const switchFirstItemAction = () => {};
+  const switchSecondItemAction = () => {};
+  const switchThirdItemAction = () => {};
+  const switchFourthItemAction = () => {};
 
   const item = getCollection(profileId as string);
   return (
@@ -44,7 +50,14 @@ export const CreatorProfile: FC = () => {
           }></ExtraInfoItem>
       </Profile>
       <div className="market-place-section">
-        <h2>Products</h2>
+        <div className="cards-header">
+          <h2>Products</h2>
+          <CreatorProfileSwitch
+            firstItemAction={switchFirstItemAction}
+            secondItemAction={switchSecondItemAction}
+            thirdItemAction={switchThirdItemAction}
+            switchFirstItemAction={switchFourthItemAction}></CreatorProfileSwitch>
+        </div>
         <CollectionsHeader />
         <CardsFragment cards={cards} isTable={isTable} />
       </div>

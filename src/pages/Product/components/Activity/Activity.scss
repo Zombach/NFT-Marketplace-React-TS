@@ -1,0 +1,22 @@
+@import '@src/variables';
+
+.seller-info {
+    .recent-bid {
+        display: flex;
+        gap: 7px;
+
+        .time {
+            color: $color-black;
+
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .floor-bid {
+            color: $color-purple;
+
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}

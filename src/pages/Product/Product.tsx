@@ -1,4 +1,5 @@
 import './Product.scss';
+import { Activity } from './components/Activity/Activity';
 import { CardsFragment } from '@src/pages/Marketplace/CardsFragment/CardsFragment';
 import { CollectionsHeader } from '@components/CollectionsHeader/CollectionsHeader';
 import { type FC, useState } from 'react';
@@ -11,6 +12,7 @@ export const Product: FC = () => {
   return (
     <div className="product-page">
       <ProductSection></ProductSection>
+      <Activity></Activity>
       <div className="market-place-section">
         <h2>More from the collection</h2>
         <CollectionsHeader />

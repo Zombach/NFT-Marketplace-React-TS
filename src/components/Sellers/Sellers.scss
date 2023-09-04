@@ -1,0 +1,54 @@
+@import '@src/variables';
+
+.sellers-section {
+    width: 1142px;
+
+    margin-bottom: 70px;
+
+    .sellers-section-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 32px;
+
+        .sellers-section-header-left {
+            display: flex;
+            gap: 257px;
+        }
+    }
+
+    .sellers-section-header-right {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+
+        color: $color-black;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 26px;
+        text-decoration: underline;
+    }
+
+    .seller-cards {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 30px;
+        row-gap: 16px;
+    }
+}
+
+@media (max-width: 850px) {
+    .sellers-section {
+        width: 100%;
+
+        .sellers-section-header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 32px;
+
+            .sellers-section-header-left {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    }
+}
