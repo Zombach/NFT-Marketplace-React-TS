@@ -14,10 +14,6 @@ export interface SwitchItem {
 }
 
 export const Switch: FC<SwitchProps> = ({ items, defaultState }) => {
-  if (defaultState >= items.length) {
-    throw console.error('defaultState must be less then count of items');
-  }
-
   const [state, setState] = useState<number>(defaultState);
 
   useEffect(() => {
@@ -40,9 +36,8 @@ export const Switch: FC<SwitchProps> = ({ items, defaultState }) => {
     const button = document.getElementById(`${id} button`);
 
     if (box !== null && button !== null) {
-      box.style.backgroundColor = '#7B61FF';
-      button.style.color = 'white';
-      button.style.fontWeight = '700';
+      box.classList.add('active');
+      button.classList.add('active');
     }
   };
 
@@ -51,9 +46,8 @@ export const Switch: FC<SwitchProps> = ({ items, defaultState }) => {
     const lastButton = document.getElementById(`${items[state].id} button`);
 
     if (lastStateBox != null && lastButton !== null) {
-      lastStateBox.style.backgroundColor = 'inherit';
-      lastButton.style.color = 'inherit';
-      lastButton.style.fontWeight = '400';
+      lastStateBox.classList.remove('active');
+      lastButton.classList.remove('active');
     }
   };
 
@@ -62,7 +56,7 @@ export const Switch: FC<SwitchProps> = ({ items, defaultState }) => {
       <div className="switch">
         {items.map((i, key) => {
           return (
-            <ButtonBox id={i.id} buttonId={`${i.id} button`} key={key} onClick={() => onClickHandler(key, i)}>
+            <ButtonBox buttonClassName="switch-button" id={i.id} buttonId={`${i.id} button`} key={key} onClick={() => onClickHandler(key, i)}>
               {i.item}
             </ButtonBox>
           );
