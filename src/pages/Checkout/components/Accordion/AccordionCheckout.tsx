@@ -13,6 +13,7 @@ export const AccordionCheckout: FC<AccordionCheckoutProps> = ({ title, content }
     <div>
       <Accordion className="accordion">
         <Item
+          initialEntered
           header={
             <div className="header">
               <span>{title}</span>

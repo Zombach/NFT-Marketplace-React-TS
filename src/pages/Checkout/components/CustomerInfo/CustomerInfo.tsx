@@ -1,6 +1,6 @@
 import './CustomerInfo.scss';
-import InputText from '@components/InputText/InputText';
-import React, { type FC } from 'react';
+import InputText from '@components/Inputs/InputText/InputText';
+import React, { type FC, useState } from 'react';
 
 export const CustomerInfo: FC = () => {
   return (

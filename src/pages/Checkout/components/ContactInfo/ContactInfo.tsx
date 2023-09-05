@@ -1,5 +1,5 @@
 import './ContactInfo.scss';
-import InputText from '@components/InputText/InputText';
+import InputText from '@components/Inputs/InputText/InputText';
 import React, { type FC } from 'react';
 
 export const ContactInfo: FC = () => {

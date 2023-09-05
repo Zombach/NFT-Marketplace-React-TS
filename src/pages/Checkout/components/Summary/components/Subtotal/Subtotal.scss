@@ -1,0 +1,14 @@
+@import "@src/variables";
+
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 8px;
+    color: $color-grey-4;
+    font-size: 14px;
+}
+
+.bg-grey {
+    background-color: $color-light-grey;
+    color: $color-black;
+}

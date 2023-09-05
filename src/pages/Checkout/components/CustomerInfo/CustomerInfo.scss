@@ -1,3 +1,5 @@
+@import "@src/variables";
+
 .customer-info-section {
     display: flex;
     flex-direction: column;
@@ -12,4 +14,9 @@
 
 .city {
     width: 170%;
+}
+
+.divider-info {
+    height: 1px;
+    background-color: $color-grey;
 }
