@@ -6,6 +6,30 @@
     opacity: 0;
 }
 
+.checkbox {
+    height: 24px;
+
+    label::before {
+        height: 24px;
+        width: 24px;
+    }
+
+    label {
+        color: $color-grey-3;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+}
+
+.checkbox-label {
+    font-family: $font-helvetica-neue;
+    color: $color-grey-3;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
 #checkbox+label {
     display: inline-flex;
     align-items: center;

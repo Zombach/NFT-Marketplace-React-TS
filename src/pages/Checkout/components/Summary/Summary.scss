@@ -1,0 +1,30 @@
+@import "@src/variables";
+
+.summary-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .button-pay {
+        width: 100%;
+        padding: 16px 8px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .summary {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .payments {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        justify-content: center;
+        color: $color-grey-4;
+    }
+}

@@ -75,7 +75,6 @@ export const CreateNFT: FC = () => {
             multiline={true}
             onChange={(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setDesc(event.target.value)}></InputText>
           <Checkbox
-            className="checkbox"
             label={'I understand and agree to BNB NFT’s Minting Rules and terms '}
             onChange={(e) => {
               setIsChecked(e.target.checked);
