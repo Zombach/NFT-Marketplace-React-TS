@@ -14,14 +14,6 @@
   "[scss]": {
     "editor.defaultFormatter": "vscode.css-language-features"
   },
-  "cSpell.words": [
-    "autofix",
-    "autofocus",
-    "btns",
-    "craco",
-    "endregion",
-    "Parens",
-    "Viewd"
-  ]
+  "cSpell.words": ["autofix", "autofocus", "btns", "craco", "endregion", "Parens", "Viewd"],
+  "files.eol": "\r\n"
 }
- 

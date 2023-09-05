@@ -100,3 +100,19 @@ export const sellersMock: Seller[] = [
   createSeller('11'),
   createSeller('12'),
 ];
+
+export const avatarsMock: string[] = [
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+];
