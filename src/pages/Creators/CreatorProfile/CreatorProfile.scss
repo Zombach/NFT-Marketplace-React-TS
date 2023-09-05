@@ -1,5 +1,13 @@
 @import '@src/variables';
 
+.market-place-section {
+    .cards-header {
+        display: flex;
+        align-items: center;
+        gap: 252px;
+    }
+}
+
 .creator-profile-buttons {
     display: flex;
     gap: 16px;
@@ -42,6 +50,14 @@
 }
 
 @media (max-width: 850px) {
+    .market-place-section {
+        .cards-header {
+            flex-direction: column;
+            gap: 21px;
+            align-items: flex-start;
+        }
+    }
+
     .creator-profile-buttons {
         gap: 8px;
 

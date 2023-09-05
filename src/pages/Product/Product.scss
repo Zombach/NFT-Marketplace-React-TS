@@ -1,5 +1,9 @@
+@import '@src/variables';
+
 .product-page {
-    padding: 0 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .market-place-section {
         margin-bottom: 120px;
@@ -8,6 +12,7 @@
 
 @media (max-width: 850px) {
     .product-page {
+        display: block;
         padding: 0 24px;
     }
 }

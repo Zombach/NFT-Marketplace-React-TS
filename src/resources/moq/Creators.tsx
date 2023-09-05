@@ -1,5 +1,6 @@
 import './Base.scss';
 import { Creator } from '@models/Creator';
+import { Seller } from '@models/Seller';
 import AvatarMock from './avatar-mock.jpg';
 import React, { type FC } from 'react';
 import type { CardSmall } from '@models/CardModels/CardModels';
@@ -74,3 +75,28 @@ export const creator = (id: string) => {
     address: '0xa6794dec66df7d8b69752956df1b28ca93f77cd7',
   } as Creator;
 };
+
+export const createSeller = (id: string) => {
+  return {
+    id: id,
+    avatar: AvatarMock,
+    username: `@user ${id}`,
+    lastBidTime: '15 hours ago',
+    lastBidPrice: '15.5',
+  };
+};
+
+export const sellersMock: Seller[] = [
+  createSeller('1'),
+  createSeller('2'),
+  createSeller('3'),
+  createSeller('4'),
+  createSeller('5'),
+  createSeller('6'),
+  createSeller('7'),
+  createSeller('8'),
+  createSeller('9'),
+  createSeller('10'),
+  createSeller('11'),
+  createSeller('12'),
+];
