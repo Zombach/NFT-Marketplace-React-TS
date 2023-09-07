@@ -1,5 +1,33 @@
+@import "@src/variables";
+
 .payment-section {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
+}
+
+.credentials {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.code {
+    width: 40%;
+}
+
+.circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $color-black;
+}
+
+.payment-method {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 12px;
+    gap: 12px;
 }
