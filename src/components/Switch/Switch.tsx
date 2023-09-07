@@ -35,7 +35,7 @@ export const Switch: FC<SwitchProps> = ({ items, defaultState }) => {
     const box = document.getElementById(id);
     const button = document.getElementById(`${id} button`);
 
-    if (box !== null && button !== null) {
+    if (box && button) {
       box.classList.add('active');
       button.classList.add('active');
     }
@@ -45,7 +45,7 @@ export const Switch: FC<SwitchProps> = ({ items, defaultState }) => {
     const lastStateBox = document.getElementById(items[state].id);
     const lastButton = document.getElementById(`${items[state].id} button`);
 
-    if (lastStateBox != null && lastButton !== null) {
+    if (lastStateBox && lastButton) {
       lastStateBox.classList.remove('active');
       lastButton.classList.remove('active');
     }
