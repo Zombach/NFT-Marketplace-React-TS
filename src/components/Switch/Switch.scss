@@ -12,7 +12,6 @@
     width: 100%;
 
     .button-box {
-        padding: 0 19px;
         display: inline-block;
         height: 38px;
         display: flex;
@@ -20,13 +19,25 @@
         justify-content: center;
         border-radius: 10px;
 
-        button {
+        &.active {
+            background-color: $color-purple;
+        }
+
+        .switch-button {
+            padding: 0 19px;
             color: $color-dark-2;
             font-size: 14px;
             font-weight: 400;
             height: 100%;
             width: 100%;
             border-radius: 10px;
+            border: 0;
+
+            &.active {
+                color: $color-white;
+                font-weight: 700;
+                background-color: $color-purple;
+            }
         }
     }
 }
