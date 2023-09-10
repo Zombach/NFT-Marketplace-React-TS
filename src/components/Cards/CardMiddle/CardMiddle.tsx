@@ -26,7 +26,7 @@ export const CardMiddle: FC<CardMiddleFragmentProps> = (props) => {
       </div>
       <div className="bottom-section">
         <p className="bottom-section-header">
-          <Link className="link" to={`/product/${card.id}`}>
+          <Link className="link" to={`/product/${card.id}`} state={card}>
             {card.nftName}
           </Link>
         </p>
