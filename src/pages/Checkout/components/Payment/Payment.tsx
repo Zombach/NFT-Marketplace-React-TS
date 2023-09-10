@@ -1,15 +1,21 @@
 import './Payment.scss';
-import { RadioButton } from '@components/RadioButton/RadioButton';
-import Card from './components/Card/Card';
+import InputText from '@components/Inputs/InputText/InputText';
 import React, { type FC } from 'react';
 
 export const CustomerInfo: FC = () => {
   return (
     <div className="payment-section">
-      <Card />
-      <RadioButton textLeft={'PayPal'} />
-      <RadioButton textLeft={'Bank transfer'} />
-      <RadioButton textLeft={'Apple pay'} />
+      <div className="payment-method">
+        <div className="circle"></div>
+        <span>Credit card</span>
+      </div>
+      <InputText id={'cardNumber'} name={'creditCard'} placeholder={'Card number'} />
+      <div className="credentials">
+        <InputText id={'expDate'} name={'Exp.date'} placeholder={'Exp.day'} />
+        <div className="code">
+          <InputText id={'securityCode'} name={'securityCode'} placeholder={'CVC'} />
+        </div>
+      </div>
     </div>
   );
 };
