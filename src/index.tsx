@@ -1,6 +1,8 @@
 import './index.scss';
 import { Application } from './Application';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from './store/Store';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
@@ -8,9 +10,14 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename={process.env.REACT_APP_BASE_NAME}>
-      <Application />
-    </BrowserRouter>
+    <React.StrictMode>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Application />
+        </BrowserRouter>
+      </Provider>
+    </React.StrictMode>
+    ,
   </React.StrictMode>,
 );
 

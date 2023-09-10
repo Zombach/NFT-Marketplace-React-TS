@@ -19,12 +19,7 @@ export const ProductSection: FC<ProductSectionProps> = (props) => {
       <div className="product-section-right-part">
         <h2>{product.nftName}</h2>
         <AuthoredBy srcAvatar={product.avatar} username={product.userName}></AuthoredBy>
-        <ProductPriceBlock
-          ethereumPrice={product.price}
-          dollarPrice={product.price}
-          username={product.userName}
-          lastSalePrice={product.price}
-          ethereumBidPrice={product.priceBnB}></ProductPriceBlock>
+        <ProductPriceBlock product={product} lastSalePrice={product.price} ethereumBidPrice={product.priceBnB}></ProductPriceBlock>
         <ProductActions></ProductActions>
       </div>
     </section>

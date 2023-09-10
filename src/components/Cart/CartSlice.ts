@@ -28,6 +28,8 @@ const cartSlice = createSlice({
   },
 });
 
+console.log("products", state.cart.products);
+
 export const { addToCart } = cartSlice.actions;
 
 export const selectCartItems = (state: RootState) => state.cartState.products;
