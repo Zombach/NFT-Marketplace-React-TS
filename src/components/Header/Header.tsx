@@ -1,5 +1,5 @@
 import './Header.scss';
-import { ReactComponent as Ellipse } from './assets/ellipse.svg';
+import { ReactComponent as Ellipse } from './assets/ellipseWhite.svg';
 import { ReactComponent as HamburgerMenu } from './assets/hamburgerMenu.svg';
 import { ReactComponent as Lock } from './assets/lock.svg';
 import { ReactComponent as Logo } from './assets/logo.svg';

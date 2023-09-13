@@ -1,5 +1,6 @@
 import './Base.scss';
 import { Creator } from '@models/Creator';
+import { HeaderFoto } from '@models/HeaderFoto';
 import { Seller } from '@models/Seller';
 import AvatarMock from './avatar-mock.jpg';
 import React, { type FC } from 'react';
@@ -99,4 +100,21 @@ export const sellersMock: Seller[] = [
   createSeller('10'),
   createSeller('11'),
   createSeller('12'),
+];
+
+export const createFotoHeader = (id: number, username: string, whatCreated: string, whenCreated: string) => {
+  return {
+    id: id,
+    avatar: `./assets/ava${id}.svg`,
+    username: `${username}`,
+    whatCreated: `${whatCreated}`,
+    whenCreated: `${whenCreated}`,
+  };
+};
+
+export const fotoHeaderMock: HeaderFoto[] = [
+  createFotoHeader(0, '@Marterium', 'created Machina', 'an hour ago (2,000 views)'),
+  createFotoHeader(1, '@Shakinsir', 'created Table', 'an 2 hour ago (6,000 views)'),
+  createFotoHeader(2, '@S75Studio', 'created House', 'an 3 hour ago (9,000 views)'),
+  createFotoHeader(3, '@GraphicMuzic', 'created Bed', 'an 4 hour ago (1,000 views)'),
 ];
