@@ -118,3 +118,19 @@ export const fotoHeaderMock: HeaderFoto[] = [
   createFotoHeader(2, '@S75Studio', 'created House', 'an 3 hour ago (9,000 views)'),
   createFotoHeader(3, '@GraphicMuzic', 'created Bed', 'an 4 hour ago (1,000 views)'),
 ];
+
+export const avatarsMock: string[] = [
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+  AvatarMock,
+];
