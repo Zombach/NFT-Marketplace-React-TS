@@ -3,13 +3,12 @@ import React, { ChangeEvent, FC } from 'react';
 
 export interface CheckboxProps {
   label: string;
-  className?: string;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const Checkbox: FC<CheckboxProps> = ({ label, onChange, className }) => {
+export const Checkbox: FC<CheckboxProps> = ({ label, onChange }) => {
   return (
-    <div className={className}>
+    <div className="checkbox">
       <input type="checkbox" id="checkbox" onChange={onChange} />
       <label htmlFor="checkbox">{label}</label>
     </div>

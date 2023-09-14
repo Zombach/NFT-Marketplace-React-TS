@@ -1,0 +1,13 @@
+@import '@src/variables';
+
+.input-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    background-image: url("./assets/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 15px) center;
+    outline: none;
+    cursor: pointer;
+}

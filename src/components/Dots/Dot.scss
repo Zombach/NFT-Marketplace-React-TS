@@ -1,0 +1,14 @@
+@import '@src/variables';
+
+.dot-header {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $color-white;
+    
+    
+}
+.dot-header.selected{
+    border: 2px solid $color-white;
+    background: transparent
+}

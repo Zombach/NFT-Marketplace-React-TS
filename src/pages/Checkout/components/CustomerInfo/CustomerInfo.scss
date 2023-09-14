@@ -1,0 +1,22 @@
+@import "@src/variables";
+
+.customer-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.city-code-container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.city {
+    width: 170%;
+}
+
+.divider-info {
+    height: 1px;
+    background-color: $color-grey;
+}

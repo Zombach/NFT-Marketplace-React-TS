@@ -3,8 +3,8 @@ import { ReactComponent as Circle } from './assets/circle.svg';
 import { ReactComponent as DownloadIcon } from './assets/download.svg';
 import { ReactComponent as PictureIcon } from './assets/picture.svg';
 import Checkbox from '@components/Checkbox/Checkbox';
-import InputText from '@components/InputText/InputText';
-import React, { type FC, useState } from 'react';
+import InputText from '@components/Inputs/InputText/InputText';
+import React, { ChangeEvent, type FC, useState } from 'react';
 
 export const CreateNFT: FC = () => {
   const [name, setName] = useState<string>('');
@@ -66,16 +66,15 @@ export const CreateNFT: FC = () => {
             name={'Name'}
             placeholder={'Enter a name here...'}
             isRequired={true}
-            onChange={(event) => setName(event.target.value)}></InputText>
+            onChange={(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setName(event.target.value)}></InputText>
           <InputText
             id={'desc'}
             name={'Description'}
             placeholder={'Enter a description here...'}
             isRequired={true}
             multiline={true}
-            onChange={(event) => setDesc(event.target.value)}></InputText>
+            onChange={(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setDesc(event.target.value)}></InputText>
           <Checkbox
-            className="checkbox"
             label={'I understand and agree to BNB NFT’s Minting Rules and terms '}
             onChange={(e) => {
               setIsChecked(e.target.checked);

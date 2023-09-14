@@ -4,7 +4,7 @@ import { FC } from 'react';
 
 export interface EthereumPriceProps {
   value: number | string;
-  children?: string;
+  children?: string | React.ReactNode;
   title?: string;
 }
 
@@ -19,12 +19,18 @@ export const EthereumPrice: FC<EthereumPriceProps> = ({ value, children, title }
       )}
       <EthereumIcon className="ethereum-icon" />
       <div className="ethereum-price-value-currency">{value} BNB</div>
-      {children && (
-        <>
-          <div></div>
-          <div className="ethereum-price-extra">{children}</div>
-        </>
-      )}
+      {children &&
+        (typeof children === 'string' ? (
+          <>
+            <div></div>
+            <div className="ethereum-price-extra">{children}</div>
+          </>
+        ) : (
+          <>
+            <div></div>
+            {children}
+          </>
+        ))}
     </div>
   );
 };
