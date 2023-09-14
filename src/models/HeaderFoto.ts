@@ -4,4 +4,5 @@ export interface HeaderFoto {
   avatar: string;
   whatCreated: string;
   whenCreated: string;
+  mainFoto: string;
 }

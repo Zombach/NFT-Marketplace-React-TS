@@ -1,13 +1,7 @@
 import './HeaderCard.scss';
 import { ReactComponent as ArrowLeft } from '../assets/arrowLeft.svg';
 import { ReactComponent as ArrowRight } from '../assets/arrowRight.svg';
-import { ReactComponent as Avataruser1 } from './assets/avataruser1.svg';
-import { ReactComponent as Avataruser2 } from './assets/avataruser2.svg';
-import { ReactComponent as Avataruser3 } from './assets/avataruser3.svg';
-import { ReactComponent as Avataruser4 } from './assets/avataruser4.svg';
-import { EthereumPrice } from '@components/EthereumPrice/EthereumPrice';
 import { FC, createContext, useEffect, useState } from 'react';
-import { ReactComponent as Header } from '../assets/header.svg';
 import { HeaderFoto } from '@models/HeaderFoto';
 import { fotoHeaderMock } from '@resources/moq/Creators';
 import Dots from '@components/Dots/Dots';
@@ -65,12 +59,11 @@ export const HeaderCard: FC<HeaderCardProps> = ({ id, avatar, username, whatCrea
             return (
               <>
                 <div className="header-card-index">
-                  <Header></Header>
+                  <img className="main-foto" src={headerCard.mainFoto} alt="" />
                 </div>
                 <div className="text-block">
-                  <div className="ava-left">
-                    <Avataruser1></Avataruser1>
-                    <img src={headerCard.avatar} alt="" />
+                  <div>
+                    <img className="ava-left" src={headerCard.avatar} alt="" />
                   </div>
                   <div className="ava-right">
                     <p>
