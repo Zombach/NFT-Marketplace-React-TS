@@ -1,11 +1,8 @@
 @import "@src/variables";
 
 .sign-up {
-    margin-top: 148px;
     display: inline-flex;
     flex-direction: column;
-    height: 368px;
-    width: 458px;
 
     .h2 {
         color: $color-black;
@@ -22,7 +19,6 @@
         flex-direction: row;
         justify-content: center;
         display: flex;
-        width: 458px;
         height: 56px;
         padding: 6px 8px;
         justify-content: center;
