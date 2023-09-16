@@ -33,6 +33,13 @@ h2 {
     border: 0;
 }
 
+.disabled-btn {
+    border-radius: 10px;
+    background: $color-grey;
+    color: $color-grey-4;
+    border: 0;
+}
+
 button {
     cursor: pointer;
 }

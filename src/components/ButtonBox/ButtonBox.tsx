@@ -10,6 +10,7 @@ export interface ButtonBoxProps {
   onClick?: () => void;
   id?: string;
   buttonId?: string;
+  disabled?: boolean;
 }
 
 export const ButtonBox: FC<ButtonBoxProps> = ({
@@ -21,6 +22,7 @@ export const ButtonBox: FC<ButtonBoxProps> = ({
   onClick,
   id,
   buttonId,
+  disabled,
 }): JSX.Element => {
   let click =
     onClick ??
@@ -30,7 +32,7 @@ export const ButtonBox: FC<ButtonBoxProps> = ({
     });
   return (
     <div id={id} className={className ?? 'button-box'}>
-      <button id={buttonId} className={buttonClassName ?? 'button'} onClick={click}>
+      <button id={buttonId} className={buttonClassName ?? 'button'} onClick={click} disabled={disabled}>
         {SvgBox && SvgBox}
         {children && <span className={textClassName ?? 'text'}>{children}</span>}
       </button>

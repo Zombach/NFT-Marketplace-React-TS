@@ -1,4 +1,6 @@
 import './CheckoutFragment.scss';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
 import AccordionCheckout from '../Accordion/AccordionCheckout';
 import AdditionalInfo from '../AdditionalInfo/AdditionalInfo';
 import ContactInfo from '../ContactInfo/ContactInfo';
@@ -8,12 +10,21 @@ import React, { type FC } from 'react';
 import Summary from '../Summary/Summary';
 
 export const CheckoutFragment: FC = () => {
-  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm<FormData>({
+    resolver: yupResolver(schema),
+  });
+
+  const onSubmit: SubmitHandler<FormData> = (data) => {
+    console.log('data', data);
   };
 
   return (
-    <form id="form-checkout" onSubmit={onSubmit}>
+    <form id="form-checkout" onSubmit={handleSubmit(onSubmit)}>
       <div className="checkout-accordions-container">
         <AccordionCheckout title="Customers Information" content={<CustomerInfo />} />
         <AccordionCheckout title="Contact information" content={<ContactInfo />} />
@@ -24,5 +35,3 @@ export const CheckoutFragment: FC = () => {
     </form>
   );
 };
-
-export default CheckoutFragment;

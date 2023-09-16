@@ -3,7 +3,7 @@ import { CardMarketplace } from '@resources/moq/Marketplace';
 import { EthereumPrice } from '@components/EthereumPrice/EthereumPrice';
 import { FC, useState } from 'react';
 import { ModalWindow } from '@components/Modals/ModalWindow/ModalWindow';
-import { addToCart } from '@components/Cart/CartSlice';
+import { Product, addToCart } from '@components/Cart/CartSlice';
 import { useDispatch } from 'react-redux';
 import ButtonBox from '@components/ButtonBox/ButtonBox';
 import CartModal from '@components/Cart/components/CartModal/CartModal';
@@ -20,7 +20,7 @@ export const ProductPriceBlock: FC<AuthoredByProps> = ({ product, lastSalePrice,
   const [modalIsOpen, setIsOpen] = useState<boolean>(false);
 
   const onClickHandle = () => {
-    dispatch(addToCart(product));
+    dispatch(addToCart(product as Product));
     setIsOpen(true);
   };
 
