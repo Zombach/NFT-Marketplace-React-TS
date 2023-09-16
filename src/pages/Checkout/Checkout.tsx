@@ -1,5 +1,5 @@
 import './Checkout.scss';
-import CheckoutFragment from './components/CheckoutFragment/CheckoutFragment';
+import { CheckoutFragment } from './components/CheckoutFragment/CheckoutFragment';
 import React, { type FC } from 'react';
 
 export const Checkout: FC = () => {

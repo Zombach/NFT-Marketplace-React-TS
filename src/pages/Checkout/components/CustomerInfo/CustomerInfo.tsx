@@ -1,4 +1,5 @@
 import './CustomerInfo.scss';
+import { ObjectSchema } from 'yup';
 import InputText from '@components/Inputs/InputText/InputText';
 import React, { type FC, useState } from 'react';
 
