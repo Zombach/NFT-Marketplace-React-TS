@@ -11,18 +11,20 @@ import Trust from './components/Trust/Trust';
 export const Footer: FC = () => {
   return (
     <>
-      <Delimiter className="delimiter" />
-      <div className="footer">
-        <div className="left">
-          <AboutUs />
-          <Subscribe />
-          <Trust extraClassName="desktop-only" />
-        </div>
-        <div className="right">
-          <Links />
-          <SocialNetwork />
-          <Trust extraClassName="mobile-only" />
-          <Copyright />
+      <Delimiter className="footer-delimiter" />
+      <div className="footer-container">
+        <div className="footer">
+          <div className="left">
+            <AboutUs />
+            <Subscribe />
+            <Trust extraClassName="desktop-only" />
+          </div>
+          <div className="right">
+            <Links />
+            <SocialNetwork />
+            <Trust extraClassName="mobile-only" />
+            <Copyright />
+          </div>
         </div>
       </div>
     </>
