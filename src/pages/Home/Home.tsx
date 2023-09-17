@@ -11,13 +11,15 @@ export const Home: FC = () => {
   const context = useContext(UserContext);
 
   return (
-    <div className="home-page">
+    <>
       <Hero></Hero>
-      <CreateNftText></CreateNftText>
-      <SellersSection></SellersSection>
-      <Video></Video>
-      <AvatarsSection></AvatarsSection>
-    </div>
+      <div className="home-page">
+        <CreateNftText></CreateNftText>
+        <SellersSection></SellersSection>
+        <Video></Video>
+        <AvatarsSection></AvatarsSection>
+      </div>
+    </>
   );
 };
 

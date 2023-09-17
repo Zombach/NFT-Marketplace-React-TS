@@ -38,7 +38,10 @@ export const CartModal: FC<CartModalProps> = ({ onClose }) => {
           className="btn-box"
           buttonClassName={items?.length > 0 ? 'cart-btn primary-2-btn' : 'cart-btn disabled-btn'}
           disabled={items?.length === 0}
-          onClick={() => navigate('/checkout')}>
+          onClick={() => {
+            onClose();
+            navigate('/checkout');
+          }}>
           Check out
         </ButtonBox>
       </div>

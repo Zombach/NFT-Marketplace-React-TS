@@ -22,7 +22,7 @@ export const SliderContext = createContext(0);
 
 export const HeaderCard: FC<HeaderCardProps> = ({ id, avatar, username, whatCreated, whenCreated }) => {
   const [skip, setSkip] = useState<number>(0);
-  const [HeaderCards, setHeaderCards] = useState<HeaderFoto[]>([]);
+  const [headerCards, setHeaderCards] = useState<HeaderFoto[]>([]);
 
   const onClickSkipLeft = () => {
     if (skip + 1 >= 4) {
@@ -55,7 +55,7 @@ export const HeaderCard: FC<HeaderCardProps> = ({ id, avatar, username, whatCrea
     return (
       <div id="header-card">
         <div className="header-card-left">
-          {HeaderCards.map((headerCard) => {
+          {headerCards.map((headerCard) => {
             return (
               <>
                 <div className="header-card-index">
