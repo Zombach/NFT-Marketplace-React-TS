@@ -5,8 +5,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1140px;
-    margin: 37px auto;
+    max-width: 1440px;
+    margin: 37px 5%;
+    position: relative;
+    z-index: 1;
 
     .background {
         background-color: transparent;

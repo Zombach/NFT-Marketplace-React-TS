@@ -7,10 +7,10 @@
     bottom: 210px;
     height: 900px;
     justify-content: space-between;
+    z-index: 0;
 
-    .header-card-index {
-        position: relative;
-        z-index: -1;
+    .header-card-left {
+        width: 100%;
     }
 
     .text-block {
@@ -34,6 +34,7 @@
         width: 100%;
         height: 900px;
         object-fit: cover;
+        border-radius: 0 0 0 20px;
     }
 
     .ava-right {

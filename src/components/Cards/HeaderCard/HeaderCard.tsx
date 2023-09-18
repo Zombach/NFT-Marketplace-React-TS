@@ -50,50 +50,47 @@ export const HeaderCard: FC<HeaderCardProps> = ({ id, avatar, username, whatCrea
     setHeaderCards(currentSellers.items);
   }, [4, skip]);
 
-  // eslint-disable-next-line no-lone-blocks
-  {
-    return (
-      <div id="header-card">
-        <div className="header-card-left">
-          {headerCards.map((headerCard) => {
-            return (
-              <>
-                <div className="header-card-index">
-                  <img className="main-foto" src={headerCard.mainFoto} alt="" />
-                </div>
-                <div className="text-block">
-                  <div>
-                    <img className="ava-left" src={headerCard.avatar} alt="" />
-                  </div>
-                  <div className="ava-right">
-                    <p>
-                      {headerCard.username} <span className="little-text">{headerCard.whatCreated}</span>
-                    </p>
-                    <p className="little-text opacity">{headerCard.whenCreated}</p>
-                  </div>
-                </div>
+  return (
+    <div id="header-card">
+      <div className="header-card-left">
+        {headerCards.map((headerCard) => {
+          return (
+            <>
+              <div className="header-card-index">
+                <img className="main-foto" src={headerCard.mainFoto} alt="" />
+              </div>
+              <div className="text-block">
                 <div>
-                  <SliderContext.Provider value={headerCard.id}>
-                    <Dots />
-                  </SliderContext.Provider>
+                  <img className="ava-left" src={headerCard.avatar} alt="" />
                 </div>
-                <div className="arrow-switch">
-                  <button onClick={onClickSkipRight} className="circle-big">
-                    <div className="arrow">
-                      <ArrowRight></ArrowRight>
-                    </div>
-                  </button>
-                  <button onClick={onClickSkipLeft} className="circle-big">
-                    <div className="arrow ">
-                      <ArrowLeft></ArrowLeft>
-                    </div>
-                  </button>
+                <div className="ava-right">
+                  <p>
+                    {headerCard.username} <span className="little-text">{headerCard.whatCreated}</span>
+                  </p>
+                  <p className="little-text opacity">{headerCard.whenCreated}</p>
                 </div>
-              </>
-            );
-          })}
-        </div>
+              </div>
+              <div>
+                <SliderContext.Provider value={headerCard.id}>
+                  <Dots />
+                </SliderContext.Provider>
+              </div>
+              <div className="arrow-switch">
+                <button onClick={onClickSkipRight} className="circle-big">
+                  <div className="arrow">
+                    <ArrowRight></ArrowRight>
+                  </div>
+                </button>
+                <button onClick={onClickSkipLeft} className="circle-big">
+                  <div className="arrow ">
+                    <ArrowLeft></ArrowLeft>
+                  </div>
+                </button>
+              </div>
+            </>
+          );
+        })}
       </div>
-    );
-  }
+    </div>
+  );
 };
