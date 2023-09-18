@@ -19,14 +19,22 @@ export const Select: FC<SelectProps> = ({ id, name, placeholder, isRequired = fa
   };
 
   return (
-    <div className="input-group">
-      <select className="input-group-input input-select" name={name} id={id} placeholder="" defaultValue={defaultValue} onChange={handleSelectChange}>
-        {options?.map((option) => <option>{option}</option>)}
-      </select>
-      <label htmlFor={id} className="active">
-        {placeholder}
-        {isRequired && <span className="required">*</span>}
-      </label>
+    <div className="select">
+      <div className="input-group">
+        <select
+          className="input-group-input input-select"
+          name={name}
+          id={id}
+          placeholder=""
+          defaultValue={defaultValue}
+          onChange={handleSelectChange}>
+          {options?.map((option) => <option>{option}</option>)}
+        </select>
+        <label htmlFor={id} className="active">
+          {placeholder}
+          {isRequired && <span className="required">*</span>}
+        </label>
+      </div>
     </div>
   );
 };

@@ -40,7 +40,7 @@ export const CardMiddle: FC<CardMiddleFragmentProps> = (props) => {
           <div className="price-container">
             <Ethereum />
             <div>
-              <p className="price">{card.price}</p>
+              <p className="price">{card.price} BNB</p>
               <p className="sub-title">{card.priceBnB}</p>
             </div>
           </div>

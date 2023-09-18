@@ -1,7 +1,7 @@
 @import '@src/variables';
 
 .sellers-section {
-    max-width: 1142px;
+    max-width: 1140px;
     margin: 0 auto 70px auto;
 
     .sellers-section-header {
@@ -27,12 +27,15 @@
     }
 
     .seller-cards {
-        display: flex;
         display: grid;
         grid-template-rows: auto auto;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 30px;
         row-gap: 16px;
+    }
+
+    .seller-card {
+        min-width: 556px;
     }
 }
 
