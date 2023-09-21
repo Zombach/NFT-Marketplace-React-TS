@@ -1,7 +1,8 @@
+import { UseFormRegister, useForm } from 'react-hook-form';
 import '../Input.scss';
 import './InputText.scss';
 import React, { ChangeEvent, FC } from 'react';
-
+import { Reg } from '@models/Reg';
 export interface InputTextProps {
   id: string;
   name: string;
@@ -12,13 +13,27 @@ export interface InputTextProps {
   multiline?: boolean;
   className?: string;
   onChange?: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  register: any;
+  regName: any;
 }
 
-export const InputText: FC<InputTextProps> = ({ id, name, placeholder, onChange, rightSideItem, isRequired = false, multiline = false , className}) => {
+
+export const InputText: FC<InputTextProps> = ({
+  id,
+  name,
+  placeholder,
+  onChange,
+  rightSideItem,
+  isRequired = false,
+  multiline = false,
+  className,
+  register,
+  regName,
+}) => {
   return (
     <div className={className ?? 'input-group'}>
       {!multiline ? (
-        <input className="input-group-input" type="text" name={name} id={id} placeholder="" onChange={onChange} />
+        <input className="input-group-input" {...register(regName)} type="text" name={name} id={id} placeholder="" onChange={onChange} />
       ) : (
         <textarea name={name} id={id} placeholder="" onChange={onChange}></textarea>
       )}

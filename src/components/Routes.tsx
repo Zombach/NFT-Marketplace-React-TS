@@ -13,8 +13,8 @@ import LogIn from '@pages/LogIn/LogIn';
 import Marketplace from '@pages/Marketplace/Marketplace';
 import NotFound from '@pages/NotFound/NotFound';
 import Product from '@pages/Product/Product';
-import SignUp from '@pages/SignUp/SignUp';
 import Welcome from '@pages/Welcome/Welcome';
+import { SignUp } from '@pages/SignUp/SignUp';
 
 export const Routes: FC = () => {
   return (
