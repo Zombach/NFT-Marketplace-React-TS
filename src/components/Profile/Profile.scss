@@ -13,12 +13,11 @@
 }
 
 .profile-section {
+    max-width: 1140px;
     display: flex;
+    margin: 0 auto 70px auto;
     gap: 29px;
-
-    margin-right: 150px;
-    margin-left: 150px;
-    margin-bottom: 70px;
+    justify-content: space-between;
 
     .profile-section-left-part {
         position: relative;

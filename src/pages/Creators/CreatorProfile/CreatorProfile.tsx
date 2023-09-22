@@ -1,17 +1,18 @@
 import './CreatorProfile.scss';
 import { CardsFragment } from '@pages/Marketplace/CardsFragment/CardsFragment';
 import { EthereumPrice } from '@components/EthereumPrice/EthereumPrice';
+import { type FC, useState } from 'react';
 import { ReactComponent as ViewIcon } from '@components/Profile/assets/view.svg';
 import { cards } from '@resources/moq/Marketplace';
 import { creator } from '@resources/moq/Creators';
 import { getShortAddress } from '@src/helpers';
+import { initSwitchItems } from './dispatcher';
 import { useParams } from 'react-router-dom';
 import CollectionsHeader from '@components/CollectionsHeader/CollectionsHeader';
-import CreatorProfileSwitch from './components/CreatorProfileSwitch/CreatorProfileSwitch';
 import ExtraInfoItem from '@components/Profile/components/ExtraInfoItem/ExtraInfoItem';
 import HeaderImg from './assets/creator-header-img.jpg';
 import Profile from '@components/Profile/Profile';
-import React, { type FC, useState } from 'react';
+import Switch from '@components/Switch/Switch';
 
 export const CreatorProfile: FC = () => {
   const { profileId } = useParams();
@@ -21,10 +22,7 @@ export const CreatorProfile: FC = () => {
     return creator(id);
   };
 
-  const switchFirstItemAction = () => {};
-  const switchSecondItemAction = () => {};
-  const switchThirdItemAction = () => {};
-  const switchFourthItemAction = () => {};
+  const items = initSwitchItems();
 
   const item = getCollection(profileId as string);
   return (
@@ -52,11 +50,7 @@ export const CreatorProfile: FC = () => {
       <div className="market-place-section">
         <div className="cards-header">
           <h2>Products</h2>
-          <CreatorProfileSwitch
-            firstItemAction={switchFirstItemAction}
-            secondItemAction={switchSecondItemAction}
-            thirdItemAction={switchThirdItemAction}
-            switchFirstItemAction={switchFourthItemAction}></CreatorProfileSwitch>
+          <Switch items={items} activeItem={1}></Switch>
         </div>
         <CollectionsHeader />
         <CardsFragment cards={cards} isTable={isTable} />

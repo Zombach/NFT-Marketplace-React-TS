@@ -10,6 +10,8 @@ export interface ButtonBoxProps {
   onClick?: () => void;
   id?: string;
   buttonId?: string;
+  disabled?: boolean;
+  isActive?: boolean;
 }
 
 export const ButtonBox: FC<ButtonBoxProps> = ({
@@ -21,6 +23,8 @@ export const ButtonBox: FC<ButtonBoxProps> = ({
   onClick,
   id,
   buttonId,
+  disabled,
+  isActive,
 }): JSX.Element => {
   let click =
     onClick ??
@@ -28,9 +32,12 @@ export const ButtonBox: FC<ButtonBoxProps> = ({
       // eslint-disable-next-line
       console.log('Не реализованная функция');
     });
+
+  className = className ?? 'button-box';
+  if (isActive) className += ' active';
   return (
-    <div id={id} className={className ?? 'button-box'}>
-      <button id={buttonId} className={buttonClassName ?? 'button'} onClick={click}>
+    <div id={id} className={className}>
+      <button id={buttonId} className={buttonClassName ?? 'button'} onClick={click} disabled={disabled}>
         {SvgBox && SvgBox}
         {children && <span className={textClassName ?? 'text'}>{children}</span>}
       </button>
