@@ -29,12 +29,11 @@ export const CreatorProfile: FC = () => {
     <>
       <Profile
         headerImg={HeaderImg}
-        avatar={item.avatar}
-        headerName={item.userName}
-        desc={item.description}
+        creator={item}
         buttonsClassName="creator-profile-buttons"
         buttonLeftText={'Follow'}
-        buttonRightText={'Message'}>
+        buttonRightText={'Message'}
+        headerName={''}>
         <ExtraInfoItem leftText={'Followers'} RightItem={<div className="extra-info-item-right-part">{item.followersCount}</div>}></ExtraInfoItem>
         <ExtraInfoItem leftText={'Following'} RightItem={<div className="extra-info-item-right-part">{item.followingCount}</div>}></ExtraInfoItem>
         <ExtraInfoItem leftText={'Earned'} RightItem={<EthereumPrice value={item.earned} />}></ExtraInfoItem>

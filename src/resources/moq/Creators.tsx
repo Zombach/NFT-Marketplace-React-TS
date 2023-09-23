@@ -71,7 +71,7 @@ const desc = `LIŔONA is a creator of minimalistic ⨯ bold graphic and digital 
 export const creator = (id: string) => {
   return {
     id: id,
-    userName: '@YFI Fan',
+    username: '@YFI Fan',
     avatar: AvatarMock,
     description: desc,
     followersCount: 123,
@@ -106,13 +106,13 @@ export const sellersMock: Seller[] = [
   createSeller('12'),
 ];
 
-export const createPhotoHeader = (id: number, username: string, avatar: string, whatCreated: string, whenCreated: string, mainPhoto: string) => {
+export const createPhotoHeader = (id: number, username: string, avatar: string, name: string, createdAt: string, mainPhoto: string) => {
   return {
     id: id,
     username: username,
     avatar: avatar,
-    whatCreated: whatCreated,
-    whenCreated: whenCreated,
+    name: name,
+    createdAt: createdAt,
     mainPhoto: mainPhoto,
   };
 };

@@ -1,5 +1,6 @@
 import './Footer.scss';
 import { ReactComponent as Delimiter } from './assets/delimiter.svg';
+import { checkOnDesktopOnly, checkOnMobileOnly } from '@src/helpers';
 import AboutUs from './components/AboutUs/AboutUs';
 import Copyright from './components/Copyright/Copyright';
 import Links from './components/Links/Links';
@@ -16,12 +17,12 @@ export const Footer: FC = () => {
         <div className="left">
           <AboutUs />
           <Subscribe />
-          <Trust extraClassName="desktop-only" />
+          {checkOnDesktopOnly() && <Trust />}
         </div>
         <div className="right">
           <Links />
           <SocialNetwork />
-          <Trust extraClassName="mobile-only" />
+          {checkOnMobileOnly() && <Trust />}
           <Copyright />
         </div>
       </div>

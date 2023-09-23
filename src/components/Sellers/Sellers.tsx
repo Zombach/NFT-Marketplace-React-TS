@@ -13,10 +13,15 @@ export interface SellersProps {
   title: string;
   countOnPage: number;
   isNeededSwitch?: boolean;
-  getSellerCard: (seller: Seller, skip: number) => React.ReactNode;
+  SellersCards: FC<SellersCardsProps>;
 }
 
-export const Sellers: FC<SellersProps> = ({ title, countOnPage, isNeededSwitch = false, getSellerCard }) => {
+export interface SellersCardsProps {
+  sellers: Seller[];
+  skip: number;
+}
+
+export const Sellers: FC<SellersProps> = ({ title, countOnPage, isNeededSwitch = false, SellersCards }) => {
   const [skip, setSkip] = useState<number>(0);
   const [sellers, setSellers] = useState<Seller[]>([]);
   const [totalCount, setTotalCount] = useState<number>(0);
@@ -53,9 +58,7 @@ export const Sellers: FC<SellersProps> = ({ title, countOnPage, isNeededSwitch =
         </div>
       </div>
       <div className="seller-cards">
-        {sellers.map((seller, i) => {
-          return getSellerCard(seller, i + skip);
-        })}
+        <SellersCards sellers={sellers} skip={skip}></SellersCards>
       </div>
     </section>
   );

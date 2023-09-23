@@ -5,11 +5,10 @@ export interface ButtonBoxProps {
   className?: string;
   buttonClassName?: string;
   textClassName?: string;
-  children?: string;
+  text?: string;
   SvgBox?: ReactNode;
   onClick?: () => void;
   id?: string;
-  buttonId?: string;
   disabled?: boolean;
   isActive?: boolean;
 }
@@ -18,11 +17,10 @@ export const ButtonBox: FC<ButtonBoxProps> = ({
   className,
   buttonClassName,
   textClassName,
-  children,
+  text,
   SvgBox,
   onClick,
   id,
-  buttonId,
   disabled,
   isActive,
 }): JSX.Element => {
@@ -37,9 +35,9 @@ export const ButtonBox: FC<ButtonBoxProps> = ({
   if (isActive) className += ' active';
   return (
     <div id={id} className={className}>
-      <button id={buttonId} className={buttonClassName ?? 'button'} onClick={click} disabled={disabled}>
+      <button className={buttonClassName ?? 'button'} onClick={click} disabled={disabled}>
         {SvgBox && SvgBox}
-        {children && <span className={textClassName ?? 'text'}>{children}</span>}
+        {text && <span className={textClassName ?? 'text'}>{text}</span>}
       </button>
     </div>
   );

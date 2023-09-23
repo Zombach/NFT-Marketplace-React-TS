@@ -6,10 +6,6 @@ import { HeaderPhoto } from '@models/HeaderPhoto';
 import { photoHeaderMock } from '@resources/moq/Creators';
 import Dots from '@components/Dots/Dots';
 
-export interface FindModel<T> {
-  items: T[];
-}
-
 export const SliderContext = createContext(0);
 
 export const HeaderCard: FC = () => {
@@ -32,14 +28,13 @@ export const HeaderCard: FC = () => {
     }
   };
 
-  const getSellers = (skip: number): FindModel<HeaderPhoto> => {
-    const response: FindModel<HeaderPhoto> = { items: photoHeaderMock.slice(skip, skip + 1) };
-    return response;
+  const getSellers = (skip: number): HeaderPhoto[] => {
+    return photoHeaderMock.slice(skip, skip + 1);
   };
 
   useEffect(() => {
     const currentSellers = getSellers(skip);
-    setHeaderCards(currentSellers.items);
+    setHeaderCards(currentSellers);
   }, [skip]);
 
   return (
@@ -57,9 +52,9 @@ export const HeaderCard: FC = () => {
                 </div>
                 <div className="ava-right">
                   <p>
-                    {headerCard.username} <span className="little-text">{headerCard.whatCreated}</span>
+                    {headerCard.username} <span className="little-text">{headerCard.name}</span>
                   </p>
-                  <p className="little-text opacity">{headerCard.whenCreated}</p>
+                  <p className="little-text opacity">{headerCard.createdAt}</p>
                 </div>
               </div>
               <div>
@@ -69,14 +64,10 @@ export const HeaderCard: FC = () => {
               </div>
               <div className="arrow-switch">
                 <button onClick={onClickSkipRight} className="circle-big">
-                  <div className="arrow">
-                    <ArrowRight></ArrowRight>
-                  </div>
+                  <ArrowRight className="arrow"></ArrowRight>
                 </button>
                 <button onClick={onClickSkipLeft} className="circle-big">
-                  <div className="arrow ">
-                    <ArrowLeft></ArrowLeft>
-                  </div>
+                  <ArrowLeft className="arrow"></ArrowLeft>
                 </button>
               </div>
             </div>

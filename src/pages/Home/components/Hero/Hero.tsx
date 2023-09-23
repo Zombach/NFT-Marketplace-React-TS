@@ -15,11 +15,11 @@ export const Hero = () => {
             <h2 className="main-text">Discover, collect, & sell NFTs</h2>
             <p className="text">Copy Discover the Most Premium, Unique and Exclusive NFT Collections</p>
             <div className="button-icon">
-              <Link to="/" className="btn">
-                <p className="text-b">Explore</p>
+              <Link to="/marketplace" className="btn">
+                <span className="text-b">Explore</span>
               </Link>
-              <Link to="/" className="btn white">
-                <p className="text-b black">Create</p>
+              <Link to="/create-nft" className="btn white">
+                <span className="text-b black">Create</span>
               </Link>
             </div>
             <div className="line-home">
@@ -30,9 +30,9 @@ export const Hero = () => {
                 <EllipseBlack />
                 <Play className="play" />
               </div>
-              <Link to="/" className="learn-more">
+              <a href="#video" className="learn-more">
                 Learn more about BNB
-              </Link>
+              </a>
             </div>
           </div>
         </div>

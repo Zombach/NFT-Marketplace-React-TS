@@ -29,9 +29,12 @@ export const Switch: FC<SwitchProps> = ({ items, activeItem }) => {
     <div className="switch-box">
       <div className="switch">
         {items.map((i, key) => (
-          <ButtonBox key={key} buttonClassName="switch-button" buttonId={`button`} onClick={() => onClickHandler(key, i)} isActive={key === state}>
-            {i.item}
-          </ButtonBox>
+          <ButtonBox
+            key={key}
+            buttonClassName="switch-button"
+            onClick={() => onClickHandler(key, i)}
+            text={i.item}
+            isActive={key === state}></ButtonBox>
         ))}
       </div>
     </div>

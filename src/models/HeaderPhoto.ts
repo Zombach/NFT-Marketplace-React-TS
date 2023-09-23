@@ -2,7 +2,7 @@ export interface HeaderPhoto {
   id: number;
   username: string;
   avatar: string;
-  whatCreated: string;
-  whenCreated: string;
+  name: string;
+  createdAt: string;
   mainPhoto: string;
 }
