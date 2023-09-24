@@ -1,5 +1,16 @@
 @import "@src/variables";
 
+.footer-delimiter {
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1140px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
 .footer {
     display: inline-flex;
     flex-direction: row;
