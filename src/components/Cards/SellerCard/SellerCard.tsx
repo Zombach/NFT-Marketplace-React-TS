@@ -1,6 +1,7 @@
 import './SellerCard.scss';
 import { EthereumPrice } from '@components/EthereumPrice/EthereumPrice';
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 import Avatar from '@components/Avatar/Avatar';
 
 export interface SellerCardProps {
@@ -13,14 +14,16 @@ export interface SellerCardProps {
   sellerInfoBottom: React.ReactNode;
 }
 
-export const SellerCard: FC<SellerCardProps> = ({ number, avatar, username, lastBidPrice, rightBottom, sellerInfoBottom }) => {
+export const SellerCard: FC<SellerCardProps> = ({ id, number, avatar, username, lastBidPrice, rightBottom, sellerInfoBottom }) => {
   return (
     <div className="seller-card">
       <div className="seller-card-left">
         {number && <span className="number">{number}</span>}
         <Avatar src={avatar}></Avatar>
         <div className="seller-info">
-          <span className="username">{username}</span>
+          <Link to={`creators/${id}`}>
+            <span className="username">{username}</span>
+          </Link>
           {sellerInfoBottom}
         </div>
       </div>
