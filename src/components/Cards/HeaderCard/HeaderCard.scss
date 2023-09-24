@@ -1,13 +1,13 @@
 @import '@src/variables';
 
 
-#header-card{
+#header-card {
     display: flex;
     justify-content: right;
     position: relative;
     bottom: 210px;
     height: 900px;
-    width: 705px; 
+    width: 705px;
 
     .header-card-index {
         position: relative;
@@ -24,17 +24,17 @@
         bottom: 240px;
     }
 
-    .ava-left{
+    .ava-left {
         width: 86px;
         height: 86px;
         flex-shrink: 0;
         border-radius: 86px;
     }
 
-    .main-foto{
+    .main-photo {
         width: 705px;
         height: 900px;
-        flex-shrink: 0;        
+        flex-shrink: 0;
     }
 
     .ava-right {

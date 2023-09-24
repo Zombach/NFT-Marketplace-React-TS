@@ -1,4 +1,4 @@
-import './CardsRender.scss';
+import './Cards.scss';
 import { type CardSmall as Cards } from '@models/CardModels/CardModels';
 import CardSmall from '@components/Cards/CardSmall/CardSmall';
 import HeaderCardSmall from './HeaderCardSmall/HeaderCardSmall';
