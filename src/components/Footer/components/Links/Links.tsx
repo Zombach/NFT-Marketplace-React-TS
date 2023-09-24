@@ -1,23 +1,14 @@
 import './Links.scss';
-import { type FC } from 'react';
-import { Link } from 'react-router-dom';
+import React, { type FC } from 'react';
 
 export const Links: FC = () => {
   const indent = `${'\u00A0'}/${'\u00A0'}`;
   return (
     <div className="links">
-      <Link to="/" className="text part-1">
-        Home
-      </Link>
-      <Link to="/marketplace" className="text part-1">
-        {indent}Marketplace
-      </Link>
-      <Link to="/collections" className="text part-2">
-        {indent}Collections
-      </Link>
-      <Link to="/creators" className="text part-3">
-        {indent}Creators
-      </Link>
+      <p className="text part-1">Marketplace</p>
+      <p className="text part-2">{indent}Collections</p>
+      <p className="text part-3">{indent}Sellers</p>
+      <p className="text part-4">{indent}Blog</p>
     </div>
   );
 };

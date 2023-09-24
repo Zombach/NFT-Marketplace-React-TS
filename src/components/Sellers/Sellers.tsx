@@ -1,27 +1,21 @@
 import './Sellers.scss';
 import { ReactComponent as Arrow } from './assets/arrow.svg';
 import { FC, useEffect, useState } from 'react';
+import { FindResponseModel } from '@models/FindResponseModel';
 import { Link } from 'react-router-dom';
-import { SearchResponseModel } from '@models/SearchResponseModel';
 import { Seller } from '@models/Seller';
-import { initSwitchItems } from './dispatcher';
 import { sellersMock } from '@resources/moq/Creators';
 import ButtonBox from '@components/ButtonBox/ButtonBox';
-import Switch from '@components/Switch/Switch';
+import SellersSwitch from './components/SellersSwitch/SellersSwitch';
 
 export interface SellersProps {
   title: string;
   countOnPage: number;
   isNeededSwitch?: boolean;
-  SellersCards: FC<SellersCardsProps>;
+  getSellerCard: (seller: Seller, number: number) => React.ReactNode;
 }
 
-export interface SellersCardsProps {
-  sellers: Seller[];
-  skip: number;
-}
-
-export const Sellers: FC<SellersProps> = ({ title, countOnPage, isNeededSwitch = false, SellersCards }) => {
+export const Sellers: FC<SellersProps> = ({ title, countOnPage, isNeededSwitch = false, getSellerCard }) => {
   const [skip, setSkip] = useState<number>(0);
   const [sellers, setSellers] = useState<Seller[]>([]);
   const [totalCount, setTotalCount] = useState<number>(0);
@@ -32,6 +26,10 @@ export const Sellers: FC<SellersProps> = ({ title, countOnPage, isNeededSwitch =
     setSellers(currentSellers.items);
   }, [countOnPage, skip]);
 
+  const switchFirstItemAction = () => {};
+  const switchSecondItemAction = () => {};
+  const switchThirdItemAction = () => {};
+
   const onClickSkip = () => {
     if (skip + countOnPage >= totalCount) {
       setSkip(0);
@@ -40,8 +38,8 @@ export const Sellers: FC<SellersProps> = ({ title, countOnPage, isNeededSwitch =
     }
   };
 
-  const getSellers = (skip: number, count: number): SearchResponseModel<Seller> => {
-    const response: SearchResponseModel<Seller> = { items: sellersMock.slice(skip, skip + count), totalCount: sellersMock.length };
+  const getSellers = (skip: number, count: number): FindResponseModel<Seller> => {
+    const response: FindResponseModel<Seller> = { items: sellersMock.slice(skip, skip + count), totalCount: sellersMock.length };
     return response;
   };
 
@@ -50,7 +48,12 @@ export const Sellers: FC<SellersProps> = ({ title, countOnPage, isNeededSwitch =
       <div className="sellers-section-header">
         <div className="sellers-section-header-left">
           <h2>{title}</h2>
-          {isNeededSwitch && <Switch items={initSwitchItems()} activeItem={1}></Switch>}
+          {isNeededSwitch && (
+            <SellersSwitch
+              firstItemAction={switchFirstItemAction}
+              secondItemAction={switchSecondItemAction}
+              thirdItemAction={switchThirdItemAction}></SellersSwitch>
+          )}
         </div>
         <div className="sellers-section-header-right">
           <Link to={'../creators'}>See all</Link>
@@ -58,7 +61,9 @@ export const Sellers: FC<SellersProps> = ({ title, countOnPage, isNeededSwitch =
         </div>
       </div>
       <div className="seller-cards">
-        <SellersCards sellers={sellers} skip={skip}></SellersCards>
+        {sellers.map((seller, i) => {
+          return getSellerCard(seller, i + skip);
+        })}
       </div>
     </section>
   );

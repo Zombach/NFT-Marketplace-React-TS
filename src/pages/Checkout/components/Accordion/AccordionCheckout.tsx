@@ -5,7 +5,7 @@ import arrowUp from './assets/arrowUp.svg';
 
 export interface AccordionCheckoutProps {
   title: string;
-  content: React.ReactNode;
+  content: any;
 }
 
 export const AccordionCheckout: FC<AccordionCheckoutProps> = ({ title, content }) => {
