@@ -11,11 +11,11 @@ export interface SelectProps {
   options?: string[];
 }
 
-export const InputText: FC<SelectProps> = ({ id, name, placeholder, isRequired = false, options }) => {
+export const Select: FC<SelectProps> = ({ id, name, placeholder, isRequired = false, options }) => {
   return (
     <div className="input-group">
       <select className="input-group-input input-select" name={name} id={id} placeholder="">
-        {options?.map((option) => <option>{option}</option>)}
+        {options?.map((option, key) => <option key={key}>{option}</option>)}
       </select>
       <label htmlFor={id}>
         {placeholder}
@@ -25,4 +25,4 @@ export const InputText: FC<SelectProps> = ({ id, name, placeholder, isRequired =
   );
 };
 
-export default InputText;
+export default Select;

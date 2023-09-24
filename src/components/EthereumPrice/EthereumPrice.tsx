@@ -19,18 +19,12 @@ export const EthereumPrice: FC<EthereumPriceProps> = ({ value, children, title }
       )}
       <EthereumIcon className="ethereum-icon" />
       <div className="ethereum-price-value-currency">{value} BNB</div>
-      {children &&
-        (typeof children === 'string' ? (
-          <>
-            <div></div>
-            <div className="ethereum-price-extra">{children}</div>
-          </>
-        ) : (
-          <>
-            <div></div>
-            {children}
-          </>
-        ))}
+      {children && (
+        <>
+          <div></div>
+          {typeof children === 'string' ? <div className="ethereum-price-extra">{children}</div> : <> {children} </>}
+        </>
+      )}
     </div>
   );
 };

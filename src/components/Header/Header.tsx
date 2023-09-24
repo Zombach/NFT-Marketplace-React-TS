@@ -4,15 +4,14 @@ import { ReactComponent as HamburgerMenu } from './assets/hamburgerMenu.svg';
 import { ReactComponent as Lock } from './assets/lock.svg';
 import { ReactComponent as Logo } from './assets/logo.svg';
 import { ReactComponent as Search } from './assets/search.svg';
-import NavLink from './components/NavLink/NavLink';
-import React from 'react';
+import NavLinks from './components/NavLinks/NavLinks';
 
 export const Header = () => {
   return (
     <div id="header">
       <div className="left column">
         <Logo className="logo" />
-        <NavLink />
+        <NavLinks />
       </div>
       <div className="right column">
         <button className="background">

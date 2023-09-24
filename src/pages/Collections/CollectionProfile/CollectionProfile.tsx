@@ -24,14 +24,7 @@ export const Details: FC = () => {
 
   return (
     <div className="collection-profile">
-      <Profile
-        headerImg={Image}
-        avatar={item.avatar}
-        headerName={item.name}
-        username={item.userName}
-        desc={item.description}
-        buttonLeftText={'Create community marketplace'}
-        buttonRightText={'Place bid'}>
+      <Profile headerImg={Image} creator={item.creator} buttonLeftText={'Create community marketplace'} buttonRightText={'Place bid'} headerName={''}>
         <ExtraInfoItem leftText={'Floor'} RightItem={<EthereumPrice value={item.floorPrice} />}></ExtraInfoItem>
         <ExtraInfoItem leftText={'Total volume'} RightItem={<EthereumPrice value={item.totalVolume} />}></ExtraInfoItem>
         <ExtraInfoItem leftText={'Items'} RightItem={<div className="details-item-right-part">{item.countItems}</div>}></ExtraInfoItem>
