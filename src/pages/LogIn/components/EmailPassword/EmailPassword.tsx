@@ -15,7 +15,7 @@ export const EmailPassword: FC = () => {
         </div>
         <TapHere text="Forget password?" tap="Tap here" />
         <button className="button-fill">
-          <span className="text-b">Log In</span>
+          <p className="text-b">Log In</p>
         </button>
         <ContinueWith />
         <div className="text-down">

@@ -24,8 +24,8 @@ export const ProductPriceBlock: FC<AuthoredByProps> = ({ ethereumPrice, username
         <EthereumPrice value={lastSalePrice}></EthereumPrice>
       </div>
       <div className="product-price-buttons">
-        <ButtonBox buttonClassName="buy-button primary-btn" text="Buy now for 2.2 BNB"></ButtonBox>
-        <ButtonBox buttonClassName="bid-button primary-2-btn" text="Place bid"></ButtonBox>
+        <ButtonBox buttonClassName="buy-button primary-btn">Buy now for 2.2 BNB</ButtonBox>
+        <ButtonBox buttonClassName="bid-button primary-2-btn">Place bid</ButtonBox>
       </div>
     </div>
   );

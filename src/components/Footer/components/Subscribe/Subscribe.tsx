@@ -11,7 +11,7 @@ export const Subscribe: FC = () => {
         <span>Subscribe and get news</span>
       </div>
       <form className="block">
-        <InputText id={'subs'} name={'subs'} placeholder={'Email'} rightSideItem={<SendIcon />}></InputText>
+        <InputText id={'subs'} name={'subs'} placeholder={'Email'} rightSideItem={<ButtonBox SvgBox={<SendIcon></SendIcon>}></ButtonBox>}></InputText>
       </form>
     </div>
   );
