@@ -100,4 +100,41 @@
         top: 14px;
         left: 14px;
     }
+
+    @media(max-width: 500px) {
+        bottom: 60px;
+        height: 530px;
+        width: 390px;
+
+        .main-photo {
+            height: 530px;
+            width: 390px;
+        }
+
+        .text-block {
+            left: 25px;
+            bottom: 100px;
+        }
+
+        .ava-left{
+            width: 56px;
+                height: 56px;
+        }
+
+        .ava-right {
+            font-size: 24px;
+            line-height: 34px;
+
+            .little-text {
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+        }
+
+        .arrow-switch {
+            left: 250px;
+            bottom: 145px;
+        }
+
+    }
 }

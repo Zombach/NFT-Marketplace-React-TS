@@ -121,4 +121,67 @@
             cursor: pointer;
         }
     }
+
+
+    @media(max-width: 500px) {
+        padding: 0px 24px 31px 24px;
+        
+        .container {
+            display: flex;
+            flex-direction: column;  
+            margin-top: 0;
+            align-self: auto;
+        }
+        
+        .home-page-header {
+            
+            .main-text{
+                font-size: 40px;
+                line-height: 48px;
+            }
+
+            .left {
+                gap: 16px;
+                
+            }
+
+            .text {
+                font-size: 14px;
+                line-height: 22px;     
+                z-index: -1;;           
+            }
+
+            .btn{
+                margin-top: 0;
+                width: 50%;
+            }
+
+            .button-icon{
+                gap:8px;
+                padding: 8px 8px;
+            }
+
+            .width-mobile-only{
+                width: 100%;
+                position: relative;
+                bottom: 20px;
+            }
+
+            .line-home {
+                margin: 0 auto;
+                padding: 8px 0 24px 0;
+            }
+
+            .learn-more-section {
+                position: relative;
+                bottom: 15px;
+            }
+
+            .learn-more {
+                font-size: 16px;
+                
+            }
+        }
+    
+    }
 }

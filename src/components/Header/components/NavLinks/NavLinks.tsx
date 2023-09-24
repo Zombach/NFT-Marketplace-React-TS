@@ -4,19 +4,19 @@ import React from 'react';
 
 export const NavLinks = () => {
   return (
-    <div className="link">
+    <div className="link mobile-nav">
       <Link to="/" className="link-text">
         Home
       </Link>
-      <div>/</div>
+      <div className="desktop-only">/</div>
       <Link to="/marketplace" className="link-text">
         Marketplace
       </Link>
-      <div>/</div>
+      <div className="desktop-only">/</div>
       <Link to="/collections" className="link-text">
         Collections
       </Link>
-      <div>/</div>
+      <div className="desktop-only">/</div>
       <Link to="/creators" className="link-text">
         Creators
       </Link>
