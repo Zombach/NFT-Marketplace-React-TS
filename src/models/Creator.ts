@@ -1,6 +1,6 @@
 export interface Creator {
   id: string;
-  username: string;
+  userName: string;
   avatar: string;
   description: string;
   followersCount: number;

@@ -26,10 +26,10 @@ export const Details: FC = () => {
     <div className="collection-profile">
       <Profile
         headerImg={Image}
-        avatar={item.creator.avatar}
+        avatar={item.avatar}
         headerName={item.name}
-        username={item.creator.username}
-        desc={item.creator.description}
+        username={item.userName}
+        desc={item.description}
         buttonLeftText={'Create community marketplace'}
         buttonRightText={'Place bid'}>
         <ExtraInfoItem leftText={'Floor'} RightItem={<EthereumPrice value={item.floorPrice} />}></ExtraInfoItem>

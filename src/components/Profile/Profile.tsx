@@ -4,6 +4,7 @@ import { ReactComponent as ShareIcon } from './assets/share.svg';
 import AuthoredBy from '@components/AuthoredBy/AuthoredBy';
 import Avatar from '@components/Avatar/Avatar';
 import Button from '@components/ButtonBox/ButtonBox';
+import SvgBox from '@components/ButtonBox/components/SvgBox/SvgBox';
 
 export interface ProfileProps {
   headerImg: string;
@@ -30,10 +31,14 @@ export const Profile: FC<ProfileProps> = (props) => {
           {props.username && <AuthoredBy username={props.username}></AuthoredBy>}
           <span className="desc">{props.desc}</span>
           <div className={props.buttonsClassName ?? 'profile-buttons'}>
-            <Button className="left-btn" buttonClassName="left-btn primary-btn" text={props.buttonLeftText}></Button>
+            <Button className="left-btn" buttonClassName="left-btn primary-btn">
+              {props.buttonLeftText}
+            </Button>
             <div className="profile-buttons-right">
-              <Button className="right-btn" buttonClassName="right-btn primary-2-btn" text={props.buttonRightText}></Button>
-              <Button buttonClassName="share-button" SvgBox={<ShareIcon></ShareIcon>}></Button>
+              <Button className="right-btn" buttonClassName="right-btn primary-2-btn">
+                {props.buttonRightText}
+              </Button>
+              <Button buttonClassName="share-button" SvgBox={<SvgBox SvgElement={ShareIcon}></SvgBox>}></Button>
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@ import { FC } from 'react';
 export const Video: FC = () => {
   return (
     <>
-      <div id={'video'} className="video">
+      <div className="video">
         <h2>BnB Nft marketplace</h2>
         <span>Mission to lead the future of metaverse</span>
         <div className="video-block">
