@@ -25,3 +25,27 @@
         margin-left: 1px;
     }
 }
+
+@media (max-width: 850px) {
+    .trust {
+        width: 100%;
+        margin-top: 0;
+        gap: 0;
+        justify-content: space-between;
+
+        .text-1 {
+            text-align: center;
+            width: 100%;
+        }
+
+        .text-2 {
+            text-align: center;
+            width: 100%;
+        }
+
+        .text-3 {
+            text-align: center;
+            width: 100%;
+        }
+    }
+}

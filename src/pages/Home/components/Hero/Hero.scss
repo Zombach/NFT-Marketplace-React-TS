@@ -1,0 +1,124 @@
+@import "@src/variables";
+
+
+#home-page-container {
+    margin: 0 auto;
+    display: flex;
+    height: 900px;
+    max-width: 1140px;
+    gap: 100px;
+
+    .container {
+        display: grid;
+        grid-template-columns: 45% 65%;
+        margin-top: 150px;
+        align-self: center;
+        width: 100%;
+        gap: 60px;
+    }
+
+    .home-page-header {
+        .left {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .main-text {
+            color: $color-black;
+            font-family: $font-helvetica-neue;
+            font-size: 60px;
+            font-weight: 500;
+            line-height: 70px;
+        }
+
+        .text {
+            color: $color-black;
+            font-family: $font-helvetica-neue;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 32px;
+            opacity: 0.7;
+        }
+
+        .button-icon {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            padding: 12px 8px;
+            align-items: center;
+            gap: 16px;
+            border-radius: 10px;
+            border: 0;
+
+
+            .white {
+                background: $color-white;
+                border: 10px;
+                border: 2px solid $color-black;
+            }
+
+            .text-app-goog {
+                color: $color-black;
+                text-align: right;
+                font-family: $font-helvetica-neue;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 32px;
+            }
+        }
+
+        .btn {
+            margin-top: 32px;
+            width: 34%;
+            padding: 16px 8px;
+            border-radius: 10px;
+            border: 0;
+            background: $color-purple;
+            text-align: center;
+            cursor: pointer;
+
+            .text-b {
+                margin: 0 auto;
+                color: $color-white;
+                font-family: $font-helvetica-neue;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 26px;
+            }
+
+            .black {
+                color: $color-black;
+            }
+        }
+
+        .line-home {
+            height: 3px;
+            margin: 73px auto 20px auto;
+        }
+
+        .learn-more-section {
+            text-align: left;
+            width: 100%;
+            display: flex;
+
+        }
+
+        .play {
+            position: relative;
+            right: 30px;
+            bottom: 11px;
+        }
+
+        .learn-more {
+            bottom: 120px;
+            color: $color-black;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 32px;
+            text-decoration-line: underline;
+            cursor: pointer;
+        }
+    }
+}

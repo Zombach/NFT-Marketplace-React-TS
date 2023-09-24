@@ -1,28 +1,18 @@
 import './Subscribe.scss';
-import { ReactComponent as Send } from './assets/send.svg';
-import React, { type FC } from 'react';
+import { type FC } from 'react';
+import { ReactComponent as SendIcon } from './assets/send.svg';
+import ButtonBox from '@components/ButtonBox/ButtonBox';
+import InputText from '@components/Inputs/InputText/InputText';
 
 export const Subscribe: FC = () => {
   return (
     <div className="subscribe">
       <div className="label">
-        <button className="btn">Subscribe and get news</button>
+        <span>Subscribe and get news</span>
       </div>
-      <div className="block">
-        <div className="root">
-          <div className="label">
-            <p className="text">Email</p>
-          </div>
-          <div className="base">
-            <input className="input" placeholder="placeholder..." />
-            <button className="btn">
-              <div className="adornment">
-                <Send className="send" />
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
+      <form className="block">
+        <InputText id={'subs'} name={'subs'} placeholder={'Email'} rightSideItem={<SendIcon />}></InputText>
+      </form>
     </div>
   );
 };

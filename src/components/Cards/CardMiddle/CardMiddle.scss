@@ -1,8 +1,10 @@
 @import '@src/variables';
 
-.middle-card {
-    border-radius: 10px;
-    border: 1px solid $color-grey;
+a:active,
+a:hover,
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .bottom-section {
@@ -32,12 +34,6 @@
     font-family: $font-helvetica-neue;
     font-weight: 500;
     font-size: 24px;
-}
-
-.price-bnb {
-    margin-top: 4px;
-    color: $color-grey-4;
-    font-size: 14px;
 }
 
 .likes-btn {
@@ -85,4 +81,11 @@
     gap: 8px;
     align-items: center;
     text-align: center;
+}
+
+.small-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
 }

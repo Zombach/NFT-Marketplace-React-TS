@@ -1,0 +1,47 @@
+@import "@src/variables";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+}
+
+.item-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    font-size: 1rem;
+    text-align: left;
+    background-color: transparent;
+    border: 1px solid $color-grey;
+    border-radius: 10px;
+}
+
+.item-btn-expanded {
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+}
+
+.item-btn-expanded .arrow {
+    transform: rotate(180deg);
+}
+
+.item-panel {
+    padding: 24px;
+    border-right: 1px solid $color-grey;
+    border-left: 1px solid $color-grey;
+    border-bottom: 1px solid $color-grey;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+}
+
+.divider {
+    height: 1px;
+    background-color: $color-grey;
+    margin: 0 24px;
+}

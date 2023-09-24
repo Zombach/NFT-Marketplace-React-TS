@@ -1,0 +1,14 @@
+@import "@src/variables";
+
+.checkout-page {
+    max-width: 1140px;
+    margin: 0 auto 120px auto;
+
+    h2 {
+        font-family: $font-helvetica-neue;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 48px;
+        margin: 40px 0;
+    }
+}
