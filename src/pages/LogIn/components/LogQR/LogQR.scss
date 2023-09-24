@@ -1,6 +1,6 @@
 @import "@src/variables";
 
-.text-qr{
+.text-qr {
     text-align: center;
     font-family: $font-helvetica-neue;
     font-size: 16px;
@@ -8,7 +8,8 @@
     line-height: 26px;
     margin-bottom: 8px;
 }
-.text-scan{
+
+.text-scan {
     color: $color-grey-3;
     font-family: $font-helvetica-neue;
     font-size: 14px;
@@ -16,14 +17,16 @@
     line-height: 22px;
     text-align: center;
 }
-.foto{
+
+.photo {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto 64px auto;
 }
-.qr-column{
+
+.qr-column {
     margin: 160px auto 0 114px;
-    
-    
+
+
 }
