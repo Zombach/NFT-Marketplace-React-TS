@@ -1,5 +1,6 @@
 import './UserInfo.scss';
 import { ReactComponent as Layer } from './assets/layer.svg';
+import { Link } from 'react-router-dom';
 import Avatar from '@components/Avatar/Avatar';
 import React, { type FC } from 'react';
 
@@ -26,7 +27,9 @@ export const UserInfo: FC<UserInfoProps> = ({ userId, userName, avatar, func }) 
             });
           click('id нажавшего пользователя', userId);
         }}>
-        <p className="user-name">{userName}</p>
+        <Link to={`/creators/${userId}`}>
+          <p className="user-name">{userName}</p>
+        </Link>
       </button>
     </div>
   );

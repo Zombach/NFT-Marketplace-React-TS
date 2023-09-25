@@ -1,10 +1,9 @@
+import { Creator } from './Creator';
+
 export interface Collection {
   id: string;
   name: string;
-  userId: string;
-  userName: string;
-  avatar: string;
-  description: string;
+  creator: Creator;
   floorPrice: string;
   totalVolume: string;
   countItems: number;

@@ -1,11 +1,15 @@
 @import "@src/variables";
 
-
 #header {
-    padding: 37px 50px 37px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
+    z-index: 1;
+    margin: 37px 50px;
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     .background {
         background-color: transparent;
@@ -20,38 +24,38 @@
         gap: 60px;
     }
 
-        .column {
-            display: flex;
-            align-items: center;
-        }
-    
-        .sign-in {
-            text-align: center;
-            font-size: 14px;
-            line-height: 26px;
-            font-weight: 500;
-            font-family: $font-helvetica-neue;
-            color: $color-black;
-            text-decoration-line: underline;
-        }
-    
-        .icon {
-            display: flex;
-            gap: 16px;
-        }
-    
-        .burger {
-            position: relative;
-            right: 35px;
-            bottom: 14px;
-        }
+    .column {
+        display: flex;
+        align-items: center;
+    }
+
+    .sign-in {
+        text-align: center;
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 500;
+        font-family: $font-helvetica-neue;
+        color: $color-black;
+        text-decoration-line: underline;
+    }
+
+    .icon {
+        display: flex;
+        gap: 16px;
+    }
+
+    .burger {
+        position: relative;
+        right: 35px;
+        bottom: 14px;
+    }
 }
 
 @media (min-width: 1550px) {
 
-    .ellipse{
+    .ellipse {
         border: 1px solid $color-black;
         border-radius: 50%;
-    }   
+    }
 
 }

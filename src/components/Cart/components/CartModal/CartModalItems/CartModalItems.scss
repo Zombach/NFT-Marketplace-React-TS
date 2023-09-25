@@ -1,0 +1,33 @@
+.cart-item-container {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+    }
+
+    .cart-item-description {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .close-btn {
+        display: flex;
+        align-items: center;
+
+        svg {
+            cursor: pointer;
+        }
+    }
+
+    .description-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

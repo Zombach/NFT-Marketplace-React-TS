@@ -8,13 +8,13 @@
     bottom: 50px;
 
     .container {
-        display: flex;        
+        display: flex;
         align-self: center;
         width: 100%;
         gap: 40px;
     }
 
-    .grid{
+    .grid {
         display: grid;
         grid-template-columns: 30% 70%;
         padding: 40px;
@@ -24,6 +24,7 @@
         align-self: center;
         width: 100%;
     }
+
     .text-info {
         color: $color-white;
         font-family: $font-helvetica-neue;

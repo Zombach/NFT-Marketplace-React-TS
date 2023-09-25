@@ -2,6 +2,7 @@ import '../Card.scss';
 import './CardBig.scss';
 import { CardCollections } from '@resources/moq/Collections';
 import { EthereumPrice } from '@components/EthereumPrice/EthereumPrice';
+import { Link } from 'react-router-dom';
 import Avatar from '@components/Avatar/Avatar';
 import React, { type FC } from 'react';
 
@@ -20,7 +21,9 @@ export const CardBig: FC<CardBigFragmentProps> = (props) => {
       </div>
       <div className="card-bottom-section">
         <div className="collection-title">
-          <p className="collection-name">{card.collectionName}</p>
+          <Link to={`/collections/${card.id}`}>
+            <p className="collection-name">{card.collectionName}</p>
+          </Link>
           <p className="sub-title">{card.owners}</p>
         </div>
         <div className="volume-floor-container">
