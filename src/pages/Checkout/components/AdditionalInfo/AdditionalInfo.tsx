@@ -1,11 +1,10 @@
 import './AdditionalInfo.scss';
+import { useForm } from 'react-hook-form';
 import InputText from '@components/Inputs/InputText/InputText';
 import React, { type FC, useState } from 'react';
-import { useForm } from 'react-hook-form';
-
 
 export interface CustomerInfoModel {
-  description: string;  
+  description: string;
 }
 
 export const CustomerInfo: FC = () => {

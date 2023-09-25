@@ -1,10 +1,9 @@
-import { UseFormRegister, useForm } from 'react-hook-form';
 import '../Input.scss';
 import './InputText.scss';
 import { AnyObject, ObjectSchema } from 'yup';
-import { useFormContext } from 'react-hook-form';
-import React, { ChangeEvent, FC } from 'react';
 import { Reg } from '@models/Reg';
+import { UseFormRegister, useForm, useFormContext } from 'react-hook-form';
+import React, { ChangeEvent, FC } from 'react';
 export interface InputTextProps {
   id: string;
   name: string;
@@ -18,7 +17,6 @@ export interface InputTextProps {
   register: any;
   regName: any;
 }
-
 
 export const InputText: FC<InputTextProps> = ({
   id,
@@ -37,7 +35,7 @@ export const InputText: FC<InputTextProps> = ({
     <div className={className ?? 'input-group'}>
       {!multiline ? (
         <div className="input-group-container">
-        <input className="input-group-input" {...register(regName)} type="text" name={name} id={id} placeholder="" onChange={onChange} />
+          <input className="input-group-input" {...register(regName)} type="text" name={name} id={id} placeholder="" onChange={onChange} />
           {schemas?.formState?.errors?.[name] && <span>{schemas?.formState?.errors?.[name]?.message?.toString()}</span>}
         </div>
       ) : (

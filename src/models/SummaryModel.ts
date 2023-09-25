@@ -1,3 +1,3 @@
 export interface SummaryModel {
-    discount: string;
+  discount: string;
 }

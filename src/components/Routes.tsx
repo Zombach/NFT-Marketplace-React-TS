@@ -2,6 +2,7 @@ import { Details as BlogDetails } from '@pages/Blog/Details/Details';
 import { Details as CollectionProfile } from '@pages/Collections/CollectionProfile/CollectionProfile';
 import { FC } from 'react';
 import { Route, Routes as Switch } from 'react-router-dom';
+import { SignUp } from '@pages/SignUp/SignUp';
 import Blog from '@pages/Blog/Blog';
 import Checkout from '@pages/Checkout/Checkout';
 import Collections from '@pages/Collections/Collections';
@@ -14,7 +15,6 @@ import Marketplace from '@pages/Marketplace/Marketplace';
 import NotFound from '@pages/NotFound/NotFound';
 import Product from '@pages/Product/Product';
 import Welcome from '@pages/Welcome/Welcome';
-import { SignUp } from '@pages/SignUp/SignUp';
 
 export const Routes: FC = () => {
   return (

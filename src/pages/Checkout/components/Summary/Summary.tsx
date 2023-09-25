@@ -1,13 +1,13 @@
 import './Summary.scss';
 import { ReactComponent as SecurityIcon } from './assets/security.svg';
+import { SummaryModel } from '@models/SummaryModel';
 import { getFormattedPrice } from '@src/utils/GetFormattedPrice';
 import { selectCartItemsSum } from '@components/Cart/CartSlice';
+import { useForm } from 'react-hook-form';
 import { useSelector } from 'react-redux';
 import InputText from '@components/Inputs/InputText/InputText';
 import React, { type FC } from 'react';
 import Subtotal from './components/Subtotal/Subtotal';
-import { useForm } from 'react-hook-form';
-import { SummaryModel } from '@models/SummaryModel';
 
 export const Summary: FC = () => {
   const totalPrice = useSelector(selectCartItemsSum);

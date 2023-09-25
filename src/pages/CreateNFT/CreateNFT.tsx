@@ -1,8 +1,9 @@
-import { useForm } from 'react-hook-form';
 import './CreateNFT.scss';
 import { ReactComponent as Circle } from './assets/circle.svg';
+import { CreateNft } from '@models/CreateNft';
 import { ReactComponent as DownloadIcon } from './assets/download.svg';
 import { ReactComponent as PictureIcon } from './assets/picture.svg';
+import { useForm } from 'react-hook-form';
 import Checkbox from '@components/Checkbox/Checkbox';
 import InputText from '@components/Inputs/InputText/InputText';
 import React, { ChangeEvent, type FC, useRef, useState } from 'react';

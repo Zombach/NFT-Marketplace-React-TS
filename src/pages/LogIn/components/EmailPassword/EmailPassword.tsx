@@ -1,16 +1,14 @@
 import './EmailPassword.scss';
 import { ContinueWith } from '../ContinueWith/ContinueWith';
+import { Reg } from '@models/Reg';
 import { TapHere } from '../TapHere/TapHere';
+import { useForm } from 'react-hook-form';
 import InputText from '@components/Inputs/InputText/InputText';
 import React, { type FC } from 'react';
-import { useForm } from 'react-hook-form';
-import { Reg } from '@models/Reg';
 
 export const EmailPassword: FC = () => {
-  const {register} = useForm<Reg>();
-  
-  
-  
+  const { register } = useForm<Reg>();
+
   return (
     <div id="EmailPassword">
       <form className="left-block">

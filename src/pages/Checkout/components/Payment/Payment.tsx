@@ -1,13 +1,12 @@
 import './Payment.scss';
-import InputText from '@components/Inputs/InputText/InputText';
 import { PaymentModel } from '@models/PaymentModel';
-import React, { type FC } from 'react';
 import { useForm } from 'react-hook-form';
+import InputText from '@components/Inputs/InputText/InputText';
+import React, { type FC } from 'react';
 
 export const CustomerInfo: FC = () => {
-  
   const { register } = useForm<PaymentModel>();
-  
+
   return (
     <div className="payment-section">
       <div className="payment-method">

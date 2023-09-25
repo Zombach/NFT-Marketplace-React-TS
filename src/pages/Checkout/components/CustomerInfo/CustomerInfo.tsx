@@ -1,8 +1,8 @@
 import './CustomerInfo.scss';
 import { ObjectSchema } from 'yup';
+import { useForm } from 'react-hook-form';
 import InputText from '@components/Inputs/InputText/InputText';
 import React, { type FC, useState } from 'react';
-import { useForm } from 'react-hook-form';
 
 export interface CustomerInfoModel {
   name: string;
@@ -15,11 +15,9 @@ export interface CustomerInfoModel {
   vat: string;
 }
 
-
 export const CustomerInfo: FC = () => {
-   
   const { register } = useForm<CustomerInfoModel>();
-  
+
   return (
     <div className="customer-info-section">
       <InputText id={'name'} name={'name'} placeholder={'Name'} register={register} regName="name" />

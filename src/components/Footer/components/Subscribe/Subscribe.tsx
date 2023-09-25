@@ -1,9 +1,9 @@
 import './Subscribe.scss';
 import { type FC } from 'react';
 import { ReactComponent as SendIcon } from './assets/send.svg';
+import { useForm } from 'react-hook-form';
 import ButtonBox from '@components/ButtonBox/ButtonBox';
 import InputText from '@components/Inputs/InputText/InputText';
-import { useForm } from 'react-hook-form';
 
 export interface SubscribeModel {
   subs: string;
@@ -11,7 +11,7 @@ export interface SubscribeModel {
 
 export const Subscribe: FC = () => {
   const { register } = useForm<SubscribeModel>();
-  
+
   return (
     <div className="subscribe">
       <div className="label">
@@ -24,7 +24,7 @@ export const Subscribe: FC = () => {
           placeholder={'Email'}
           register={register}
           regName="description"
-          rightSideItem={<ButtonBox SvgBox={<SendIcon></SendIcon>}></ButtonBox>}></InputText>
+          rightSideItem={<SendIcon></SendIcon>}></InputText>
       </form>
     </div>
   );
