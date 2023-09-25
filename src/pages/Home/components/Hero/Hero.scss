@@ -2,27 +2,20 @@
 
 
 #home-page-container {
-    margin: 0 auto;
     display: flex;
-    height: 900px;
-    max-width: 1140px;
+    margin: 0 0 0 7%;
     gap: 100px;
-
-    .container {
-        display: grid;
-        grid-template-columns: 45% 65%;
-        margin-top: 150px;
-        align-self: center;
-        width: 100%;
-        gap: 60px;
-    }
+    height: auto;
 
     .home-page-header {
+        width: 40%;
+
         .left {
             display: flex;
             flex-direction: column;
             gap: 40px;
             align-items: center;
+            justify-content: center;
         }
 
         .main-text {
@@ -48,6 +41,7 @@
             width: 100%;
             padding: 12px 8px;
             align-items: center;
+            text-align: center;
             gap: 16px;
             border-radius: 10px;
             border: 0;
@@ -76,7 +70,6 @@
             border-radius: 10px;
             border: 0;
             background: $color-purple;
-            text-align: center;
             cursor: pointer;
 
             .text-b {
@@ -120,5 +113,9 @@
             text-decoration-line: underline;
             cursor: pointer;
         }
+    }
+
+    .photo-section {
+        width: 60%;
     }
 }

@@ -12,7 +12,7 @@ export type CardMarketplace = {
   nftImage: string;
   like: string;
   time: Date;
-  price: string;
+  price: number;
   priceBnB: string;
 };
 
@@ -26,7 +26,7 @@ const Card = (userId: string) => {
     nftImage: Nft,
     like: '34',
     time: new Date(),
-    price: '0.49 BNB',
+    price: 32,
     priceBnB: '≈ $140.05',
   } as CardMarketplace;
 };

@@ -1,5 +1,7 @@
 import '../Input.scss';
 import './InputText.scss';
+import { AnyObject, ObjectSchema } from 'yup';
+import { useFormContext } from 'react-hook-form';
 import React, { ChangeEvent, FC } from 'react';
 
 export interface InputTextProps {
@@ -14,10 +16,15 @@ export interface InputTextProps {
 }
 
 export const InputText: FC<InputTextProps> = ({ id, name, placeholder, onChange, rightSideItem, isRequired = false, multiline = false }) => {
+  const schemas = useFormContext();
+
   return (
     <div className="input-group">
       {!multiline ? (
-        <input className="input-group-input" type="text" name={name} id={id} placeholder="" onChange={onChange} />
+        <div className="input-group-container">
+          <input {...schemas?.register(name)} className="input-group-input" type="text" name={name} id={id} placeholder="" onChange={onChange} />
+          {schemas?.formState?.errors?.[name] && <span>{schemas?.formState?.errors?.[name]?.message?.toString()}</span>}
+        </div>
       ) : (
         <textarea name={name} id={id} placeholder="" onChange={onChange}></textarea>
       )}

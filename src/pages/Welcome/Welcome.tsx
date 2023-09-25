@@ -1,20 +1,16 @@
 import './Welcome.scss';
-import { ReactComponent as Background } from './assets/background.svg';
-import { BnB } from './components/BnB/BnB';
 import { ReactComponent as Delimiter } from './assets/delimiter.svg';
 import React, { type FC } from 'react';
 import SignUp from './components/SignUp/SignUp';
+import monkeyBnb from './assets/monkeyBnb.png';
 
 export const Welcome: FC = () => {
   return (
     <div className="welcome">
-      <Background className="background" />
-      <div className="left">
-        <SignUp className="sign-up" />
-      </div>
+      <SignUp className="sign-up" />
       <Delimiter className="delimiter" />
       <div className="right">
-        <BnB className="bnb" />
+        <img src={monkeyBnb} alt="monkey" />
       </div>
     </div>
   );
