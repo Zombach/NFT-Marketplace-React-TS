@@ -29,7 +29,7 @@ export const Hero = () => {
               <EllipseBlack />
               <Play className="play" />
             </div>
-            <a href="learnMore" className="learn-more">
+            <a href="#video" className="learn-more">
               Learn more about BNB
             </a>
           </div>
