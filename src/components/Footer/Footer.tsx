@@ -1,5 +1,6 @@
 import './Footer.scss';
 import { ReactComponent as Delimiter } from './assets/delimiter.svg';
+import { checkOnDesktopOnly, checkOnMobileOnly } from '@src/helpers';
 import AboutUs from './components/AboutUs/AboutUs';
 import Copyright from './components/Copyright/Copyright';
 import Links from './components/Links/Links';
@@ -11,20 +12,18 @@ import Trust from './components/Trust/Trust';
 export const Footer: FC = () => {
   return (
     <>
-      <Delimiter className="footer-delimiter" />
-      <div className="footer-container">
-        <div className="footer">
-          <div className="left">
-            <AboutUs />
-            <Subscribe />
-            <Trust extraClassName="desktop-only" />
-          </div>
-          <div className="right">
-            <Links />
-            <SocialNetwork />
-            <Trust extraClassName="mobile-only" />
-            <Copyright />
-          </div>
+      <Delimiter className="delimiter" />
+      <div className="footer">
+        <div className="left">
+          <AboutUs />
+          <Subscribe />
+          {checkOnDesktopOnly() && <Trust />}
+        </div>
+        <div className="right">
+          <Links />
+          <SocialNetwork />
+          {checkOnMobileOnly() && <Trust />}
+          <Copyright />
         </div>
       </div>
     </>

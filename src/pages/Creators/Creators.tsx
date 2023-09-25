@@ -1,7 +1,7 @@
 import './Creators.scss';
 import { type CardSmall } from '@models/CardModels/CardModels';
 import { cards as mock } from '@resources/moq/Creators';
-import CardsRender from './CardsRender/CardsRender';
+import Cards from './CardsRender/Cards';
 import React, { type FC, useEffect, useState } from 'react';
 
 export const Creators: FC = () => {
@@ -19,7 +19,7 @@ export const Creators: FC = () => {
     return new Promise((res) => setTimeout(res, delay));
   };
 
-  return <div className="creators">{cards && <CardsRender cards={cards} />}</div>;
+  return <div className="creators">{cards && <Cards cards={cards} />}</div>;
 };
 
 export default Creators;

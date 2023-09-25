@@ -3,11 +3,20 @@
 
 #home-page-container {
     display: flex;
-    margin: 0 0 0 7%;
+    height: 900px;
+    max-width: 1140px;
     gap: 100px;
 
+    .container {
+        display: grid;
+        grid-template-columns: 45% 65%;
+        margin-top: 150px;
+        align-self: center;
+        width: 100%;
+        gap: 60px;
+    }
+
     .home-page-header {
-        width: 40%;
 
         .left {
             display: flex;
@@ -68,6 +77,7 @@
             border-radius: 10px;
             border: 0;
             background: $color-purple;
+            text-align: center;
             cursor: pointer;
 
             .text-b {

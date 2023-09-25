@@ -6,7 +6,7 @@ import { ReactComponent as Logo } from './assets/logo.svg';
 import { ReactComponent as Search } from './assets/search.svg';
 import CartModal from '@components/Cart/components/CartModal/CartModal';
 import ModalWindow from '@components/Modals/ModalWindow/ModalWindow';
-import NavLink from './components/NavLink/NavLink';
+import NavLinks from './components/NavLinks/NavLinks';
 import React, { useState } from 'react';
 
 export const Header = () => {
@@ -17,13 +17,16 @@ export const Header = () => {
   };
 
   return (
-    <>
-      <div id="header">
-        <div className="left column">
-          <Logo className="logo" />
-          <NavLink />
-        </div>
-        <div className="right column">
+    <div id="header">
+      <div className="left column">
+        <Logo className="logo" />
+        <NavLinks />
+      </div>
+      <div className="right column">
+        <button className="background">
+          <Search className="logo" />
+        </button>
+        <div className="icon">
           <button className="background">
             <Search className="logo" />
           </button>
@@ -42,6 +45,6 @@ export const Header = () => {
         </div>
       </div>
       <ModalWindow isOpen={modalIsOpen} content={<CartModal onClose={() => setIsOpen(false)} />} />
-    </>
+    </div>
   );
 };

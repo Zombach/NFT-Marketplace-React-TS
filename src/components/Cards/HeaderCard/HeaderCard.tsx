@@ -2,30 +2,18 @@ import './HeaderCard.scss';
 import { ReactComponent as ArrowLeft } from '../assets/arrowLeft.svg';
 import { ReactComponent as ArrowRight } from '../assets/arrowRight.svg';
 import { FC, createContext, useEffect, useState } from 'react';
-import { HeaderFoto } from '@models/HeaderFoto';
-import { fotoHeaderMock } from '@resources/moq/Creators';
+import { HeaderPhoto } from '@models/HeaderPhoto';
+import { photoHeaderMock } from '@resources/moq/Creators';
 import Dots from '@components/Dots/Dots';
-
-export interface HeaderCardProps {
-  id: number;
-  avatar: string;
-  username: string;
-  whatCreated: string;
-  whenCreated: string;
-}
-
-export interface FindModel<T> {
-  items: T[];
-}
 
 export const SliderContext = createContext(0);
 
-export const HeaderCard: FC<HeaderCardProps> = ({ id, avatar, username, whatCreated, whenCreated }) => {
+export const HeaderCard: FC = () => {
   const [skip, setSkip] = useState<number>(0);
-  const [headerCards, setHeaderCards] = useState<HeaderFoto[]>([]);
+  const [headerCards, setHeaderCards] = useState<HeaderPhoto[]>([]);
 
   const onClickSkipLeft = () => {
-    if (skip + 1 >= 4) {
+    if (skip + 1 >= photoHeaderMock.length) {
       setSkip(0);
     } else {
       setSkip(skip + 1);
@@ -34,30 +22,29 @@ export const HeaderCard: FC<HeaderCardProps> = ({ id, avatar, username, whatCrea
 
   const onClickSkipRight = () => {
     if (skip - 1 < 0) {
-      setSkip(3);
+      setSkip(photoHeaderMock.length - 1);
     } else {
       setSkip(skip - 1);
     }
   };
 
-  const getSellers = (skip: number): FindModel<HeaderFoto> => {
-    const response: FindModel<HeaderFoto> = { items: fotoHeaderMock.slice(skip, skip + 1) };
-    return response;
+  const getSellers = (skip: number): HeaderPhoto[] => {
+    return photoHeaderMock.slice(skip, skip + 1);
   };
 
   useEffect(() => {
     const currentSellers = getSellers(skip);
-    setHeaderCards(currentSellers.items);
-  }, [4, skip]);
+    setHeaderCards(currentSellers);
+  }, [skip]);
 
   return (
     <div id="header-card">
       <div className="header-card-left">
-        {headerCards.map((headerCard) => {
+        {headerCards.map((headerCard, key) => {
           return (
-            <>
+            <div key={key}>
               <div className="header-card-index">
-                <img className="main-foto" src={headerCard.mainFoto} alt="" />
+                <img className="main-photo" src={headerCard.mainPhoto} alt="" />
               </div>
               <div className="text-block">
                 <div>
@@ -65,9 +52,9 @@ export const HeaderCard: FC<HeaderCardProps> = ({ id, avatar, username, whatCrea
                 </div>
                 <div className="ava-right">
                   <p>
-                    {headerCard.username} <span className="little-text">{headerCard.whatCreated}</span>
+                    {headerCard.username} <span className="little-text">{headerCard.name}</span>
                   </p>
-                  <p className="little-text opacity">{headerCard.whenCreated}</p>
+                  <p className="little-text opacity">{headerCard.createdAt}</p>
                 </div>
               </div>
               <div>
@@ -77,17 +64,13 @@ export const HeaderCard: FC<HeaderCardProps> = ({ id, avatar, username, whatCrea
               </div>
               <div className="arrow-switch">
                 <button onClick={onClickSkipRight} className="circle-big">
-                  <div className="arrow">
-                    <ArrowRight></ArrowRight>
-                  </div>
+                  <ArrowRight className="arrow"></ArrowRight>
                 </button>
                 <button onClick={onClickSkipLeft} className="circle-big">
-                  <div className="arrow ">
-                    <ArrowLeft></ArrowLeft>
-                  </div>
+                  <ArrowLeft className="arrow"></ArrowLeft>
                 </button>
               </div>
-            </>
+            </div>
           );
         })}
       </div>
