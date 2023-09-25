@@ -35,7 +35,10 @@ export const ProductPriceBlock: FC<AuthoredByProps> = ({ product, lastSalePrice,
         <EthereumPrice value={lastSalePrice}></EthereumPrice>
       </div>
       <div className="product-price-buttons">
-        <ButtonBox buttonClassName="buy-button primary-btn" text={`Buy now for ${product.price.toString()} BNB`}></ButtonBox>
+        <ButtonBox
+          onClick={() => onClickHandle}
+          buttonClassName="buy-button primary-btn"
+          text={`Buy now for ${product.price.toString()} BNB`}></ButtonBox>
         <ButtonBox buttonClassName="bid-button primary-2-btn" text="Place bid"></ButtonBox>
       </div>
       <ModalWindow onClose={() => setIsOpen(false)} isOpen={modalIsOpen} content={<CartModal onClose={() => setIsOpen(false)} />} />
