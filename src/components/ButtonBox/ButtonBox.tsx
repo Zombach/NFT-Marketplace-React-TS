@@ -4,26 +4,40 @@ import React, { type FC, ReactNode } from 'react';
 export interface ButtonBoxProps {
   className?: string;
   buttonClassName?: string;
+  textClassName?: string;
   text?: string;
-  children?: string;
   SvgBox?: ReactNode;
   onClick?: () => void;
   id?: string;
-  buttonId?: string;
+  disabled?: boolean;
+  isActive?: boolean;
 }
 
-export const ButtonBox: FC<ButtonBoxProps> = ({ className, buttonClassName, text, children, SvgBox, onClick, id, buttonId }): JSX.Element => {
+export const ButtonBox: FC<ButtonBoxProps> = ({
+  className,
+  buttonClassName,
+  textClassName,
+  text,
+  SvgBox,
+  onClick,
+  id,
+  disabled,
+  isActive,
+}): JSX.Element => {
   let click =
     onClick ??
     (() => {
       // eslint-disable-next-line
       console.log('Не реализованная функция');
     });
+
+  className = className ?? 'button-box';
+  if (isActive) className += ' active';
   return (
-    <div id={id} className={className ?? 'button-box'}>
-      <button id={buttonId} className={buttonClassName ?? 'button'} onClick={click}>
+    <div id={id} className={className}>
+      <button className={buttonClassName ?? 'button'} onClick={click} disabled={disabled}>
         {SvgBox && SvgBox}
-        {children && <span className={text ?? 'text'}>{children}</span>}
+        {text && <span className={textClassName ?? 'text'}>{text}</span>}
       </button>
     </div>
   );

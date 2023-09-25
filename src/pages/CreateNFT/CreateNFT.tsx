@@ -4,7 +4,7 @@ import { ReactComponent as DownloadIcon } from './assets/download.svg';
 import { ReactComponent as PictureIcon } from './assets/picture.svg';
 import Checkbox from '@components/Checkbox/Checkbox';
 import InputText from '@components/Inputs/InputText/InputText';
-import React, { ChangeEvent, type FC, useState } from 'react';
+import React, { ChangeEvent, type FC, useRef, useState } from 'react';
 
 export const CreateNFT: FC = () => {
   const [name, setName] = useState<string>('');
@@ -14,24 +14,23 @@ export const CreateNFT: FC = () => {
   const [isChecked, setIsChecked] = useState<boolean>(false);
   const [fileName, setFileName] = useState<string | undefined>(undefined);
   const allowedFileTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/svg'];
+  const dropAreaRef = useRef<HTMLDivElement>(null);
 
   const sendData = (event: React.FormEvent<HTMLFormElement>) => {};
 
   const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
 
-    let dropArea = document.getElementById('drop-area');
-    if (dropArea && dropArea.style) {
-      dropArea.style.opacity = '1';
+    if (dropAreaRef && dropAreaRef.current) {
+      dropAreaRef.current.style.opacity = '1';
     }
     setDragIsOver(true);
   };
 
   const handleDragLeave = (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
-    let dropArea = document.getElementById('drop-area');
-    if (dropArea && dropArea.style) {
-      dropArea.style.opacity = '0.25';
+    if (dropAreaRef && dropAreaRef.current) {
+      dropAreaRef.current.style.opacity = '0.25';
     }
     setDragIsOver(false); //TODo: To darken or change the background picture
   };
@@ -57,7 +56,7 @@ export const CreateNFT: FC = () => {
         <form onSubmit={(e) => sendData} className="create-nft-form">
           <p>Import image</p>
           <span className="types-allowed">File types supported: JPG, PNG, GIF, SVG. Max size: 50 MB</span>
-          <div id="drop-area" className="drop-area" onDragOver={handleDragOver} onDragLeave={handleDragLeave} onDrop={handleDrop}>
+          <div id="drop-area" className="drop-area" ref={dropAreaRef} onDragOver={handleDragOver} onDragLeave={handleDragLeave} onDrop={handleDrop}>
             <Circle className="circle"></Circle>
             {!fileName ? <DownloadIcon></DownloadIcon> : <PictureIcon></PictureIcon>}
           </div>
