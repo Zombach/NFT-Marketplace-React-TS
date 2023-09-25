@@ -1,8 +1,9 @@
 import './Base.scss';
-import { Creator } from '@models/Creator';
+// import { Creator } from '@models/Creator';
 import { type FC } from 'react';
 import { HeaderPhoto } from '@models/HeaderPhoto';
-import { Seller } from '@models/Seller';
+// import { Seller } from '@models/Seller';
+import { User } from '@models/User';
 import Aleks from './projectCreators/aleks.jpg';
 import AvatarMock from './avatar-mock.jpg';
 import Milana from './projectCreators/milana.jpg';
@@ -68,30 +69,31 @@ export const Render: FC = () => {
 const desc = `LIŔONA is a creator of minimalistic ⨯ bold graphic and digital artwork. 
 ✹ Artist / Creative Director ✹ #NFT minting `;
 
-export const creator = (id: string) => {
+export const creator = (id: string): User => {
   return {
-    id: id,
-    username: '@YFI Fan',
+    id: Number(id),
+    name: `@user ${id}`,
+    email: 'email.email.com',
+    address: '0xa6794dec66df7d8b69752956df1b28ca93f77cd7',
+    password: 'qwerty',
     avatar: AvatarMock,
     description: desc,
-    followersCount: 123,
-    followingCount: 123,
-    earned: 123,
-    address: '0xa6794dec66df7d8b69752956df1b28ca93f77cd7',
-  } as Creator;
-};
-
-export const createSeller = (id: string) => {
-  return {
-    id: id,
-    avatar: AvatarMock,
-    username: `@user ${id}`,
-    lastBidTime: '15 hours ago',
-    lastBidPrice: '15.5',
   };
 };
 
-export const sellersMock: Seller[] = [
+export const createSeller = (id: string): User => {
+  return {
+    id: Number(id),
+    name: `@user ${id}`,
+    email: 'email.email.com',
+    address: '0xa6794dec66df7d8b69752956df1b28ca93f77cd7',
+    password: 'qwerty',
+    avatar: AvatarMock,
+    description: desc,
+  };
+};
+
+export const sellersMock: User[] = [
   createSeller('1'),
   createSeller('2'),
   createSeller('3'),
