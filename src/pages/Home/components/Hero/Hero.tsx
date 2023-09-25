@@ -14,12 +14,12 @@ export const Hero = () => {
           <h2 className="main-text">Discover, collect, & sell NFTs</h2>
           <p className="text">Copy Discover the Most Premium, Unique and Exclusive NFT Collections</p>
           <div className="button-icon">
-            <button className="btn">
-              <p className="text-b">Explore</p>
-            </button>
-            <button className="btn white">
-              <p className="text-b black">Create</p>
-            </button>
+            <Link to="/marketplace" className="btn">
+              <span className="text-b">Explore</span>
+            </Link>
+            <Link to="/create-nft" className="btn white">
+              <span className="text-b black">Create</span>
+            </Link>
           </div>
           <div className="line-home">
             <Line />
