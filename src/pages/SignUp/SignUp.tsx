@@ -10,14 +10,16 @@ import { TapHere } from '@pages/LogIn/components/TapHere/TapHere';
 import Checkbox from '@components/Checkbox/Checkbox';
 import InputText from '@components/Inputs/InputText/InputText';
 import React, { type FC, useEffect, useState } from 'react';
-import axios from 'axios';
 import { dividerClasses } from '@mui/material';
 
 
 //export type OrderFormData<Reg> = { email: "123", password: "123321" };
 
 
-
+export interface Resp {
+  accessToken: string;
+  
+}
   
 
   
@@ -34,19 +36,18 @@ export const SignUp: FC = () => {
 
   //const [post, setPost] = useState({ email: "123", password: "123321" });
 
-  const onSubmit1: SubmitHandler<Reg> = (data) => console.log(data);
-   const onSubmit: SubmitHandler<Reg> = (data) =>
-     fetch('http://localhost:3000/api/auth/sign-in', {
-       method: 'POST',
-       body: JSON.stringify(data),
-       headers: { 'Content-Type': 'application/json' },
-     })
-       .then((response) => response.json())
-       .then((dataFromBack) => setFormResult(dataFromBack)); 
+  
+  const onSubmit: SubmitHandler<Reg> = (data) =>
+    fetch('http://localhost:3309/api/auth/sign-in', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: { 'Content-Type': 'application/json' },
+    })
+      .then((response) => response.json())
+      .then((data) => localStorage.setItem('accessToken', data.accessToken));  
   
   return (
-    <div id="sign-up-section">
-      {formResult && <div>данные </div>}
+    <div id="sign-up-section">      
       <form className="left-block" onSubmit={handleSubmit(onSubmit)}>
         <h2 className="text">Sign up</h2>
         <div className="login-container">
