@@ -18,15 +18,12 @@ export const Header = () => {
 
   return (
     <div id="header">
-      <div className="left column">
-        <Logo className="logo" />
-        <NavLinks />
-      </div>
-      <div className="right column">
-        <button className="background">
-          <Search className="logo" />
-        </button>
-        <div className="icon">
+      <div className="header-container">
+        <div className="left column">
+          <Logo className="logo" />
+          <NavLinks />
+        </div>
+        <div className="right column">
           <button className="background">
             <Search className="logo" />
           </button>
@@ -44,7 +41,7 @@ export const Header = () => {
           </div>
         </div>
       </div>
-      <ModalWindow isOpen={modalIsOpen} content={<CartModal onClose={() => setIsOpen(false)} />} />
+      <ModalWindow onClose={() => setIsOpen(false)} isOpen={modalIsOpen} content={<CartModal onClose={() => setIsOpen(false)} />} />
     </div>
   );
 };

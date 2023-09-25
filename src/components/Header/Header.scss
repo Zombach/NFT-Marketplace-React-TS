@@ -1,14 +1,16 @@
 @import "@src/variables";
 
-
 #header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1440px;
-    margin: 37px 5%;
     position: relative;
     z-index: 1;
+    max-width: 1140px;
+    margin: 37px auto;
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     .background {
         background-color: transparent;

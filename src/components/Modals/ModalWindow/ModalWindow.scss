@@ -2,12 +2,12 @@
 
 .modal-container {
     position: fixed;
-    top: 71px;
-    right: 150px;
+    top: 150px;
+    right: 100px;
     width: 600px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 32px;
     background-color: $color-white;
-    z-index: 2;
+    z-index: 5;
 }

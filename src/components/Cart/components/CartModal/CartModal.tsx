@@ -31,19 +31,17 @@ export const CartModal: FC<CartModalProps> = ({ onClose }) => {
         <div className="empty-cart">Cart is empty</div>
       )}
       <div className="cart-buttons">
-        <ButtonBox className="btn-box" onClick={onClose} buttonClassName="cart-btn primary-btn">
-          Continue to searching
-        </ButtonBox>
+        <ButtonBox text="Continue to searching" className="btn-box" onClick={onClose} buttonClassName="cart-btn primary-btn" />
         <ButtonBox
+          text="Check out"
           className="btn-box"
           buttonClassName={items?.length > 0 ? 'cart-btn primary-2-btn' : 'cart-btn disabled-btn'}
-          disabled={items?.length === 0}
           onClick={() => {
             onClose();
             navigate('/checkout');
-          }}>
-          Check out
-        </ButtonBox>
+          }}
+          disabled={items?.length === 0}
+        />
       </div>
     </div>
   );
