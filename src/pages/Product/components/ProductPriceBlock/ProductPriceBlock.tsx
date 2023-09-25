@@ -36,7 +36,7 @@ export const ProductPriceBlock: FC<AuthoredByProps> = ({ product, lastSalePrice,
       </div>
       <div className="product-price-buttons">
         <ButtonBox
-          onClick={() => onClickHandle}
+          onClick={() => onClickHandle()}
           buttonClassName="buy-button primary-btn"
           text={`Buy now for ${product.price.toString()} BNB`}></ButtonBox>
         <ButtonBox buttonClassName="bid-button primary-2-btn" text="Place bid"></ButtonBox>
