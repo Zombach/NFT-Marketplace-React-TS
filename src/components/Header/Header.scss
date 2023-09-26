@@ -6,6 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 
     .background {
         background-color: transparent;
@@ -96,6 +97,17 @@
             position: relative;
             right: 28px;
             bottom: 8px;
+        }
+
+        .backet{
+            width: 20px;
+            height: 20px;
+        }
+        .menu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
         }
 
 
