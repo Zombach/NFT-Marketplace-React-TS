@@ -2,20 +2,27 @@
 
 
 #home-page-container {
+    margin: 0 auto;
     display: flex;
-    margin: 0 0 0 7%;
+    height: 900px;
+    max-width: 1140px;
     gap: 100px;
-    height: auto;
+
+    .container {
+        display: grid;
+        grid-template-columns: 45% 65%;
+        margin-top: 150px;
+        align-self: center;
+        width: 100%;
+        gap: 60px;
+    }
 
     .home-page-header {
-        width: 40%;
-
         .left {
             display: flex;
             flex-direction: column;
             gap: 40px;
             align-items: center;
-            justify-content: center;
         }
 
         .main-text {
@@ -41,7 +48,6 @@
             width: 100%;
             padding: 12px 8px;
             align-items: center;
-            text-align: center;
             gap: 16px;
             border-radius: 10px;
             border: 0;
@@ -70,6 +76,7 @@
             border-radius: 10px;
             border: 0;
             background: $color-purple;
+            text-align: center;
             cursor: pointer;
 
             .text-b {
@@ -115,50 +122,47 @@
         }
     }
 
-    .photo-section {
-        width: 60%;
-    }
-
 
     @media(max-width: 500px) {
         padding: 0px 24px 31px 24px;
-        
+
         .container {
             display: flex;
-            flex-direction: column;  
+            flex-direction: column;
             margin-top: 0;
             align-self: auto;
         }
-        
+
         .home-page-header {
-            
-            .main-text{
+
+            .main-text {
                 font-size: 40px;
                 line-height: 48px;
             }
 
             .left {
                 gap: 16px;
-                
+
             }
 
             .text {
                 font-size: 14px;
-                line-height: 22px;     
-                z-index: -1;;           
+                line-height: 22px;
+                z-index: -1;
+                ;
             }
 
-            .btn{
+            .btn {
                 margin-top: 0;
                 width: 50%;
             }
 
-            .button-icon{
-                gap:8px;
+            .button-icon {
+                gap: 8px;
                 padding: 8px 8px;
             }
 
-            .width-mobile-only{
+            .width-mobile-only {
                 width: 100%;
                 position: relative;
                 bottom: 20px;
@@ -176,9 +180,9 @@
 
             .learn-more {
                 font-size: 16px;
-                
+
             }
         }
-    
+
     }
 }

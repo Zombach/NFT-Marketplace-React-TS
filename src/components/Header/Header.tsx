@@ -7,12 +7,9 @@ import { ReactComponent as Backet } from './assets/basket.svg';
 import { ReactComponent as Lock } from './assets/lock.svg';
 import { ReactComponent as Logo } from './assets/logo.svg';
 import { ReactComponent as Search } from './assets/search.svg';
-import CartModal from '@components/Cart/components/CartModal/CartModal';
-import ModalWindow from '@components/Modals/ModalWindow/ModalWindow';
 import NavLinks from './components/NavLinks/NavLinks';
 import ModalWindow from '@components/Modals/ModalWindow/ModalWindow';
 import CartModal from '@components/Cart/components/CartModal/CartModal';
-
 
 export const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -23,7 +20,7 @@ export const Header = () => {
   };
 
   return (
-    <div className='head'>
+    <div className="head">
       <div id="header">
         <div className={menuActive ? 'left column active' : 'left column'}>
           <Logo className="logo desktop-only" />
@@ -48,10 +45,6 @@ export const Header = () => {
             <Ellipse className="logo ellipse" />
             <HamburgerMenu className="logo burger" />
           </div>
-        </div>
-        <div className="burger-menu desktop-only">
-          <Ellipse className="logo ellipse" />
-          <HamburgerMenu className="logo burger" onClick={onClickHandle} />
         </div>
         <div className="menu mobile-only">
           <button onClick={onClickHandle}>
