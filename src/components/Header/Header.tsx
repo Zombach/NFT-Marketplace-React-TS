@@ -41,10 +41,10 @@ export const Header = () => {
               Sign in
             </a>
           </div>
-          <div className="burger-menu desktop-only">
+          <button className="burger-menu desktop-only" onClick={onClickHandle}>
             <Ellipse className="logo ellipse" />
             <HamburgerMenu className="logo burger" />
-          </div>
+          </button>
         </div>
         <div className="menu mobile-only">
           <button onClick={onClickHandle}>
