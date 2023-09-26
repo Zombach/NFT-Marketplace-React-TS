@@ -1,8 +1,8 @@
 import './LogIn.scss';
-import { type FC } from 'react';
 import { ReactComponent as Line } from './assets/line.svg';
 import { LogQR } from './components/LogQR/LogQR';
 import EmailPassword from './components/EmailPassword/EmailPassword';
+import React, { type FC } from 'react';
 
 export const LogIn: FC = () => {
   return (

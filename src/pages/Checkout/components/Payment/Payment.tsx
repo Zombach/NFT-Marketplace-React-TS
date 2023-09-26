@@ -9,11 +9,11 @@ export const CustomerInfo: FC = () => {
         <div className="circle"></div>
         <span>Credit card</span>
       </div>
-      <InputText id={'cardNumber'} name={'creditCard'} placeholder={'Card number'} />
+      <InputText id={'cardNumber'} name={'cardNumber'} placeholder={'Card number'} />
       <div className="credentials">
-        <InputText id={'expDate'} name={'Exp.date'} placeholder={'Exp.day'} />
+        <InputText id={'expDate'} name={'expDate'} placeholder={'Exp.day'} />
         <div className="code">
-          <InputText id={'securityCode'} name={'securityCode'} placeholder={'CVC'} />
+          <InputText id={'securityCode'} name={'code'} placeholder={'CVC'} />
         </div>
       </div>
     </div>

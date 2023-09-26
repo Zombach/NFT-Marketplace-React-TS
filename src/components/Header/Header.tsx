@@ -7,6 +7,8 @@ import { ReactComponent as Backet } from './assets/basket.svg';
 import { ReactComponent as Lock } from './assets/lock.svg';
 import { ReactComponent as Logo } from './assets/logo.svg';
 import { ReactComponent as Search } from './assets/search.svg';
+import CartModal from '@components/Cart/components/CartModal/CartModal';
+import ModalWindow from '@components/Modals/ModalWindow/ModalWindow';
 import NavLinks from './components/NavLinks/NavLinks';
 import ModalWindow from '@components/Modals/ModalWindow/ModalWindow';
 import CartModal from '@components/Cart/components/CartModal/CartModal';

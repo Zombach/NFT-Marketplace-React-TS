@@ -6,7 +6,7 @@ export const ContactInfo: FC = () => {
   return (
     <div className="contact-info-section">
       <InputText id={'email'} name={'email'} placeholder={'Email'} />
-      <InputText id={'phone'} name={'phone'} placeholder={'Phone'} />
+      <InputText id={'phoneNumber'} name={'phoneNumber'} placeholder={'Phone'} />
     </div>
   );
 };

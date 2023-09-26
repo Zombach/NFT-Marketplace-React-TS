@@ -1,19 +1,23 @@
 import './Summary.scss';
 import { ReactComponent as SecurityIcon } from './assets/security.svg';
+import { getFormattedPrice } from '@src/utils/GetFormattedPrice';
+import { selectCartItemsSum } from '@components/Cart/CartSlice';
+import { useSelector } from 'react-redux';
 import InputText from '@components/Inputs/InputText/InputText';
 import React, { type FC } from 'react';
 import Subtotal from './components/Subtotal/Subtotal';
 
 export const Summary: FC = () => {
+  const totalPrice = useSelector(selectCartItemsSum);
+
   return (
     <div className="summary-section">
       <div className="summary">
-        <Subtotal title="Subtotal" price={'32.00'} />
-        <Subtotal title="VAT" price={'32.00'} />
-        <Subtotal title="Total" price={'32.00'} isTotal={true} />
+        <Subtotal title="Subtotal" price={getFormattedPrice(totalPrice)} />
+        <Subtotal title="Total" price={getFormattedPrice(totalPrice)} isTotal={true} />
       </div>
       <InputText id={'discount'} name={'discount'} placeholder={'Add coupon to get discount'} />
-      <input form="form-checkout" className="button-pay primary-2-btn" type="submit" value="Pay $51.5" />
+      <input form="form-checkout" className="button-pay primary-2-btn" type="submit" value={`Pay ${getFormattedPrice(totalPrice)}`} />
       <div className="payments">
         <SecurityIcon />
         <span>Payments are secured and encrypted</span>

@@ -21,7 +21,7 @@ export const SellerCard: FC<SellerCardProps> = ({ id, number, avatar, username, 
         {number && <span className="number">{number}</span>}
         <Avatar src={avatar}></Avatar>
         <div className="seller-info">
-          <Link to={`creators/${id}`}>
+          <Link to={`/creators/${id}`}>
             <span className="username">{username}</span>
           </Link>
           {sellerInfoBottom}

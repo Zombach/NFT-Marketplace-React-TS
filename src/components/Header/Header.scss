@@ -1,12 +1,17 @@
 @import "@src/variables";
 
-
 #header {
     padding: 37px 50px 37px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     .background {
         background-color: transparent;
