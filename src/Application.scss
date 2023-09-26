@@ -48,6 +48,10 @@ button {
     .desktop-only {
         display: none !important;
     }
+
+    h2 {
+        font-size: 30px;
+    }
 }
 
 @media (min-width: 850px) {

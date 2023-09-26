@@ -12,6 +12,13 @@
         align-self: center;
         width: 100%;
         gap: 40px;
+
+        .line {
+            height: 100px;
+            width: 1px;
+            background-color: $color-white;
+            opacity: 0.15;
+        }
     }
 
     .grid {
@@ -46,4 +53,30 @@
         opacity: 0.8;
     }
 
+}
+
+@media (max-width: 850px) {
+    #create-nft-container {
+        .grid {
+            grid-template-columns: 100%;
+
+            .container {
+                flex-direction: column;
+                gap: 16px;
+
+                .line {
+                    height: 1px;
+                    width: 100%;
+                }
+            }
+
+            .text-info {
+                margin-bottom: 0;
+
+                &.big {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
 }
