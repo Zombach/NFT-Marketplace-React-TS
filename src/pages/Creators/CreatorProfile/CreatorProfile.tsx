@@ -15,8 +15,12 @@ import HeaderImg from './assets/creator-header-img.jpg';
 import Profile from '@components/Profile/Profile';
 import Switch from '@components/Switch/Switch';
 
+export type UrlParams = {
+  profileId: string;
+};
+
 export const CreatorProfile: FC = () => {
-  const { profileId } = useParams();
+  const { profileId } = useParams<keyof UrlParams>() as UrlParams;
   const [isTable, setIsTable] = useState<boolean>(false);
   const { data: products } = useGetUserProductsQuery(profileId);
 

@@ -1,25 +1,22 @@
 import './Product.scss';
 import { CardsFragment } from '@src/pages/Marketplace/CardsFragment/CardsFragment';
 import { CollectionsHeader } from '@components/CollectionsHeader/CollectionsHeader';
-import { type FC, useEffect, useState } from 'react';
-import { Product } from '@models/Product';
+import { type FC, useState } from 'react';
 import { useGetProductQuery, useGetProductsQuery } from '@src/features/api/productsApi';
 import { useParams } from 'react-router-dom';
 import ActivitySellersCards from './components/ActivitySellersCards/ActivitySellersCards';
 import ProductSection from './components/ProductSection/ProductSection';
 import Sellers from '@components/Sellers/Sellers';
 
-type UrlParams = {
-  productId: string;
+export type UrlParams = {
+  id: string;
 };
 
 export const ProductComponent: FC = () => {
-  const { productId } = useParams<keyof UrlParams>() as UrlParams;
+  const { id } = useParams<keyof UrlParams>() as UrlParams;
   const [isTable, setIsTable] = useState<boolean>(false);
   const { data: products } = useGetProductsQuery();
-  const { data: product } = useGetProductQuery(productId);
-
-  console.log('product', product);
+  const { data: product } = useGetProductQuery(id);
 
   return (
     <div className="product-page">

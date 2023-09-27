@@ -11,10 +11,10 @@ export const productsApi = createApi({
     getProduct: builder.query<Product, string>({
       query: (id) => `products/${id}`,
     }),
-    getUserProducts: builder.query({
+    getUserProducts: builder.query<Product[], string>({
       query: (userId) => `products/created/${userId}`,
     }),
-    addProduct: builder.mutation({
+    addProduct: builder.mutation<[], Product>({
       query: (body) => ({
         url: 'products',
         method: 'POST',
