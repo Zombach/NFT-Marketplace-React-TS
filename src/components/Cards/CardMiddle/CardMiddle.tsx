@@ -17,7 +17,7 @@ export const CardMiddle: FC<CardMiddleFragmentProps> = (props) => {
   const { card } = props;
 
   return (
-    <div className="card-container">
+    <div className="card-container middle">
       <div className="top-section">
         <img src={card.img} alt="" />
       </div>

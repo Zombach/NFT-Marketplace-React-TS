@@ -7,74 +7,76 @@ a {
     color: inherit;
 }
 
-.bottom-section {
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-    gap: 8px 0;
-}
-
-.bottom-section-header {
-    font-size: 20px;
-}
-
-.price-like-container {
-    margin-top: 8px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.price-container {
-    display: flex;
-    flex-direction: row;
-    gap: 4px;
-}
-
-.price {
-    font-family: $font-helvetica-neue;
-    font-weight: 500;
-    font-size: 24px;
-}
-
-.likes-btn {
-    margin-top: 10px;
-    padding: 6px 8px;
-    border-radius: 10px;
-    background-color: $color-grey;
-    display: flex;
-    border: none;
-    cursor: pointer;
-}
-
-.likes-btn span {
-    font-size: 14px;
-    margin-left: 4px;
-    align-self: center;
-}
-
-.user-container {
-    display: flex;
-    flex-direction: row;
-    color: $color-grey-3;
-    gap: 10px;
-}
-
-.user-name {
-    display: flex;
-    align-items: center;
-}
-
-.top-section {
-    img {
-        height: 360px;
-        max-width: 370px;
-        border-radius: 10px 10px 0 0;
+.middle {
+    .bottom-section {
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        gap: 8px 0;
     }
-}
 
-.small-avatar {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    object-fit: cover;
+    .bottom-section-header {
+        font-size: 20px;
+    }
+
+    .price-like-container {
+        margin-top: 8px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .price-container {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+    }
+
+    .price {
+        font-family: $font-helvetica-neue;
+        font-weight: 500;
+        font-size: 24px;
+    }
+
+    .likes-btn {
+        margin-top: 10px;
+        padding: 6px 8px;
+        border-radius: 10px;
+        background-color: $color-grey;
+        display: flex;
+        border: none;
+        cursor: pointer;
+    }
+
+    .likes-btn span {
+        font-size: 14px;
+        margin-left: 4px;
+        align-self: center;
+    }
+
+    .user-container {
+        display: flex;
+        flex-direction: row;
+        color: $color-grey-3;
+        gap: 10px;
+    }
+
+    .user-name {
+        display: flex;
+        align-items: center;
+    }
+
+    .top-section {
+        img {
+            height: 360px;
+            width: 370px;
+            border-radius: 10px 10px 0 0;
+        }
+    }
+
+    .small-avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
 }
