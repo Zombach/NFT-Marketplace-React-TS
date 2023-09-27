@@ -1,0 +1,18 @@
+@import '../../variables';
+
+.not-found {
+    margin: 200px auto;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 24px;
+
+    p {
+        color: $color-grey-3;
+    }
+
+    .homepage-btn {
+        margin-top: 40px;
+        padding: 16px 49px;
+    }
+}
