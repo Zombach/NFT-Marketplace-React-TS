@@ -1,12 +1,12 @@
-import { CardMarketplace } from '@resources/moq/Marketplace';
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { Product } from '@models/Product';
 import { RootState } from '@src/store/Store';
 import { calculateTotalPrice } from '@src/utils/CalculateTotalPrice';
 
-export type Product = CardMarketplace & { count: number };
+export type ProductItem = Product & { count: number };
 
 interface Cart {
-  products: Product[];
+  products: ProductItem[];
   totalPrice: number;
 }
 

@@ -1,10 +1,10 @@
 import './CardsFragment.scss';
-import { CardMarketplace } from '@resources/moq/Marketplace';
+import { Product } from '@models/Product';
 import CardMiddle from '@components/Cards/CardMiddle/CardMiddle';
 import React, { type FC } from 'react';
 
 interface CardsFragmentProps {
-  cards: CardMarketplace[];
+  cards: Product[];
   isTable: boolean;
 }
 
