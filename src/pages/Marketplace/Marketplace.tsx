@@ -8,8 +8,6 @@ export const Marketplace: FC = () => {
   const [isTable, setIsTable] = useState<boolean>(false);
   const { data: products } = useGetProductsQuery();
 
-  console.log('products', products);
-
   return (
     <div className="market-place-section">
       <CollectionsHeader />

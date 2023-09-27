@@ -24,7 +24,7 @@ export const CreatorProfile: FC = () => {
   const [isTable, setIsTable] = useState<boolean>(false);
   const { data: products } = useGetUserProductsQuery(profileId);
 
-  //надо добавить апи юзера
+  //TODO надо добавить апи юзера
   const getCollection = (id: string) => {
     return creator(id);
   };
