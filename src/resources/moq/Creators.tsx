@@ -1,8 +1,6 @@
 import './Base.scss';
-// import { Creator } from '@models/Creator';
 import { type FC } from 'react';
 import { HeaderPhoto } from '@models/HeaderPhoto';
-// import { Seller } from '@models/Seller';
 import { User } from '@models/User';
 import Aleks from './projectCreators/aleks.jpg';
 import AvatarMock from './avatar-mock.jpg';
