@@ -5,13 +5,7 @@ import { useForm } from 'react-hook-form';
 import ButtonBox from '@components/ButtonBox/ButtonBox';
 import InputText from '@components/Inputs/InputText/InputText';
 
-export interface SubscribeModel {
-  subs: string;
-}
-
-export const Subscribe: FC = () => {
-  const { register } = useForm<SubscribeModel>();
-
+export const Subscribe: FC = () => {  
   return (
     <div className="subscribe">
       <div className="label">
@@ -22,8 +16,6 @@ export const Subscribe: FC = () => {
           id={'subs'}
           name={'subs'}
           placeholder={'Email'}
-          register={register}
-          regName="description"
           rightSideItem={<SendIcon></SendIcon>}></InputText>
       </form>
     </div>

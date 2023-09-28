@@ -29,7 +29,6 @@ type Order = {
 export const CheckoutFragment: FC = () => {
   const methods = useForm<any>({ resolver: yupResolver(getCheckoutSchema()) });
   const {
-    register,
     handleSubmit,
     control,
     formState: { errors },

@@ -4,34 +4,22 @@ import { useForm } from 'react-hook-form';
 import InputText from '@components/Inputs/InputText/InputText';
 import React, { type FC, useState } from 'react';
 
-export interface CustomerInfoModel {
-  name: string;
-  lastName: string;
-  company: string;
-  city: string;
-  postalCode: string;
-  street: string;
-  country: string;
-  vat: string;
-}
 
 export const CustomerInfo: FC = () => {
-  const { register } = useForm<CustomerInfoModel>();
-
   return (
     <div className="customer-info-section">
-      <InputText id={'name'} name={'name'} placeholder={'Name'} register={register} regName="name" />
-      <InputText id={'lastName'} name={'lastName'} placeholder={'Last name'} register={register} regName="lastName" />
-      <InputText id={'company'} name={'company'} placeholder={'Company'} register={register} regName="company" />
+      <InputText id={'name'} name={'name'} placeholder={'Name'}/>
+      <InputText id={'lastName'} name={'lastName'} placeholder={'Last name'}/>
+      <InputText id={'company'} name={'company'} placeholder={'Company'}/>
       <div className="city-code-container">
         <div className="city">
-          <InputText id={'city'} name={'city'} placeholder={'City'} register={register} regName="city" />
+          <InputText id={'city'} name={'city'} placeholder={'City'}/>
         </div>
-        <InputText id={'postalCode'} name={'postalCode'} placeholder={'Postal Code'} register={register} regName="postalCode" />
+        <InputText id={'postalCode'} name={'postalCode'} placeholder={'Postal Code'}/>
       </div>
-      <InputText id={'street'} name={'street'} placeholder={'Street'} register={register} regName="street" />
-      <InputText id={'country'} name={'country'} placeholder={'Country'} register={register} regName="country" />
-      <InputText id={'vat'} name={'vat'} placeholder={'VAT (optional)'} register={register} regName="vat" />
+      <InputText id={'street'} name={'street'} placeholder={'Street'}/>
+      <InputText id={'country'} name={'country'} placeholder={'Country'}/>
+      <InputText id={'vat'} name={'vat'} placeholder={'VAT (optional)'}/>
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import './CreateNFT.scss';
 import { ReactComponent as Circle } from './assets/circle.svg';
-import { CreateNft } from '@models/CreateNft';
 import { ReactComponent as DownloadIcon } from './assets/download.svg';
 import { ReactComponent as PictureIcon } from './assets/picture.svg';
 import { useForm } from 'react-hook-form';
@@ -19,7 +18,6 @@ export const CreateNFT: FC = () => {
   const dropAreaRef = useRef<HTMLDivElement>(null);
 
   const sendData = (event: React.FormEvent<HTMLFormElement>) => {};
-  const { register } = useForm<CreateNft>();
   const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
 
@@ -67,17 +65,13 @@ export const CreateNFT: FC = () => {
             name={'Name'}
             placeholder={'Enter a name here...'}
             isRequired={true}
-            register={register}
-            regName="name"
             onChange={(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setName(event.target.value)}></InputText>
           <InputText
             id={'desc'}
             name={'Description'}
             placeholder={'Enter a description here...'}
             isRequired={true}
-            multiline={true}
-            register={register}
-            regName="description"
+            multiline={true}            
             onChange={(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setDesc(event.target.value)}></InputText>
           <Checkbox
             label={'I understand and agree to BNB NFT’s Minting Rules and terms '}
