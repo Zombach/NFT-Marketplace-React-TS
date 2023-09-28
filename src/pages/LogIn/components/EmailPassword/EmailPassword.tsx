@@ -5,13 +5,12 @@ import InputText from '@components/Inputs/InputText/InputText';
 import React, { type FC } from 'react';
 
 export const EmailPassword: FC = () => {
-
   return (
     <div id="EmailPassword">
       <form className="left-block">
         <h2 className="text">Log in</h2>
         <div className="email-password-container">
-          <InputText id="email" name="email" placeholder="Email / Phone number" isRequired={true}/>
+          <InputText id="email" name="email" placeholder="Email / Phone number" isRequired={true} />
           <InputText id="password" name="password" placeholder="Password" isRequired={true} />
         </div>
         <TapHere text="Forget password?" tap="Tap here" />

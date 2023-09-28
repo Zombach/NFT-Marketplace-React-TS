@@ -17,4 +17,3 @@ export const ValidationSignUp = () => {
 
   return schema;
 };
-

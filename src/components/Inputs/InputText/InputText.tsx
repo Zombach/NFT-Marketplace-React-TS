@@ -29,15 +29,7 @@ export const InputText: FC<InputTextProps> = ({
     <div className={className ?? 'input-group'}>
       {!multiline ? (
         <div className="input-group-container">
-          <input
-            {...schemas?.register(name)}
-            className="input-group-input"
-            type="text"
-            name={name}
-            id={id}
-            placeholder=""
-            onChange={onChange}
-          />
+          <input {...schemas?.register(name)} className="input-group-input" type="text" name={name} id={id} placeholder="" onChange={onChange} />
           {schemas?.formState?.errors?.[name] && <span>{schemas?.formState?.errors?.[name]?.message?.toString()}</span>}
         </div>
       ) : (
