@@ -3,14 +3,15 @@ import { CardMarketplace } from '@resources/moq/Marketplace';
 import { EthereumPrice } from '@components/EthereumPrice/EthereumPrice';
 import { FC, useState } from 'react';
 import { ModalWindow } from '@components/Modals/ModalWindow/ModalWindow';
-import { Product, addToCart } from '@components/Cart/CartSlice';
+import { addToCart } from '@components/Cart/CartSlice';
 import { useDispatch } from 'react-redux';
 import ButtonBox from '@components/ButtonBox/ButtonBox';
 import CartModal from '@components/Cart/components/CartModal/CartModal';
 import PriceCard from '../PriceCard/PriceCard';
+import { Product } from '@models/Product';
 
 export interface AuthoredByProps {
-  product: CardMarketplace;
+  product: Product;
   lastSalePrice: number | string;
   ethereumBidPrice: number | string;
 }
@@ -20,7 +21,7 @@ export const ProductPriceBlock: FC<AuthoredByProps> = ({ product, lastSalePrice,
   const [modalIsOpen, setIsOpen] = useState<boolean>(false);
 
   const onClickHandle = () => {
-    dispatch(addToCart(product as Product));
+    dispatch(addToCart(product));
     setIsOpen(true);
   };
 
@@ -28,7 +29,7 @@ export const ProductPriceBlock: FC<AuthoredByProps> = ({ product, lastSalePrice,
     <div className="product-price-block thin-block-border">
       <div className="product-price-block-top">
         <PriceCard title="Price" price={product.price} bottomText={`≈ $${product.price.toString()}`}></PriceCard>
-        <PriceCard title="Highest floor bid" price={ethereumBidPrice} bottomText={product.userName}></PriceCard>
+        <PriceCard title="Highest floor bid" price={ethereumBidPrice} bottomText={product.creator.name}></PriceCard>
       </div>
       <div className="last-price">
         <span>Last sale price:</span>

@@ -1,10 +1,13 @@
 import { Product } from './Product';
 import { User } from './User';
 
-export interface Collection {
-  id?: number;
+export interface Order {
+  id: number;
+  totalAmount: number;
   name: string;
-  desc: string;
+  lastName: string;
+  email: string;
+  phone: string;
   user: User;
   products: Product[];
 }
