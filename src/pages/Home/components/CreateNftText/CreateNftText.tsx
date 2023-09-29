@@ -16,12 +16,14 @@ export const CreateNftText = () => {
             Create
             <div className="text-info mini">Creative building blocks for BnB.</div>
           </div>
-          <Line></Line>
+          <div className="line-rotate mobile-only"></div>
+          <Line className="desktop-only"></Line>
           <div className="text-info">
             Collect
             <div className="text-info mini">Unearth NFTs for your growing collection.</div>
           </div>
-          <Line></Line>
+          <div className="line-rotate mobile-only"></div>
+          <Line className="desktop-only"></Line>
           <div className="text-info">
             Sell
             <div className="text-info mini">Your NFTs will shine in our marketplace.</div>

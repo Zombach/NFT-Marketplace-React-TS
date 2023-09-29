@@ -11,3 +11,17 @@
     background-color: $color-white;
     z-index: 5;
 }
+
+
+@media (max-width: 500px) {
+
+    .modal-container {
+            position: relative;
+            top: 100px;
+            right: -10px;
+            width: 400px;
+            
+        }
+
+
+}
