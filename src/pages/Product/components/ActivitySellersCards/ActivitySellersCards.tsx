@@ -7,14 +7,14 @@ export const ActivitySellersCards: FC<SellersCardsProps> = ({ sellers }) => {
   return sellers.map((seller, i) => (
     <SellerCard
       key={i}
-      id={seller.id}
+      id={seller.id.toString()}
       avatar={seller.avatar}
-      username={seller.username}
-      lastBidPrice={seller.lastBidPrice}
-      rightBottom={<span>≈ ${seller.lastBidPrice}</span>}
+      username={seller.name}
+      lastBidPrice={100}
+      rightBottom={<span>≈ ${21}</span>}
       sellerInfoBottom={
         <div className="recent-bid">
-          <span className="time">{seller.lastBidTime}</span>
+          <span className="time">{21}</span>
           <span>/</span>
           <span className="floor-bid">Floor bid</span>
         </div>

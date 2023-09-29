@@ -71,24 +71,20 @@ export const Render: FC = () => {
 
 const desc = `A handcrafted collection of 10,000 characters developed by artist DirtyRobot. Each with their own identity to be discovered within the wider stories of RENGA. In its purest form, RENGA is the art of storytelling.`;
 
-export const collection = (id: string) => {
+export const collection = (id: string): Collection => {
   return {
-    id: id,
+    id: Number(id),
     name: 'NFT',
-    creator: {
-      id: id,
-      username: '@YFI Fan',
+    desc: 'Top nft collection',
+    user: {
+      id: Number(id),
+      name: '@YFI Fan',
       avatar: AvatarMock,
       description: desc,
-      followersCount: 123,
-      followingCount: 123,
-      earned: 123,
       address: '0xa6794dec66df7d8b69752956df1b28ca93f77cd7',
+      email: 'jjjj',
+      password: '9999',
     },
-    floorPrice: '12',
-    totalVolume: '12333',
-    countItems: 123,
-    ownersCount: 323232,
-    address: '0xa6794dec66df7d8b69752956df1b28ca93f77cd7',
-  } as Collection;
+    products: [],
+  };
 };
