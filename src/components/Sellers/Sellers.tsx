@@ -3,7 +3,7 @@ import { ReactComponent as Arrow } from './assets/arrow.svg';
 import { FC, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SearchResponseModel } from '@models/SearchResponseModel';
-import { Seller } from '@models/Seller';
+import { User } from '@models/User';
 import { initSwitchItems } from './dispatcher';
 import { sellersMock } from '@resources/moq/Creators';
 import ButtonBox from '@components/ButtonBox/ButtonBox';
@@ -17,13 +17,13 @@ export interface SellersProps {
 }
 
 export interface SellersCardsProps {
-  sellers: Seller[];
+  sellers: User[];
   skip: number;
 }
 
 export const Sellers: FC<SellersProps> = ({ title, countOnPage, isNeededSwitch = false, SellersCards }) => {
   const [skip, setSkip] = useState<number>(0);
-  const [sellers, setSellers] = useState<Seller[]>([]);
+  const [sellers, setSellers] = useState<User[]>([]);
   const [totalCount, setTotalCount] = useState<number>(0);
 
   useEffect(() => {
@@ -40,8 +40,8 @@ export const Sellers: FC<SellersProps> = ({ title, countOnPage, isNeededSwitch =
     }
   };
 
-  const getSellers = (skip: number, count: number): SearchResponseModel<Seller> => {
-    const response: SearchResponseModel<Seller> = { items: sellersMock.slice(skip, skip + count), totalCount: sellersMock.length };
+  const getSellers = (skip: number, count: number): SearchResponseModel<User> => {
+    const response: SearchResponseModel<User> = { items: sellersMock.slice(skip, skip + count), totalCount: sellersMock.length };
     return response;
   };
 

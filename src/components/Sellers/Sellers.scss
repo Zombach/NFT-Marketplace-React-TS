@@ -57,5 +57,9 @@
         .seller-cards {
             grid-template-columns: initial;
         }
+
+        .seller-card {
+            min-width: 100%;
+        }
     }
 }
