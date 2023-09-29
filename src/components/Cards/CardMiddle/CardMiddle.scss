@@ -66,6 +66,11 @@ a {
 
 .top-section {
     position: relative;
+
+    .nft-img {
+        object-fit: cover;
+        width: 100%;
+    }
 }
 
 .time-badge {

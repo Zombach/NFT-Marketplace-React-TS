@@ -1,44 +1,22 @@
 @import "@src/variables";
 
 .header-card {
-    display: inline-flex;
+    display: flex;
+    gap: 290px;
     width: 100%;
 
     .text {
         color: $color-black;
-        font-variant-numeric: lining-nums proportional-nums;
         font-family: $font-helvetica-neue;
         font-size: 16px;
         font-weight: 700;
         line-height: 26px;
         text-transform: capitalize;
-
-        &.creator {
-            margin-left: 53px;
-            width: 58px;
-        }
-
-        &.volume {
-            margin-left: 292px;
-            width: 105px;
-        }
-
-        &.sales {
-            margin-left: 59px;
-            width: 42px;
-        }
-
-        &.items {
-            margin-left: 68px;
-            width: 43px;
-        }
-
-        &.followers {
-            margin-left: 51px;
-            width: 75px;
-        }
     }
 
+    .creator {
+        margin-left: 53px;
+    }
 
     .icon {
         margin-left: 10px;
@@ -46,3 +24,16 @@
         height: 18px;
     }
 }
+
+.user-extra-info-header {
+    display: grid;
+    grid-template-columns: repeat(4, 133px);
+    gap: 40px;
+
+    .header-item {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 850px) {}

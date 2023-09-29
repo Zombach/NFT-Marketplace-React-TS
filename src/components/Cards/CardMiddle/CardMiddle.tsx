@@ -18,7 +18,7 @@ export const CardMiddle: FC<CardMiddleFragmentProps> = (props) => {
   return (
     <div className="card-container">
       <div className="top-section">
-        <img src={card.nftImage} alt="" />
+        <img className="nft-img" src={card.nftImage} alt="" />
         <div className="time-badge">
           <Clock />
           {String(card.time.toLocaleTimeString())}

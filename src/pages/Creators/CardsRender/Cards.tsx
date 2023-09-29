@@ -11,7 +11,7 @@ interface CardsRenderProps {
 export const CardsRender: FC<CardsRenderProps> = ({ cards }) => {
   return (
     <div className="card-small-render">
-      <HeaderCardSmall />
+      {/* <HeaderCardSmall /> */}
       {cards.map((item, index) => (
         <CardSmall key={index} number={index} model={item} />
       ))}

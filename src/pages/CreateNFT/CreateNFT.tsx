@@ -32,7 +32,7 @@ export const CreateNFT: FC = () => {
     if (dropAreaRef && dropAreaRef.current) {
       dropAreaRef.current.style.opacity = '0.25';
     }
-    setDragIsOver(false); //TODo: To darken or change the background picture
+    setDragIsOver(false);
   };
 
   const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
@@ -50,38 +50,36 @@ export const CreateNFT: FC = () => {
   };
 
   return (
-    <>
-      <div className="create-nft-page">
-        <h2>Create an NFT</h2>
-        <form onSubmit={(e) => sendData} className="create-nft-form">
-          <p>Import image</p>
-          <span className="types-allowed">File types supported: JPG, PNG, GIF, SVG. Max size: 50 MB</span>
-          <div id="drop-area" className="drop-area" ref={dropAreaRef} onDragOver={handleDragOver} onDragLeave={handleDragLeave} onDrop={handleDrop}>
-            <Circle className="circle"></Circle>
-            {!fileName ? <DownloadIcon></DownloadIcon> : <PictureIcon></PictureIcon>}
-          </div>
-          <InputText
-            id={'name'}
-            name={'Name'}
-            placeholder={'Enter a name here...'}
-            isRequired={true}
-            onChange={(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setName(event.target.value)}></InputText>
-          <InputText
-            id={'desc'}
-            name={'Description'}
-            placeholder={'Enter a description here...'}
-            isRequired={true}
-            multiline={true}
-            onChange={(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setDesc(event.target.value)}></InputText>
-          <Checkbox
-            label={'I understand and agree to BNB NFT’s Minting Rules and terms '}
-            onChange={(e) => {
-              setIsChecked(e.target.checked);
-            }}></Checkbox>
-          <input className="submit primary-2-btn" type="submit" value="Create" />
-        </form>
-      </div>
-    </>
+    <div className="create-nft-page">
+      <h2>Create an NFT</h2>
+      <form onSubmit={(e) => sendData} className="create-nft-form">
+        <p>Import image</p>
+        <span className="types-allowed">File types supported: JPG, PNG, GIF, SVG. Max size: 50 MB</span>
+        <div id="drop-area" className="drop-area" ref={dropAreaRef} onDragOver={handleDragOver} onDragLeave={handleDragLeave} onDrop={handleDrop}>
+          <Circle className="circle"></Circle>
+          {!fileName ? <DownloadIcon></DownloadIcon> : <PictureIcon></PictureIcon>}
+        </div>
+        <InputText
+          id={'name'}
+          name={'Name'}
+          placeholder={'Enter a name here...'}
+          isRequired={true}
+          onChange={(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setName(event.target.value)}></InputText>
+        <InputText
+          id={'desc'}
+          name={'Description'}
+          placeholder={'Enter a description here...'}
+          isRequired={true}
+          multiline={true}
+          onChange={(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setDesc(event.target.value)}></InputText>
+        <Checkbox
+          label={'I understand and agree to BNB NFT’s Minting Rules and terms '}
+          onChange={(e) => {
+            setIsChecked(e.target.checked);
+          }}></Checkbox>
+        <input className="submit primary-2-btn" type="submit" value="Create" />
+      </form>
+    </div>
   );
 };
 

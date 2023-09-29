@@ -14,7 +14,7 @@ const Card = (userName: string): CardSmall => {
   return {
     userId: '1',
     userName: userName,
-    avatar: './Avatar.jpg',
+    avatar: AvatarMock,
     volume: '15,085,035.95',
     sales: '111,850',
     items: '50,850',

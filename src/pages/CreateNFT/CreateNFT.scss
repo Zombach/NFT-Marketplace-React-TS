@@ -86,3 +86,27 @@
         }
     }
 }
+
+@media (max-width: 850px) {
+    .create-nft-page {
+        max-width: 366px;
+        margin: 0 auto 100px auto;
+
+        h2 {
+            margin-bottom: 16px;
+        }
+
+        .create-nft-form {
+            width: 100%;
+
+            .drop-area {
+                width: 100%;
+            }
+
+            .submit {
+                width: 100%;
+                height: 56px;
+            }
+        }
+    }
+}
