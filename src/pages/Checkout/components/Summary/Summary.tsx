@@ -2,6 +2,7 @@ import './Summary.scss';
 import { ReactComponent as SecurityIcon } from './assets/security.svg';
 import { getFormattedPrice } from '@src/utils/GetFormattedPrice';
 import { selectCartItemsSum } from '@components/Cart/CartSlice';
+import { useForm } from 'react-hook-form';
 import { useSelector } from 'react-redux';
 import InputText from '@components/Inputs/InputText/InputText';
 import React, { type FC } from 'react';

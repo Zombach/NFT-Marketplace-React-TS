@@ -3,6 +3,7 @@ import { Details as CollectionProfile } from '@pages/Collections/CollectionProfi
 import { FC } from 'react';
 import { ProductComponent } from '@pages/Product/Product';
 import { Route, Routes as Switch } from 'react-router-dom';
+import { SignUp } from '@pages/SignUp/SignUp';
 import Blog from '@pages/Blog/Blog';
 import Checkout from '@pages/Checkout/Checkout';
 import Collections from '@pages/Collections/Collections';
