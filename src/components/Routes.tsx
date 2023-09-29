@@ -1,7 +1,9 @@
 import { Details as BlogDetails } from '@pages/Blog/Details/Details';
 import { Details as CollectionProfile } from '@pages/Collections/CollectionProfile/CollectionProfile';
 import { FC } from 'react';
+import { ProductComponent } from '@pages/Product/Product';
 import { Route, Routes as Switch } from 'react-router-dom';
+import { SignUp } from '@pages/SignUp/SignUp';
 import Blog from '@pages/Blog/Blog';
 import Checkout from '@pages/Checkout/Checkout';
 import Collections from '@pages/Collections/Collections';
@@ -12,7 +14,6 @@ import Home from '@pages/Home/Home';
 import LogIn from '@pages/LogIn/LogIn';
 import Marketplace from '@pages/Marketplace/Marketplace';
 import NotFound from '@pages/NotFound/NotFound';
-import Product from '@pages/Product/Product';
 import SignUp from '@pages/SignUp/SignUp';
 import Welcome from '@pages/Welcome/Welcome';
 
@@ -25,7 +26,7 @@ export const Routes: FC = () => {
       <Route path="creators/:profileId" element={<CreatorProfile />}></Route>
       <Route path="collections" element={<Collections />}></Route>
       <Route path="collections/:profileId" element={<CollectionProfile />}></Route>
-      <Route path="product/:id" element={<Product />}></Route>
+      <Route path="product/:id" element={<ProductComponent />}></Route>
       <Route path="checkout" element={<Checkout />}></Route>
       <Route path="logIn" element={<LogIn />}></Route>
       <Route path="signUp" element={<SignUp />}></Route>

@@ -8,10 +8,10 @@ export const SellersCards: FC<SellersCardsProps> = ({ sellers, skip }) => {
     <SellerCard
       number={i + 1 + skip}
       key={i}
-      id={seller.id}
+      id={seller.id.toString()}
       avatar={seller.avatar}
-      username={seller.username}
-      lastBidPrice={seller.lastBidPrice}
+      username={seller.name}
+      lastBidPrice={324}
       rightBottom={
         <div>
           <span className="currency-price">$2.8M</span>

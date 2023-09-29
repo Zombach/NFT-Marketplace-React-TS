@@ -1,5 +1,4 @@
 import './Profile.scss';
-import { Creator } from '@models/Creator';
 import { type FC } from 'react';
 import { ReactComponent as ShareIcon } from './assets/share.svg';
 import AuthoredBy from '@components/AuthoredBy/AuthoredBy';
