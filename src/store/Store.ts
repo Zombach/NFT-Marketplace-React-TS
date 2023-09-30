@@ -1,7 +1,7 @@
 import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE, persistReducer, persistStore } from 'redux-persist';
+import { baseApi } from '@src/features/api/baseApi';
 import { cartReducer } from '@components/Cart/CartSlice';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { productsApi } from '../features/api/productsApi';
 import storage from 'redux-persist/lib/storage';
 
 const persistConfig = {
@@ -12,7 +12,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   cartState: cartReducer,
-  [productsApi.reducerPath]: productsApi.reducer,
+  [baseApi.reducerPath]: baseApi.reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -24,7 +24,7 @@ export const store = configureStore({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    }).concat(productsApi.middleware),
+    }).concat(baseApi.middleware),
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

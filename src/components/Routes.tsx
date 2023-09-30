@@ -14,7 +14,6 @@ import Home from '@pages/Home/Home';
 import LogIn from '@pages/LogIn/LogIn';
 import Marketplace from '@pages/Marketplace/Marketplace';
 import NotFound from '@pages/NotFound/NotFound';
-import SignUp from '@pages/SignUp/SignUp';
 import Welcome from '@pages/Welcome/Welcome';
 
 export const Routes: FC = () => {
