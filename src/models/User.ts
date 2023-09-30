@@ -23,3 +23,8 @@ export interface UserLogin {
 export interface Token {
   token: string;
 }
+
+export interface TokenInfo {
+  accessToken: string | undefined;
+  isAuth: boolean;
+}
