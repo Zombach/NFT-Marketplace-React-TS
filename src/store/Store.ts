@@ -1,4 +1,5 @@
 import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE, persistReducer, persistStore } from 'redux-persist';
+import { authReducer } from '@pages/LogIn/AuthSlice';
 import { baseApi } from '@src/features/api/baseApi';
 import { cartReducer } from '@components/Cart/CartSlice';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
@@ -12,6 +13,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   cartState: cartReducer,
+  authSlice: authReducer,
   [baseApi.reducerPath]: baseApi.reducer,
 });
 

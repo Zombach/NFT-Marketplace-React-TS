@@ -4,6 +4,8 @@ import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 import { TapHere } from '../TapHere/TapHere';
 import { UserLogin } from '@models/User';
 import { ValidationLoginSchema } from '@pages/LogIn/LoginValidationSchema';
+import { setToken } from '@pages/LogIn/AuthSlice';
+import { useDispatch } from 'react-redux';
 import { useSignInMutation } from '@src/features/api/authApi';
 import { yupResolver } from '@hookform/resolvers/yup';
 import InputText from '@components/Inputs/InputText/InputText';
@@ -11,6 +13,7 @@ import React, { type FC } from 'react';
 
 export const EmailPassword: FC = () => {
   const methods = useForm<any>({ resolver: yupResolver(ValidationLoginSchema()) });
+  const dispatch = useDispatch();
   const [signIn] = useSignInMutation();
   const {
     handleSubmit,
@@ -18,11 +21,7 @@ export const EmailPassword: FC = () => {
   } = methods;
 
   const onSubmit: SubmitHandler<UserLogin> = (data) => {
-    signIn(data).then((response) => {
-      if (response) {
-        console.log(response);
-      }
-    });
+    signIn(data);
   };
 
   return (

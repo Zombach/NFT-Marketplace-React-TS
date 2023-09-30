@@ -1,9 +1,10 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { TokenInfo, User } from '@models/User';
+import { Token, TokenInfo, User, UserInfo } from '@models/User';
 
 const initialState: TokenInfo = {
   accessToken: undefined,
   isAuth: false,
+  userInfo: null,
 };
 
 export const authSlice = createSlice({
@@ -13,9 +14,12 @@ export const authSlice = createSlice({
     logout: () => {
       return initialState;
     },
-    setToken: (state, action: PayloadAction<TokenInfo>) => {
+    setToken: (state, action: PayloadAction<Token>) => {
       state.accessToken = action.payload.accessToken;
       state.isAuth = true;
+    },
+    setStorageUserInfo: (state, action: PayloadAction<UserInfo>) => {
+      state.userInfo = action.payload;
     },
     getToken: (state) => {
       return state;
@@ -23,6 +27,7 @@ export const authSlice = createSlice({
   },
 });
 
-export default authSlice.reducer;
 
 export const { logout, setToken, getToken } = authSlice.actions;
+
+export const authReducer = authSlice.reducer;
