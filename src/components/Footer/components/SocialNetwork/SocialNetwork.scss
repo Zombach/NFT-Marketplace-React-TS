@@ -14,8 +14,9 @@
 @media (max-width: 850px) {
     .social-networks {
         margin-top: 0;
-        justify-content: space-between;
+        justify-content: center;
         margin-bottom: 40px;
+        gap: 15px;
 
         &.icon {
             width: 24px;
