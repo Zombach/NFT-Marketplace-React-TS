@@ -1,4 +1,4 @@
-import { UserInfo } from '@models/User';
+import { User, UserInfo } from '@models/User';
 import { baseApi } from './baseApi';
 import { setUserInfo } from '@pages/LogIn/AuthSlice';
 
@@ -17,8 +17,21 @@ export const usersApi = baseApi.injectEndpoints({
         }
       },
     }),
+    addUser: builder.mutation<number, User>({
+      query: (body) => ({
+        url: 'users',
+        method: 'POST',
+        body,
+      }),
+    }),
+    getUsers: builder.query<UserInfo[], void>({
+      query: () => 'users',
+    }),
+    getUser: builder.query<UserInfo, string>({
+      query: (id) => `users/${id}`,
+    }),
   }),
   overrideExisting: false,
 });
 
-export const { useLazyGetCurrentUserQuery } = usersApi;
+export const { useLazyGetCurrentUserQuery, useAddUserMutation, useGetUsersQuery, useGetUserQuery } = usersApi;

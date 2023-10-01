@@ -7,6 +7,7 @@ import { checkOnDesktopOnly, getShortAddress } from '@src/helpers';
 import { creator } from '@resources/moq/Creators';
 import { initSwitchItems } from './dispatcher';
 import { useGetUserProductsQuery } from '@src/features/api/productsApi';
+import { useGetUserQuery } from '@src/features/api/usersApi';
 import { useParams } from 'react-router-dom';
 import CollectionsHeader from '@components/CollectionsHeader/CollectionsHeader';
 import ExtraInfoItem from '@components/Profile/components/ExtraInfoItem/ExtraInfoItem';
@@ -22,48 +23,43 @@ export const CreatorProfile: FC = () => {
   const { profileId } = useParams<keyof UrlParams>() as UrlParams;
   const [isTable, setIsTable] = useState<boolean>(false);
   const { data: products } = useGetUserProductsQuery(profileId);
-
-  //TODO надо добавить апи юзера
-  const getCollection = (id: string) => {
-    return creator(id);
-  };
-
+  const { data: user } = useGetUserQuery(profileId);
   const items = initSwitchItems();
 
-  const item = getCollection(profileId as string);
-
   return (
-    <>
-      <Profile
-        headerImg={HeaderImg}
-        headerName={item.name}
-        desc={item.description ?? ''}
-        buttonsClassName="creator-profile-buttons"
-        buttonLeftText={'Follow'}
-        buttonRightText={'Message'}
-        avatar={item.avatar}
-        username={item.name}>
-        <ExtraInfoItem leftText={'Followers'} RightItem={<div className="extra-info-item-right-part">{100}</div>}></ExtraInfoItem>
-        <ExtraInfoItem leftText={'Following'} RightItem={<div className="extra-info-item-right-part">{100}</div>}></ExtraInfoItem>
-        <ExtraInfoItem leftText={'Earned'} RightItem={<EthereumPrice value={100} />}></ExtraInfoItem>
-        <ExtraInfoItem
-          leftText={'Address'}
-          RightItem={
-            <div className="details-item-right-part">
-              {item.address && <span>{getShortAddress(item.address)}</span>}
-              <ViewIcon></ViewIcon>
-            </div>
-          }></ExtraInfoItem>
-      </Profile>
-      <div className="market-place-section">
-        <div className="cards-header">
-          <h2>Products</h2>
-          <Switch items={items} activeItem={1}></Switch>
+    user && (
+      <>
+        <Profile
+          headerImg={HeaderImg}
+          headerName={user!.name}
+          desc={user!.description ?? ''}
+          buttonsClassName="creator-profile-buttons"
+          buttonLeftText={'Follow'}
+          buttonRightText={'Message'}
+          avatar={user!.avatar}
+          username={user!.email}>
+          <ExtraInfoItem leftText={'Followers'} RightItem={<div className="extra-info-item-right-part">{100}</div>}></ExtraInfoItem>
+          <ExtraInfoItem leftText={'Following'} RightItem={<div className="extra-info-item-right-part">{100}</div>}></ExtraInfoItem>
+          <ExtraInfoItem leftText={'Earned'} RightItem={<EthereumPrice value={100} />}></ExtraInfoItem>
+          <ExtraInfoItem
+            leftText={'Address'}
+            RightItem={
+              <div className="details-item-right-part">
+                {user!.address && <span>{getShortAddress(user!.address)}</span>}
+                <ViewIcon></ViewIcon>
+              </div>
+            }></ExtraInfoItem>
+        </Profile>
+        <div className="market-place-section">
+          <div className="cards-header">
+            <h2>Products</h2>
+            <Switch items={items} activeItem={1}></Switch>
+          </div>
+          {checkOnDesktopOnly() && <CollectionsHeader />}
+          {products && <CardsFragment cards={products} isTable={isTable} />}
         </div>
-        {checkOnDesktopOnly() && <CollectionsHeader />}
-        {products && <CardsFragment cards={products} isTable={isTable} />}
-      </div>
-    </>
+      </>
+    )
   );
 };
 

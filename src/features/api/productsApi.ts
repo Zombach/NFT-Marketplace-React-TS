@@ -1,4 +1,5 @@
 import { Product } from '@models/Product';
+import { ReponseModel } from '@pages/CreateNFT/CreateNFT';
 import { baseApi } from './baseApi';
 
 export const productsApi = baseApi.injectEndpoints({
@@ -12,7 +13,7 @@ export const productsApi = baseApi.injectEndpoints({
     getUserProducts: builder.query<Product[], string>({
       query: (userId) => `products/created/${userId}`,
     }),
-    addProduct: builder.mutation<[], Product>({
+    addProduct: builder.mutation<number, Product>({
       query: (body) => ({
         url: 'products',
         method: 'POST',

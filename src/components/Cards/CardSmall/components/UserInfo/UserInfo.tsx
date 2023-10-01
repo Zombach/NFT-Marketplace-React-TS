@@ -5,7 +5,7 @@ import Avatar from '@components/Avatar/Avatar';
 import React, { type FC } from 'react';
 
 interface UserInfoProps {
-  userId: string;
+  userId: number;
   userName: string;
   avatar: string;
   func?: (usingUserId: string, userId: string) => {};
@@ -13,7 +13,7 @@ interface UserInfoProps {
 
 export const UserInfo: FC<UserInfoProps> = ({ userId, userName, avatar, func }) => {
   return (
-    <div key={userId} id={userId} className="user-info">
+    <div key={userId} id={userId.toString()} className="user-info">
       <Avatar className="avatar" src={avatar} />
       <Link to={`/creators/${userId}`}>
         <p className="user-name">{userName}</p>

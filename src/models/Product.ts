@@ -7,4 +7,5 @@ export interface Product {
   img: string;
   creator: User;
   description: string;
+  collectionId: number;
 }

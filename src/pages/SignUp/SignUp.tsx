@@ -3,7 +3,10 @@ import { type FC, useState } from 'react';
 import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 import { ReactComponent as Line } from './assets/line.svg';
 import { Reg } from '@models/Reg';
+import { User } from '@models/User';
 import { ValidationSignUp } from './ValidationSignUp';
+import { useAddUserMutation } from '@src/features/api/usersApi';
+import { useNavigate } from 'react-router-dom';
 import { yupResolver } from '@hookform/resolvers/yup';
 import Checkbox from '@components/Checkbox/Checkbox';
 import InputText from '@components/Inputs/InputText/InputText';
@@ -21,14 +24,13 @@ export const SignUp: FC = () => {
     formState: { errors },
   } = methods;
 
-  const onSubmit: SubmitHandler<Reg> = (data) =>
-    fetch('http://localhost:3309/api/auth/sign-in', {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: { 'Content-Type': 'application/json' },
-    })
-      .then((response) => response.json())
-      .then((data) => localStorage.setItem('accessToken', data.accessToken));
+  const navigate = useNavigate();
+  const [addUser] = useAddUserMutation();
+
+  const onSubmit: SubmitHandler<User> = (data) => {
+    addUser(data);
+    navigate('/login');
+  };
 
   return (
     <div id="sign-up-section">
@@ -39,6 +41,7 @@ export const SignUp: FC = () => {
         <form className="left-block" onSubmit={handleSubmit(onSubmit)}>
           <h2 className="text">Sign up</h2>
           <div className="login-container">
+            <InputText id="name" name="name" placeholder="Name" isRequired={true} />
             <InputText id="email" name="email" placeholder="Email / Phone number" isRequired={true} />
             <InputText id="password" name="password" placeholder="Password" isRequired={true} />
             <InputText id="address" name="address" placeholder="Address" isRequired={true} />

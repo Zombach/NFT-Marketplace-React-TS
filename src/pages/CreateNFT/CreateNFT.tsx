@@ -5,20 +5,29 @@ import { ReactComponent as DownloadIcon } from './assets/download.svg';
 import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 import { ReactComponent as PictureIcon } from './assets/picture.svg';
 import { Product } from '@models/Product';
+import { selectUserInfo } from '@pages/LogIn/AuthSlice';
 import { useAddProductMutation } from '@src/features/api/productsApi';
+import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import { yupResolver } from '@hookform/resolvers/yup';
 import Checkbox from '@components/Checkbox/Checkbox';
 import InputText from '@components/Inputs/InputText/InputText';
 import React, { ChangeEvent, type FC, useRef, useState } from 'react';
+
+export interface ReponseModel {
+  data: number;
+}
 
 export const CreateNFT: FC = () => {
   const [file, setFile] = useState<File>();
   const [fileName, setFileName] = useState<string | undefined>(undefined);
   const allowedFileTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/svg'];
   const dropAreaRef = useRef<HTMLDivElement>(null);
+  const userInfo = useSelector(selectUserInfo);
 
   const methods = useForm<any>({ resolver: yupResolver(CreateNFTValidationSchema()) });
   const [addProduct] = useAddProductMutation();
+  const navigate = useNavigate();
 
   const {
     handleSubmit,
@@ -26,7 +35,10 @@ export const CreateNFT: FC = () => {
   } = methods;
 
   const onSubmit: SubmitHandler<Product> = (data) => {
-    addProduct(data);
+    data.collectionId = 1;
+    addProduct(data).then((res) => {
+      navigate(`/creators/${userInfo?.id}`);
+    });
   };
   const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
@@ -72,6 +84,7 @@ export const CreateNFT: FC = () => {
             placeholder={'Enter a description here...'}
             isRequired={true}
             multiline={true}></InputText>
+          <InputText id={'price'} name={'price'} placeholder={'Enter a price here...'} isRequired={true}></InputText>
           <Checkbox label={'I understand and agree to BNB NFT’s Minting Rules and terms '}></Checkbox>
           <input className="submit primary-2-btn" type="submit" value="Create" />
         </form>

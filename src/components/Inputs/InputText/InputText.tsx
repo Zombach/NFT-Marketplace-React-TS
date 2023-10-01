@@ -11,29 +11,22 @@ export interface InputTextProps {
   minHeight?: string;
   multiline?: boolean;
   className?: string;
-  onChange?: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
 
-export const InputText: FC<InputTextProps> = ({
-  id,
-  name,
-  placeholder,
-  onChange,
-  rightSideItem,
-  isRequired = false,
-  multiline = false,
-  className,
-}) => {
+export const InputText: FC<InputTextProps> = ({ id, name, placeholder, rightSideItem, isRequired = false, multiline = false, className }) => {
   const schemas = useFormContext();
   return (
     <div className={className ?? 'input-group'}>
       {!multiline ? (
         <div className="input-group-container">
-          <input {...schemas?.register(name)} className="input-group-input" type="text" name={name} id={id} placeholder="" onChange={onChange} />
+          <input {...schemas?.register(name)} className="input-group-input" type="text" name={name} id={id} placeholder="" />
           {schemas?.formState?.errors?.[name] && <span>{schemas?.formState?.errors?.[name]?.message?.toString()}</span>}
         </div>
       ) : (
-        <textarea name={name} id={id} placeholder="" onChange={onChange}></textarea>
+        <>
+          <textarea id={id} placeholder="" {...schemas?.register(name)}></textarea>
+          {schemas?.formState?.errors?.[name] && <span>{schemas?.formState?.errors?.[name]?.message?.toString()}</span>}
+        </>
       )}
       <label htmlFor={id}>
         {placeholder}
