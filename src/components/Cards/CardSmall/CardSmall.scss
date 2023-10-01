@@ -15,11 +15,12 @@
     .user-info-block {
         display: flex;
         align-items: center;
-        gap: 25px;
+        gap: 20px;
 
         .number {
             font-size: 20px;
             font-weight: 400;
+            width: 25px;
         }
 
         .user-info-block-right {
