@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 import { ReactComponent as Lock } from './assets/lock.svg';
 import { ReactComponent as Logo } from './assets/logo.svg';
 import { ReactComponent as Search } from './assets/search.svg';
+import { selectIsAuth } from '@pages/LogIn/AuthSlice';
+import { useSelector } from 'react-redux';
 import CartModal from '@components/Cart/components/CartModal/CartModal';
 import ModalWindow from '@components/Modals/ModalWindow/ModalWindow';
 import NavLinks from './components/NavLinks/NavLinks';
@@ -15,6 +17,7 @@ import NavLinks from './components/NavLinks/NavLinks';
 export const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
   const [modalIsOpen, setIsOpen] = useState<boolean>(false);
+  const isAuth = useSelector(selectIsAuth);
 
   const onClickHandle = () => {
     setIsOpen(true);
@@ -38,9 +41,15 @@ export const Header = () => {
             <button className="background">
               <Lock className="logo" />
             </button>
-            <Link to="/login" className="sign-in">
-              Sign in
-            </Link>
+            {isAuth ? (
+              <Link to="/" className="sign-in">
+                Account
+              </Link>
+            ) : (
+              <Link to="/login" className="sign-in">
+                Sign in
+              </Link>
+            )}
           </div>
           <button className="burger-menu desktop-only" onClick={onClickHandle}>
             <Ellipse className="logo ellipse" />

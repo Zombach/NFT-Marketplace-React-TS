@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 const ProtectedRoutes = () => {
   const isAuth = useSelector(selectIsAuth);
-  return isAuth ? <Outlet /> : <Navigate to="/" />;
+  return isAuth ? <Outlet /> : <Navigate to="/login" />;
 };
 
 export default ProtectedRoutes;
