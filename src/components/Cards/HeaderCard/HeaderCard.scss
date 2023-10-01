@@ -75,9 +75,9 @@
     }
 
     .arrow-switch {
-        position: absolute;
-        bottom: 100px;
-        right: 100px;
+        position: relative;
+        bottom: 260px;
+        left: 350px;
         display: flex;
         gap: 16px;
     }
@@ -133,8 +133,7 @@
 
         .arrow-switch {
             left: 220px;
-            bottom: 25px;
-            right: 0;
+            bottom: 150px;
         }
 
     }
