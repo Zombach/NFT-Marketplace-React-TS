@@ -60,6 +60,15 @@ a {
         gap: 10px;
     }
 
+    .top-section {
+        position: relative;
+
+        .nft-img {
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
     .user-name {
         display: flex;
         align-items: center;

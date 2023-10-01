@@ -17,7 +17,7 @@ export const AvatarsSection: FC = () => {
           <Avatar key={i} src={a}></Avatar>
         ))}
       </div>
-      <Link to={'../signUp'}>
+      <Link to={'./signUp'}>
         <ButtonBox buttonClassName="get-started" text="Get Started"></ButtonBox>
       </Link>
     </div>

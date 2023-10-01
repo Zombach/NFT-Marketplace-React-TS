@@ -19,7 +19,7 @@ export const CardMiddle: FC<CardMiddleFragmentProps> = (props) => {
   return (
     <div className="card-container middle">
       <div className="top-section">
-        <img src={card.img} alt="" />
+        <img className="nft-img" src={card.img} alt="" />
       </div>
       <div className="bottom-section">
         <p className="bottom-section-header">

@@ -55,3 +55,21 @@
         text-align: center;
     }
 }
+
+@media (max-width: 850px) {
+    .avatars-section {
+
+        .avatars-header .text {
+            width: 100%;
+        }
+
+        .avatars-container {
+            gap: 15px;
+
+            .avatar {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+}

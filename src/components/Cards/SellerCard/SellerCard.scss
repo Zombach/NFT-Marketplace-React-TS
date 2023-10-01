@@ -63,3 +63,9 @@
         }
     }
 }
+
+@media (max-width: 850px) {
+    .sellers-section .seller-card {
+        min-width: 100%;
+    }
+}

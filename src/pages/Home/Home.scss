@@ -2,3 +2,9 @@
     max-width: 1140px;
     margin: 0 auto;
 }
+
+@media (max-width: 850px) {
+    .home-page {
+        max-width: 366px;
+    }
+}

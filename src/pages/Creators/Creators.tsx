@@ -9,15 +9,10 @@ export const Creators: FC = () => {
 
   useEffect(() => {
     const getCards = async () => {
-      await timeout(1000);
       setCards(mock);
     };
     getCards();
   }, []);
-
-  const timeout = (delay: number) => {
-    return new Promise((res) => setTimeout(res, delay));
-  };
 
   return <div className="creators">{cards && <Cards cards={cards} />}</div>;
 };

@@ -41,8 +41,7 @@
 @media (max-width: 850px) {
     .sellers-section {
         width: 100%;
-        padding: 24px;
-        margin: 50px auto 70px auto;
+        margin-bottom: 48px;
 
         .sellers-section-header {
             display: flex;
@@ -53,6 +52,14 @@
                 flex-direction: column;
                 gap: 16px;
             }
+        }
+
+        .seller-cards {
+            grid-template-columns: initial;
+        }
+
+        .seller-card {
+            min-width: 100%;
         }
     }
 }
