@@ -45,9 +45,9 @@ export const Header = () => {
               <button className="background">
                 <Lock className="logo" />
               </button>
-              <a href="signUp" className="sign-in">
+              <Link to="/login" className="sign-in">
                 Sign in
-              </a>
+              </Link>
               <div className="mobile-only">
                 <NavLinks />
               </div>
