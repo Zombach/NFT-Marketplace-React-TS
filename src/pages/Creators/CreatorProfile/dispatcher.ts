@@ -1,4 +1,3 @@
-import { Dispatch } from 'redux';
 import { SwitchItem } from '@components/Switch/Switch';
 
 export const initSwitchItems = (/*dispatch: Dispatch*/) => {
