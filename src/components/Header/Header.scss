@@ -1,15 +1,15 @@
 @import "@src/variables";
 
+
 #header {
+    padding: 37px 50px 37px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 2000px;
+    margin: 0 auto;
     position: relative;
     z-index: 1;
-    margin: 37px 50px;
-
-    .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
 
     .background {
         background-color: transparent;
@@ -49,6 +49,79 @@
         right: 35px;
         bottom: 14px;
     }
+
+    @media(max-width: 500px) {
+        padding: 31px 10px 31px 24px;
+
+        .desktop-only {
+            visibility: hidden;
+        }
+
+        .right {
+            gap: 5px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column-reverse;
+            position: absolute;
+            align-items: flex-end;
+            top: 100px;
+            gap: 15px;
+            right: 410px;
+            width: 100%;
+            background-color: white;
+            transform: translateX(0);
+            transition: all 0.4s ease;
+            padding: 0 50px 0 0;
+
+        }
+
+        .column.active {
+            transform: translateX(100%);
+            background-color: white;
+        }
+
+        .mobile-only {
+            left: -90px;
+
+        }
+
+        .elipse-black {
+            background-color: black;
+            width: 36px;
+            height: 36px;
+            flex-shrink: 0;
+            border-radius: 50%;
+        }
+
+        .ellipse {
+            width: 36px;
+            height: 36px;
+        }
+
+        .burger {
+            position: relative;
+            right: 28px;
+            bottom: 8px;
+        }
+
+        .backet {
+            width: 20px;
+            height: 20px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+    }
+
+
 }
 
 @media (min-width: 1550px) {
@@ -57,5 +130,6 @@
         border: 1px solid $color-black;
         border-radius: 50%;
     }
+
 
 }

@@ -15,3 +15,23 @@
     align-items: baseline;
     gap: 15px;
 }
+
+@media(max-width: 500px) {
+    .mobile-nav {
+            position: absolute;
+            flex-direction: column;
+            right: 410px;
+            top: 60px;
+            align-items: flex-end;
+            width: 100%;
+            background-color: white;
+            transform: translateX(100%);
+            transition: all 0.4s ease;
+            padding: 15px 50px 50px 50px;
+    }
+    .desktop-only{
+        visibility: hidden;
+    }
+    
+
+}
