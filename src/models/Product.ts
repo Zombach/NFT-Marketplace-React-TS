@@ -6,4 +6,6 @@ export interface Product {
   price: string;
   img: string;
   creator: User;
+  description: string;
+  collectionId: number;
 }

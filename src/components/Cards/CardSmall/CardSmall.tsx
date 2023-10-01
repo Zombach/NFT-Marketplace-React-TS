@@ -1,26 +1,23 @@
 import './CardSmall.scss';
 import { type FC } from 'react';
 import { ReactComponent as Icon } from '../../../pages/Creators/CardsRender/HeaderCardSmall/assets/info.svg';
+import { UserInfo } from '@models/User';
+import { UserInfo as UserInfoComponent } from './components/UserInfo/UserInfo';
 import { checkOnMobileOnly } from '@src/helpers';
-import UserInfo from './components/UserInfo/UserInfo';
-import type { CardSmall as Model } from '@models/CardModels/CardModels';
 
 interface CardSmallProps {
   number: number;
-  model: Model;
+  model: UserInfo;
 }
 
 export const CardSmall: FC<CardSmallProps> = ({ number, model }) => {
-  const { userId, userName, avatar, volume, sales, items, followers, follow } = model;
+  const { id, name, avatar } = model;
   return (
     <div className="card-small">
       <div className="user-info-block">
         <span className="number">{number + 1}</span>
         <div className="user-info-block-right">
-          <UserInfo userId={userId} userName={userName} avatar={avatar}></UserInfo>
-          <button className="follow">
-            <span className="follow-text">{follow ? 'Follow' : 'Unsubscribe'}</span>
-          </button>
+          <UserInfoComponent userId={id} userName={name} avatar={avatar}></UserInfoComponent>
         </div>
       </div>
       <div className="user-extra-info-box">
@@ -46,10 +43,10 @@ export const CardSmall: FC<CardSmallProps> = ({ number, model }) => {
               </div>
             </>
           )}
-          <span className="">{volume}</span>
-          <span className="">{sales}</span>
-          <span className="">{items}</span>
-          <span className="">{followers}</span>
+          <span className="">{123}</span>
+          <span className="">{333}</span>
+          <span className="">{25}</span>
+          <span className="">{29}</span>
         </div>
       </div>
     </div>

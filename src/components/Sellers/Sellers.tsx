@@ -3,9 +3,10 @@ import { ReactComponent as Arrow } from './assets/arrow.svg';
 import { FC, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SearchResponseModel } from '@models/SearchResponseModel';
-import { User } from '@models/User';
+import { User, UserInfo } from '@models/User';
 import { initSwitchItems } from './dispatcher';
 import { sellersMock } from '@resources/moq/Creators';
+import { useGetUsersQuery } from '@src/features/api/usersApi';
 import ButtonBox from '@components/ButtonBox/ButtonBox';
 import Switch from '@components/Switch/Switch';
 
@@ -17,20 +18,22 @@ export interface SellersProps {
 }
 
 export interface SellersCardsProps {
-  sellers: User[];
+  sellers: UserInfo[];
   skip: number;
 }
 
 export const Sellers: FC<SellersProps> = ({ title, countOnPage, isNeededSwitch = false, SellersCards }) => {
   const [skip, setSkip] = useState<number>(0);
-  const [sellers, setSellers] = useState<User[]>([]);
+  const [sellers, setSellers] = useState<UserInfo[]>([]);
   const [totalCount, setTotalCount] = useState<number>(0);
+
+  const { data: users } = useGetUsersQuery();
 
   useEffect(() => {
     const currentSellers = getSellers(skip, countOnPage);
     setTotalCount(currentSellers.totalCount);
     setSellers(currentSellers.items);
-  }, [countOnPage, skip]);
+  }, [skip, users]);
 
   const onClickSkip = () => {
     if (skip + countOnPage >= totalCount) {
@@ -40,8 +43,11 @@ export const Sellers: FC<SellersProps> = ({ title, countOnPage, isNeededSwitch =
     }
   };
 
-  const getSellers = (skip: number, count: number): SearchResponseModel<User> => {
-    const response: SearchResponseModel<User> = { items: sellersMock.slice(skip, skip + count), totalCount: sellersMock.length };
+  const getSellers = (skip: number, count: number): SearchResponseModel<UserInfo> => {
+    if (!users) {
+      return { totalCount: 0, items: [] };
+    }
+    const response: SearchResponseModel<UserInfo> = { items: users?.slice(skip, skip + count), totalCount: users.length };
     return response;
   };
 
