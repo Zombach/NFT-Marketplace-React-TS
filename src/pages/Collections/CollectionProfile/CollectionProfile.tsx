@@ -3,11 +3,9 @@ import { CollectionsHeader } from '@components/CollectionsHeader/CollectionsHead
 import { EthereumPrice } from '@components/EthereumPrice/EthereumPrice';
 import { type FC, useState } from 'react';
 import { ReactComponent as ViewIcon } from '@components/Profile/assets/view.svg';
-import { cards } from '@resources/moq/Marketplace';
+import { checkOnDesktopOnly } from '@src/helpers';
 import { collection } from '@src/resources/moq/Collections';
-import { getShortAddress } from '@src/helpers';
 import { useParams } from 'react-router-dom';
-import CardsFragment from '@src/pages/Marketplace/CardsFragment/CardsFragment';
 import ExtraInfoItem from '@components/Profile/components/ExtraInfoItem/ExtraInfoItem';
 import Image from './assets/details-img.jpg';
 import Profile from '@components/Profile/Profile';
@@ -47,7 +45,7 @@ export const Details: FC = () => {
       </Profile>
       <div className="market-place-section">
         <h2>More from the collection</h2>
-        <CollectionsHeader />
+        {checkOnDesktopOnly() && <CollectionsHeader />}
         {/* <CardsFragment cards={cards} isTable={isTable} /> */}
       </div>
     </div>

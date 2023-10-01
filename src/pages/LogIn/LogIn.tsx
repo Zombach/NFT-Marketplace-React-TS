@@ -8,7 +8,9 @@ export const LogIn: FC = () => {
   return (
     <div className="login-section">
       <EmailPassword />
-      <Line />
+      <div className="desktop-only">
+        <Line />
+      </div>
       <LogQR />
     </div>
   );

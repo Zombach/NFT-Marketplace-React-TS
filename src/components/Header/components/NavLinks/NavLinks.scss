@@ -16,22 +16,17 @@
     gap: 15px;
 }
 
-@media(max-width: 500px) {
+@media(max-width: 850px) {
     .mobile-nav {
-            position: absolute;
-            flex-direction: column;
-            right: 410px;
-            top: 60px;
-            align-items: flex-end;
-            width: 100%;
-            background-color: white;
-            transform: translateX(100%);
-            transition: all 0.4s ease;
-            padding: 15px 50px 50px 50px;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
     }
-    .desktop-only{
+
+    .desktop-only {
         visibility: hidden;
     }
-    
+
 
 }
