@@ -2,10 +2,9 @@
 
 
 #home-page-container {
-    margin: 0 auto;
     display: flex;
     height: 900px;
-    max-width: 1140px;
+    margin: 0 0 0 7%;
     gap: 100px;
 
     .container {
@@ -123,8 +122,8 @@
     }
 
 
-    @media(max-width: 500px) {
-        padding: 0px 24px 31px 24px;
+    @media(max-width: 850px) {
+        //padding: 0px 24px 31px 24px;
 
         .container {
             display: flex;

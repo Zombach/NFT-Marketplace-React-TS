@@ -8,8 +8,13 @@
     align-items: center;
     max-width: 2000px;
     margin: 0 auto;
-    position: relative;
-    z-index: 1;
+
+
+
+    .logo {
+        position: relative;
+        z-index: 2;
+    }
 
     .background {
         background-color: transparent;
@@ -18,6 +23,7 @@
 
     .left {
         gap: 60px;
+
     }
 
     .right {
@@ -27,6 +33,7 @@
     .column {
         display: flex;
         align-items: center;
+        position: relative;
     }
 
     .sign-in {
@@ -39,6 +46,13 @@
         text-decoration-line: underline;
     }
 
+    .icons {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        gap: 16px;
+    }
+
     .icon {
         display: flex;
         gap: 16px;
@@ -46,12 +60,15 @@
 
     .burger {
         position: relative;
+        z-index: 2;
         right: 35px;
         bottom: 14px;
     }
 
-    @media(max-width: 500px) {
+    @media(max-width: 850px) {
         padding: 31px 10px 31px 24px;
+        position: relative;
+        z-index: 1;
 
         .desktop-only {
             visibility: hidden;
@@ -63,22 +80,21 @@
 
         .column {
             display: flex;
-            flex-direction: column-reverse;
+            flex-direction: column;
             position: absolute;
             align-items: flex-end;
             top: 100px;
             gap: 15px;
-            right: 410px;
             width: 100%;
             background-color: white;
-            transform: translateX(0);
+            transform: translateX(150%);
             transition: all 0.4s ease;
-            padding: 0 50px 0 0;
+            padding: 0 50px 20px 0;
 
         }
 
         .column.active {
-            transform: translateX(100%);
+            transform: translateX(0);
             background-color: white;
         }
 
@@ -117,6 +133,23 @@
             align-items: center;
             gap: 10px;
         }
+
+        .icon {
+            flex-direction: column;
+        }
+
+        .icons {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+        }
+
+        .search {
+            position: relative;
+            left: 30px;
+            margin-bottom: 10px;
+        }
+
 
 
     }
