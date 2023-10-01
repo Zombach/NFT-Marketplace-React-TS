@@ -1,13 +1,14 @@
 import './Header.scss';
-import { ReactComponent as Ellipse } from './assets/ellipseWhite.svg';
-import { useState } from 'react';
-
 import { ReactComponent as Backet } from './assets/basket.svg';
+import { ReactComponent as Ellipse } from './assets/ellipseWhite.svg';
 import { ReactComponent as HamburgerMenu } from './assets/hamburgerMenu.svg';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Lock } from './assets/lock.svg';
 import { ReactComponent as Logo } from './assets/logo.svg';
 import { ReactComponent as Search } from './assets/search.svg';
+import { selectIsAuth } from '@pages/LogIn/AuthSlice';
+import { useSelector } from 'react-redux';
+import { useState } from 'react';
 import CartModal from '@components/Cart/components/CartModal/CartModal';
 import ModalWindow from '@components/Modals/ModalWindow/ModalWindow';
 import NavLinks from './components/NavLinks/NavLinks';
@@ -15,6 +16,7 @@ import NavLinks from './components/NavLinks/NavLinks';
 export const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
   const [modalIsOpen, setIsOpen] = useState<boolean>(false);
+  const isAuth = useSelector(selectIsAuth);
 
   const onClickHandle = () => {
     setIsOpen(true);
@@ -24,24 +26,42 @@ export const Header = () => {
     <div className="head">
       <div id="header">
         <div className={menuActive ? 'left column active' : 'left column'}>
-          <Logo className="logo desktop-only" />
-          <NavLinks />
+          <Link to="/" className="link-text">
+            <Logo className="logo desktop-only" />
+          </Link>
+          <div className="desktop-only">
+            <NavLinks />
+          </div>
         </div>
         <div className="mobile-only">
-          <Logo className="logo" />
+          <Link to="/" className="link-text">
+            <Logo className="logo" />
+          </Link>
         </div>
         <div className={menuActive ? 'right column active' : 'right column'}>
-          <button className="background">
-            <Search className="logo" />
-          </button>
-          <div className="icon ">
-            <button className="background">
-              <Lock className="logo" />
+          <div className="icons">
+            <button className="background search">
+              <Search className="logo" />
             </button>
-            <Link to="/login" className="sign-in">
-              Sign in
-            </Link>
+            <div className="icon ">
+              <button className="background">
+                <Lock className="logo" />
+              </button>
+              {isAuth ? (
+                <Link to="/" className="sign-in">
+                  Account
+                </Link>
+              ) : (
+                <Link to="/login" className="sign-in">
+                  Sign in
+                </Link>
+              )}
+              <div className="mobile-only">
+                <NavLinks />
+              </div>
+            </div>
           </div>
+
           <button className="burger-menu desktop-only" onClick={onClickHandle}>
             <Ellipse className="logo ellipse" />
             <HamburgerMenu className="logo burger" />

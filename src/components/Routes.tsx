@@ -14,11 +14,15 @@ import Home from '@pages/Home/Home';
 import LogIn from '@pages/LogIn/LogIn';
 import Marketplace from '@pages/Marketplace/Marketplace';
 import NotFound from '@pages/NotFound/NotFound';
+import ProtectedRoutes from './ProtectedRoutes';
 import Welcome from '@pages/Welcome/Welcome';
 
 export const Routes: FC = () => {
   return (
     <Switch>
+      <Route element={<ProtectedRoutes />}>
+        <Route path="create-nft" element={<CreateNFT />}></Route>
+      </Route>
       <Route index element={<Home />}></Route>
       <Route path="marketplace" element={<Marketplace />}></Route>
       <Route path="creators" element={<Creators />}></Route>
@@ -27,12 +31,9 @@ export const Routes: FC = () => {
       <Route path="collections/:profileId" element={<CollectionProfile />}></Route>
       <Route path="product/:id" element={<ProductComponent />}></Route>
       <Route path="checkout" element={<Checkout />}></Route>
-      <Route path="logIn" element={<LogIn />}></Route>
+      <Route path="login" element={<LogIn />}></Route>
       <Route path="sign-up" element={<SignUp />}></Route>
       <Route path="welcome" element={<Welcome />}></Route>
-      <Route path="create-nft" element={<CreateNFT />}></Route>
-      <Route path="blog" element={<Blog />}></Route>
-      <Route path="blog/details" element={<BlogDetails />}></Route>
       <Route path="*" element={<NotFound />}></Route>
     </Switch>
   );

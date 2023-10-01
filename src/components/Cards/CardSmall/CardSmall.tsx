@@ -1,7 +1,7 @@
 import './CardSmall.scss';
+import { type FC } from 'react';
 import { ReactComponent as Icon } from '../../../pages/Creators/CardsRender/HeaderCardSmall/assets/info.svg';
-import HeaderCardSmall from '@pages/Creators/CardsRender/HeaderCardSmall/HeaderCardSmall';
-import React, { type FC } from 'react';
+import { checkOnMobileOnly } from '@src/helpers';
 import UserInfo from './components/UserInfo/UserInfo';
 import type { CardSmall as Model } from '@models/CardModels/CardModels';
 
@@ -25,22 +25,27 @@ export const CardSmall: FC<CardSmallProps> = ({ number, model }) => {
       </div>
       <div className="user-extra-info-box">
         <div className="user-extra-info">
-          <div className="header-item">
-            <span className="text volume">Volume (USD)</span>
-            <Icon className="icon" />
-          </div>
-          <div className="header-item">
-            <span className="text sales">Sales</span>
-            <Icon className="icon" />
-          </div>
-          <div className="header-item">
-            <span className="text items">Items</span>
-            <Icon className="icon" />
-          </div>
-          <div className="header-item">
-            <span className="text followers">Followers</span>
-            <Icon className="icon" />
-          </div>
+          {checkOnMobileOnly() && (
+            <>
+              <div className="header-item">
+                <span className="text volume">Volume (USD)</span>
+                <Icon className="icon" />
+              </div>
+              <div className="header-item">
+                <span className="text sales">Sales</span>
+                <Icon className="icon" />
+              </div>
+
+              <div className="header-item">
+                <span className="text items">Items</span>
+                <Icon className="icon" />
+              </div>
+              <div className="header-item">
+                <span className="text followers">Followers</span>
+                <Icon className="icon" />
+              </div>
+            </>
+          )}
           <span className="">{volume}</span>
           <span className="">{sales}</span>
           <span className="">{items}</span>
