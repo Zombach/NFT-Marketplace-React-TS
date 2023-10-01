@@ -11,8 +11,6 @@
     opacity: 0.3;
 }
 
-
-
 .input-group label {
     position: absolute;
     background-color: transparent;
@@ -37,8 +35,7 @@
     color: $color-purple;
 }
 
-.input-group:focus-within label,
-.input-group input:not(:placeholder-shown)~label {
+.input-group label {
     padding: 0px 8px;
     background-color: $color-white;
     top: -12px;

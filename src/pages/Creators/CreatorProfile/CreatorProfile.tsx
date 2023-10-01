@@ -3,9 +3,8 @@ import { CardsFragment } from '@pages/Marketplace/CardsFragment/CardsFragment';
 import { EthereumPrice } from '@components/EthereumPrice/EthereumPrice';
 import { type FC, useState } from 'react';
 import { ReactComponent as ViewIcon } from '@components/Profile/assets/view.svg';
-import { cards } from '@resources/moq/Marketplace';
+import { checkOnDesktopOnly, getShortAddress } from '@src/helpers';
 import { creator } from '@resources/moq/Creators';
-import { getShortAddress } from '@src/helpers';
 import { initSwitchItems } from './dispatcher';
 import { useGetUserProductsQuery } from '@src/features/api/productsApi';
 import { useParams } from 'react-router-dom';
@@ -61,7 +60,7 @@ export const CreatorProfile: FC = () => {
           <h2>Products</h2>
           <Switch items={items} activeItem={1}></Switch>
         </div>
-        <CollectionsHeader />
+        {checkOnDesktopOnly() && <CollectionsHeader />}
         {products && <CardsFragment cards={products} isTable={isTable} />}
       </div>
     </>

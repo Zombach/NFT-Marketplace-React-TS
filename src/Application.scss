@@ -58,4 +58,12 @@ button {
     .mobile-only {
         display: none !important;
     }
+    .application{
+        overflow: hidden;
+    }
+}
+@media (max-width: 850px) {
+    .application {
+        overflow: hidden;
+    }
 }
