@@ -18,9 +18,6 @@ export const CardSmall: FC<CardSmallProps> = ({ number, model }) => {
         <span className="number">{number + 1}</span>
         <div className="user-info-block-right">
           <UserInfoComponent userId={id} userName={name} avatar={avatar}></UserInfoComponent>
-          {/* <button className="follow">
-            <span className="follow-text">{'Follow'}</span>
-          </button> */}
         </div>
       </div>
       <div className="user-extra-info-box">
