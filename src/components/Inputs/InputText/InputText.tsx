@@ -1,7 +1,7 @@
 import '../Input.scss';
 import './InputText.scss';
+import { UseFormRegister, useForm, useFormContext } from 'react-hook-form';
 import React, { ChangeEvent, FC } from 'react';
-
 export interface InputTextProps {
   id: string;
   name: string;
@@ -10,16 +10,23 @@ export interface InputTextProps {
   isRequired?: boolean;
   minHeight?: string;
   multiline?: boolean;
-  onChange?: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  className?: string;
 }
 
-export const InputText: FC<InputTextProps> = ({ id, name, placeholder, onChange, rightSideItem, isRequired = false, multiline = false }) => {
+export const InputText: FC<InputTextProps> = ({ id, name, placeholder, rightSideItem, isRequired = false, multiline = false, className }) => {
+  const schemas = useFormContext();
   return (
-    <div className="input-group">
+    <div className={className ?? 'input-group'}>
       {!multiline ? (
-        <input className="input-group-input" type="text" name={name} id={id} placeholder="" onChange={onChange} />
+        <div className="input-group-container">
+          <input {...schemas?.register(name)} className="input-group-input" type="text" name={name} id={id} placeholder="" />
+          {schemas?.formState?.errors?.[name] && <span>{schemas?.formState?.errors?.[name]?.message?.toString()}</span>}
+        </div>
       ) : (
-        <textarea name={name} id={id} placeholder="" onChange={onChange}></textarea>
+        <>
+          <textarea id={id} placeholder="" {...schemas?.register(name)}></textarea>
+          {schemas?.formState?.errors?.[name] && <span>{schemas?.formState?.errors?.[name]?.message?.toString()}</span>}
+        </>
       )}
       <label htmlFor={id}>
         {placeholder}

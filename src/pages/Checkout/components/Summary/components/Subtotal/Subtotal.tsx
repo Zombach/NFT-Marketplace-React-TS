@@ -11,7 +11,7 @@ export const Subtotal: FC<SubtotalProps> = ({ title, price, isTotal = false }) =
   return (
     <div className={isTotal ? 'subtotal bg-grey' : 'subtotal'}>
       <span>{title}</span>
-      <span>${price}</span>
+      <span>{price}</span>
     </div>
   );
 };

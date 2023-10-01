@@ -1,9 +1,11 @@
+import { User } from './User';
+
 export interface Product {
+  id: number;
   name: string;
-  username: string;
-  userAvatar: string;
   price: string;
-  bidPrice: string;
-  lastPrice: string;
-  image: string;
+  img: string;
+  creator: User;
+  description: string;
+  collectionId: number;
 }

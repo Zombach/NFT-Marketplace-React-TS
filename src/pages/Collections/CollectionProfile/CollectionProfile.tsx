@@ -3,11 +3,9 @@ import { CollectionsHeader } from '@components/CollectionsHeader/CollectionsHead
 import { EthereumPrice } from '@components/EthereumPrice/EthereumPrice';
 import { type FC, useState } from 'react';
 import { ReactComponent as ViewIcon } from '@components/Profile/assets/view.svg';
-import { cards } from '@resources/moq/Marketplace';
+import { checkOnDesktopOnly } from '@src/helpers';
 import { collection } from '@src/resources/moq/Collections';
-import { getShortAddress } from '@src/helpers';
 import { useParams } from 'react-router-dom';
-import CardsFragment from '@src/pages/Marketplace/CardsFragment/CardsFragment';
 import ExtraInfoItem from '@components/Profile/components/ExtraInfoItem/ExtraInfoItem';
 import Image from './assets/details-img.jpg';
 import Profile from '@components/Profile/Profile';
@@ -26,29 +24,29 @@ export const Details: FC = () => {
     <div className="collection-profile">
       <Profile
         headerImg={Image}
-        avatar={item.creator.avatar}
+        avatar={item.user.avatar}
         headerName={item.name}
-        username={item.creator.username}
-        desc={item.creator.description}
+        username={item.user.name}
+        desc={item.user.description ?? ''}
         buttonLeftText={'Create community marketplace'}
         buttonRightText={'Place bid'}>
-        <ExtraInfoItem leftText={'Floor'} RightItem={<EthereumPrice value={item.floorPrice} />}></ExtraInfoItem>
-        <ExtraInfoItem leftText={'Total volume'} RightItem={<EthereumPrice value={item.totalVolume} />}></ExtraInfoItem>
-        <ExtraInfoItem leftText={'Items'} RightItem={<div className="details-item-right-part">{item.countItems}</div>}></ExtraInfoItem>
-        <ExtraInfoItem leftText={'Owners'} RightItem={<div className="details-item-right-part">{item.ownersCount}</div>}></ExtraInfoItem>
+        <ExtraInfoItem leftText={'Floor'} RightItem={<EthereumPrice value={100} />}></ExtraInfoItem>
+        <ExtraInfoItem leftText={'Total volume'} RightItem={<EthereumPrice value={100} />}></ExtraInfoItem>
+        <ExtraInfoItem leftText={'Items'} RightItem={<div className="details-item-right-part">{item.products.length}</div>}></ExtraInfoItem>
+        <ExtraInfoItem leftText={'Owners'} RightItem={<div className="details-item-right-part">{32}</div>}></ExtraInfoItem>
         <ExtraInfoItem
           leftText={'Address'}
           RightItem={
             <div className="details-item-right-part">
-              <span>{getShortAddress(item.address)}</span>
+              {/* <span>{getShortAddress(item.address)}</span> */}
               <ViewIcon></ViewIcon>
             </div>
           }></ExtraInfoItem>
       </Profile>
       <div className="market-place-section">
         <h2>More from the collection</h2>
-        <CollectionsHeader />
-        <CardsFragment cards={cards} isTable={isTable} />
+        {checkOnDesktopOnly() && <CollectionsHeader />}
+        {/* <CardsFragment cards={cards} isTable={isTable} /> */}
       </div>
     </div>
   );

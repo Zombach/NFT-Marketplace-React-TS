@@ -26,6 +26,11 @@
 
 .top-section {
     position: relative;
+
+    .collection-img {
+        object-fit: cover;
+        width: 100%;
+    }
 }
 
 .big-avatar {
@@ -38,4 +43,21 @@
     width: 56px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+@media (max-width: 850px) {
+    .card-bottom-section {
+        flex-direction: column;
+
+        .collection-title {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 16px;
+            align-items: center;
+
+            .sub-title {
+                margin-top: 0;
+            }
+        }
+    }
 }

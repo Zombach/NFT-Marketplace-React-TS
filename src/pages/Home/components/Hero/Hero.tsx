@@ -23,7 +23,7 @@ export const Hero = () => {
               </Link>
             </div>
             <div className="line-home">
-              <Line />
+              <Line className="width-mobile-only" />
             </div>
             <div className="learn-more-section">
               <div>

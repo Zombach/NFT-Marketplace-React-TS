@@ -1,7 +1,14 @@
-.dots{
+.dots {
     display: flex;
-    gap: 11px;
+    gap: 15px;
     position: relative;
     left: 110px;
     bottom: 230px;
+}
+
+ @media(max-width: 850px) {
+     .dots {
+         left: 25px;
+         bottom: 114px;
+     }
 }

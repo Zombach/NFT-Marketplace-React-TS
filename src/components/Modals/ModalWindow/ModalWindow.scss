@@ -1,0 +1,27 @@
+@import '@src/variables';
+
+.modal-container {
+    position: fixed;
+    top: 150px;
+    right: 100px;
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 32px;
+    background-color: $color-white;
+    z-index: 5;
+}
+
+
+@media (max-width: 500px) {
+
+    .modal-container {
+            position: relative;
+            top: 100px;
+            right: -3px;
+            width: 366px;
+            
+        }
+
+
+}

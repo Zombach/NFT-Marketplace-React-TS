@@ -1,4 +1,6 @@
 import './Payment.scss';
+import { PaymentModel } from '@models/PaymentModel';
+import { useForm } from 'react-hook-form';
 import InputText from '@components/Inputs/InputText/InputText';
 import React, { type FC } from 'react';
 

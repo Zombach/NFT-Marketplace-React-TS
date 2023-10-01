@@ -8,13 +8,20 @@
     bottom: 50px;
 
     .container {
-        display: flex;        
+        display: flex;
         align-self: center;
         width: 100%;
         gap: 40px;
+
+        .line {
+            height: 100px;
+            width: 1px;
+            background-color: $color-white;
+            opacity: 0.15;
+        }
     }
 
-    .grid{
+    .grid {
         display: grid;
         grid-template-columns: 30% 70%;
         padding: 40px;
@@ -24,6 +31,7 @@
         align-self: center;
         width: 100%;
     }
+
     .text-info {
         color: $color-white;
         font-family: $font-helvetica-neue;
@@ -45,4 +53,33 @@
         opacity: 0.8;
     }
 
+    
+
+}
+
+@media (max-width: 850px) {
+    #create-nft-container {
+        .grid {
+            grid-template-columns: 100%;
+            margin-top: 85px;
+
+            .container {
+                flex-direction: column;
+                gap: 16px;
+
+                .line {
+                    height: 1px;
+                    width: 100%;
+                }
+            }
+
+            .text-info {
+                margin-bottom: 0;
+
+                &.big {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
 }

@@ -1,12 +1,10 @@
-import { Creator } from './Creator';
+import { Product } from './Product';
+import { User } from './User';
 
 export interface Collection {
-  id: string;
+  id?: number;
   name: string;
-  creator: Creator;
-  floorPrice: string;
-  totalVolume: string;
-  countItems: number;
-  ownersCount: number;
-  address: string;
+  desc: string;
+  user: User;
+  products: Product[];
 }

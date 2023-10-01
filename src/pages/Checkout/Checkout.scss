@@ -12,3 +12,10 @@
         margin: 40px 0;
     }
 }
+
+@media (max-width: 850px) {
+    .checkout-page {
+        max-width: 366px;
+        margin: 0 auto 120px auto;
+    }
+}

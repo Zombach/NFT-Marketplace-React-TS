@@ -1,13 +1,9 @@
 @import "@src/variables";
 
 .user-info {
-    margin-left: 25px;
     display: flex;
-    width: 251px;
-    height: 56px;
     align-items: center;
     gap: 16px;
-    margin-top: 16px;
 
     .avatar {
         width: 56px;
@@ -17,22 +13,27 @@
         background: $color-grey-light;
     }
 
-    .button {
-        display: flex;
-        width: 179px;
-        height: 21px;
-        flex-direction: column;
-        justify-content: center;
-        border: none;
-        background: none;
+    .user-name {
+        color: $color-dark-2;
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 850px) {
+    .user-info {
+        gap: 10px;
+
+        .avatar {
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+            background: $color-grey-light;
+        }
 
         .user-name {
             color: $color-dark-2;
-            font-variant-numeric: lining-nums proportional-nums;
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 26px;
-            text-transform: capitalize;
+            font-size: 14px;
         }
     }
 }

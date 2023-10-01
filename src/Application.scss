@@ -33,14 +33,37 @@ h2 {
     border: 0;
 }
 
+.disabled-btn {
+    border-radius: 10px;
+    background: $color-grey;
+    color: $color-grey-4;
+    border: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
 @media (max-width: 850px) {
     .desktop-only {
         display: none !important;
+    }
+
+    h2 {
+        font-size: 30px;
     }
 }
 
 @media (min-width: 850px) {
     .mobile-only {
         display: none !important;
+    }
+    .application{
+        overflow: hidden;
+    }
+}
+@media (max-width: 850px) {
+    .application {
+        overflow: hidden;
     }
 }

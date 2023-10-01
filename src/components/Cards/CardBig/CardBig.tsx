@@ -16,7 +16,7 @@ export const CardBig: FC<CardBigFragmentProps> = (props) => {
   return (
     <div className="card-container">
       <div className="top-section">
-        <img src={card.nftImage} alt="" />
+        <img className="collection-img" src={card.nftImage} alt="" />
         <Avatar className="big-avatar" src={card.avatar} />
       </div>
       <div className="card-bottom-section">

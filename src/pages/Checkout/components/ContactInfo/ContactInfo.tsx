@@ -1,4 +1,5 @@
 import './ContactInfo.scss';
+import { useForm } from 'react-hook-form';
 import InputText from '@components/Inputs/InputText/InputText';
 import React, { type FC } from 'react';
 

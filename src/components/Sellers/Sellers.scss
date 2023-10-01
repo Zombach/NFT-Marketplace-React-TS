@@ -1,8 +1,7 @@
 @import '@src/variables';
 
 .sellers-section {
-    width: 1142px;
-
+    max-width: 1140px;
     margin: 0 auto 70px auto;
 
     .sellers-section-header {
@@ -20,7 +19,6 @@
         display: flex;
         gap: 8px;
         align-items: center;
-
         color: $color-black;
         font-size: 14px;
         font-weight: 500;
@@ -28,16 +26,22 @@
     }
 
     .seller-cards {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: repeat(2, 1fr);
         column-gap: 30px;
         row-gap: 16px;
+    }
+
+    .seller-card {
+        min-width: 556px;
     }
 }
 
 @media (max-width: 850px) {
     .sellers-section {
         width: 100%;
+        margin-bottom: 48px;
 
         .sellers-section-header {
             display: flex;
@@ -48,6 +52,14 @@
                 flex-direction: column;
                 gap: 16px;
             }
+        }
+
+        .seller-cards {
+            grid-template-columns: initial;
+        }
+
+        .seller-card {
+            min-width: 100%;
         }
     }
 }

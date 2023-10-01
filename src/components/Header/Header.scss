@@ -1,11 +1,17 @@
 @import "@src/variables";
 
-
 #header {
     padding: 37px 50px 37px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 2000px;
+    margin: 0 auto;
+
+    .logo {
+        position: relative;
+        z-index: 2;
+    }
 
     .background {
         background-color: transparent;
@@ -14,6 +20,7 @@
 
     .left {
         gap: 60px;
+
     }
 
     .right {
@@ -23,6 +30,7 @@
     .column {
         display: flex;
         align-items: center;
+        position: relative;
     }
 
     .sign-in {
@@ -35,6 +43,13 @@
         text-decoration-line: underline;
     }
 
+    .icons {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        gap: 16px;
+    }
+
     .icon {
         display: flex;
         gap: 16px;
@@ -42,8 +57,95 @@
 
     .burger {
         position: relative;
+        z-index: 2;
         right: 35px;
         bottom: 14px;
+    }
+
+    @media(max-width: 850px) {
+        padding: 31px 10px 31px 24px;
+        position: relative;
+        z-index: 1;
+
+        .desktop-only {
+            visibility: hidden;
+        }
+
+        .right {
+            gap: 5px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            align-items: flex-end;
+            top: 100px;
+            gap: 15px;
+            width: 100%;
+            background-color: white;
+            transform: translateX(150%);
+            transition: all 0.4s ease;
+            padding: 0 50px 20px 0;
+
+        }
+
+        .column.active {
+            transform: translateX(0);
+            background-color: white;
+        }
+
+        .mobile-only {
+            left: -90px;
+
+        }
+
+        .elipse-black {
+            background-color: black;
+            width: 36px;
+            height: 36px;
+            flex-shrink: 0;
+            border-radius: 50%;
+        }
+
+        .ellipse {
+            width: 36px;
+            height: 36px;
+        }
+
+        .burger {
+            position: relative;
+            right: 28px;
+            bottom: 8px;
+        }
+
+        .backet {
+            width: 20px;
+            height: 20px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icon {
+            flex-direction: column;
+        }
+
+        .icons {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+        }
+
+        .search {
+            position: relative;
+            left: 30px;
+            margin-bottom: 10px;
+        }
     }
 }
 
@@ -53,5 +155,6 @@
         border: 1px solid $color-black;
         border-radius: 50%;
     }
+
 
 }

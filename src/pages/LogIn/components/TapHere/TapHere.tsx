@@ -1,4 +1,5 @@
 import './TapHere.scss';
+import { Link } from 'react-router-dom';
 import React from 'react';
 
 export interface TapHereProps {
@@ -11,8 +12,10 @@ export const TapHere = (props: TapHereProps) => {
     <div id="tap-here">
       <p className="text-forget">
         {props.text}{' '}
-        <button className="button-t">
-          <span className="purple-color">{props.tap}</span>
+        <button type="button" className="button-t">
+          <Link to="/sign-up" className="purple-color">
+            {props.tap}
+          </Link>
         </button>
       </p>
     </div>

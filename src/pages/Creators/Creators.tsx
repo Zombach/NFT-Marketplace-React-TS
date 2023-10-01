@@ -1,25 +1,14 @@
 import './Creators.scss';
 import { type CardSmall } from '@models/CardModels/CardModels';
 import { cards as mock } from '@resources/moq/Creators';
+import { useGetUsersQuery } from '@src/features/api/usersApi';
 import Cards from './CardsRender/Cards';
 import React, { type FC, useEffect, useState } from 'react';
 
 export const Creators: FC = () => {
-  const [cards, setCards] = useState<CardSmall[]>([]);
+  const { data: users } = useGetUsersQuery();
 
-  useEffect(() => {
-    const getCards = async () => {
-      await timeout(1000);
-      setCards(mock);
-    };
-    getCards();
-  }, []);
-
-  const timeout = (delay: number) => {
-    return new Promise((res) => setTimeout(res, delay));
-  };
-
-  return <div className="creators">{cards && <Cards cards={cards} />}</div>;
+  return <div className="creators">{users && <Cards cards={users} />}</div>;
 };
 
 export default Creators;

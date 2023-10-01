@@ -1,25 +1,25 @@
 import './ProductSection.scss';
+import { CardMarketplace } from '@resources/moq/Marketplace';
 import { FC } from 'react';
-import { product } from '@resources/moq/Products';
+import { Product } from '@models/Product';
 import AuthoredBy from '@components/AuthoredBy/AuthoredBy';
-import AvatarMock from '@components/Avatar/assets/avatar-mock.jpg';
 import ProductActions from '../ProductActions/ProductActions';
-import ProductImg from './assets/product-mock.svg';
 import ProductPriceBlock from '../ProductPriceBlock/ProductPriceBlock';
 
-export const ProductSection: FC = () => {
+interface ProductSectionProps {
+  product: Product;
+}
+
+export const ProductSection: FC<ProductSectionProps> = (props) => {
+  const { product } = props;
+
   return (
     <section className="product-section">
-      <img className="product-img" src={product.image} alt=""></img>
+      <img className="product-img" src={product.img} alt=""></img>
       <div className="product-section-right-part">
         <h2>{product.name}</h2>
-        <AuthoredBy srcAvatar={product.userAvatar} username={product.username}></AuthoredBy>
-        <ProductPriceBlock
-          ethereumPrice={product.price}
-          dollarPrice={product.price}
-          username={product.username}
-          lastSalePrice={product.lastPrice}
-          ethereumBidPrice={product.bidPrice}></ProductPriceBlock>
+        <AuthoredBy srcAvatar={product.creator.avatar} username={product.creator.name}></AuthoredBy>
+        <ProductPriceBlock product={product} lastSalePrice={product.price} ethereumBidPrice={product.price}></ProductPriceBlock>
         <ProductActions></ProductActions>
       </div>
     </section>

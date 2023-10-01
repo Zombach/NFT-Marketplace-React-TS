@@ -19,6 +19,7 @@
 
         .checkbox {
             margin-bottom: 40px;
+            margin-top: 40px;
         }
 
         #name {
@@ -83,6 +84,30 @@
         .submit {
             width: 170px;
             height: 56px;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .create-nft-page {
+        max-width: 366px;
+        margin: 0 auto 100px auto;
+
+        h2 {
+            margin-bottom: 16px;
+        }
+
+        .create-nft-form {
+            width: 100%;
+
+            .drop-area {
+                width: 100%;
+            }
+
+            .submit {
+                width: 100%;
+                height: 56px;
+            }
         }
     }
 }

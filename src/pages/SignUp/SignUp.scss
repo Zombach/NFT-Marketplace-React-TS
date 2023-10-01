@@ -1,0 +1,82 @@
+@import "@src/variables";
+
+#sign-up-section {
+    display: flex;
+    max-width: 1140px;
+    margin: 40px auto 120px auto;
+    gap: 112px;
+    justify-content: space-between;
+
+    .left-block {
+        margin-top: 58px;
+        width: 50%;
+    }
+
+    .text {
+        margin-bottom: 8px;
+        font-family: $font-helvetica-neue;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 48px;
+    }
+
+    .button-fill {
+        margin-top: 42px;
+        width: 100%;
+        padding: 16px 8px;
+        border-radius: 10px;
+        border: 0;
+        background: $color-purple;
+
+
+        .text-b {
+            margin: 0 auto;
+            color: $color-white;
+            font-family: $font-helvetica-neue;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 32px;
+        }
+    }
+
+
+    .photo {
+        margin-top: 58px;
+
+        img {
+            max-width: 457px;
+        }
+    }
+
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        margin-bottom: 24px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 850px) {
+    #sign-up-section {
+        margin: 0 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+
+        .left-block {
+            margin-top: 0;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        .photo {
+            margin-top: 0;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}

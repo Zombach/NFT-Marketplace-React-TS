@@ -1,5 +1,16 @@
 .login-section {
     display: flex;
     max-width: 1140px;
-    margin: 40px auto 0 auto;
+    margin: 40px auto 120px auto;
+    justify-content: space-between;
+}
+
+@media (max-width: 850px) {
+    .login-section {
+        margin: 0 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;        
+    }
 }
