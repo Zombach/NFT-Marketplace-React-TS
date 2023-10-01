@@ -2,14 +2,15 @@ import './Header.scss';
 import { ReactComponent as Ellipse } from './assets/ellipseWhite.svg';
 import { useState } from 'react';
 
-import { ReactComponent as HamburgerMenu } from './assets/hamburgerMenu.svg';
 import { ReactComponent as Backet } from './assets/basket.svg';
+import { ReactComponent as HamburgerMenu } from './assets/hamburgerMenu.svg';
+import { Link } from 'react-router-dom';
 import { ReactComponent as Lock } from './assets/lock.svg';
 import { ReactComponent as Logo } from './assets/logo.svg';
 import { ReactComponent as Search } from './assets/search.svg';
-import NavLinks from './components/NavLinks/NavLinks';
-import ModalWindow from '@components/Modals/ModalWindow/ModalWindow';
 import CartModal from '@components/Cart/components/CartModal/CartModal';
+import ModalWindow from '@components/Modals/ModalWindow/ModalWindow';
+import NavLinks from './components/NavLinks/NavLinks';
 
 export const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -37,9 +38,9 @@ export const Header = () => {
             <button className="background">
               <Lock className="logo" />
             </button>
-            <a href="signUp" className="sign-in">
+            <Link to="/login" className="sign-in">
               Sign in
-            </a>
+            </Link>
           </div>
           <button className="burger-menu desktop-only" onClick={onClickHandle}>
             <Ellipse className="logo ellipse" />

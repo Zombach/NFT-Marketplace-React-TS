@@ -28,7 +28,7 @@ export const Routes: FC = () => {
       <Route path="product/:id" element={<ProductComponent />}></Route>
       <Route path="checkout" element={<Checkout />}></Route>
       <Route path="logIn" element={<LogIn />}></Route>
-      <Route path="signUp" element={<SignUp />}></Route>
+      <Route path="sign-up" element={<SignUp />}></Route>
       <Route path="welcome" element={<Welcome />}></Route>
       <Route path="create-nft" element={<CreateNFT />}></Route>
       <Route path="blog" element={<Blog />}></Route>
