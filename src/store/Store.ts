@@ -8,12 +8,12 @@ import storage from 'redux-persist/lib/storage';
 const persistConfig = {
   key: 'root',
   storage: storage,
-  whitelist: ['cartState'],
+  whitelist: ['cartState', 'authState'],
 };
 
 const rootReducer = combineReducers({
   cartState: cartReducer,
-  authSlice: authReducer,
+  authState: authReducer,
   [baseApi.reducerPath]: baseApi.reducer,
 });
 

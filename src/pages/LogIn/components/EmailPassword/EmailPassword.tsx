@@ -4,8 +4,9 @@ import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 import { TapHere } from '../TapHere/TapHere';
 import { UserLogin } from '@models/User';
 import { ValidationLoginSchema } from '@pages/LogIn/LoginValidationSchema';
-import { setToken } from '@pages/LogIn/AuthSlice';
-import { useDispatch } from 'react-redux';
+import { selectToken } from '@pages/LogIn/AuthSlice';
+import { useLazyGetCurrentUserQuery } from '@src/features/api/usersApi';
+import { useSelector } from 'react-redux';
 import { useSignInMutation } from '@src/features/api/authApi';
 import { yupResolver } from '@hookform/resolvers/yup';
 import InputText from '@components/Inputs/InputText/InputText';
@@ -13,15 +14,21 @@ import React, { type FC } from 'react';
 
 export const EmailPassword: FC = () => {
   const methods = useForm<any>({ resolver: yupResolver(ValidationLoginSchema()) });
-  const dispatch = useDispatch();
   const [signIn] = useSignInMutation();
+  const [getCurrentUser] = useLazyGetCurrentUserQuery();
+  const token = useSelector(selectToken);
+
   const {
     handleSubmit,
     formState: { errors },
   } = methods;
 
   const onSubmit: SubmitHandler<UserLogin> = (data) => {
-    signIn(data);
+    signIn(data).then(() => {
+      if (token) {
+        getCurrentUser();
+      }
+    });
   };
 
   return (
