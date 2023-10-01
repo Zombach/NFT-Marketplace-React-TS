@@ -13,7 +13,7 @@ export const TapHere = (props: TapHereProps) => {
       <p className="text-forget">
         {props.text}{' '}
         <button type="button" className="button-t">
-          <Link to="/signUp" className="purple-color">
+          <Link to="/sign-up" className="purple-color">
             {props.tap}
           </Link>
         </button>
